@@ -1,0 +1,55 @@
+
+Lmod is automatically replacing "gcc-native/14.2" with "gcc/12.2.0".
+
+
+The following have been reloaded with a version change:
+  1) cray-libsci/24.11.0 => cray-libsci/23.09.1.1
+  2) cray-mpich/8.1.31 => cray-mpich/8.1.27
+  3) libfabric/1.22.0 => libfabric/1.20.1
+
+Job configuration:
+  ERA5_DIR      = /lustre/orion/lrn036/world-shared/ERA5_npz/5.625_deg/
+  FORECAST_TYPE = direct
+  MODEL         = res_slimvit
+  PRED_RANGE    = 120
+  MAX_EPOCHS    = 5
+  PATIENCE      = 5
+  OUTPUT_DIR    = /lustre/orion/csc662/proj-shared/janet/forecasting
+  File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/tutorial/./era5_era5_forecasting.py", line 337
+    elif args.forecast_type == "iterative":
+    ^^^^
+IndentationError: expected an indented block after 'if' statement on line 332
+  File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/tutorial/./era5_era5_forecasting.py", line 337
+    elif args.forecast_type == "iterative":
+    ^^^^
+IndentationError: expected an indented block after 'if' statement on line 332
+  File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/tutorial/./era5_era5_forecasting.py", line 337
+    elif args.forecast_type == "iterative":
+    ^^^^
+IndentationError: expected an indented block after 'if' statement on line 332
+  File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/tutorial/./era5_era5_forecasting.py", line 337
+    elif args.forecast_type == "iterative":
+    ^^^^
+IndentationError: expected an indented block after 'if' statement on line 332
+  File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/tutorial/./era5_era5_forecasting.py", line 337
+    elif args.forecast_type == "iterative":
+    ^^^^
+IndentationError: expected an indented block after 'if' statement on line 332
+  File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/tutorial/./era5_era5_forecasting.py", line 337
+    elif args.forecast_type == "iterative":
+    ^^^^
+IndentationError: expected an indented block after 'if' statement on line 332
+  File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/tutorial/./era5_era5_forecasting.py", line 337
+    elif args.forecast_type == "iterative":
+    ^^^^
+IndentationError: expected an indented block after 'if' statement on line 332
+  File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/tutorial/./era5_era5_forecasting.py", line 337
+    elif args.forecast_type == "iterative":
+    ^^^^
+IndentationError: expected an indented block after 'if' statement on line 332
+srun: error: frontier02476: tasks 0-7: Exited with exit code 1
+srun: Terminating StepId=3873195.0
+
+real	0m0.392s
+user	0m0.014s
+sys	0m0.031s
