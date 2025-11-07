@@ -1,0 +1,417 @@
+
+Lmod is automatically replacing "gcc-native/14.2" with "gcc/12.2.0".
+
+
+The following have been reloaded with a version change:
+  1) cray-libsci/24.11.0 => cray-libsci/23.09.1.1
+  2) cray-mpich/8.1.31 => cray-mpich/8.1.27
+  3) libfabric/1.22.0 => libfabric/1.20.1
+
+Job configuration:
+  ERA5_DIR      = /lustre/orion/lrn036/world-shared/ERA5_npz/5.625_deg/
+  FORECAST_TYPE = direct
+  MODEL         = res_slimvit
+  PRED_RANGE    = 120
+  MAX_EPOCHS    = 5
+  PATIENCE      = 5
+  OUTPUT_DIR    = /lustre/orion/csc662/proj-shared/janet/forecasting
+  CHECKPOINT    = /lustre/orion/csc662/proj-shared/janet/forecasting/res_slimvit_direct_forecasting_120/checkpoints/epoch_008.ckpt
+srun: warning: can't honor --ntasks-per-node set to 1 which doesn't match the requested tasks 8 with the maximum number of requested nodes 1. Ignoring --ntasks-per-node.
+/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'repr' attribute with value False was provided to the `Field()` function, which has no effect in the context it was used. 'repr' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'repr' attribute with value False was provided to the `Field()` function, which has no effect in the context it was used. 'repr' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'frozen' attribute with value True was provided to the `Field()` function, which has no effect in the context it was used. 'frozen' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'frozen' attribute with value True was provided to the `Field()` function, which has no effect in the context it was used. 'frozen' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'repr' attribute with value False was provided to the `Field()` function, which has no effect in the context it was used. 'repr' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'frozen' attribute with value True was provided to the `Field()` function, which has no effect in the context it was used. 'frozen' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'repr' attribute with value False was provided to the `Field()` function, which has no effect in the context it was used. 'repr' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'frozen' attribute with value True was provided to the `Field()` function, which has no effect in the context it was used. 'frozen' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'repr' attribute with value False was provided to the `Field()` function, which has no effect in the context it was used. 'repr' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'repr' attribute with value False was provided to the `Field()` function, which has no effect in the context it was used. 'repr' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'frozen' attribute with value True was provided to the `Field()` function, which has no effect in the context it was used. 'frozen' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'repr' attribute with value False was provided to the `Field()` function, which has no effect in the context it was used. 'repr' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'frozen' attribute with value True was provided to the `Field()` function, which has no effect in the context it was used. 'frozen' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'repr' attribute with value False was provided to the `Field()` function, which has no effect in the context it was used. 'repr' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'frozen' attribute with value True was provided to the `Field()` function, which has no effect in the context it was used. 'frozen' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'frozen' attribute with value True was provided to the `Field()` function, which has no effect in the context it was used. 'frozen' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+Loading model: res_slimvit
+Loading model: res_slimvit
+Loading model: res_slimvit
+Loading model: res_slimvit
+Loading model: res_slimvit
+Loading model: res_slimvit
+Loading model: res_slimvit
+Loading model: res_slimvit
+Loading optimizer adamw
+Loading optimizer adamw
+Loading optimizer adamw
+Loading optimizer adamw
+Loading optimizer adamw
+Loading optimizer adamw
+Loading optimizer adamw
+Loading optimizer adamw
+Loading learning rate scheduler: linear-warmup-cosine-annealing
+Loading learning rate scheduler: linear-warmup-cosine-annealing
+Loading learning rate scheduler: linear-warmup-cosine-annealing
+Loading learning rate scheduler: linear-warmup-cosine-annealing
+Loading learning rate scheduler: linear-warmup-cosine-annealing
+Loading learning rate scheduler: linear-warmup-cosine-annealing
+Loading learning rate scheduler: linear-warmup-cosine-annealing
+Loading learning rate scheduler: linear-warmup-cosine-annealing
+Loading training loss: lat_mse
+Loading training loss: lat_mse
+Loading training loss: lat_mse
+Loading training loss: lat_mse
+Loading training loss: lat_mse
+Loading training loss: lat_mse
+Loading training loss: lat_mse
+Loading training loss: lat_mse
+No train transform
+No train transform
+No train transform
+No train transform
+No train transform
+No train transform
+No train transform
+No train transform
+Loading validation loss: lat_rmse
+Loading validation loss: lat_rmse
+Loading validation loss: lat_rmse
+Loading validation loss: lat_rmse
+Loading validation loss: lat_rmse
+Loading validation loss: lat_rmse
+Loading validation loss: lat_rmse
+Loading validation loss: lat_rmse
+Loading validation loss: lat_acc
+Loading validation loss: lat_acc
+Loading validation loss: lat_acc
+Loading validation loss: lat_acc
+Loading validation loss: lat_acc
+Loading validation loss: lat_acc
+Loading validation loss: lat_acc
+Loading validation loss: lat_acc
+Loading validation loss: lat_mse
+Loading validation transform: denormalize
+Loading validation transform: denormalize
+Loading validation loss: lat_mse
+Loading validation transform: denormalize
+Loading validation loss: lat_mse
+Loading validation loss: lat_mse
+No validation transform
+Loading validation transform: denormalize
+Loading validation transform: denormalize
+Loading validation loss: lat_mse
+Loading validation transform: denormalize
+Loading validation transform: denormalize
+Loading validation loss: lat_mse
+Loading validation transform: denormalize
+Loading validation transform: denormalize
+No validation transform
+Loading validation transform: denormalize
+Loading validation loss: lat_mse
+Loading validation transform: denormalize
+Loading validation transform: denormalize
+No validation transform
+No validation transform
+Loading validation transform: denormalize
+No validation transform
+Loading validation loss: lat_mse
+Loading validation transform: denormalize
+Loading validation transform: denormalize
+No validation transform
+No validation transform
+Loading validation transform: denormalize
+No validation transform
+Loading test loss: lat_rmse
+Loading test loss: lat_rmse
+Loading test loss: lat_rmse
+Loading test loss: lat_rmse
+Loading test loss: lat_rmse
+Loading test loss: lat_rmse
+Loading test loss: lat_rmse
+Loading test loss: lat_rmse
+Loading test loss: lat_acc
+Loading test transform: denormalize
+Loading test transform: denormalize
+Loading test loss: lat_acc
+Loading test transform: denormalize
+Loading test loss: lat_acc
+Loading test loss: lat_acc
+Loading test loss: lat_acc
+Loading test transform: denormalize
+Loading test transform: denormalize
+[rank: 0] Seed set to 0
+Loading test transform: denormalize
+Loading test transform: denormalize
+Loading test loss: lat_acc
+Loading test transform: denormalize
+Loading test transform: denormalize
+Loading test transform: denormalize
+Loading test transform: denormalize
+Loading test loss: lat_acc
+[rank: 5] Seed set to 0
+Loading test transform: denormalize
+Loading test loss: lat_acc
+Loading test transform: denormalize
+Loading test transform: denormalize
+Loading test transform: denormalize
+[rank: 3] Seed set to 0
+[rank: 2] Seed set to 0
+[rank: 7] Seed set to 0
+Loading test transform: denormalize
+[rank: 4] Seed set to 0
+[rank: 1] Seed set to 0
+[rank: 6] Seed set to 0
+/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/lightning_fabric/strategies/fsdp.py:697: `FSDPStrategy(activation_checkpointing=<class 'timm.models.vision_transformer.Block'>)` is deprecated, use `FSDPStrategy(activation_checkpointing_policy={<class 'timm.models.vision_transformer.Block'>})` instead.
+Using bfloat16 Automatic Mixed Precision (AMP)
+Trainer already configured with model summary callbacks: [<class 'pytorch_lightning.callbacks.rich_model_summary.RichModelSummary'>]. Skipping setting a default `ModelSummary` callback.
+Traceback (most recent call last):
+  File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/tutorial/./era5_era5_forecasting.py", line 341, in <module>
+    model = cl.LitModule.load_from_checkpoint(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pytorch_lightning/utilities/model_helpers.py", line 125, in wrapper
+    return self.method(cls, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pytorch_lightning/core/module.py", line 1662, in load_from_checkpoint
+    loaded = _load_from_checkpoint(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pytorch_lightning/core/saving.py", line 63, in _load_from_checkpoint
+    checkpoint = pl_load(checkpoint_path, map_location=map_location)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/lightning_fabric/utilities/cloud_io.py", line 60, in _load
+    with fs.open(path_or_url, "rb") as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/fsspec/spec.py", line 1338, in open
+    f = self._open(
+        ^^^^^^^^^^^
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/fsspec/implementations/local.py", line 210, in _open
+    return LocalFileOpener(path, mode, fs=self, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/fsspec/implementations/local.py", line 387, in __init__
+    self._open()
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/fsspec/implementations/local.py", line 392, in _open
+    self.f = open(self.path, mode=self.mode)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/lustre/orion/csc662/proj-shared/janet/forecasting/res_slimvit_direct_forecasting_120/checkpoints/epoch_008.ckpt'
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+HPU available: False, using: 0 HPUs
+Traceback (most recent call last):
+  File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/tutorial/./era5_era5_forecasting.py", line 341, in <module>
+Traceback (most recent call last):
+  File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/tutorial/./era5_era5_forecasting.py", line 341, in <module>
+Traceback (most recent call last):
+  File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/tutorial/./era5_era5_forecasting.py", line 341, in <module>
+Traceback (most recent call last):
+  File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/tutorial/./era5_era5_forecasting.py", line 341, in <module>
+Traceback (most recent call last):
+  File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/tutorial/./era5_era5_forecasting.py", line 341, in <module>
+Traceback (most recent call last):
+  File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/tutorial/./era5_era5_forecasting.py", line 341, in <module>
+Traceback (most recent call last):
+  File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/tutorial/./era5_era5_forecasting.py", line 341, in <module>
+    model = cl.LitModule.load_from_checkpoint(
+    model = cl.LitModule.load_from_checkpoint(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pytorch_lightning/utilities/model_helpers.py", line 125, in wrapper
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pytorch_lightning/utilities/model_helpers.py", line 125, in wrapper
+    model = cl.LitModule.load_from_checkpoint(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pytorch_lightning/utilities/model_helpers.py", line 125, in wrapper
+    model = cl.LitModule.load_from_checkpoint(
+    model = cl.LitModule.load_from_checkpoint(
+    model = cl.LitModule.load_from_checkpoint(
+    model = cl.LitModule.load_from_checkpoint(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pytorch_lightning/utilities/model_helpers.py", line 125, in wrapper
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pytorch_lightning/utilities/model_helpers.py", line 125, in wrapper
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pytorch_lightning/utilities/model_helpers.py", line 125, in wrapper
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pytorch_lightning/utilities/model_helpers.py", line 125, in wrapper
+    return self.method(cls, *args, **kwargs)
+    return self.method(cls, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pytorch_lightning/core/module.py", line 1662, in load_from_checkpoint
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pytorch_lightning/core/module.py", line 1662, in load_from_checkpoint
+    return self.method(cls, *args, **kwargs)
+    return self.method(cls, *args, **kwargs)
+    return self.method(cls, *args, **kwargs)
+    return self.method(cls, *args, **kwargs)
+    return self.method(cls, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pytorch_lightning/core/module.py", line 1662, in load_from_checkpoint
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pytorch_lightning/core/module.py", line 1662, in load_from_checkpoint
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pytorch_lightning/core/module.py", line 1662, in load_from_checkpoint
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pytorch_lightning/core/module.py", line 1662, in load_from_checkpoint
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pytorch_lightning/core/module.py", line 1662, in load_from_checkpoint
+    loaded = _load_from_checkpoint(
+    loaded = _load_from_checkpoint(
+    loaded = _load_from_checkpoint(
+    loaded = _load_from_checkpoint(
+    loaded = _load_from_checkpoint(
+    loaded = _load_from_checkpoint(
+    loaded = _load_from_checkpoint(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pytorch_lightning/core/saving.py", line 63, in _load_from_checkpoint
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pytorch_lightning/core/saving.py", line 63, in _load_from_checkpoint
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pytorch_lightning/core/saving.py", line 63, in _load_from_checkpoint
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pytorch_lightning/core/saving.py", line 63, in _load_from_checkpoint
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pytorch_lightning/core/saving.py", line 63, in _load_from_checkpoint
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pytorch_lightning/core/saving.py", line 63, in _load_from_checkpoint
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pytorch_lightning/core/saving.py", line 63, in _load_from_checkpoint
+    checkpoint = pl_load(checkpoint_path, map_location=map_location)
+    checkpoint = pl_load(checkpoint_path, map_location=map_location)
+    checkpoint = pl_load(checkpoint_path, map_location=map_location)
+    checkpoint = pl_load(checkpoint_path, map_location=map_location)
+    checkpoint = pl_load(checkpoint_path, map_location=map_location)
+    checkpoint = pl_load(checkpoint_path, map_location=map_location)
+    checkpoint = pl_load(checkpoint_path, map_location=map_location)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/lightning_fabric/utilities/cloud_io.py", line 60, in _load
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/lightning_fabric/utilities/cloud_io.py", line 60, in _load
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/lightning_fabric/utilities/cloud_io.py", line 60, in _load
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/lightning_fabric/utilities/cloud_io.py", line 60, in _load
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/lightning_fabric/utilities/cloud_io.py", line 60, in _load
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/lightning_fabric/utilities/cloud_io.py", line 60, in _load
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/lightning_fabric/utilities/cloud_io.py", line 60, in _load
+    with fs.open(path_or_url, "rb") as f:
+    with fs.open(path_or_url, "rb") as f:
+    with fs.open(path_or_url, "rb") as f:
+    with fs.open(path_or_url, "rb") as f:
+    with fs.open(path_or_url, "rb") as f:
+    with fs.open(path_or_url, "rb") as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    with fs.open(path_or_url, "rb") as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/fsspec/spec.py", line 1338, in open
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/fsspec/spec.py", line 1338, in open
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/fsspec/spec.py", line 1338, in open
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/fsspec/spec.py", line 1338, in open
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/fsspec/spec.py", line 1338, in open
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/fsspec/spec.py", line 1338, in open
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/fsspec/spec.py", line 1338, in open
+    f = self._open(
+    f = self._open(
+        ^^^^^^^^^^^
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/fsspec/implementations/local.py", line 210, in _open
+    f = self._open(
+    f = self._open(
+    f = self._open(
+    f = self._open(
+        ^^^^^^^^^^^
+        ^^^^^^^^^^^
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/fsspec/implementations/local.py", line 210, in _open
+        ^^^^^^^^^^^
+        ^^^^^^^^^^^
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/fsspec/implementations/local.py", line 210, in _open
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/fsspec/implementations/local.py", line 210, in _open
+        ^^^^^^^^^^^
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/fsspec/implementations/local.py", line 210, in _open
+    f = self._open(
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/fsspec/implementations/local.py", line 210, in _open
+        ^^^^^^^^^^^
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/fsspec/implementations/local.py", line 210, in _open
+    return LocalFileOpener(path, mode, fs=self, **kwargs)
+    return LocalFileOpener(path, mode, fs=self, **kwargs)
+    return LocalFileOpener(path, mode, fs=self, **kwargs)
+    return LocalFileOpener(path, mode, fs=self, **kwargs)
+    return LocalFileOpener(path, mode, fs=self, **kwargs)
+    return LocalFileOpener(path, mode, fs=self, **kwargs)
+    return LocalFileOpener(path, mode, fs=self, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/fsspec/implementations/local.py", line 387, in __init__
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/fsspec/implementations/local.py", line 387, in __init__
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/fsspec/implementations/local.py", line 387, in __init__
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/fsspec/implementations/local.py", line 387, in __init__
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/fsspec/implementations/local.py", line 387, in __init__
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/fsspec/implementations/local.py", line 387, in __init__
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/fsspec/implementations/local.py", line 387, in __init__
+    self._open()
+    self._open()
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/fsspec/implementations/local.py", line 392, in _open
+    self._open()
+    self._open()
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/fsspec/implementations/local.py", line 392, in _open
+    self._open()
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/fsspec/implementations/local.py", line 392, in _open
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/fsspec/implementations/local.py", line 392, in _open
+    self._open()
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/fsspec/implementations/local.py", line 392, in _open
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/fsspec/implementations/local.py", line 392, in _open
+    self._open()
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/fsspec/implementations/local.py", line 392, in _open
+    self.f = open(self.path, mode=self.mode)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/lustre/orion/csc662/proj-shared/janet/forecasting/res_slimvit_direct_forecasting_120/checkpoints/epoch_008.ckpt'
+    self.f = open(self.path, mode=self.mode)
+    self.f = open(self.path, mode=self.mode)
+    self.f = open(self.path, mode=self.mode)
+    self.f = open(self.path, mode=self.mode)
+    self.f = open(self.path, mode=self.mode)
+    self.f = open(self.path, mode=self.mode)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/lustre/orion/csc662/proj-shared/janet/forecasting/res_slimvit_direct_forecasting_120/checkpoints/epoch_008.ckpt'
+FileNotFoundError: [Errno 2] No such file or directory: '/lustre/orion/csc662/proj-shared/janet/forecasting/res_slimvit_direct_forecasting_120/checkpoints/epoch_008.ckpt'
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/lustre/orion/csc662/proj-shared/janet/forecasting/res_slimvit_direct_forecasting_120/checkpoints/epoch_008.ckpt'
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/lustre/orion/csc662/proj-shared/janet/forecasting/res_slimvit_direct_forecasting_120/checkpoints/epoch_008.ckpt'
+FileNotFoundError: [Errno 2] No such file or directory: '/lustre/orion/csc662/proj-shared/janet/forecasting/res_slimvit_direct_forecasting_120/checkpoints/epoch_008.ckpt'
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/lustre/orion/csc662/proj-shared/janet/forecasting/res_slimvit_direct_forecasting_120/checkpoints/epoch_008.ckpt'
+srun: error: frontier09077: task 7: Exited with exit code 1
+srun: Terminating StepId=3877341.0
+slurmstepd: error: *** STEP 3877341.0 ON frontier09077 CANCELLED AT 2025-11-07T10:56:50 ***
+srun: error: frontier09077: tasks 0-6: Exited with exit code 1
+
+real	0m42.659s
+user	0m0.015s
+sys	0m0.039s

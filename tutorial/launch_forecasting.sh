@@ -56,7 +56,7 @@ MAX_EPOCHS=5
 PATIENCE=5
 # Output directory path
 OUTPUT_DIR="/lustre/orion/csc662/proj-shared/janet/forecasting"
-CHECKPOINT="/lustre/orion/csc662/proj-shared/janet/forecasting/res_slimvit_direct_forecasting_120/checkpoints/epoch_004.ckpt"
+CHECKPOINT="/lustre/orion/csc662/proj-shared/janet/forecasting/res_slimvit_direct_forecasting_120_v3/checkpoints/epoch_008.ckpt"
 
 echo "Job configuration:"
 echo "  ERA5_DIR      = ${ERA5_DIR}"
