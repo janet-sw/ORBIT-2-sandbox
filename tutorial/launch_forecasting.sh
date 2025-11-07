@@ -2,10 +2,10 @@
 #SBATCH -A csc662
 #SBATCH -J era5-forecast
 #SBATCH --nodes=1
-#SBATCH --gres=gpu:8
-#SBATCH --ntasks-per-node=8
+#SBATCH --gres=gpu:1
+#SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=7
-#SBATCH -t 00:40:00
+#SBATCH -t 00:10:00
 #SBATCH -q debug
 #SBATCH -o logs/forecast-%j.out
 #SBATCH -e logs/forecast-%j.out
@@ -78,4 +78,5 @@ time srun -n $((SLURM_JOB_NUM_NODES * 8)) \
     --max_epochs "$MAX_EPOCHS" \
     --patience "$PATIENCE" \
     --output_dir "$OUTPUT_DIR" \
+    --checkpoint "$CHECKPOINT" \
     "$FORECAST_TYPE" "$ERA5_DIR" "$MODEL" "$PRED_RANGE"

@@ -136,7 +136,7 @@ class LitModule(pl.LightningModule):
             losses = lf(yhat_, y_)
             loss_name = getattr(lf, "name", f"loss_{i}")
             if losses.dim() == 0:  # aggregate loss
-                loss_dict[f"{stage}/{loss_name}:agggregate"] = losses
+                loss_dict[f"{stage}/{loss_name}:aggregate"] = losses
             else:  # per channel + aggregate
                 for var_name, loss in zip(out_variables, losses):
                     name = f"{stage}/{loss_name}:{var_name}"

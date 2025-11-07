@@ -30,21 +30,28 @@ from pytorch_lightning.callbacks import DeviceStatsMonitor
 import functools
 from torch.distributed.fsdp.wrap import transformer_auto_wrap_policy
 
-os.environ['MASTER_ADDR'] = str(os.environ['HOSTNAME'])
-os.environ['MASTER_PORT'] = "29500"
-os.environ['WORLD_SIZE'] = os.environ['SLURM_NTASKS']
-os.environ['RANK'] = os.environ['SLURM_PROCID']
+# os.environ['MASTER_ADDR'] = str(os.environ['HOSTNAME'])
+# os.environ['MASTER_PORT'] = "29500"
+# os.environ['WORLD_SIZE'] = os.environ['SLURM_NTASKS']
+# os.environ['RANK'] = os.environ['SLURM_PROCID']
 
-world_size = int(os.environ['SLURM_NTASKS'])
-world_rank = int(os.environ['SLURM_PROCID'])
-local_rank = int(os.environ['SLURM_LOCALID'])
-num_nodes = world_size//8
+# world_size = int(os.environ['SLURM_NTASKS'])
+# world_rank = int(os.environ['SLURM_PROCID'])
+# local_rank = int(os.environ['SLURM_LOCALID'])
+# num_nodes = world_size//8
 
-torch.cuda.set_device(local_rank)
-device = torch.cuda.current_device()
+# torch.cuda.set_device(local_rank)
+# device = torch.cuda.current_device()
 
-if world_rank==0:
-    print("world_size",world_size,"num_nodes",num_nodes,flush=True)
+# if world_rank==0:
+#     print("world_size",world_size,"num_nodes",num_nodes,flush=True)
+
+if torch.cuda.is_available():
+    local_rank = int(os.environ.get("LOCAL_RANK", 0))
+    torch.cuda.set_device(local_rank)
+    device = torch.device(f"cuda:{local_rank}")
+else:
+    device = torch.device("cpu")
 
 
 parser = ArgumentParser()
@@ -149,7 +156,9 @@ elif args.forecast_type == "continuous":
         buffer_size=2000,
         num_workers=8,
     )
-dm.setup()
+# Only setup if training from scratch (not loading from checkpoint)
+if args.checkpoint is None:
+    dm.setup()
 
 # Set up deep learning model
 in_channels = 42 ### was 49
@@ -261,9 +270,10 @@ trainer = pl.Trainer(
     callbacks=callbacks,
     default_root_dir=default_root_dir,
     accelerator="gpu",
-    devices=8,
+    devices=1, #was 8
     max_epochs=args.max_epochs,
-    strategy=strategy, ### was "ddp"
+    # strategy=strategy, ### was "ddp"
+    strategy="auto",
     precision="bf16-mixed",
 )
 
@@ -321,15 +331,13 @@ def continuous_testing(model, trainer, args, from_checkpoint=False):
 if args.checkpoint is None:
     trainer.fit(model, datamodule=dm)
     if args.forecast_type == "direct":
-        trainer.test(model, datamodule=dm, ckpt_path="best")
+        trainer.test(model, datamodule=dm,)
     elif args.forecast_type == "iterative":
         iterative_testing(model, trainer, args)
     elif args.forecast_type == "continuous":
         continuous_testing(model, trainer, args)
 # Evaluate saved model checkpoint
 else:
-    # ckpt_model = cl.LitModule.load_from_checkpoint(args.checkpoint, strict=True)
-    # trainer.test(ckpt_model, datamodule=dm)
     model = cl.LitModule.load_from_checkpoint(
         args.checkpoint,
         net=model.net,
@@ -338,10 +346,10 @@ else:
         train_loss=None,
         val_loss=None,
         test_loss=model.test_loss,
-        test_target_tranfsorms=model.test_target_transforms,
+        test_target_transforms=model.test_target_transforms,
     )
     if args.forecast_type == "direct":
-        trainer.test(model, datamodule=dm)
+        trainer.test(model, datamodule=dm, verbose=True)
     elif args.forecast_type == "iterative":
         iterative_testing(model, trainer, args, from_checkpoint=True)
     elif args.forecast_type == "continuous":

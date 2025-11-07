@@ -1,0 +1,518 @@
+
+Lmod is automatically replacing "gcc-native/14.2" with "gcc/12.2.0".
+
+
+The following have been reloaded with a version change:
+  1) cray-libsci/24.11.0 => cray-libsci/23.09.1.1
+  2) cray-mpich/8.1.31 => cray-mpich/8.1.27
+  3) libfabric/1.22.0 => libfabric/1.20.1
+
+Job configuration:
+  ERA5_DIR      = /lustre/orion/lrn036/world-shared/ERA5_npz/5.625_deg/
+  FORECAST_TYPE = direct
+  MODEL         = res_slimvit
+  PRED_RANGE    = 120
+  MAX_EPOCHS    = 5
+  PATIENCE      = 5
+  OUTPUT_DIR    = /lustre/orion/csc662/proj-shared/janet/forecasting
+  CHECKPOINT    = /lustre/orion/csc662/proj-shared/janet/forecasting/res_slimvit_direct_forecasting_120/checkpoints/epoch_004.ckpt
+srun: warning: can't honor --ntasks-per-node set to 1 which doesn't match the requested tasks 8 with the maximum number of requested nodes 1. Ignoring --ntasks-per-node.
+/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'repr' attribute with value False was provided to the `Field()` function, which has no effect in the context it was used. 'repr' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'frozen' attribute with value True was provided to the `Field()` function, which has no effect in the context it was used. 'frozen' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'repr' attribute with value False was provided to the `Field()` function, which has no effect in the context it was used. 'repr' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'frozen' attribute with value True was provided to the `Field()` function, which has no effect in the context it was used. 'frozen' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'repr' attribute with value False was provided to the `Field()` function, which has no effect in the context it was used. 'repr' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'frozen' attribute with value True was provided to the `Field()` function, which has no effect in the context it was used. 'frozen' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'repr' attribute with value False was provided to the `Field()` function, which has no effect in the context it was used. 'repr' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'repr' attribute with value False was provided to the `Field()` function, which has no effect in the context it was used. 'repr' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'frozen' attribute with value True was provided to the `Field()` function, which has no effect in the context it was used. 'frozen' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'frozen' attribute with value True was provided to the `Field()` function, which has no effect in the context it was used. 'frozen' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'repr' attribute with value False was provided to the `Field()` function, which has no effect in the context it was used. 'repr' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'repr' attribute with value False was provided to the `Field()` function, which has no effect in the context it was used. 'repr' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'frozen' attribute with value True was provided to the `Field()` function, which has no effect in the context it was used. 'frozen' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'repr' attribute with value False was provided to the `Field()` function, which has no effect in the context it was used. 'repr' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'frozen' attribute with value True was provided to the `Field()` function, which has no effect in the context it was used. 'frozen' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'frozen' attribute with value True was provided to the `Field()` function, which has no effect in the context it was used. 'frozen' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+Loading model: res_slimvit
+Loading model: res_slimvit
+Loading model: res_slimvit
+Loading model: res_slimvit
+Loading model: res_slimvit
+Loading model: res_slimvit
+Loading model: res_slimvit
+Loading model: res_slimvit
+Loading optimizer adamw
+Loading optimizer adamw
+Loading optimizer adamw
+Loading optimizer adamw
+Loading optimizer adamw
+Loading optimizer adamw
+Loading optimizer adamw
+Loading optimizer adamw
+Loading learning rate scheduler: linear-warmup-cosine-annealing
+Loading learning rate scheduler: linear-warmup-cosine-annealing
+Loading learning rate scheduler: linear-warmup-cosine-annealing
+Loading learning rate scheduler: linear-warmup-cosine-annealing
+Loading learning rate scheduler: linear-warmup-cosine-annealing
+Loading learning rate scheduler: linear-warmup-cosine-annealing
+Loading learning rate scheduler: linear-warmup-cosine-annealing
+Loading learning rate scheduler: linear-warmup-cosine-annealing
+Loading training loss: lat_mse
+Loading training loss: lat_mse
+Loading training loss: lat_mse
+Loading training loss: lat_mse
+Loading training loss: lat_mse
+Loading training loss: lat_mse
+Loading training loss: lat_mse
+Loading training loss: lat_mse
+No train transform
+No train transform
+No train transform
+No train transform
+No train transform
+No train transform
+No train transform
+No train transform
+Loading validation loss: lat_rmse
+Loading validation loss: lat_rmse
+Loading validation loss: lat_rmse
+Loading validation loss: lat_rmse
+Loading validation loss: lat_rmse
+Loading validation loss: lat_rmse
+Loading validation loss: lat_rmse
+Loading validation loss: lat_rmse
+Loading validation loss: lat_acc
+Loading validation loss: lat_acc
+Loading validation loss: lat_acc
+Loading validation loss: lat_acc
+Loading validation loss: lat_acc
+Loading validation loss: lat_acc
+Loading validation loss: lat_acc
+Loading validation loss: lat_acc
+Loading validation loss: lat_mse
+Loading validation loss: lat_mse
+Loading validation transform: denormalize
+Loading validation transform: denormalize
+Loading validation loss: lat_mse
+Loading validation loss: lat_mse
+Loading validation transform: denormalize
+Loading validation loss: lat_mse
+Loading validation transform: denormalize
+Loading validation loss: lat_mse
+Loading validation transform: denormalize
+Loading validation loss: lat_mse
+Loading validation transform: denormalize
+Loading validation transform: denormalize
+Loading validation transform: denormalize
+Loading validation loss: lat_mse
+Loading validation transform: denormalize
+Loading validation transform: denormalize
+Loading validation transform: denormalize
+No validation transform
+No validation transform
+Loading validation transform: denormalize
+Loading validation transform: denormalize
+Loading validation transform: denormalize
+No validation transform
+No validation transform
+Loading validation transform: denormalize
+No validation transform
+Loading validation transform: denormalize
+No validation transform
+No validation transform
+No validation transform
+Loading test loss: lat_rmse
+Loading test loss: lat_rmse
+Loading test loss: lat_rmse
+Loading test loss: lat_rmse
+Loading test loss: lat_rmse
+Loading test loss: lat_rmse
+Loading test loss: lat_rmse
+Loading test loss: lat_rmse
+Loading test loss: lat_acc
+Loading test loss: lat_acc
+Loading test loss: lat_acc
+Loading test loss: lat_acc
+Loading test loss: lat_acc
+Loading test loss: lat_acc
+Loading test transform: denormalize
+Loading test transform: denormalize
+Loading test transform: denormalize
+Loading test transform: denormalize
+Loading test transform: denormalize
+Loading test transform: denormalize
+Loading test transform: denormalize
+Loading test loss: lat_acc
+Loading test transform: denormalize
+Loading test transform: denormalize
+Loading test transform: denormalize
+Loading test transform: denormalize
+Loading test transform: denormalize
+Loading test loss: lat_acc
+Loading test transform: denormalize
+Loading test transform: denormalize
+Loading test transform: denormalize
+[rank: 4] Seed set to 0
+Loading test transform: denormalize
+[rank: 2] Seed set to 0
+[rank: 0] Seed set to 0
+[rank: 6] Seed set to 0
+[rank: 7] Seed set to 0
+[rank: 1] Seed set to 0
+[rank: 5] Seed set to 0
+[rank: 3] Seed set to 0
+/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/lightning_fabric/strategies/fsdp.py:697: `FSDPStrategy(activation_checkpointing=<class 'timm.models.vision_transformer.Block'>)` is deprecated, use `FSDPStrategy(activation_checkpointing_policy={<class 'timm.models.vision_transformer.Block'>})` instead.
+Using bfloat16 Automatic Mixed Precision (AMP)
+Trainer already configured with model summary callbacks: [<class 'pytorch_lightning.callbacks.rich_model_summary.RichModelSummary'>]. Skipping setting a default `ModelSummary` callback.
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+HPU available: False, using: 0 HPUs
+Running direct forecasting testing...
+Running direct forecasting testing...
+Running direct forecasting testing...
+Running direct forecasting testing...
+Running direct forecasting testing...
+Running direct forecasting testing...
+Running direct forecasting testing...
+Running direct forecasting testing...
+You are using a CUDA device ('AMD Instinct MI250X') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 7, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(
+/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 7, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(
+/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 7, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(
+/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 7, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(
+/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 7, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(
+/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 7, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(
+/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 7, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+SLURM auto-requeueing enabled. Setting signal handlers.
+/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 7, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(
+MIOpen(HIP): Error [FlushUnsafe] File is unwritable: "/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt"
+MIOpen(HIP): Error [~FindDbRecord_t] Failed to store record to find-db at <"/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt">
+MIOpen(HIP): Error [FlushUnsafe] File is unwritable: "/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt"
+MIOpen(HIP): Error [~FindDbRecord_t] Failed to store record to find-db at <"/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt">
+MIOpen(HIP): Error [FlushUnsafe] File is unwritable: "/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt"
+MIOpen(HIP): Error [~FindDbRecord_t] Failed to store record to find-db at <"/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt">
+MIOpen(HIP): Error [FlushUnsafe] File is unwritable: "/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt"
+MIOpen(HIP): Error [~FindDbRecord_t] Failed to store record to find-db at <"/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt">
+MIOpen(HIP): Error [FlushUnsafe] File is unwritable: "/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt"
+MIOpen(HIP): Error [~FindDbRecord_t] Failed to store record to find-db at <"/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt">
+MIOpen(HIP): Error [FlushUnsafe] File is unwritable: "/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt"
+MIOpen(HIP): Error [~FindDbRecord_t] Failed to store record to find-db at <"/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt">
+MIOpen(HIP): Error [FlushUnsafe] File is unwritable: "/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt"
+MIOpen(HIP): Error [~FindDbRecord_t] Failed to store record to find-db at <"/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt">
+MIOpen(HIP): Error [FlushUnsafe] File is unwritable: "/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt"
+MIOpen(HIP): Error [~FindDbRecord_t] Failed to store record to find-db at <"/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt">
+MIOpen(HIP): Error [FlushUnsafe] File is unwritable: "/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt"
+MIOpen(HIP): Error [~FindDbRecord_t] Failed to store record to find-db at <"/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt">
+MIOpen(HIP): Error [FlushUnsafe] File is unwritable: "/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt"
+MIOpen(HIP): Error [~FindDbRecord_t] Failed to store record to find-db at <"/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt">
+MIOpen(HIP): Error [FlushUnsafe] File is unwritable: "/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt"
+MIOpen(HIP): Error [~FindDbRecord_t] Failed to store record to find-db at <"/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt">
+MIOpen(HIP): Error [FlushUnsafe] File is unwritable: "/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt"
+MIOpen(HIP): Error [~FindDbRecord_t] Failed to store record to find-db at <"/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt">
+MIOpen(HIP): Error [FlushUnsafe] File is unwritable: "/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt"
+MIOpen(HIP): Error [~FindDbRecord_t] Failed to store record to find-db at <"/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt">
+MIOpen(HIP): Error [FlushUnsafe] File is unwritable: "/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt"
+MIOpen(HIP): Error [~FindDbRecord_t] Failed to store record to find-db at <"/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt">
+MIOpen(HIP): Error [FlushUnsafe] File is unwritable: "/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt"
+MIOpen(HIP): Error [~FindDbRecord_t] Failed to store record to find-db at <"/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt">
+MIOpen(HIP): Error [FlushUnsafe] File is unwritable: "/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt"
+MIOpen(HIP): Error [~FindDbRecord_t] Failed to store record to find-db at <"/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt">
+MIOpen(HIP): Error [FlushUnsafe] File is unwritable: "/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt"
+MIOpen(HIP): Error [~FindDbRecord_t] Failed to store record to find-db at <"/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt">
+MIOpen(HIP): Error [FlushUnsafe] File is unwritable: "/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt"
+MIOpen(HIP): Error [~FindDbRecord_t] Failed to store record to find-db at <"/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt">
+MIOpen(HIP): Error [FlushUnsafe] File is unwritable: "/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt"
+MIOpen(HIP): Error [~FindDbRecord_t] Failed to store record to find-db at <"/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt">
+MIOpen(HIP): Error [FlushUnsafe] File is unwritable: "/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt"
+MIOpen(HIP): Error [~FindDbRecord_t] Failed to store record to find-db at <"/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt">
+MIOpen(HIP): Error [FlushUnsafe] File is unwritable: "/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt"
+MIOpen(HIP): Error [~FindDbRecord_t] Failed to store record to find-db at <"/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt">
+MIOpen(HIP): Error [FlushUnsafe] File is unwritable: "/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt"
+MIOpen(HIP): Error [~FindDbRecord_t] Failed to store record to find-db at <"/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt">
+MIOpen(HIP): Error [FlushUnsafe] File is unwritable: "/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt"
+MIOpen(HIP): Error [~FindDbRecord_t] Failed to store record to find-db at <"/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt">
+MIOpen(HIP): Error [FlushUnsafe] File is unwritable: "/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt"
+MIOpen(HIP): Error [~FindDbRecord_t] Failed to store record to find-db at <"/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt">
+MIOpen(HIP): Error [FlushUnsafe] File is unwritable: "/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt"
+MIOpen(HIP): Error [~FindDbRecord_t] Failed to store record to find-db at <"/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt">
+MIOpen(HIP): Error [FlushUnsafe] File is unwritable: "/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt"
+MIOpen(HIP): Error [~FindDbRecord_t] Failed to store record to find-db at <"/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt">
+MIOpen(HIP): Error [FlushUnsafe] File is unwritable: "/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt"
+MIOpen(HIP): Error [~FindDbRecord_t] Failed to store record to find-db at <"/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt">
+MIOpen(HIP): Error [FlushUnsafe] File is unwritable: "/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt"
+MIOpen(HIP): Error [~FindDbRecord_t] Failed to store record to find-db at <"/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt">
+MIOpen(HIP): Error [FlushUnsafe] File is unwritable: "/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt"
+MIOpen(HIP): Error [~FindDbRecord_t] Failed to store record to find-db at <"/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt">
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃              Test metric              ┃             DataLoader 0             ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ test/lat_acc:10m_u_component_of_wind  │         0.09120241383703011          │
+│ test/lat_acc:10m_v_component_of_wind  │         0.04212339256951241          │
+│      test/lat_acc:2m_temperature      │         0.46454054982879894          │
+│        test/lat_acc:aggregate         │          0.2670362530156916          │
+│     test/lat_acc:geopotential_500     │         0.46341621652022713          │
+│     test/lat_acc:temperature_850      │          0.5094286277867192          │
+│   test/lat_acc:total_precipitation    │         0.03150631755186152          │
+│ test/lat_rmse:10m_u_component_of_wind │          4.525669171931427           │
+│ test/lat_rmse:10m_v_component_of_wind │          4.435656160553348           │
+│     test/lat_rmse:2m_temperature      │           5.76597030671135           │
+│        test/lat_rmse:aggregate        │          160.31677262329387          │
+│    test/lat_rmse:geopotential_500     │          942.6970029503665           │
+│     test/lat_rmse:temperature_850     │          4.475880483554725           │
+│   test/lat_rmse:total_precipitation   │        0.00045666664574672643        │
+└───────────────────────────────────────┴──────────────────────────────────────┘
+Testing ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16/-- 0:00:23 • -:--:-- 14.95it/s 
+the results are [{'test/lat_rmse:2m_temperature': tensor(5.7660, device='cuda:0', dtype=torch.float64), 'test/lat_rmse:geopotential_500': tensor(942.6970, device='cuda:0', dtype=torch.float64), 'test/lat_rmse:temperature_850': tensor(4.4759, device='cuda:0', dtype=torch.float64), 'test/lat_rmse:total_precipitation': tensor(0.0005, device='cuda:0', dtype=torch.float64), 'test/lat_rmse:10m_u_component_of_wind': tensor(4.5257, device='cuda:0', dtype=torch.float64), 'test/lat_rmse:10m_v_component_of_wind': tensor(4.4357, device='cuda:0', dtype=torch.float64), 'test/lat_rmse:aggregate': tensor(160.3168, device='cuda:0', dtype=torch.float64), 'test/lat_acc:2m_temperature': tensor(0.4645, device='cuda:0', dtype=torch.float64), 'test/lat_acc:geopotential_500': tensor(0.4634, device='cuda:0', dtype=torch.float64), 'test/lat_acc:temperature_850': tensor(0.5094, device='cuda:0', dtype=torch.float64), 'test/lat_acc:total_precipitation': tensor(0.0315, device='cuda:0', dtype=torch.float64), 'test/lat_acc:10m_u_component_of_wind': tensor(0.0912, device='cuda:0', dtype=torch.float64), 'test/lat_acc:10m_v_component_of_wind': tensor(0.0421, device='cuda:0', dtype=torch.float64), 'test/lat_acc:aggregate': tensor(0.2670, device='cuda:0', dtype=torch.float64)}]
+MIOpen(HIP): Error [FlushUnsafe] File is unwritable: "/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt"
+MIOpen(HIP): Error [~FindDbRecord_t] Failed to store record to find-db at <"/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt">
+MIOpen(HIP): Error [FlushUnsafe] File is unwritable: "/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt"
+MIOpen(HIP): Error [~FindDbRecord_t] Failed to store record to find-db at <"/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt">
+MIOpen(HIP): Error [FlushUnsafe] File is unwritable: "/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt"
+MIOpen(HIP): Error [~FindDbRecord_t] Failed to store record to find-db at <"/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt">
+MIOpen(HIP): Error [FlushUnsafe] File is unwritable: "/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt"
+MIOpen(HIP): Error [~FindDbRecord_t] Failed to store record to find-db at <"/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt">
+MIOpen(HIP): Error [FlushUnsafe] File is unwritable: "/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt"
+MIOpen(HIP): Error [~FindDbRecord_t] Failed to store record to find-db at <"/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt">
+MIOpen(HIP): Error [FlushUnsafe] File is unwritable: "/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt"
+MIOpen(HIP): Error [~FindDbRecord_t] Failed to store record to find-db at <"/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt">
+MIOpen(HIP): Error [FlushUnsafe] File is unwritable: "/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt"
+MIOpen(HIP): Error [~FindDbRecord_t] Failed to store record to find-db at <"/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt">
+MIOpen(HIP): Error [FlushUnsafe] File is unwritable: "/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt"
+MIOpen(HIP): Error [~FindDbRecord_t] Failed to store record to find-db at <"/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt">
+MIOpen(HIP): Error [FlushUnsafe] File is unwritable: "/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt"
+MIOpen(HIP): Error [~FindDbRecord_t] Failed to store record to find-db at <"/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt">
+MIOpen(HIP): Error [FlushUnsafe] File is unwritable: "/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt"
+MIOpen(HIP): Error [~FindDbRecord_t] Failed to store record to find-db at <"/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt">
+MIOpen(HIP): Error [FlushUnsafe] File is unwritable: "/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt"
+MIOpen(HIP): Error [~FindDbRecord_t] Failed to store record to find-db at <"/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt">
+MIOpen(HIP): Error [FlushUnsafe] File is unwritable: "/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt"
+MIOpen(HIP): Error [~FindDbRecord_t] Failed to store record to find-db at <"/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt">
+MIOpen(HIP): Error [FlushUnsafe] File is unwritable: "/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt"
+MIOpen(HIP): Error [~FindDbRecord_t] Failed to store record to find-db at <"/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt">
+MIOpen(HIP): Error [FlushUnsafe] File is unwritable: "/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt"
+MIOpen(HIP): Error [~FindDbRecord_t] Failed to store record to find-db at <"/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt">
+MIOpen(HIP): Error [FlushUnsafe] File is unwritable: "/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt"
+MIOpen(HIP): Error [~FindDbRecord_t] Failed to store record to find-db at <"/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt">
+MIOpen(HIP): Error [FlushUnsafe] File is unwritable: "/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt"
+MIOpen(HIP): Error [~FindDbRecord_t] Failed to store record to find-db at <"/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt">
+MIOpen(HIP): Error [FlushUnsafe] File is unwritable: "/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt"
+MIOpen(HIP): Error [~FindDbRecord_t] Failed to store record to find-db at <"/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt">
+MIOpen(HIP): Error [FlushUnsafe] File is unwritable: "/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt"
+MIOpen(HIP): Error [~FindDbRecord_t] Failed to store record to find-db at <"/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt">
+MIOpen(HIP): Error [FlushUnsafe] File is unwritable: "/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt"
+MIOpen(HIP): Error [~FindDbRecord_t] Failed to store record to find-db at <"/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt">
+MIOpen(HIP): Error [FlushUnsafe] File is unwritable: "/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt"
+MIOpen(HIP): Error [~FindDbRecord_t] Failed to store record to find-db at <"/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt">
+MIOpen(HIP): Error [FlushUnsafe] File is unwritable: "/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt"
+MIOpen(HIP): Error [~FindDbRecord_t] Failed to store record to find-db at <"/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt">
+MIOpen(HIP): Error [FlushUnsafe] File is unwritable: "/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt"
+MIOpen(HIP): Error [~FindDbRecord_t] Failed to store record to find-db at <"/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt">
+MIOpen(HIP): Error [FlushUnsafe] File is unwritable: "/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt"
+MIOpen(HIP): Error [~FindDbRecord_t] Failed to store record to find-db at <"/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt">
+MIOpen(HIP): Error [FlushUnsafe] File is unwritable: "/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt"
+MIOpen(HIP): Error [~FindDbRecord_t] Failed to store record to find-db at <"/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt">
+MIOpen(HIP): Error [FlushUnsafe] File is unwritable: "/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt"
+MIOpen(HIP): Error [~FindDbRecord_t] Failed to store record to find-db at <"/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt">
+MIOpen(HIP): Error [FlushUnsafe] File is unwritable: "/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt"
+MIOpen(HIP): Error [~FindDbRecord_t] Failed to store record to find-db at <"/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt">
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃              Test metric              ┃             DataLoader 0             ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ test/lat_acc:10m_u_component_of_wind  │         0.09132231044873364          │
+│ test/lat_acc:10m_v_component_of_wind  │         0.04217227598799357          │
+│      test/lat_acc:2m_temperature      │         0.46512908732025027          │
+│        test/lat_acc:aggregate         │          0.2674021965001094          │
+│     test/lat_acc:geopotential_500     │         0.46428230339754206          │
+│     test/lat_acc:temperature_850      │          0.5099475826443074          │
+│   test/lat_acc:total_precipitation    │         0.03155961920182906          │
+│ test/lat_rmse:10m_u_component_of_wind │          4.525707633801115           │
+│ test/lat_rmse:10m_v_component_of_wind │          4.435655620524749           │
+│     test/lat_rmse:2m_temperature      │          5.767699009029101           │
+│        test/lat_rmse:aggregate        │          160.27605197217108          │
+│    test/lat_rmse:geopotential_500     │          942.4508956072619           │
+│     test/lat_rmse:temperature_850     │          4.475897296181252           │
+│   test/lat_rmse:total_precipitation   │        0.00045666622815384667        │
+└───────────────────────────────────────┴──────────────────────────────────────┘
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃              Test metric              ┃             DataLoader 0             ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ test/lat_acc:10m_u_component_of_wind  │         0.09136645499240256          │
+│ test/lat_acc:10m_v_component_of_wind  │         0.042213600164377904         │
+│      test/lat_acc:2m_temperature      │          0.464900410315286           │
+│        test/lat_acc:aggregate         │          0.2673089516538588          │
+│     test/lat_acc:geopotential_500     │          0.4637613742336893          │
+│     test/lat_acc:temperature_850      │          0.5100739870864374          │
+│   test/lat_acc:total_precipitation    │         0.03153788313095965          │
+│ test/lat_rmse:10m_u_component_of_wind │          4.5256013403598905          │
+│ test/lat_rmse:10m_v_component_of_wind │           4.43563822225882           │
+│     test/lat_rmse:2m_temperature      │          5.768478906611896           │
+│        test/lat_rmse:aggregate        │          160.3141737063385           │
+│    test/lat_rmse:geopotential_500     │          942.6791819828409           │
+│     test/lat_rmse:temperature_850     │          4.475685116492108           │
+│   test/lat_rmse:total_precipitation   │        0.00045666946727533473        │
+└───────────────────────────────────────┴──────────────────────────────────────┘
+Testing ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16/-- 0:00:29 • -:--:-- 5.69it/s 
+Testing ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16/-- 0:00:29 • -:--:-- 5.79it/s 
+MIOpen(HIP): Error [FlushUnsafe] File is unwritable: "/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt"
+MIOpen(HIP): Error [~FindDbRecord_t] Failed to store record to find-db at <"/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt">
+MIOpen(HIP): Error [FlushUnsafe] File is unwritable: "/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt"
+MIOpen(HIP): Error [~FindDbRecord_t] Failed to store record to find-db at <"/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt">
+MIOpen(HIP): Error [FlushUnsafe] File is unwritable: "/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt"
+MIOpen(HIP): Error [~FindDbRecord_t] Failed to store record to find-db at <"/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt">
+the results are [{'test/lat_rmse:2m_temperature': tensor(5.7685, device='cuda:0', dtype=torch.float64), 'test/lat_rmse:geopotential_500': tensor(942.6792, device='cuda:0', dtype=torch.float64), 'test/lat_rmse:temperature_850': tensor(4.4757, device='cuda:0', dtype=torch.float64), 'test/lat_rmse:total_precipitation': tensor(0.0005, device='cuda:0', dtype=torch.float64), 'test/lat_rmse:10m_u_component_of_wind': tensor(4.5256, device='cuda:0', dtype=torch.float64), 'test/lat_rmse:10m_v_component_of_wind': tensor(4.4356, device='cuda:0', dtype=torch.float64), 'test/lat_rmse:aggregate': tensor(160.3142, device='cuda:0', dtype=torch.float64), 'test/lat_acc:2m_temperature': tensor(0.4649, device='cuda:0', dtype=torch.float64), 'test/lat_acc:geopotential_500': tensor(0.4638, device='cuda:0', dtype=torch.float64), 'test/lat_acc:temperature_850': tensor(0.5101, device='cuda:0', dtype=torch.float64), 'test/lat_acc:total_precipitation': tensor(0.0315, device='cuda:0', dtype=torch.float64), 'test/lat_acc:10m_u_component_of_wind': tensor(0.0914, device='cuda:0', dtype=torch.float64), 'test/lat_acc:10m_v_component_of_wind': tensor(0.0422, device='cuda:0', dtype=torch.float64), 'test/lat_acc:aggregate': tensor(0.2673, device='cuda:0', dtype=torch.float64)}]
+the results are [{'test/lat_rmse:2m_temperature': tensor(5.7677, device='cuda:0', dtype=torch.float64), 'test/lat_rmse:geopotential_500': tensor(942.4509, device='cuda:0', dtype=torch.float64), 'test/lat_rmse:temperature_850': tensor(4.4759, device='cuda:0', dtype=torch.float64), 'test/lat_rmse:total_precipitation': tensor(0.0005, device='cuda:0', dtype=torch.float64), 'test/lat_rmse:10m_u_component_of_wind': tensor(4.5257, device='cuda:0', dtype=torch.float64), 'test/lat_rmse:10m_v_component_of_wind': tensor(4.4357, device='cuda:0', dtype=torch.float64), 'test/lat_rmse:aggregate': tensor(160.2761, device='cuda:0', dtype=torch.float64), 'test/lat_acc:2m_temperature': tensor(0.4651, device='cuda:0', dtype=torch.float64), 'test/lat_acc:geopotential_500': tensor(0.4643, device='cuda:0', dtype=torch.float64), 'test/lat_acc:temperature_850': tensor(0.5099, device='cuda:0', dtype=torch.float64), 'test/lat_acc:total_precipitation': tensor(0.0316, device='cuda:0', dtype=torch.float64), 'test/lat_acc:10m_u_component_of_wind': tensor(0.0913, device='cuda:0', dtype=torch.float64), 'test/lat_acc:10m_v_component_of_wind': tensor(0.0422, device='cuda:0', dtype=torch.float64), 'test/lat_acc:aggregate': tensor(0.2674, device='cuda:0', dtype=torch.float64)}]
+MIOpen(HIP): Error [FlushUnsafe] File is unwritable: "/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt"
+MIOpen(HIP): Error [~FindDbRecord_t] Failed to store record to find-db at <"/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt">
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃              Test metric              ┃             DataLoader 0             ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ test/lat_acc:10m_u_component_of_wind  │         0.09128976693048471          │
+│ test/lat_acc:10m_v_component_of_wind  │         0.04214999901449482          │
+│      test/lat_acc:2m_temperature      │         0.46500549631452054          │
+│        test/lat_acc:aggregate         │          0.2673333722345251          │
+│     test/lat_acc:geopotential_500     │         0.46419034262590286          │
+│     test/lat_acc:temperature_850      │          0.5098186256928452          │
+│   test/lat_acc:total_precipitation    │         0.031546002828902076         │
+│ test/lat_rmse:10m_u_component_of_wind │          4.5256773369866306          │
+│ test/lat_rmse:10m_v_component_of_wind │          4.435653063950982           │
+│     test/lat_rmse:2m_temperature      │          5.766879626376882           │
+│        test/lat_rmse:aggregate        │           160.269910835672           │
+│    test/lat_rmse:geopotential_500     │          942.4149998825445           │
+│     test/lat_rmse:temperature_850     │          4.475798438561951           │
+│   test/lat_rmse:total_precipitation   │        0.00045666561063423207        │
+└───────────────────────────────────────┴──────────────────────────────────────┘
+MIOpen(HIP): Error [FlushUnsafe] File is unwritable: "/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt"
+MIOpen(HIP): Error [~FindDbRecord_t] Failed to store record to find-db at <"/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt">
+MIOpen(HIP): Error [FlushUnsafe] File is unwritable: "/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt"
+MIOpen(HIP): Error [~FindDbRecord_t] Failed to store record to find-db at <"/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt">
+Testing ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16/-- 0:00:29 • -:--:-- 5.16it/s 
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃              Test metric              ┃             DataLoader 0             ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ test/lat_acc:10m_u_component_of_wind  │         0.09163166909219465          │
+│ test/lat_acc:10m_v_component_of_wind  │          0.0423183500494593          │
+│      test/lat_acc:2m_temperature      │          0.4660361866046962          │
+│        test/lat_acc:aggregate         │         0.26807551084563697          │
+│     test/lat_acc:geopotential_500     │          0.4655122160351332          │
+│     test/lat_acc:temperature_850      │          0.5113178843898589          │
+│   test/lat_acc:total_precipitation    │         0.03163675890247969          │
+│ test/lat_rmse:10m_u_component_of_wind │          4.525557299179888           │
+│ test/lat_rmse:10m_v_component_of_wind │          4.435615841847068           │
+│     test/lat_rmse:2m_temperature      │          5.771941195888299           │
+│        test/lat_rmse:aggregate        │          160.21979144645988          │
+│    test/lat_rmse:geopotential_500     │          942.1097298625651           │
+│     test/lat_rmse:temperature_850     │          4.475447810793229           │
+│   test/lat_rmse:total_precipitation   │        0.00045666848585526273        │
+└───────────────────────────────────────┴──────────────────────────────────────┘
+Testing ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16/-- 0:00:29 • -:--:-- 6.92it/s 
+the results are [{'test/lat_rmse:2m_temperature': tensor(5.7669, device='cuda:0', dtype=torch.float64), 'test/lat_rmse:geopotential_500': tensor(942.4150, device='cuda:0', dtype=torch.float64), 'test/lat_rmse:temperature_850': tensor(4.4758, device='cuda:0', dtype=torch.float64), 'test/lat_rmse:total_precipitation': tensor(0.0005, device='cuda:0', dtype=torch.float64), 'test/lat_rmse:10m_u_component_of_wind': tensor(4.5257, device='cuda:0', dtype=torch.float64), 'test/lat_rmse:10m_v_component_of_wind': tensor(4.4357, device='cuda:0', dtype=torch.float64), 'test/lat_rmse:aggregate': tensor(160.2699, device='cuda:0', dtype=torch.float64), 'test/lat_acc:2m_temperature': tensor(0.4650, device='cuda:0', dtype=torch.float64), 'test/lat_acc:geopotential_500': tensor(0.4642, device='cuda:0', dtype=torch.float64), 'test/lat_acc:temperature_850': tensor(0.5098, device='cuda:0', dtype=torch.float64), 'test/lat_acc:total_precipitation': tensor(0.0315, device='cuda:0', dtype=torch.float64), 'test/lat_acc:10m_u_component_of_wind': tensor(0.0913, device='cuda:0', dtype=torch.float64), 'test/lat_acc:10m_v_component_of_wind': tensor(0.0421, device='cuda:0', dtype=torch.float64), 'test/lat_acc:aggregate': tensor(0.2673, device='cuda:0', dtype=torch.float64)}]
+MIOpen(HIP): Error [FlushUnsafe] File is unwritable: "/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt"
+MIOpen(HIP): Error [~FindDbRecord_t] Failed to store record to find-db at <"/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt">
+MIOpen(HIP): Error [FlushUnsafe] File is unwritable: "/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt"
+MIOpen(HIP): Error [~FindDbRecord_t] Failed to store record to find-db at <"/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt">
+MIOpen(HIP): Error [FlushUnsafe] File is unwritable: "/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt"
+MIOpen(HIP): Error [~FindDbRecord_t] Failed to store record to find-db at <"/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache/3876649/gfx90a6e.HIP.3_2_0_.ufdb.txt">
+the results are [{'test/lat_rmse:2m_temperature': tensor(5.7719, device='cuda:0', dtype=torch.float64), 'test/lat_rmse:geopotential_500': tensor(942.1097, device='cuda:0', dtype=torch.float64), 'test/lat_rmse:temperature_850': tensor(4.4754, device='cuda:0', dtype=torch.float64), 'test/lat_rmse:total_precipitation': tensor(0.0005, device='cuda:0', dtype=torch.float64), 'test/lat_rmse:10m_u_component_of_wind': tensor(4.5256, device='cuda:0', dtype=torch.float64), 'test/lat_rmse:10m_v_component_of_wind': tensor(4.4356, device='cuda:0', dtype=torch.float64), 'test/lat_rmse:aggregate': tensor(160.2198, device='cuda:0', dtype=torch.float64), 'test/lat_acc:2m_temperature': tensor(0.4660, device='cuda:0', dtype=torch.float64), 'test/lat_acc:geopotential_500': tensor(0.4655, device='cuda:0', dtype=torch.float64), 'test/lat_acc:temperature_850': tensor(0.5113, device='cuda:0', dtype=torch.float64), 'test/lat_acc:total_precipitation': tensor(0.0316, device='cuda:0', dtype=torch.float64), 'test/lat_acc:10m_u_component_of_wind': tensor(0.0916, device='cuda:0', dtype=torch.float64), 'test/lat_acc:10m_v_component_of_wind': tensor(0.0423, device='cuda:0', dtype=torch.float64), 'test/lat_acc:aggregate': tensor(0.2681, device='cuda:0', dtype=torch.float64)}]
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃              Test metric              ┃             DataLoader 0             ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ test/lat_acc:10m_u_component_of_wind  │         0.09128973853780055          │
+│ test/lat_acc:10m_v_component_of_wind  │          0.0421499851980768          │
+│      test/lat_acc:2m_temperature      │          0.4650053422339763          │
+│        test/lat_acc:aggregate         │          0.2673333889683635          │
+│     test/lat_acc:geopotential_500     │         0.46419049824541775          │
+│     test/lat_acc:temperature_850      │          0.5098187279574681          │
+│   test/lat_acc:total_precipitation    │         0.03154604163744121          │
+│ test/lat_rmse:10m_u_component_of_wind │          4.525677324093445           │
+│ test/lat_rmse:10m_v_component_of_wind │          4.435653074782358           │
+│     test/lat_rmse:2m_temperature      │          5.766881201669521           │
+│        test/lat_rmse:aggregate        │          160.26993686640438          │
+│    test/lat_rmse:geopotential_500     │          942.4151554047721           │
+│     test/lat_rmse:temperature_850     │          4.4757975275005375          │
+│   test/lat_rmse:total_precipitation   │        0.00045666560800392437        │
+└───────────────────────────────────────┴──────────────────────────────────────┘
+Testing ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16/-- 0:00:29 • -:--:-- 5.90it/s 
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃              Test metric              ┃             DataLoader 0             ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ test/lat_acc:10m_u_component_of_wind  │         0.09166673085505131          │
+│ test/lat_acc:10m_v_component_of_wind  │         0.04234268768181289          │
+│      test/lat_acc:2m_temperature      │         0.46614800068189105          │
+│        test/lat_acc:aggregate         │          0.268139583748821           │
+│     test/lat_acc:geopotential_500     │          0.4655807389335612          │
+│     test/lat_acc:temperature_850      │          0.5114488876770885          │
+│   test/lat_acc:total_precipitation    │         0.031650456663521384         │
+│ test/lat_rmse:10m_u_component_of_wind │          4.525588441534915           │
+│ test/lat_rmse:10m_v_component_of_wind │          4.435616640438597           │
+│     test/lat_rmse:2m_temperature      │          5.772692512368675           │
+│        test/lat_rmse:aggregate        │          160.23105404639207          │
+│    test/lat_rmse:geopotential_500     │          942.1763887248694           │
+│     test/lat_rmse:temperature_850     │          4.475581290010266           │
+│   test/lat_rmse:total_precipitation   │        0.0004566691305960354         │
+└───────────────────────────────────────┴──────────────────────────────────────┘
+Testing ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16/-- 0:00:29 • -:--:-- 5.82it/s 
+the results are [{'test/lat_rmse:2m_temperature': tensor(5.7669, device='cuda:0', dtype=torch.float64), 'test/lat_rmse:geopotential_500': tensor(942.4152, device='cuda:0', dtype=torch.float64), 'test/lat_rmse:temperature_850': tensor(4.4758, device='cuda:0', dtype=torch.float64), 'test/lat_rmse:total_precipitation': tensor(0.0005, device='cuda:0', dtype=torch.float64), 'test/lat_rmse:10m_u_component_of_wind': tensor(4.5257, device='cuda:0', dtype=torch.float64), 'test/lat_rmse:10m_v_component_of_wind': tensor(4.4357, device='cuda:0', dtype=torch.float64), 'test/lat_rmse:aggregate': tensor(160.2699, device='cuda:0', dtype=torch.float64), 'test/lat_acc:2m_temperature': tensor(0.4650, device='cuda:0', dtype=torch.float64), 'test/lat_acc:geopotential_500': tensor(0.4642, device='cuda:0', dtype=torch.float64), 'test/lat_acc:temperature_850': tensor(0.5098, device='cuda:0', dtype=torch.float64), 'test/lat_acc:total_precipitation': tensor(0.0315, device='cuda:0', dtype=torch.float64), 'test/lat_acc:10m_u_component_of_wind': tensor(0.0913, device='cuda:0', dtype=torch.float64), 'test/lat_acc:10m_v_component_of_wind': tensor(0.0421, device='cuda:0', dtype=torch.float64), 'test/lat_acc:aggregate': tensor(0.2673, device='cuda:0', dtype=torch.float64)}]
+the results are [{'test/lat_rmse:2m_temperature': tensor(5.7727, device='cuda:0', dtype=torch.float64), 'test/lat_rmse:geopotential_500': tensor(942.1764, device='cuda:0', dtype=torch.float64), 'test/lat_rmse:temperature_850': tensor(4.4756, device='cuda:0', dtype=torch.float64), 'test/lat_rmse:total_precipitation': tensor(0.0005, device='cuda:0', dtype=torch.float64), 'test/lat_rmse:10m_u_component_of_wind': tensor(4.5256, device='cuda:0', dtype=torch.float64), 'test/lat_rmse:10m_v_component_of_wind': tensor(4.4356, device='cuda:0', dtype=torch.float64), 'test/lat_rmse:aggregate': tensor(160.2311, device='cuda:0', dtype=torch.float64), 'test/lat_acc:2m_temperature': tensor(0.4661, device='cuda:0', dtype=torch.float64), 'test/lat_acc:geopotential_500': tensor(0.4656, device='cuda:0', dtype=torch.float64), 'test/lat_acc:temperature_850': tensor(0.5114, device='cuda:0', dtype=torch.float64), 'test/lat_acc:total_precipitation': tensor(0.0317, device='cuda:0', dtype=torch.float64), 'test/lat_acc:10m_u_component_of_wind': tensor(0.0917, device='cuda:0', dtype=torch.float64), 'test/lat_acc:10m_v_component_of_wind': tensor(0.0423, device='cuda:0', dtype=torch.float64), 'test/lat_acc:aggregate': tensor(0.2681, device='cuda:0', dtype=torch.float64)}]
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃              Test metric              ┃             DataLoader 0             ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ test/lat_acc:10m_u_component_of_wind  │         0.09123469190396223          │
+│ test/lat_acc:10m_v_component_of_wind  │         0.04214648032935842          │
+│      test/lat_acc:2m_temperature      │          0.4646661501776982          │
+│        test/lat_acc:aggregate         │          0.2671047168708846          │
+│     test/lat_acc:geopotential_500     │         0.46350407873150423          │
+│     test/lat_acc:temperature_850      │          0.5095580785201553          │
+│   test/lat_acc:total_precipitation    │         0.031518821562628835         │
+│ test/lat_rmse:10m_u_component_of_wind │           4.52570082820156           │
+│ test/lat_rmse:10m_v_component_of_wind │          4.4356569789309095          │
+│     test/lat_rmse:2m_temperature      │          5.766766760103821           │
+│        test/lat_rmse:aggregate        │          160.32366405785396          │
+│    test/lat_rmse:geopotential_500     │           942.737421515398           │
+│     test/lat_rmse:temperature_850     │          4.475981597101001           │
+│   test/lat_rmse:total_precipitation   │        0.00045666738876158744        │
+└───────────────────────────────────────┴──────────────────────────────────────┘
+Testing ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16/-- 0:00:30 • -:--:-- 5.86it/s 
+the results are [{'test/lat_rmse:2m_temperature': tensor(5.7668, device='cuda:0', dtype=torch.float64), 'test/lat_rmse:geopotential_500': tensor(942.7374, device='cuda:0', dtype=torch.float64), 'test/lat_rmse:temperature_850': tensor(4.4760, device='cuda:0', dtype=torch.float64), 'test/lat_rmse:total_precipitation': tensor(0.0005, device='cuda:0', dtype=torch.float64), 'test/lat_rmse:10m_u_component_of_wind': tensor(4.5257, device='cuda:0', dtype=torch.float64), 'test/lat_rmse:10m_v_component_of_wind': tensor(4.4357, device='cuda:0', dtype=torch.float64), 'test/lat_rmse:aggregate': tensor(160.3237, device='cuda:0', dtype=torch.float64), 'test/lat_acc:2m_temperature': tensor(0.4647, device='cuda:0', dtype=torch.float64), 'test/lat_acc:geopotential_500': tensor(0.4635, device='cuda:0', dtype=torch.float64), 'test/lat_acc:temperature_850': tensor(0.5096, device='cuda:0', dtype=torch.float64), 'test/lat_acc:total_precipitation': tensor(0.0315, device='cuda:0', dtype=torch.float64), 'test/lat_acc:10m_u_component_of_wind': tensor(0.0912, device='cuda:0', dtype=torch.float64), 'test/lat_acc:10m_v_component_of_wind': tensor(0.0421, device='cuda:0', dtype=torch.float64), 'test/lat_acc:aggregate': tensor(0.2671, device='cuda:0', dtype=torch.float64)}]
+
+real	1m20.994s
+user	0m0.020s
+sys	0m0.043s
