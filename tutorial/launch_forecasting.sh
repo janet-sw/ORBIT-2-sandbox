@@ -5,7 +5,7 @@
 #SBATCH --gres=gpu:8
 #SBATCH --ntasks-per-node=8
 #SBATCH --cpus-per-task=7
-#SBATCH -t 00:40:00
+#SBATCH -t 02:00:00
 #SBATCH -q debug
 #SBATCH -o logs/forecast-%j.out
 #SBATCH -e logs/forecast-%j.out
@@ -52,7 +52,7 @@ MODEL="res_slimvit"
 # Prediction range in hours
 PRED_RANGE=120
 # Training hyper‑parameters
-MAX_EPOCHS=5
+MAX_EPOCHS=50
 PATIENCE=5
 # Output directory path
 OUTPUT_DIR="/lustre/orion/csc662/proj-shared/janet/forecasting"

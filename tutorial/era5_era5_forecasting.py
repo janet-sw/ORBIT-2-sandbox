@@ -224,8 +224,8 @@ model = cl.load_forecasting_module(
 pl.seed_everything(0)
 default_root_dir = f"{args.output_dir}/{args.model}_{args.forecast_type}_forecasting_{args.pred_range}"
 logger = TensorBoardLogger(save_dir=f"{default_root_dir}/logs")
-# early_stopping = "val/lat_mse:aggregate"
-early_stopping = "train/lat_mse:aggregate"
+early_stopping = "val/lat_mse:aggregate"
+# early_stopping = "train/lat_mse:aggregate"
 
 gpu_stats = DeviceStatsMonitor()
 
@@ -321,7 +321,9 @@ def continuous_testing(model, trainer, args, from_checkpoint=False):
 if args.checkpoint is None:
     trainer.fit(model, datamodule=dm)
     if args.forecast_type == "direct":
-        trainer.test(model, datamodule=dm, ckpt_path="best")
+        trainer.test(model, datamodule=dm,
+                    #  ckpt_path="best"
+                     )
     elif args.forecast_type == "iterative":
         iterative_testing(model, trainer, args)
     elif args.forecast_type == "continuous":
