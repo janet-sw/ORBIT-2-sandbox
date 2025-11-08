@@ -5,7 +5,7 @@
 #SBATCH --gres=gpu:8
 #SBATCH --ntasks-per-node=8
 #SBATCH --cpus-per-task=7
-#SBATCH -t 02:00:00
+#SBATCH -t 00:20:00
 #SBATCH -q debug
 #SBATCH -o logs/forecast-%j.out
 #SBATCH -e logs/forecast-%j.out

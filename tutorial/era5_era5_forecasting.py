@@ -29,6 +29,8 @@ from climate_learn.models.hub.components.cnn_blocks import (
 from pytorch_lightning.callbacks import DeviceStatsMonitor
 import functools
 from torch.distributed.fsdp.wrap import transformer_auto_wrap_policy
+import os, glob, datetime
+
 
 os.environ['MASTER_ADDR'] = str(os.environ['HOSTNAME'])
 os.environ['MASTER_PORT'] = "29500"
@@ -74,6 +76,12 @@ iterative.add_argument("pred_range", type=int, choices=[6, 24, 72, 120, 240])
 continuous.add_argument("era5_dir")
 continuous.add_argument("model", choices=["resnet", "unet", "vit"])
 args = parser.parse_args()
+
+def latest_ckpt(ckpt_dir):
+    if not os.path.isdir(ckpt_dir):
+        return None
+    cands = glob.glob(os.path.join(ckpt_dir, "*.ckpt"))
+    return max(cands, key=os.path.getmtime) if cands else None
 
 # Set up data
 variables = [
@@ -224,8 +232,8 @@ model = cl.load_forecasting_module(
 pl.seed_everything(0)
 default_root_dir = f"{args.output_dir}/{args.model}_{args.forecast_type}_forecasting_{args.pred_range}"
 logger = TensorBoardLogger(save_dir=f"{default_root_dir}/logs")
-early_stopping = "val/lat_mse:aggregate"
-# early_stopping = "train/lat_mse:aggregate"
+# early_stopping = "val/lat_mse:aggregate"
+early_stopping = "train/lat_mse:aggregate"
 
 gpu_stats = DeviceStatsMonitor()
 
@@ -319,7 +327,10 @@ def continuous_testing(model, trainer, args, from_checkpoint=False):
 
 # Train and evaluate model from scratch
 if args.checkpoint is None:
-    trainer.fit(model, datamodule=dm)
+    # trainer.fit(model, datamodule=dm)
+    resume_path = latest_ckpt(f"{default_root_dir}/checkpoints")
+    print(f">> Resuming from: {resume_path}" if resume_path else ">> Fresh run", flush=True)
+    trainer.fit(model, datamodule=dm, ckpt_path=resume_path)
     if args.forecast_type == "direct":
         trainer.test(model, datamodule=dm,
                     #  ckpt_path="best"
