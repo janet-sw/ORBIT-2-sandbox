@@ -1,0 +1,4 @@
+__pycache__/
+*.py[cod]
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/logs/
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial/miopen_cache
