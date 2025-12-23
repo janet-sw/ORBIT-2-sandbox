@@ -1,5 +1,6 @@
 import os
 import numpy as np
+import pytorch_lightning as pl
 import torch
 import torch.nn.functional as F
 from torch.utils.data import DataLoader
@@ -14,7 +15,7 @@ def collate_fn(batch):
     return inp, out, ["daily_tmax"], ["daily_tmax"]
 
 
-class ERA5toPRISMDataModule(torch.nn.Module):
+class ERA5toPRISMDataModule(pl.LightningDataModule):
     def __init__(self, in_root_dir, out_root_dir, batch_size=32, num_workers=4):
         super().__init__()
         self.save_hyperparameters(logger=False)

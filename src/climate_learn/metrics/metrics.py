@@ -1,25 +1,15 @@
 # Standard Library
-from typing import Callable, Optional, Union, List, Dict
+from typing import Callable, Optional, Union
 
 # Local application
 from .utils import MetricsMetaInfo, register
 from .functional import *
-from torch.distributed.fsdp import FullyShardedDataParallel as FSDP
-from torch.distributed.fsdp.wrap import wrap, transformer_auto_wrap_policy
-from torch.distributed.fsdp import MixedPrecision
-from torch.distributed.algorithms._checkpoint.checkpoint_wrapper import (
-checkpoint_wrapper,
-CheckpointImpl,
-apply_activation_checkpointing,
-)
-import functools
-from torchvision.models import vgg16
+
+# Third party
 import numpy as np
 import torch
-import os
-from torch.nn import Sequential
-import lpips
-from lpips import NetLinLayer 
+
+
 class Metric:
     """Parent class for all ClimateLearn metrics."""
 
@@ -123,49 +113,7 @@ class PERCEPTUAL(Metric):
     def __init__(self, device, model, aggregate_only: bool = False, metainfo: Optional[MetricsMetaInfo] = None):
         self.loss_fn = lpips.LPIPS(net='vgg').to(device) # best forward scores
         self.model = model
-
-        for param in self.loss_fn.parameters():
-            param.requires_grad = False
-
-
-        local_rank = int(os.environ['SLURM_LOCALID'])
-
-
-
-        #bfloat16 policy
-        bfloatPolicy = MixedPrecision(
-            param_dtype=torch.bfloat16,
-            # Gradient communication precision.
-            reduce_dtype=torch.bfloat16,
-            # Buffer precision.
-            buffer_dtype=torch.bfloat16,
-        )
-
-
-        auto_wrap_policy = functools.partial(
-            transformer_auto_wrap_policy,
-            transformer_layer_cls={
-               Sequential   # < ---- Your Transformer layer class
-            },
-        )
-
-
-        check_fn = lambda submodule: isinstance(submodule, Sequential)
-
-
-
-        self.loss_fn = FSDP(self.loss_fn, device_id = local_rank, process_group= None,sync_module_states=True, sharding_strategy=torch.distributed.fsdp.ShardingStrategy.FULL_SHARD,auto_wrap_policy = None, mixed_precision=bfloatPolicy, forward_prefetch=True, limit_all_gathers = False)
-
-        #activation checkpointing
-        apply_activation_checkpointing(
-            self.loss_fn, checkpoint_wrapper_fn=checkpoint_wrapper, check_fn=check_fn
-        )
-
-
-
-
-        if torch.distributed.get_rank()==0:
-            print("inside PERCEPTUAL after FSDP","self.loss_fn",self.loss_fn,flush=True)
+        print("inside PERCEPTUAL","self.loss_fn",self.loss_fn,flush=True)
 
         super().__init__(aggregate_only, metainfo)
 
@@ -186,81 +134,53 @@ class PERCEPTUAL(Metric):
         """
         return perceptual(self.loss_fn,self.model, pred, target)
 
-@register("imagegradient")
-class IMAGEGRADIENT(Metric):
-    """Computes image gradient error."""
+
+@register("quantile")
+class QUANTILE(Metric):
+    """Computes quantile loss."""
 
     def __call__(
         self,
         pred: Union[torch.FloatTensor, torch.DoubleTensor],
         target: Union[torch.FloatTensor, torch.DoubleTensor],
-        var_names: Optional[List[str]] = None,
-        var_weights: Optional[Dict[str, float]] = None
     ) -> Union[torch.FloatTensor, torch.DoubleTensor]:
-        return image_gradient(pred, target,var_names,var_weights)
+        r"""
+        .. highlight:: python
 
+        :param pred: The predicted values of shape [B,C,H,W].
+        :type pred: torch.FloatTensor|torch.DoubleTensor
+        :param target: The ground truth target values of shape [B,C,H,W].
+        :type target: torch.FloatTensor|torch.DoubleTensor
 
-
-@register("bayesian_tv")
-class Bayesian_TV(Metric):
-    """Computes weighted mean-squared error with variable-specific weights."""
-
-    def __call__(
-        self,
-        pred: Union[torch.FloatTensor, torch.DoubleTensor],
-        target: Union[torch.FloatTensor, torch.DoubleTensor],
-        var_names: Optional[List[str]] = None,
-        var_weights: Optional[Dict[str, float]] = None
-    ) -> Union[torch.FloatTensor, torch.DoubleTensor]:
+        :rtype: torch.FloatTensor|torch.DoubleTensor
         """
-        Compute the bayesian total variation weighted MSE loss.
-        
-        Args:
-            pred: Predictions tensor of shape [B,C,H,W]
-            target: Target tensor of shape [B,C,H,W]
-            
-        Returns:
-            Loss tensor
-        """
-        return bayesian_tv(
-            pred,
-            target,
-            var_names,
-            var_weights,
-            self.aggregate_only
-        )
-
+        return lat_weighted_quantile(pred, target, self.aggregate_only)
 
 
 
 @register("mse")
 class MSE(Metric):
-    """Computes weighted mean-squared error with variable-specific weights."""
+    """Computes standard mean-squared error."""
 
     def __call__(
         self,
         pred: Union[torch.FloatTensor, torch.DoubleTensor],
         target: Union[torch.FloatTensor, torch.DoubleTensor],
-        var_names: Optional[List[str]] = None,
-        var_weights: Optional[Dict[str, float]] = None
     ) -> Union[torch.FloatTensor, torch.DoubleTensor]:
+        r"""
+        .. highlight:: python
+
+        :param pred: The predicted values of shape [B,C,H,W].
+        :type pred: torch.FloatTensor|torch.DoubleTensor
+        :param target: The ground truth target values of shape [B,C,H,W].
+        :type target: torch.FloatTensor|torch.DoubleTensor
+
+        :return: A singleton tensor if `self.aggregate_only` is `True`. Else, a
+            tensor of shape [C+1], where the last element is the aggregate
+            MSE, and the preceding elements are the channel-wise MSEs.
+        :rtype: torch.FloatTensor|torch.DoubleTensor
         """
-        Compute the weighted MSE loss.
-        
-        Args:
-            pred: Predictions tensor of shape [B,C,H,W]
-            target: Target tensor of shape [B,C,H,W]
-            
-        Returns:
-            Loss tensor
-        """
-        return mse(
-            pred,
-            target,
-            var_names,
-            var_weights,
-            self.aggregate_only
-        )
+        return mse(pred, target, self.aggregate_only)
 
 
 
@@ -313,7 +233,7 @@ class LatWeightedMSE(LatitudeWeightedMetric):
         :rtype: torch.FloatTensor|torch.DoubleTensor
         """
         super().cast_to_device(pred)
-        return mse(pred, target, aggregate_only=self.aggregate_only, lat_weights=self.lat_weights)
+        return mse(pred, target, self.aggregate_only, self.lat_weights)
 
 
 @register("rmse")

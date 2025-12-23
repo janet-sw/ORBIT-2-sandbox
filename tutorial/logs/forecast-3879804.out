@@ -1,0 +1,170 @@
+
+Lmod is automatically replacing "gcc-native/14.2" with "gcc/12.2.0".
+
+
+The following have been reloaded with a version change:
+  1) cray-libsci/24.11.0 => cray-libsci/23.09.1.1
+  2) cray-mpich/8.1.31 => cray-mpich/8.1.27
+  3) libfabric/1.22.0 => libfabric/1.20.1
+
+Job configuration:
+  ERA5_DIR      = /lustre/orion/lrn036/world-shared/ERA5_npz/5.625_deg/
+  FORECAST_TYPE = direct
+  MODEL         = res_slimvit
+  PRED_RANGE    = 120
+  MAX_EPOCHS    = 5
+  PATIENCE      = 5
+  OUTPUT_DIR    = /lustre/orion/csc662/proj-shared/janet/forecasting
+  CHECKPOINT    = /lustre/orion/csc662/proj-shared/janet/forecasting/res_slimvit_direct_forecasting_120/checkpoints/epoch_019.ckpt
+srun: warning: can't honor --ntasks-per-node set to 1 which doesn't match the requested tasks 8 with the maximum number of requested nodes 1. Ignoring --ntasks-per-node.
+/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'repr' attribute with value False was provided to the `Field()` function, which has no effect in the context it was used. 'repr' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'frozen' attribute with value True was provided to the `Field()` function, which has no effect in the context it was used. 'frozen' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'repr' attribute with value False was provided to the `Field()` function, which has no effect in the context it was used. 'repr' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'frozen' attribute with value True was provided to the `Field()` function, which has no effect in the context it was used. 'frozen' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'repr' attribute with value False was provided to the `Field()` function, which has no effect in the context it was used. 'repr' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'frozen' attribute with value True was provided to the `Field()` function, which has no effect in the context it was used. 'frozen' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'repr' attribute with value False was provided to the `Field()` function, which has no effect in the context it was used. 'repr' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'frozen' attribute with value True was provided to the `Field()` function, which has no effect in the context it was used. 'frozen' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'repr' attribute with value False was provided to the `Field()` function, which has no effect in the context it was used. 'repr' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'frozen' attribute with value True was provided to the `Field()` function, which has no effect in the context it was used. 'frozen' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'repr' attribute with value False was provided to the `Field()` function, which has no effect in the context it was used. 'repr' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'frozen' attribute with value True was provided to the `Field()` function, which has no effect in the context it was used. 'frozen' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'repr' attribute with value False was provided to the `Field()` function, which has no effect in the context it was used. 'repr' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'frozen' attribute with value True was provided to the `Field()` function, which has no effect in the context it was used. 'frozen' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'repr' attribute with value False was provided to the `Field()` function, which has no effect in the context it was used. 'repr' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'frozen' attribute with value True was provided to the `Field()` function, which has no effect in the context it was used. 'frozen' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+world_size 8 num_nodes 1
+Loading model: res_slimvit
+Loading optimizer adamw
+Loading learning rate scheduler: linear-warmup-cosine-annealing
+Loading training loss: lat_mse
+No train transform
+Loading validation loss: lat_rmse
+Loading validation loss: lat_acc
+Loading validation loss: lat_mse
+Loading validation transform: denormalize
+Loading validation transform: denormalize
+No validation transform
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/tutorial/./era5_era5_forecasting.py", line 45, in <module>
+  File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/tutorial/./era5_era5_forecasting.py", line 45, in <module>
+  File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/tutorial/./era5_era5_forecasting.py", line 45, in <module>
+  File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/tutorial/./era5_era5_forecasting.py", line 45, in <module>
+  File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/tutorial/./era5_era5_forecasting.py", line 45, in <module>
+  File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/tutorial/./era5_era5_forecasting.py", line 45, in <module>
+  File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/tutorial/./era5_era5_forecasting.py", line 45, in <module>
+    torch.cuda.set_device(local_rank)
+    torch.cuda.set_device(local_rank)
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/torch/cuda/__init__.py", line 478, in set_device
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/torch/cuda/__init__.py", line 478, in set_device
+    torch.cuda.set_device(local_rank)
+    torch.cuda.set_device(local_rank)
+    torch.cuda.set_device(local_rank)
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/torch/cuda/__init__.py", line 478, in set_device
+    torch.cuda.set_device(local_rank)
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/torch/cuda/__init__.py", line 478, in set_device
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/torch/cuda/__init__.py", line 478, in set_device
+    torch.cuda.set_device(local_rank)
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/torch/cuda/__init__.py", line 478, in set_device
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/torch/cuda/__init__.py", line 478, in set_device
+Loading test loss: lat_rmse
+Loading test loss: lat_acc
+Loading test transform: denormalize
+Loading test transform: denormalize
+[rank: 0] Seed set to 0
+    torch._C._cuda_setDevice(device)
+RuntimeError: HIP error: invalid device ordinal
+HIP kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing AMD_SERIALIZE_KERNEL=3
+Compile with `TORCH_USE_HIP_DSA` to enable device-side assertions.
+
+    torch._C._cuda_setDevice(device)
+    torch._C._cuda_setDevice(device)
+    torch._C._cuda_setDevice(device)
+RuntimeError: HIP error: invalid device ordinal
+HIP kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing AMD_SERIALIZE_KERNEL=3
+Compile with `TORCH_USE_HIP_DSA` to enable device-side assertions.
+
+RuntimeError: HIP error: invalid device ordinal
+HIP kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing AMD_SERIALIZE_KERNEL=3
+Compile with `TORCH_USE_HIP_DSA` to enable device-side assertions.
+    torch._C._cuda_setDevice(device)
+
+RuntimeError: HIP error: invalid device ordinal
+HIP kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing AMD_SERIALIZE_KERNEL=3
+Compile with `TORCH_USE_HIP_DSA` to enable device-side assertions.
+
+    torch._C._cuda_setDevice(device)
+RuntimeError: HIP error: invalid device ordinal
+HIP kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing AMD_SERIALIZE_KERNEL=3
+Compile with `TORCH_USE_HIP_DSA` to enable device-side assertions.
+
+RuntimeError: HIP error: invalid device ordinal
+HIP kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing AMD_SERIALIZE_KERNEL=3
+Compile with `TORCH_USE_HIP_DSA` to enable device-side assertions.
+
+    torch._C._cuda_setDevice(device)
+RuntimeError: HIP error: invalid device ordinal
+HIP kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing AMD_SERIALIZE_KERNEL=3
+Compile with `TORCH_USE_HIP_DSA` to enable device-side assertions.
+
+/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/lightning_fabric/strategies/fsdp.py:697: `FSDPStrategy(activation_checkpointing=<class 'timm.models.vision_transformer.Block'>)` is deprecated, use `FSDPStrategy(activation_checkpointing_policy={<class 'timm.models.vision_transformer.Block'>})` instead.
+Traceback (most recent call last):
+  File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/tutorial/./era5_era5_forecasting.py", line 267, in <module>
+    trainer = pl.Trainer(
+              ^^^^^^^^^^^
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pytorch_lightning/utilities/argparse.py", line 70, in insert_env_defaults
+    return fn(self, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pytorch_lightning/trainer/trainer.py", line 404, in __init__
+    self._accelerator_connector = _AcceleratorConnector(
+                                  ^^^^^^^^^^^^^^^^^^^^^^
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pytorch_lightning/trainer/connectors/accelerator_connector.py", line 147, in __init__
+    self._set_parallel_devices_and_init_accelerator()
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pytorch_lightning/trainer/connectors/accelerator_connector.py", line 371, in _set_parallel_devices_and_init_accelerator
+    self._devices_flag = accelerator_cls.parse_devices(self._devices_flag)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pytorch_lightning/accelerators/cuda.py", line 88, in parse_devices
+    return _parse_gpu_ids(devices, include_cuda=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/lightning_fabric/utilities/device_parser.py", line 103, in _parse_gpu_ids
+    return _sanitize_gpu_ids(gpus, include_cuda=include_cuda, include_mps=include_mps)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/lightning_fabric/utilities/device_parser.py", line 136, in _sanitize_gpu_ids
+    raise MisconfigurationException(
+lightning_fabric.utilities.exceptions.MisconfigurationException: You requested gpu: [0, 1, 2, 3, 4, 5, 6, 7]
+ But your machine only has: [0]
+srun: error: frontier08841: tasks 0-7: Exited with exit code 1
+srun: Terminating StepId=3879804.0
+
+real	0m41.495s
+user	0m0.016s
+sys	0m0.035s

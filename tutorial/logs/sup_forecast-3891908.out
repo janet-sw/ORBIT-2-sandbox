@@ -1,0 +1,58 @@
+
+Lmod is automatically replacing "gcc-native/14.2" with "gcc/12.2.0".
+
+
+The following have been reloaded with a version change:
+  1) cray-libsci/24.11.0 => cray-libsci/23.09.1.1
+  2) cray-mpich/8.1.31 => cray-mpich/8.1.27
+  3) libfabric/1.22.0 => libfabric/1.20.1
+
+Job configuration:
+  ERA5_DIR      = /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/
+  FORECAST_TYPE = direct
+  MODEL         = res_slimvit
+  PRED_RANGE    = 120
+  MAX_EPOCHS    = 5
+  PATIENCE      = 10
+  OUTPUT_DIR    = /lustre/orion/csc662/proj-shared/janet/forecasting
+/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'repr' attribute with value False was provided to the `Field()` function, which has no effect in the context it was used. 'repr' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'frozen' attribute with value True was provided to the `Field()` function, which has no effect in the context it was used. 'frozen' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+[baseline 1 sample] ok
+Traceback (most recent call last):
+  File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/tutorial/./era5_era5_forecasting_sup_res.py", line 296, in <module>
+    t0=time.time(); it=iter(dm.train_dataloader()); print(f"[build loader] {time.time()-t0:.1f}s", flush=True)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 479, in __iter__
+    self._iterator = self._get_iterator()
+                     ^^^^^^^^^^^^^^^^^^^^
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 415, in _get_iterator
+    return _MultiProcessingDataLoaderIter(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 1138, in __init__
+    w.start()
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/multiprocessing/process.py", line 121, in start
+    self._popen = self._Popen(self)
+                  ^^^^^^^^^^^^^^^^^
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/multiprocessing/context.py", line 224, in _Popen
+    return _default_context.get_context().Process._Popen(process_obj)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/multiprocessing/context.py", line 289, in _Popen
+    return Popen(process_obj)
+           ^^^^^^^^^^^^^^^^^^
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/multiprocessing/popen_spawn_posix.py", line 32, in __init__
+    super().__init__(process_obj)
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/multiprocessing/popen_fork.py", line 19, in __init__
+    self._launch(process_obj)
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/multiprocessing/popen_spawn_posix.py", line 47, in _launch
+    reduction.dump(process_obj, fp)
+  File "/ccs/home/janetw/miniconda3/envs/orbit/lib/python3.12/multiprocessing/reduction.py", line 60, in dump
+    ForkingPickler(file, protocol).dump(obj)
+AttributeError: Can't get local object 'make_downsample_collate.<locals>.collate'
+srun: error: frontier04096: task 0: Exited with exit code 1
+srun: Terminating StepId=3891908.0
+
+real	30m14.140s
+user	0m0.020s
+sys	0m0.029s

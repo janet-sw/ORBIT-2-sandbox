@@ -1,0 +1,111 @@
+
+Lmod is automatically replacing "gcc-native/14.2" with "gcc/12.2.0".
+
+
+The following have been reloaded with a version change:
+  1) cray-libsci/24.11.0 => cray-libsci/23.09.1.1
+  2) cray-mpich/8.1.31 => cray-mpich/8.1.27
+  3) libfabric/1.22.0 => libfabric/1.20.1
+
+Job configuration:
+  ERA5_DIR      = /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/
+  FORECAST_TYPE = direct
+  MODEL         = res_slimvit
+  PRED_RANGE    = 120
+  MAX_EPOCHS    = 50
+  PATIENCE      = 20
+  OUTPUT_DIR    = /lustre/orion/csc662/proj-shared/janet/forecasting
+  CHECKPOINT    = /lustre/orion/csc662/proj-shared/janet/forecasting/test_high_ressolution_res_slimvit_direct_forecasting_120/checkpoints/epoch_014-step_1500.ckpt
+Loading model: res_slimvit
+Loading optimizer adamw
+Loading learning rate scheduler: linear-warmup-cosine-annealing
+Loading training loss: lat_mse
+No train transform
+Loading validation loss: lat_rmse
+Loading validation loss: lat_acc
+Loading validation loss: lat_mse
+Loading validation transform: denormalize
+Loading validation transform: denormalize
+No validation transform
+Loading test loss: lat_rmse
+Loading test loss: lat_acc
+Loading test transform: denormalize
+Loading test transform: denormalize
+[rank: 0] Seed set to 0
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/lightning_fabric/strategies/fsdp.py:697: `FSDPStrategy(activation_checkpointing=<class 'timm.models.vision_transformer.Block'>)` is deprecated, use `FSDPStrategy(activation_checkpointing_policy={<class 'timm.models.vision_transformer.Block'>})` instead.
+Trainer already configured with model summary callbacks: [<class 'pytorch_lightning.callbacks.rich_model_summary.RichModelSummary'>]. Skipping setting a default `ModelSummary` callback.
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+You are using a CUDA device ('AMD Instinct MI250X') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
+Initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/1
+[W1116 14:33:25.038367856 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [frontier09024.frontier.olcf.ornl.gov]:22125 (errno: 97 - Address family not supported by protocol).
+----------------------------------------------------------------------------------------------------
+distributed_backend=nccl
+All distributed processes registered. Starting with 1 processes
+----------------------------------------------------------------------------------------------------
+
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/torch/distributed/fsdp/_init_utils.py:430: UserWarning: FSDP is switching to use `NO_SHARD` instead of ShardingStrategy.FULL_SHARD since the world size is 1.
+  warnings.warn(
+SLURM auto-requeueing enabled. Setting signal handlers.
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/tutorial/./test_sup_res_parallel_test.py", line 422, in <module>
+[rank0]:     trainer.test(model, datamodule=dm)
+[rank0]:     ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 774, in test
+[rank0]:     return call._call_and_handle_interrupt(
+[rank0]:            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+[rank0]:         self, self._test_impl, model, dataloaders, ckpt_path, verbose, datamodule
+[rank0]:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:     )
+[rank0]:     ^
+[rank0]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/trainer/call.py", line 49, in _call_and_handle_interrupt
+[rank0]:     return trainer_fn(*args, **kwargs)
+[rank0]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 816, in _test_impl
+[rank0]:     results = self._run(model, ckpt_path=ckpt_path)
+[rank0]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 1011, in _run
+[rank0]:     results = self._run_stage()
+[rank0]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 1048, in _run_stage
+[rank0]:     return self._evaluation_loop.run()
+[rank0]:            ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+[rank0]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/loops/utilities.py", line 179, in _decorator
+[rank0]:     return loop_run(self, *args, **kwargs)
+[rank0]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/loops/evaluation_loop.py", line 145, in run
+[rank0]:     self._evaluation_step(batch, batch_idx, dataloader_idx, dataloader_iter)
+[rank0]:     ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/loops/evaluation_loop.py", line 437, in _evaluation_step
+[rank0]:     output = call._call_strategy_hook(trainer, hook_name, *step_args)
+[rank0]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/trainer/call.py", line 329, in _call_strategy_hook
+[rank0]:     output = fn(*args, **kwargs)
+[rank0]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/strategies/strategy.py", line 424, in test_step
+[rank0]:     return self._forward_redirection(self.model, self.lightning_module, "test_step", *args, **kwargs)
+[rank0]:            ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/strategies/strategy.py", line 641, in __call__
+[rank0]:     wrapper_output = wrapper_module(*args, **kwargs)
+[rank0]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank0]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 854, in forward
+[rank0]:     output = self._fsdp_wrapped_module(*args, **kwargs)
+[rank0]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank0]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/strategies/strategy.py", line 634, in wrapped_forward
+[rank0]:     out = method(*_args, **_kwargs)
+[rank0]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/module.py", line 113, in test_step
+[rank0]:     self.evaluate(batch, "test")
+[rank0]:     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+[rank0]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/module.py", line 136, in evaluate
+[rank0]:     losses = lf(yhat_, y_)
+[rank0]:                 ^^^^^
+[rank0]: UnboundLocalError: cannot access local variable 'yhat_' where it is not associated with a value
+Testing: |          | 0/? [00:00<?, ?it/s]Testing: |          | 0/? [00:00<?, ?it/s]Testing DataLoader 0: |          | 0/? [00:00<?, ?it/s]srun: error: frontier09024: task 0: Exited with exit code 1
+srun: Terminating StepId=3897125.0
+
+real	0m54.746s
+user	0m0.015s
+sys	0m0.032s

@@ -1,11 +1,9 @@
 # Standard library
 from typing import Union
 
-
 # Local application
 from .registry import register
 from ..data import IterDataModule
-from ..data.processing.era5_constants import PRECIP_VARIABLES
 
 # Third party
 import torch
@@ -20,8 +18,8 @@ class Denormalize:
             raise RuntimeError("norm was 'None', did you setup the data module?")
         # Hotfix to work with dict style data
         if isinstance(norm, dict):
-            mean_norm = torch.tensor([norm[k].mean if k not in PRECIP_VARIABLES else 0. for k in norm.keys()])
-            std_norm = torch.tensor([norm[k].std if k not in PRECIP_VARIABLES else 1. for k in norm.keys()])
+            mean_norm = torch.tensor([norm[k].mean for k in norm.keys()])
+            std_norm = torch.tensor([norm[k].std for k in norm.keys()])
         else:
             mean_norm = norm.mean
             std_norm = norm.std

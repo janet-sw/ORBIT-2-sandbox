@@ -2,54 +2,31 @@
 # Visit https://bit.ly/cffinit to generate yours today!
 
 cff-version: 1.2.0
-title: >-
-  ORBIT-2: Scaling Exascale Vision Transformer for Weather
-  and Climate Downscaling
+title: "ClimateLearn: Benchmarking Machine Learning for Weather and Climate Modeling"
 message: >-
   If you use this software, please cite it using the
   metadata from this file.
 type: software
 authors:
-  - given-names: Xiao
-    family-names: Wang
-    email: wangx2@ornl.gov
-    affiliation: Oak Ridge National Laboratory
-  - given-names: Jong-Youl
-    family-names: Choi
-    email: choij@ornl.gov
-    affiliation: Oak Ridge National Laboratory
-  - given-names: Isaac
-    family-names: Lyngaas
-    email: ilyngaasir@ornl.gov
-    affiliation: Oak Ridge National Laboratory
-  - given-names: Hong-Jun
-    family-names: Yoon
-    email: yoonh@ornl.gov
-    affiliation: Oak Ridge National Laboratory
-  - given-names: Ashwin
-    family-names: Aji
-    email: Ashwin.Aji@amd.com
-    affiliation: AMD
-  - given-names: Takuya
-    family-names: Kurihana
-    affiliation: Oak Ridge National Laboratory
-  - given-names: Ming
-    family-names: Fan
-    email: fanm@ornl.gov
-    affiliation: Oak Ridge National Laboratory
-  - given-names: Prasanna
-    family-names: Balaprakash
-    email: pbalapra@ornl.gov
-    affiliation: Oak Ridge National Laboratory
-  - given-names: Dan
-    family-names: Lu
-    email: lud1@ornl.gov
-    affiliation: Oak Ridge National Laboratory
-identifiers:
-  - type: url
-    value: 'https://github.com/XiaoWang-Github/ORBIT-2'
-    description: ORBIT-2 Code Repository
-repository-code: 'https://github.com/XiaoWang-Github/ORBIT-2'
-abstract: >-
-  ORBIT-2 Weather and Climate Downscaling Foundation Model Software Repository
-
+  - given-names: Tung
+    family-names: Nguyen
+    email: tungnd@cs.ucla.edu
+    affiliation: 'University of California, Los Angeles'
+  - given-names: Jason
+    family-names: Jewik
+    email: jason.jewik@ucla.edu
+    affiliation: 'University of California, Los Angeles'
+  - given-names: Hritik
+    family-names: Bansal
+    email: hbansal@ucla.edu
+    affiliation: 'University of California, Los Angeles'
+  - given-names: Prakhar
+    family-names: Sharma
+    email: prakhar6sharma@gmail.com
+    affiliation: 'University of California, Los Angeles'
+  - given-names: Aditya
+    family-names: Grover
+    email: adityag@cs.ucla.edu
+    affiliation: 'University of California, Los Angeles'
+license: MIT
+repository-code: "https://github.com/aditya-grover/climate-learn"

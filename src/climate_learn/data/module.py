@@ -3,6 +3,7 @@ from typing import Any, Callable, Dict, Sequence, Tuple, Union
 
 # Third party
 import numpy as np
+from pytorch_lightning import LightningDataModule
 import torch
 from torch.utils.data import DataLoader, IterableDataset
 from torchvision.transforms import transforms
@@ -64,7 +65,7 @@ def get_data_class(dataset_args: DatasetArgs) -> Callable[..., Dataset]:
         return dataset_args._data_class
 
 
-class DataModule(torch.nn.Module):
+class DataModule(LightningDataModule):
     """ClimateLearn's data module interface. Encapsulates dataset/task-specific
     data modules."""
 

@@ -1,0 +1,88 @@
+Metadata-Version: 2.4
+Name: climate_learn
+Version: 1.0.0
+Summary: ClimateLearn: Benchmarking Machine Learning for Weather and Climate Modeling
+Author-email: MINT at UCLA <jason.jewik@ucla.edu>, Tung Nguyen <tungnd@cs.ucla.edu>, Jason Jewik <jason.jewik@ucla.edu>, Hritik Bansal <hbansal@ucla.edu>, Prakhar Sharma <prakhar6sharma@gmail.com>, Aditya Grover <adityag@cs.ucla.edu>
+Project-URL: Source, https://github.com/aditya-grover/climate-learn
+Project-URL: Issue Tracker, https://github.com/aditya-grover/climate-learn/issues
+Project-URL: Documentation, https://climatelearn.readthedocs.io/en/latest/
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Atmospheric Science
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: cdsapi>=0.5.1
+Requires-Dist: dask>=2022.2.0
+Requires-Dist: importlib-metadata==4.13.0
+Requires-Dist: matplotlib>=3.5.3
+Requires-Dist: netcdf4>=1.6.2
+Requires-Dist: pytorch-lightning>=1.9.0
+Requires-Dist: scikit-learn>=1.0.2
+Requires-Dist: timm==0.9.2
+Requires-Dist: tensorboard==2.11.2
+Requires-Dist: wandb>=0.13.9
+Requires-Dist: xarray>=0.20.2
+Requires-Dist: rasterio>=1.3.7
+Provides-Extra: dev
+Requires-Dist: black>=23.1.0; extra == "dev"
+Requires-Dist: flake8>=3.9.2; extra == "dev"
+Requires-Dist: pytest>=7.2.1; extra == "dev"
+Requires-Dist: properscoring; extra == "dev"
+Requires-Dist: build; extra == "dev"
+Requires-Dist: twine; extra == "dev"
+Provides-Extra: docs
+Requires-Dist: ipython>=7.34.0; extra == "docs"
+Requires-Dist: nbsphinx>=0.8.12; extra == "docs"
+Requires-Dist: sphinx>=5.3.0; extra == "docs"
+Requires-Dist: sphinx_rtd_theme>=1.1.1; extra == "docs"
+Dynamic: license-file
+
+**ORBIT Downscaling Experiments Proof of Principle**
+
+Modified from Climate Learn.
+
+(1) Install your conda environment
+
+(2) Then do `pip install -e .` to install the package to the environment
+
+(3) Do  `pip install -r requirements.txt`
+
+(4) Go to tutorial folder. Downscaling.py is the downscaling super resolution proof of principle code
+
+**Run Script for Downscaling and Visualization**
+
+
+To run it, use the job scheduler to run the job launch_downscaling.sh
+
+`python ./downscaling.py --max_epochs 30 /lustre/orion/lrn036/world-shared/ERA5_npz/5.625_deg/ /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/ vit t2m`
+
+In the above line --max_epochs is the maximum number of epochs. "/lustre/orion/lrn036/world-shared/ERA5_npz/5.625_deg/" is the input coarse resolution data path. "/lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/" is the ground truth high resolution data path. 
+"vit" is an AI architecture of choice. Besides "**vit**", you can also use "**resnet**", "**unet**" or "**res_slimvit**" architecture by setting the corresponding flag.
+"t2m" is the output variable. Some other example output variables to choose include t2m (surface temperature), z500 (500 hpa geopotential), t850 (temperature at 850 hpa), and u10 (u component of wind at 10m). 
+The input variables can be changed in the code downscaling.py
+You can also request multiple nodes by changing `#SBATCH --nodes=1`  and set --nodes to be larger than 1.
+
+
+(5) To visualize the input and output, run launch_visualize.sh afterwards. Use only a single node with a single GPU. In visualize.py, do not forget to change the AI architecture choice and checkpoint path according to the training setup.
+
+(6) Available training losses include MSE, MAE, latitude weighted MSE, Pearson Score, Anomaly Coefficient. Most recently, hybrid perceptual loss is implemented.  Training loss can be changed in ./src/climate-learn/util/loader.py
+
+
+**Available Training Data**
+ERA5 5.6 degree "/lustre/orion/lrn036/world-shared/ERA5_npz/5.625_deg/" 
+ERA5 1.4 degree "/lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/"
+ERA5 0.25 degree "/lustre/orion/world-shared/lrn036/jyc/frontier/ClimaX-v2/data/ERA5-wb2/0.25_deg" 

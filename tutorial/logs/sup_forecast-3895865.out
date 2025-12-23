@@ -1,0 +1,212 @@
+
+Lmod is automatically replacing "gcc-native/14.2" with "gcc/12.2.0".
+
+
+The following have been reloaded with a version change:
+  1) cray-libsci/24.11.0 => cray-libsci/23.09.1.1
+  2) cray-mpich/8.1.31 => cray-mpich/8.1.27
+  3) libfabric/1.22.0 => libfabric/1.20.1
+
+Job configuration:
+  ERA5_DIR      = /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/
+  FORECAST_TYPE = direct
+  MODEL         = res_slimvit
+  PRED_RANGE    = 120
+  MAX_EPOCHS    = 50
+  PATIENCE      = 10
+  OUTPUT_DIR    = /lustre/orion/csc662/proj-shared/janet/forecasting
+  CHECKPOINT    = 
+world_size 8 num_nodes 1
+Loading model: res_slimvit
+Loading model: res_slimvit
+Loading model: res_slimvit
+Loading model: res_slimvit
+Loading model: res_slimvit
+Loading model: res_slimvit
+Loading model: res_slimvit
+Loading model: res_slimvit
+Loading optimizer adamw
+Loading optimizer adamw
+Loading optimizer adamw
+Loading optimizer adamw
+Loading optimizer adamw
+Loading optimizer adamw
+Loading optimizer adamw
+Loading optimizer adamw
+Loading learning rate scheduler: linear-warmup-cosine-annealing
+Loading learning rate scheduler: linear-warmup-cosine-annealing
+Loading learning rate scheduler: linear-warmup-cosine-annealing
+Loading learning rate scheduler: linear-warmup-cosine-annealing
+Loading learning rate scheduler: linear-warmup-cosine-annealing
+Loading learning rate scheduler: linear-warmup-cosine-annealing
+Loading learning rate scheduler: linear-warmup-cosine-annealing
+Loading learning rate scheduler: linear-warmup-cosine-annealing
+Loading training loss: lat_mse
+Loading training loss: lat_mse
+Loading training loss: lat_mse
+Loading training loss: lat_mse
+Loading training loss: lat_mse
+Loading training loss: lat_mse
+Loading training loss: lat_mse
+Loading training loss: lat_mse
+No train transform
+No train transform
+No train transform
+No train transform
+No train transform
+No train transform
+No train transform
+No train transform
+Loading validation loss: lat_rmse
+Loading validation loss: lat_rmse
+Loading validation loss: lat_rmse
+Loading validation loss: lat_rmse
+Loading validation loss: lat_rmse
+Loading validation loss: lat_rmse
+Loading validation loss: lat_rmse
+Loading validation loss: lat_rmse
+Loading validation loss: lat_acc
+Loading validation loss: lat_acc
+Loading validation loss: lat_acc
+Loading validation loss: lat_acc
+Loading validation loss: lat_acc
+Loading validation loss: lat_acc
+Loading validation loss: lat_acc
+Loading validation loss: lat_mse
+Loading validation transform: denormalize
+Loading validation loss: lat_mse
+Loading validation transform: denormalize
+Loading validation loss: lat_mse
+Loading validation loss: lat_mse
+Loading validation transform: denormalize
+Loading validation transform: denormalize
+Loading validation transform: denormalize
+Loading validation transform: denormalize
+No validation transform
+Loading validation loss: lat_mse
+Loading validation loss: lat_mse
+Loading validation loss: lat_mse
+No validation transform
+Loading validation transform: denormalize
+Loading validation transform: denormalize
+Loading validation transform: denormalize
+Loading validation transform: denormalize
+Loading validation transform: denormalize
+No validation transform
+No validation transform
+Loading validation transform: denormalize
+Loading validation transform: denormalize
+Loading validation transform: denormalize
+No validation transform
+No validation transform
+No validation transform
+Loading validation loss: lat_acc
+Loading validation loss: lat_mse
+Loading validation transform: denormalize
+Loading validation transform: denormalize
+No validation transform
+Loading test loss: lat_rmse
+Loading test loss: lat_rmse
+Loading test loss: lat_rmse
+Loading test loss: lat_rmse
+Loading test loss: lat_rmse
+Loading test loss: lat_rmse
+Loading test loss: lat_rmse
+Loading test loss: lat_rmse
+Loading test loss: lat_acc
+Loading test transform: denormalize
+Loading test loss: lat_acc
+Loading test loss: lat_acc
+Loading test loss: lat_acc
+Loading test transform: denormalize
+Loading test transform: denormalize
+Loading test transform: denormalize
+Loading test transform: denormalize
+Loading test loss: lat_acc
+Loading test transform: denormalize
+Loading test transform: denormalize
+Loading test transform: denormalize
+Loading test transform: denormalize
+Loading test loss: lat_acc
+Loading test loss: lat_acc
+Loading test transform: denormalize
+Loading test transform: denormalize
+Loading test transform: denormalize
+Loading test transform: denormalize
+Loading test transform: denormalize
+[rank: 6] Seed set to 0
+[rank: 1] Seed set to 0
+[rank: 2] Seed set to 0
+[rank: 3] Seed set to 0
+[rank: 4] Seed set to 0
+[rank: 5] Seed set to 0
+[rank: 7] Seed set to 0
+Loading test loss: lat_acc
+Loading test transform: denormalize
+Loading test transform: denormalize
+[rank: 0] Seed set to 0
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/lightning_fabric/strategies/fsdp.py:697: `FSDPStrategy(activation_checkpointing=<class 'timm.models.vision_transformer.Block'>)` is deprecated, use `FSDPStrategy(activation_checkpointing_policy={<class 'timm.models.vision_transformer.Block'>})` instead.
+Trainer already configured with model summary callbacks: [<class 'pytorch_lightning.callbacks.rich_model_summary.RichModelSummary'>]. Skipping setting a default `ModelSummary` callback.
+GPU available: True (cuda), used: True
+>> Fresh run
+>> Fresh run
+>> Fresh run
+TPU available: False, using: 0 TPU cores
+>> Fresh run
+>> Fresh run
+>> Fresh run
+>> Fresh run
+>> Fresh run
+You are using a CUDA device ('AMD Instinct MI250X') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
+Initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/8
+Initializing distributed: GLOBAL_RANK: 1, MEMBER: 2/8
+Initializing distributed: GLOBAL_RANK: 7, MEMBER: 8/8
+Initializing distributed: GLOBAL_RANK: 2, MEMBER: 3/8
+Initializing distributed: GLOBAL_RANK: 3, MEMBER: 4/8
+Initializing distributed: GLOBAL_RANK: 6, MEMBER: 7/8
+Initializing distributed: GLOBAL_RANK: 5, MEMBER: 6/8
+Initializing distributed: GLOBAL_RANK: 4, MEMBER: 5/8
+[W1115 23:27:11.712666196 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [frontier09085.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W1115 23:27:11.712669643 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [frontier09085.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W1115 23:27:11.712684862 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [frontier09085.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W1115 23:27:11.712682287 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [frontier09085.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W1115 23:27:11.712678529 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [frontier09085.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W1115 23:27:11.712980044 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [frontier09085.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W1115 23:27:11.713740664 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [frontier09085.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W1115 23:27:11.765121372 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [frontier09085.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+----------------------------------------------------------------------------------------------------
+distributed_backend=nccl
+All distributed processes registered. Starting with 8 processes
+----------------------------------------------------------------------------------------------------
+
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7]
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7]
+LOCAL_RANK: 4 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7]
+LOCAL_RANK: 5 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7]
+LOCAL_RANK: 6 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7]
+LOCAL_RANK: 7 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/utilities/model_summary/model_summary.py:231: Precision bf16-mixed is not supported by the model summary.  Estimated model size in MB will not be accurate. Using 32 bits instead.
+┏━━━┳━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━┓
+┃   ┃ Name ┃ Type         ┃ Params ┃ Mode  ┃
+┡━━━╇━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━┩
+│ 0 │ net  │ Res_Slim_ViT │  262 K │ train │
+└───┴──────┴──────────────┴────────┴───────┘
+Trainable params: 262 K                                                         
+Non-trainable params: 0                                                         
+Total params: 262 K                                                             
+Total estimated model params size (MB): 1                                       
+Modules in train mode: 208                                                      
+Modules in eval mode: 0                                                         
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+Training: |          | 0/? [00:00<?, ?it/s]Training: |          | 0/? [00:00<?, ?it/s]Epoch 0: |          | 0/? [00:00<?, ?it/s] Epoch 0: |          | 20/? [01:50<00:00,  0.18it/s]Epoch 0: |          | 20/? [01:50<00:00,  0.18it/s, v_num=15, train/lat_mse:aggregate=0.952]Epoch 0: |          | 40/? [01:53<00:00,  0.35it/s, v_num=15, train/lat_mse:aggregate=0.952]Epoch 0: |          | 40/? [01:53<00:00,  0.35it/s, v_num=15, train/lat_mse:aggregate=0.968]Epoch 0: |          | 60/? [01:57<00:00,  0.51it/s, v_num=15, train/lat_mse:aggregate=0.968]Epoch 0: |          | 60/? [01:57<00:00,  0.51it/s, v_num=15, train/lat_mse:aggregate=0.968]Epoch 0: |          | 80/? [02:01<00:00,  0.66it/s, v_num=15, train/lat_mse:aggregate=0.968]Epoch 0: |          | 80/? [02:01<00:00,  0.66it/s, v_num=15, train/lat_mse:aggregate=0.959]Epoch 0: |          | 100/? [02:04<00:00,  0.80it/s, v_num=15, train/lat_mse:aggregate=0.959]Epoch 0: |          | 100/? [02:04<00:00,  0.80it/s, v_num=15, train/lat_mse:aggregate=0.954]Epoch 0: |          | 100/? [02:17<00:00,  0.73it/s, v_num=15, train/lat_mse:aggregate=0.967]Epoch 0: |          | 0/? [00:00<?, ?it/s, v_num=15, train/lat_mse:aggregate=0.967]          Epoch 1: |          | 0/? [00:00<?, ?it/s, v_num=15, train/lat_mse:aggregate=0.967]Epoch 1: |          | 20/? [08:47<00:00,  0.04it/s, v_num=15, train/lat_mse:aggregate=0.967]Epoch 1: |          | 20/? [08:47<00:00,  0.04it/s, v_num=15, train/lat_mse:aggregate=0.763]Epoch 1: |          | 40/? [08:51<00:00,  0.08it/s, v_num=15, train/lat_mse:aggregate=0.763]Epoch 1: |          | 40/? [08:51<00:00,  0.08it/s, v_num=15, train/lat_mse:aggregate=0.724]Epoch 1: |          | 60/? [08:54<00:00,  0.11it/s, v_num=15, train/lat_mse:aggregate=0.724]Epoch 1: |          | 60/? [08:54<00:00,  0.11it/s, v_num=15, train/lat_mse:aggregate=0.676]Epoch 1: |          | 80/? [08:58<00:00,  0.15it/s, v_num=15, train/lat_mse:aggregate=0.676]Epoch 1: |          | 80/? [08:58<00:00,  0.15it/s, v_num=15, train/lat_mse:aggregate=0.694]Epoch 1: |          | 100/? [09:01<00:00,  0.18it/s, v_num=15, train/lat_mse:aggregate=0.694]Epoch 1: |          | 100/? [09:01<00:00,  0.18it/s, v_num=15, train/lat_mse:aggregate=0.669]Epoch 1: |          | 100/? [09:03<00:00,  0.18it/s, v_num=15, train/lat_mse:aggregate=0.675]Epoch 1: |          | 0/? [00:00<?, ?it/s, v_num=15, train/lat_mse:aggregate=0.675]          Epoch 2: |          | 0/? [00:00<?, ?it/s, v_num=15, train/lat_mse:aggregate=0.675]Epoch 2: |          | 20/? [08:34<00:00,  0.04it/s, v_num=15, train/lat_mse:aggregate=0.675]Epoch 2: |          | 20/? [08:34<00:00,  0.04it/s, v_num=15, train/lat_mse:aggregate=0.670]Epoch 2: |          | 40/? [08:37<00:00,  0.08it/s, v_num=15, train/lat_mse:aggregate=0.670]Epoch 2: |          | 40/? [08:37<00:00,  0.08it/s, v_num=15, train/lat_mse:aggregate=0.666]Epoch 2: |          | 60/? [08:41<00:00,  0.12it/s, v_num=15, train/lat_mse:aggregate=0.666]Epoch 2: |          | 60/? [08:41<00:00,  0.12it/s, v_num=15, train/lat_mse:aggregate=0.656]Epoch 2: |          | 80/? [08:45<00:00,  0.15it/s, v_num=15, train/lat_mse:aggregate=0.656]Epoch 2: |          | 80/? [08:45<00:00,  0.15it/s, v_num=15, train/lat_mse:aggregate=0.651]Epoch 2: |          | 100/? [08:48<00:00,  0.19it/s, v_num=15, train/lat_mse:aggregate=0.651]Epoch 2: |          | 100/? [08:48<00:00,  0.19it/s, v_num=15, train/lat_mse:aggregate=0.627]Epoch 2: |          | 100/? [08:49<00:00,  0.19it/s, v_num=15, train/lat_mse:aggregate=0.649]Epoch 2: |          | 0/? [00:00<?, ?it/s, v_num=15, train/lat_mse:aggregate=0.649]          Epoch 3: |          | 0/? [00:00<?, ?it/s, v_num=15, train/lat_mse:aggregate=0.649]Epoch 3: |          | 20/? [08:30<00:00,  0.04it/s, v_num=15, train/lat_mse:aggregate=0.649]Epoch 3: |          | 20/? [08:30<00:00,  0.04it/s, v_num=15, train/lat_mse:aggregate=0.649]Epoch 3: |          | 40/? [08:34<00:00,  0.08it/s, v_num=15, train/lat_mse:aggregate=0.649]Epoch 3: |          | 40/? [08:34<00:00,  0.08it/s, v_num=15, train/lat_mse:aggregate=0.633]Epoch 3: |          | 60/? [08:37<00:00,  0.12it/s, v_num=15, train/lat_mse:aggregate=0.633]Epoch 3: |          | 60/? [08:37<00:00,  0.12it/s, v_num=15, train/lat_mse:aggregate=0.649]Epoch 3: |          | 80/? [08:41<00:00,  0.15it/s, v_num=15, train/lat_mse:aggregate=0.649]Epoch 3: |          | 80/? [08:41<00:00,  0.15it/s, v_num=15, train/lat_mse:aggregate=0.634]Epoch 3: |          | 100/? [08:44<00:00,  0.19it/s, v_num=15, train/lat_mse:aggregate=0.634]Epoch 3: |          | 100/? [08:44<00:00,  0.19it/s, v_num=15, train/lat_mse:aggregate=0.626]Epoch 3: |          | 100/? [08:46<00:00,  0.19it/s, v_num=15, train/lat_mse:aggregate=0.621]Epoch 3: |          | 0/? [00:00<?, ?it/s, v_num=15, train/lat_mse:aggregate=0.621]          Epoch 4: |          | 0/? [00:00<?, ?it/s, v_num=15, train/lat_mse:aggregate=0.621]Epoch 4: |          | 20/? [08:34<00:00,  0.04it/s, v_num=15, train/lat_mse:aggregate=0.621]Epoch 4: |          | 20/? [08:34<00:00,  0.04it/s, v_num=15, train/lat_mse:aggregate=0.643]Epoch 4: |          | 40/? [08:37<00:00,  0.08it/s, v_num=15, train/lat_mse:aggregate=0.643]Epoch 4: |          | 40/? [08:37<00:00,  0.08it/s, v_num=15, train/lat_mse:aggregate=0.636]Epoch 4: |          | 60/? [08:41<00:00,  0.12it/s, v_num=15, train/lat_mse:aggregate=0.636]Epoch 4: |          | 60/? [08:41<00:00,  0.12it/s, v_num=15, train/lat_mse:aggregate=0.614]Epoch 4: |          | 80/? [08:44<00:00,  0.15it/s, v_num=15, train/lat_mse:aggregate=0.614]Epoch 4: |          | 80/? [08:44<00:00,  0.15it/s, v_num=15, train/lat_mse:aggregate=0.633]Epoch 4: |          | 100/? [08:48<00:00,  0.19it/s, v_num=15, train/lat_mse:aggregate=0.633]Epoch 4: |          | 100/? [08:48<00:00,  0.19it/s, v_num=15, train/lat_mse:aggregate=0.623]Epoch 4: |          | 100/? [08:49<00:00,  0.19it/s, v_num=15, train/lat_mse:aggregate=0.642]Epoch 4: |          | 0/? [00:00<?, ?it/s, v_num=15, train/lat_mse:aggregate=0.642]          Epoch 5: |          | 0/? [00:00<?, ?it/s, v_num=15, train/lat_mse:aggregate=0.642]Epoch 5: |          | 20/? [08:43<00:00,  0.04it/s, v_num=15, train/lat_mse:aggregate=0.642]Epoch 5: |          | 20/? [08:43<00:00,  0.04it/s, v_num=15, train/lat_mse:aggregate=0.636]Epoch 5: |          | 40/? [08:47<00:00,  0.08it/s, v_num=15, train/lat_mse:aggregate=0.636]Epoch 5: |          | 40/? [08:47<00:00,  0.08it/s, v_num=15, train/lat_mse:aggregate=0.598]Epoch 5: |          | 60/? [08:50<00:00,  0.11it/s, v_num=15, train/lat_mse:aggregate=0.598]Epoch 5: |          | 60/? [08:50<00:00,  0.11it/s, v_num=15, train/lat_mse:aggregate=0.637]Epoch 5: |          | 80/? [08:54<00:00,  0.15it/s, v_num=15, train/lat_mse:aggregate=0.637]Epoch 5: |          | 80/? [08:54<00:00,  0.15it/s, v_num=15, train/lat_mse:aggregate=0.631]Epoch 5: |          | 100/? [08:57<00:00,  0.19it/s, v_num=15, train/lat_mse:aggregate=0.631]Epoch 5: |          | 100/? [08:57<00:00,  0.19it/s, v_num=15, train/lat_mse:aggregate=0.626]Epoch 5: |          | 100/? [08:59<00:00,  0.19it/s, v_num=15, train/lat_mse:aggregate=0.632]Epoch 5: |          | 0/? [00:00<?, ?it/s, v_num=15, train/lat_mse:aggregate=0.632]          Epoch 6: |          | 0/? [00:00<?, ?it/s, v_num=15, train/lat_mse:aggregate=0.632]Epoch 6: |          | 20/? [08:36<00:00,  0.04it/s, v_num=15, train/lat_mse:aggregate=0.632]Epoch 6: |          | 20/? [08:36<00:00,  0.04it/s, v_num=15, train/lat_mse:aggregate=0.622]Epoch 6: |          | 40/? [08:39<00:00,  0.08it/s, v_num=15, train/lat_mse:aggregate=0.622]Epoch 6: |          | 40/? [08:39<00:00,  0.08it/s, v_num=15, train/lat_mse:aggregate=0.623]Epoch 6: |          | 60/? [08:43<00:00,  0.11it/s, v_num=15, train/lat_mse:aggregate=0.623]Epoch 6: |          | 60/? [08:43<00:00,  0.11it/s, v_num=15, train/lat_mse:aggregate=0.622]Epoch 6: |          | 80/? [08:46<00:00,  0.15it/s, v_num=15, train/lat_mse:aggregate=0.622]Epoch 6: |          | 80/? [08:46<00:00,  0.15it/s, v_num=15, train/lat_mse:aggregate=0.617]Epoch 6: |          | 100/? [08:50<00:00,  0.19it/s, v_num=15, train/lat_mse:aggregate=0.617]Epoch 6: |          | 100/? [08:50<00:00,  0.19it/s, v_num=15, train/lat_mse:aggregate=0.607]Epoch 6: |          | 100/? [08:51<00:00,  0.19it/s, v_num=15, train/lat_mse:aggregate=0.616]Epoch 6: |          | 0/? [00:00<?, ?it/s, v_num=15, train/lat_mse:aggregate=0.616]          Epoch 7: |          | 0/? [00:00<?, ?it/s, v_num=15, train/lat_mse:aggregate=0.616]Epoch 7: |          | 20/? [08:54<00:00,  0.04it/s, v_num=15, train/lat_mse:aggregate=0.616]Epoch 7: |          | 20/? [08:54<00:00,  0.04it/s, v_num=15, train/lat_mse:aggregate=0.617]Epoch 7: |          | 40/? [08:58<00:00,  0.07it/s, v_num=15, train/lat_mse:aggregate=0.617]Epoch 7: |          | 40/? [08:58<00:00,  0.07it/s, v_num=15, train/lat_mse:aggregate=0.610]Epoch 7: |          | 60/? [09:01<00:00,  0.11it/s, v_num=15, train/lat_mse:aggregate=0.610]Epoch 7: |          | 60/? [09:01<00:00,  0.11it/s, v_num=15, train/lat_mse:aggregate=0.618]Epoch 7: |          | 80/? [09:05<00:00,  0.15it/s, v_num=15, train/lat_mse:aggregate=0.618]Epoch 7: |          | 80/? [09:05<00:00,  0.15it/s, v_num=15, train/lat_mse:aggregate=0.607]Epoch 7: |          | 100/? [09:08<00:00,  0.18it/s, v_num=15, train/lat_mse:aggregate=0.607]Epoch 7: |          | 100/? [09:08<00:00,  0.18it/s, v_num=15, train/lat_mse:aggregate=0.604]Epoch 7: |          | 100/? [09:10<00:00,  0.18it/s, v_num=15, train/lat_mse:aggregate=0.600]Epoch 7: |          | 0/? [00:00<?, ?it/s, v_num=15, train/lat_mse:aggregate=0.600]          Epoch 8: |          | 0/? [00:00<?, ?it/s, v_num=15, train/lat_mse:aggregate=0.600]Epoch 8: |          | 20/? [08:50<00:00,  0.04it/s, v_num=15, train/lat_mse:aggregate=0.600]Epoch 8: |          | 20/? [08:50<00:00,  0.04it/s, v_num=15, train/lat_mse:aggregate=0.607]Epoch 8: |          | 40/? [08:54<00:00,  0.07it/s, v_num=15, train/lat_mse:aggregate=0.607]Epoch 8: |          | 40/? [08:54<00:00,  0.07it/s, v_num=15, train/lat_mse:aggregate=0.611]Epoch 8: |          | 60/? [08:57<00:00,  0.11it/s, v_num=15, train/lat_mse:aggregate=0.611]Epoch 8: |          | 60/? [08:57<00:00,  0.11it/s, v_num=15, train/lat_mse:aggregate=0.616]Epoch 8: |          | 80/? [09:01<00:00,  0.15it/s, v_num=15, train/lat_mse:aggregate=0.616]Epoch 8: |          | 80/? [09:01<00:00,  0.15it/s, v_num=15, train/lat_mse:aggregate=0.619]Epoch 8: |          | 100/? [09:04<00:00,  0.18it/s, v_num=15, train/lat_mse:aggregate=0.619]Epoch 8: |          | 100/? [09:04<00:00,  0.18it/s, v_num=15, train/lat_mse:aggregate=0.615]Epoch 8: |          | 100/? [09:06<00:00,  0.18it/s, v_num=15, train/lat_mse:aggregate=0.604]Epoch 8: |          | 0/? [00:00<?, ?it/s, v_num=15, train/lat_mse:aggregate=0.604]          Epoch 9: |          | 0/? [00:00<?, ?it/s, v_num=15, train/lat_mse:aggregate=0.604]Epoch 9: |          | 20/? [08:39<00:00,  0.04it/s, v_num=15, train/lat_mse:aggregate=0.604]Epoch 9: |          | 20/? [08:39<00:00,  0.04it/s, v_num=15, train/lat_mse:aggregate=0.607]Epoch 9: |          | 40/? [08:42<00:00,  0.08it/s, v_num=15, train/lat_mse:aggregate=0.607]Epoch 9: |          | 40/? [08:42<00:00,  0.08it/s, v_num=15, train/lat_mse:aggregate=0.585]Epoch 9: |          | 60/? [08:46<00:00,  0.11it/s, v_num=15, train/lat_mse:aggregate=0.585]Epoch 9: |          | 60/? [08:46<00:00,  0.11it/s, v_num=15, train/lat_mse:aggregate=0.604]Epoch 9: |          | 80/? [08:49<00:00,  0.15it/s, v_num=15, train/lat_mse:aggregate=0.604]Epoch 9: |          | 80/? [08:49<00:00,  0.15it/s, v_num=15, train/lat_mse:aggregate=0.591]Epoch 9: |          | 100/? [08:53<00:00,  0.19it/s, v_num=15, train/lat_mse:aggregate=0.591]Epoch 9: |          | 100/? [08:53<00:00,  0.19it/s, v_num=15, train/lat_mse:aggregate=0.596]Epoch 9: |          | 100/? [08:55<00:00,  0.19it/s, v_num=15, train/lat_mse:aggregate=0.601]Epoch 9: |          | 0/? [00:00<?, ?it/s, v_num=15, train/lat_mse:aggregate=0.601]          Epoch 10: |          | 0/? [00:00<?, ?it/s, v_num=15, train/lat_mse:aggregate=0.601]Epoch 10: |          | 20/? [08:09<00:00,  0.04it/s, v_num=15, train/lat_mse:aggregate=0.601]Epoch 10: |          | 20/? [08:09<00:00,  0.04it/s, v_num=15, train/lat_mse:aggregate=0.618]Epoch 10: |          | 40/? [08:13<00:00,  0.08it/s, v_num=15, train/lat_mse:aggregate=0.618]Epoch 10: |          | 40/? [08:13<00:00,  0.08it/s, v_num=15, train/lat_mse:aggregate=0.605]Epoch 10: |          | 60/? [08:17<00:00,  0.12it/s, v_num=15, train/lat_mse:aggregate=0.605]Epoch 10: |          | 60/? [08:17<00:00,  0.12it/s, v_num=15, train/lat_mse:aggregate=0.628]Epoch 10: |          | 80/? [08:20<00:00,  0.16it/s, v_num=15, train/lat_mse:aggregate=0.628]Epoch 10: |          | 80/? [08:20<00:00,  0.16it/s, v_num=15, train/lat_mse:aggregate=0.602]Epoch 10: |          | 100/? [08:24<00:00,  0.20it/s, v_num=15, train/lat_mse:aggregate=0.602]Epoch 10: |          | 100/? [08:24<00:00,  0.20it/s, v_num=15, train/lat_mse:aggregate=0.610]Epoch 10: |          | 100/? [08:26<00:00,  0.20it/s, v_num=15, train/lat_mse:aggregate=0.603]Epoch 10: |          | 0/? [00:00<?, ?it/s, v_num=15, train/lat_mse:aggregate=0.603]          Epoch 11: |          | 0/? [00:00<?, ?it/s, v_num=15, train/lat_mse:aggregate=0.603]Epoch 11: |          | 20/? [08:35<00:00,  0.04it/s, v_num=15, train/lat_mse:aggregate=0.603]Epoch 11: |          | 20/? [08:35<00:00,  0.04it/s, v_num=15, train/lat_mse:aggregate=0.567]Epoch 11: |          | 40/? [08:38<00:00,  0.08it/s, v_num=15, train/lat_mse:aggregate=0.567]Epoch 11: |          | 40/? [08:38<00:00,  0.08it/s, v_num=15, train/lat_mse:aggregate=0.581]Epoch 11: |          | 60/? [08:42<00:00,  0.11it/s, v_num=15, train/lat_mse:aggregate=0.581]Epoch 11: |          | 60/? [08:42<00:00,  0.11it/s, v_num=15, train/lat_mse:aggregate=0.595]Epoch 11: |          | 80/? [08:45<00:00,  0.15it/s, v_num=15, train/lat_mse:aggregate=0.595]Epoch 11: |          | 80/? [08:45<00:00,  0.15it/s, v_num=15, train/lat_mse:aggregate=0.578]Epoch 11: |          | 100/? [08:49<00:00,  0.19it/s, v_num=15, train/lat_mse:aggregate=0.578]Epoch 11: |          | 100/? [08:49<00:00,  0.19it/s, v_num=15, train/lat_mse:aggregate=0.565]Epoch 11: |          | 100/? [08:50<00:00,  0.19it/s, v_num=15, train/lat_mse:aggregate=0.586]Epoch 11: |          | 0/? [00:00<?, ?it/s, v_num=15, train/lat_mse:aggregate=0.586]          Epoch 12: |          | 0/? [00:00<?, ?it/s, v_num=15, train/lat_mse:aggregate=0.586]Epoch 12: |          | 20/? [09:24<00:00,  0.04it/s, v_num=15, train/lat_mse:aggregate=0.586]Epoch 12: |          | 20/? [09:24<00:00,  0.04it/s, v_num=15, train/lat_mse:aggregate=0.581]Epoch 12: |          | 40/? [09:27<00:00,  0.07it/s, v_num=15, train/lat_mse:aggregate=0.581]Epoch 12: |          | 40/? [09:27<00:00,  0.07it/s, v_num=15, train/lat_mse:aggregate=0.589]Epoch 12: |          | 60/? [09:31<00:00,  0.10it/s, v_num=15, train/lat_mse:aggregate=0.589]Epoch 12: |          | 60/? [09:31<00:00,  0.10it/s, v_num=15, train/lat_mse:aggregate=0.578]Epoch 12: |          | 80/? [09:35<00:00,  0.14it/s, v_num=15, train/lat_mse:aggregate=0.578]Epoch 12: |          | 80/? [09:35<00:00,  0.14it/s, v_num=15, train/lat_mse:aggregate=0.584]Epoch 12: |          | 100/? [09:38<00:00srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** STEP 3895865.0 ON frontier09085 CANCELLED AT 2025-11-16T01:26:58 DUE TO TIME LIMIT ***
+slurmstepd: error: *** JOB 3895865 ON frontier09085 CANCELLED AT 2025-11-16T01:26:58 DUE TO TIME LIMIT ***

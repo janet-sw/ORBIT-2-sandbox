@@ -1,7 +1,5 @@
 # Standard library
-from typing import Optional, Union, List, Dict
-
-from sympy import true
+from typing import Optional, Union
 
 # Local application
 from .utils import Pred, handles_probabilistic
@@ -10,7 +8,6 @@ from .utils import Pred, handles_probabilistic
 import torch
 import torch.nn.functional as F
 import lpips
-from torchmetrics.functional.image import image_gradients
 from einops import repeat
 import torchvision
 
@@ -29,6 +26,7 @@ def perceptual(
 
 
     error = F.l1_loss(pred, target) + 0.5*torch.mean(loss_fn(pred,target))
+
 
     return error
 
@@ -57,144 +55,15 @@ def lat_weighted_quantile(
 
 
 @handles_probabilistic
-def image_gradient(
-    pred: Pred,
-    target: Union[torch.FloatTensor, torch.DoubleTensor],
-    var_names: Optional[List[str]] = None,
-    var_weights: Optional[Dict[str, float]] = None,
-    aggregate_only: bool = False,
-    lat_weights: Optional[Union[torch.FloatTensor, torch.DoubleTensor]] = None,
-) -> Union[torch.FloatTensor, torch.DoubleTensor]:
-    """
-    Computes the image gradient loss between the ground truth and predicted images.
-
-    Args:
-        target (torch.Tensor): Ground truth image tensor of shape (B, C, V, H, W) or (B, V, H, W).
-        pred (torch.Tensor): Predicted image tensor with the same shape as `image`.
-    Returns:
-        dict: A dictionary containing the gradient loss.
-    """
-
-    error_1 = (pred - target).square()
-    error_2 = image_gradient_fn(pred, target)
-
-    if var_names is not None:
-        assert len(var_names) == pred.shape[1], "Number of variable names must match channel dimension"
-
-        channel_weights = torch.ones(pred.shape[1], device=pred.device, dtype=pred.dtype)
-        for i, var in enumerate(var_names):
-            weight = var_weights.get(var, 1.0)
-            channel_weights[i] = weight
-        weights_expanded = channel_weights.view(1, -1, 1, 1)
-        error_1 = error_1 * weights_expanded
-        error_2 = error_2 * weights_expanded
-
-    loss = torch.mean(error_1) + 0.1*torch.mean(error_2)
-
-    return loss
-
-@handles_probabilistic
-def image_gradient_fn(pred:Pred, 
-                      target: Union[torch.BFloat16Tensor, torch.FloatTensor, torch.DoubleTensor]
-                      ):
-    
-    # Ensure images are at least 4D (batch, V, H, W)
-    if pred.dim() == 5:
-        pred = pred.flatten(0, 1)  # Merge batch and channel dimensions
-
-    if target.dim() == 5:
-        target = target.flatten(0, 1)
-
-    # Compute image gradients
-    dy, dx = image_gradients(target)
-    hat_dy, hat_dx = image_gradients(pred)
-
-    # Compute gradient difference loss: add latitude weight if needed
-    error = torch.mean(torch.abs(dx - hat_dx) + torch.abs(dy - hat_dy))
-    return error
-
-
-@handles_probabilistic
-def bayesian_tv(
-    pred: Pred,
-    target: Union[torch.FloatTensor, torch.DoubleTensor],
-    var_names: Optional[List[str]] = None,
-    var_weights: Optional[Dict[str, float]] = None,
-    aggregate_only: bool = False,
-    lat_weights: Optional[Union[torch.FloatTensor, torch.DoubleTensor]] = None,
-) -> Union[torch.FloatTensor, torch.DoubleTensor]:
-
-    mse_error = (pred - target).square()
-
-    pixel_dif1 = torch.abs(pred[:,:,1:,:] - pred[:,:,:-1,:]) #vertical TV difference
-    pixel_dif2 = torch.abs(pred[:,:,:,1:] - pred[:,:,:,:-1]) #horizontal TV difference
-    pixel_dif3 = torch.abs(pred[:,:,1:,1:] - pred[:,:,:-1,:-1]) #diagonal TV difference
-    pixel_dif4 = torch.abs(pred[:,:,1:,:-1] - pred[:,:,:-1,1:]) #opposite diagonal TV difference
-
-
-    pixel_dif1 = F.pad(pixel_dif1,(0,0,0,1),"constant",0)
-    pixel_dif2 = F.pad(pixel_dif2,(0,1),"constant",0)
-    pixel_dif3 = F.pad(pixel_dif3,(0,1,0,1),"constant",0)
-    pixel_dif4 = F.pad(pixel_dif4,(1,0,0,1),"constant",0)
-
-
-    prior_weight =0.02
-    prior_error = prior_weight*(pixel_dif1+pixel_dif2 + 0.7*pixel_dif3+0.7*pixel_dif4)
-
-
-    error = mse_error + prior_error
-    #if torch.distributed.get_rank()==0:
-    #    print("torch.mean(mse_error)",torch.mean(mse_error),"torch.mean(prior_error)",torch.mean(prior_error),flush=True)
-
-    #print('during  mse with error', error.dtype, pred.dtype, target.dtype)
-    if lat_weights is not None:
-        error = error * lat_weights
-
-    if var_names is not None:
-        assert len(var_names) == pred.shape[1], "Number of variable names must match channel dimension"
-
-        channel_weights = torch.ones(pred.shape[1], device=pred.device, dtype=pred.dtype)
-        for i, var in enumerate(var_names):
-            weight = var_weights.get(var, 1.0)
-            channel_weights[i] = weight
-        weights_expanded = channel_weights.view(1, -1, 1, 1)
-        error = error * weights_expanded
-
-    per_channel_losses = error.mean([0, 2, 3])
-    loss = error.mean()
-    if aggregate_only:
-        return loss
-    return torch.cat((per_channel_losses, loss.unsqueeze(0)))
-
-
-
-
-
-@handles_probabilistic
 def mse(
     pred: Pred,
     target: Union[torch.FloatTensor, torch.DoubleTensor],
-    var_names: Optional[List[str]] = None,
-    var_weights: Optional[Dict[str, float]] = None,
     aggregate_only: bool = False,
     lat_weights: Optional[Union[torch.FloatTensor, torch.DoubleTensor]] = None,
 ) -> Union[torch.FloatTensor, torch.DoubleTensor]:
-
     error = (pred - target).square()
-    #print('during  mse with error', error.dtype, pred.dtype, target.dtype)
     if lat_weights is not None:
         error = error * lat_weights
-
-    if var_names is not None:
-        assert len(var_names) == pred.shape[1], "Number of variable names must match channel dimension"
-
-        channel_weights = torch.ones(pred.shape[1], device=pred.device, dtype=pred.dtype)
-        for i, var in enumerate(var_names):
-            weight = var_weights.get(var, 1.0)
-            channel_weights[i] = weight
-        weights_expanded = channel_weights.view(1, -1, 1, 1)
-        error = error * weights_expanded
-
     per_channel_losses = error.mean([0, 2, 3])
     loss = error.mean()
     if aggregate_only:

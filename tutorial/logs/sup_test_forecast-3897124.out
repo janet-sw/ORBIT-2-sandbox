@@ -1,0 +1,77 @@
+
+Lmod is automatically replacing "gcc-native/14.2" with "gcc/12.2.0".
+
+
+The following have been reloaded with a version change:
+  1) cray-libsci/24.11.0 => cray-libsci/23.09.1.1
+  2) cray-mpich/8.1.31 => cray-mpich/8.1.27
+  3) libfabric/1.22.0 => libfabric/1.20.1
+
+Job configuration:
+  ERA5_DIR      = /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/
+  FORECAST_TYPE = direct
+  MODEL         = res_slimvit
+  PRED_RANGE    = 120
+  MAX_EPOCHS    = 50
+  PATIENCE      = 20
+  OUTPUT_DIR    = /lustre/orion/csc662/proj-shared/janet/forecasting
+  CHECKPOINT    = /lustre/orion/csc662/proj-shared/janet/forecasting/test_high_ressolution_res_slimvit_direct_forecasting_120/checkpoints/epoch_014-step_1500.ckpt
+world_size 1 num_nodes 0
+Loading model: res_slimvit
+Loading optimizer adamw
+Loading learning rate scheduler: linear-warmup-cosine-annealing
+Loading training loss: lat_mse
+No train transform
+Loading validation loss: lat_rmse
+Loading validation loss: lat_acc
+Loading validation loss: lat_mse
+Loading validation transform: denormalize
+Loading validation transform: denormalize
+No validation transform
+Loading test loss: lat_rmse
+Loading test loss: lat_acc
+Loading test transform: denormalize
+Loading test transform: denormalize
+[rank: 0] Seed set to 0
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/lightning_fabric/strategies/fsdp.py:697: `FSDPStrategy(activation_checkpointing=<class 'timm.models.vision_transformer.Block'>)` is deprecated, use `FSDPStrategy(activation_checkpointing_policy={<class 'timm.models.vision_transformer.Block'>})` instead.
+Traceback (most recent call last):
+  File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/tutorial/./test_sup_res_parallel.py", line 310, in <module>
+    trainer = pl.Trainer(
+        logger=logger,
+    ...<9 lines>...
+        check_val_every_n_epoch=1,
+    )
+  File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/utilities/argparse.py", line 70, in insert_env_defaults
+    return fn(self, **kwargs)
+  File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 404, in __init__
+    self._accelerator_connector = _AcceleratorConnector(
+                                  ~~~~~~~~~~~~~~~~~~~~~^
+        devices=devices,
+        ^^^^^^^^^^^^^^^^
+    ...<8 lines>...
+        plugins=plugins,
+        ^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/trainer/connectors/accelerator_connector.py", line 145, in __init__
+    self._set_parallel_devices_and_init_accelerator()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/trainer/connectors/accelerator_connector.py", line 364, in _set_parallel_devices_and_init_accelerator
+    self._devices_flag = accelerator_cls.parse_devices(self._devices_flag)
+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/accelerators/cuda.py", line 88, in parse_devices
+    return _parse_gpu_ids(devices, include_cuda=True)
+  File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/lightning_fabric/utilities/device_parser.py", line 103, in _parse_gpu_ids
+    return _sanitize_gpu_ids(gpus, include_cuda=include_cuda, include_mps=include_mps)
+  File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/lightning_fabric/utilities/device_parser.py", line 136, in _sanitize_gpu_ids
+    raise MisconfigurationException(
+        f"You requested gpu: {gpus}\n But your machine only has: {all_available_gpus}"
+    )
+lightning_fabric.utilities.exceptions.MisconfigurationException: You requested gpu: [0, 1, 2, 3, 4, 5, 6, 7]
+ But your machine only has: [0]
+srun: error: frontier09024: task 0: Exited with exit code 1
+srun: Terminating StepId=3897124.0
+
+real	0m21.892s
+user	0m0.015s
+sys	0m0.032s

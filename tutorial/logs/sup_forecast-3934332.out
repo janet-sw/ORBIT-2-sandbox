@@ -1,0 +1,255 @@
+
+Lmod is automatically replacing "gcc-native/14.2" with "gcc/12.2.0".
+
+
+The following have been reloaded with a version change:
+  1) cray-libsci/24.11.0 => cray-libsci/23.09.1.1
+  2) cray-mpich/8.1.31 => cray-mpich/8.1.27
+  3) libfabric/1.22.0 => libfabric/1.20.1
+
+Job configuration:
+  ERA5_DIR      = /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/
+  FORECAST_TYPE = direct
+  MODEL         = res_slimvit
+  PRED_RANGE    = 120
+  MAX_EPOCHS    = 50
+  PATIENCE      = 20
+  OUTPUT_DIR    = /lustre/orion/csc662/proj-shared/janet/forecasting
+  CHECKPOINT    = 
+world_size 8 num_nodes 1
+Loading model: res_slimvit
+Loading model: res_slimvit
+Loading model: res_slimvit
+Loading model: res_slimvit
+Loading model: res_slimvit
+Loading model: res_slimvit
+Loading model: res_slimvit
+Loading model: res_slimvit
+Loading optimizer adamw
+Loading optimizer adamw
+Loading optimizer adamw
+Loading optimizer adamw
+Loading optimizer adamw
+Loading optimizer adamw
+Loading optimizer adamw
+Loading optimizer adamw
+Loading learning rate scheduler: linear-warmup-cosine-annealing
+Loading learning rate scheduler: linear-warmup-cosine-annealing
+Loading learning rate scheduler: linear-warmup-cosine-annealing
+Loading learning rate scheduler: linear-warmup-cosine-annealing
+Loading learning rate scheduler: linear-warmup-cosine-annealing
+Loading learning rate scheduler: linear-warmup-cosine-annealing
+Loading learning rate scheduler: linear-warmup-cosine-annealing
+Loading learning rate scheduler: linear-warmup-cosine-annealing
+Loading training loss: lat_mse
+Loading training loss: lat_mse
+Loading training loss: lat_mse
+Loading training loss: lat_mse
+Loading training loss: lat_mse
+Loading training loss: lat_mse
+Loading training loss: lat_mse
+Loading training loss: lat_mse
+No train transform
+No train transform
+No train transform
+No train transform
+No train transform
+No train transform
+No train transform
+No train transform
+Loading validation loss: lat_rmse
+Loading validation loss: lat_rmse
+Loading validation loss: lat_rmse
+Loading validation loss: lat_rmse
+Loading validation loss: lat_rmse
+Loading validation loss: lat_rmse
+Loading validation loss: lat_rmse
+Loading validation loss: lat_rmse
+Loading validation loss: lat_acc
+Loading validation loss: lat_acc
+Loading validation loss: lat_acc
+Loading validation loss: lat_acc
+Loading validation loss: lat_acc
+Loading validation loss: lat_acc
+Loading validation loss: lat_acc
+Loading validation loss: lat_acc
+Loading validation loss: lat_mse
+Loading validation transform: denormalize
+Loading validation loss: lat_mse
+Loading validation transform: denormalize
+Loading validation transform: denormalize
+Loading validation loss: lat_mse
+No validation transform
+Loading validation loss: lat_mse
+Loading validation transform: denormalize
+Loading validation transform: denormalize
+Loading validation transform: denormalize
+Loading validation loss: lat_mse
+No validation transform
+Loading validation transform: denormalize
+Loading validation loss: lat_mse
+Loading validation transform: denormalize
+Loading validation loss: lat_mse
+Loading validation transform: denormalize
+Loading validation transform: denormalize
+No validation transform
+Loading validation transform: denormalize
+Loading validation transform: denormalize
+No validation transform
+Loading validation loss: lat_mse
+No validation transform
+Loading validation transform: denormalize
+Loading validation transform: denormalize
+Loading validation transform: denormalize
+No validation transform
+No validation transform
+Loading validation transform: denormalize
+No validation transform
+Loading test loss: lat_rmse
+Loading test loss: lat_rmse
+Loading test loss: lat_rmse
+Loading test loss: lat_rmse
+Loading test loss: lat_rmse
+Loading test loss: lat_rmse
+Loading test loss: lat_rmse
+Loading test loss: lat_rmse
+Loading test loss: lat_acc
+Loading test loss: lat_acc
+Loading test transform: denormalize
+Loading test loss: lat_acc
+Loading test transform: denormalize
+Loading test transform: denormalize
+Loading test transform: denormalize
+Loading test transform: denormalize
+Loading test loss: lat_acc
+Loading test loss: lat_acc
+Loading test transform: denormalize
+Loading test loss: lat_acc
+Loading test transform: denormalize
+Loading test transform: denormalize
+Loading test loss: lat_acc
+Loading test transform: denormalize
+Loading test transform: denormalize
+Loading test transform: denormalize
+Loading test transform: denormalize
+Loading test loss: lat_acc
+Loading test transform: denormalize
+[rank: 3] Seed set to 0
+Loading test transform: denormalize
+Loading test transform: denormalize
+[rank: 7] Seed set to 0
+[rank: 5] Seed set to 0
+Loading test transform: denormalize
+[rank: 0] Seed set to 0
+[rank: 4] Seed set to 0
+[rank: 6] Seed set to 0
+[rank: 1] Seed set to 0
+[rank: 2] Seed set to 0
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/lightning_fabric/strategies/fsdp.py:697: `FSDPStrategy(activation_checkpointing=<class 'timm.models.vision_transformer.Block'>)` is deprecated, use `FSDPStrategy(activation_checkpointing_policy={<class 'timm.models.vision_transformer.Block'>})` instead.
+Trainer already configured with model summary callbacks: [<class 'pytorch_lightning.callbacks.rich_model_summary.RichModelSummary'>]. Skipping setting a default `ModelSummary` callback.
+GPU available: True (cuda), used: True
+>> Resuming from: /lustre/orion/csc662/proj-shared/janet/forecasting/v4_baseline_test_high_ressolution_res_slimvit_direct_forecasting_120/checkpoints/last.ckpt
+>> Resuming from: /lustre/orion/csc662/proj-shared/janet/forecasting/v4_baseline_test_high_ressolution_res_slimvit_direct_forecasting_120/checkpoints/last.ckpt
+>> Resuming from: /lustre/orion/csc662/proj-shared/janet/forecasting/v4_baseline_test_high_ressolution_res_slimvit_direct_forecasting_120/checkpoints/last.ckpt
+>> Resuming from: /lustre/orion/csc662/proj-shared/janet/forecasting/v4_baseline_test_high_ressolution_res_slimvit_direct_forecasting_120/checkpoints/last.ckpt
+>> Resuming from: /lustre/orion/csc662/proj-shared/janet/forecasting/v4_baseline_test_high_ressolution_res_slimvit_direct_forecasting_120/checkpoints/last.ckpt
+TPU available: False, using: 0 TPU cores
+>> Resuming from: /lustre/orion/csc662/proj-shared/janet/forecasting/v4_baseline_test_high_ressolution_res_slimvit_direct_forecasting_120/checkpoints/last.ckpt
+>> Resuming from: /lustre/orion/csc662/proj-shared/janet/forecasting/v4_baseline_test_high_ressolution_res_slimvit_direct_forecasting_120/checkpoints/last.ckpt
+>> Resuming from: /lustre/orion/csc662/proj-shared/janet/forecasting/v4_baseline_test_high_ressolution_res_slimvit_direct_forecasting_120/checkpoints/last.ckpt
+You are using a CUDA device ('AMD Instinct MI250X') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
+Initializing distributed: GLOBAL_RANK: 7, MEMBER: 8/8
+Initializing distributed: GLOBAL_RANK: 4, MEMBER: 5/8
+Initializing distributed: GLOBAL_RANK: 5, MEMBER: 6/8
+Initializing distributed: GLOBAL_RANK: 6, MEMBER: 7/8
+Initializing distributed: GLOBAL_RANK: 1, MEMBER: 2/8
+Initializing distributed: GLOBAL_RANK: 2, MEMBER: 3/8
+Initializing distributed: GLOBAL_RANK: 3, MEMBER: 4/8
+Initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/8
+[W1130 22:26:06.131437851 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [frontier06546.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W1130 22:26:06.131451818 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [frontier06546.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W1130 22:26:06.131458040 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [frontier06546.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W1130 22:26:06.131453992 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [frontier06546.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W1130 22:26:06.131472298 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [frontier06546.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W1130 22:26:06.131466386 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [frontier06546.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W1130 22:26:06.132921812 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [frontier06546.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W1130 22:26:06.181578481 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [frontier06546.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+----------------------------------------------------------------------------------------------------
+distributed_backend=nccl
+All distributed processes registered. Starting with 8 processes
+----------------------------------------------------------------------------------------------------
+
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/callbacks/model_checkpoint.py:751: Checkpoint directory /lustre/orion/csc662/proj-shared/janet/forecasting/v4_baseline_test_high_ressolution_res_slimvit_direct_forecasting_120/checkpoints exists and is not empty.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7]
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7]
+LOCAL_RANK: 4 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7]
+LOCAL_RANK: 5 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7]
+LOCAL_RANK: 6 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7]
+LOCAL_RANK: 7 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/utilities/model_summary/model_summary.py:231: Precision bf16-mixed is not supported by the model summary.  Estimated model size in MB will not be accurate. Using 32 bits instead.
+┏━━━┳━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━┓
+┃   ┃ Name ┃ Type         ┃ Params ┃ Mode  ┃
+┡━━━╇━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━┩
+│ 0 │ net  │ Res_Slim_ViT │  6.5 M │ train │
+└───┴──────┴──────────────┴────────┴───────┘
+Trainable params: 6.5 M                                                         
+Non-trainable params: 0                                                         
+Total params: 6.5 M                                                             
+Total estimated model params size (MB): 25                                      
+Modules in train mode: 396                                                      
+Modules in eval mode: 0                                                         
+Restoring states from the checkpoint path at /lustre/orion/csc662/proj-shared/janet/forecasting/v4_baseline_test_high_ressolution_res_slimvit_direct_forecasting_120/checkpoints/last.ckpt
+Restored all states from the checkpoint at /lustre/orion/csc662/proj-shared/janet/forecasting/v4_baseline_test_high_ressolution_res_slimvit_direct_forecasting_120/checkpoints/last.ckpt
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/torch/utils/data/dataloader.py:627: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 7, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/torch/utils/data/dataloader.py:627: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 7, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/torch/utils/data/dataloader.py:627: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 7, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/torch/utils/data/dataloader.py:627: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 7, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/torch/utils/data/dataloader.py:627: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 7, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/torch/utils/data/dataloader.py:627: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 7, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/torch/utils/data/dataloader.py:627: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 7, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/torch/utils/data/dataloader.py:627: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 7, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(
+Training: |          | 0/? [00:00<?, ?it/s]Training: |          | 0/? [00:00<?, ?it/s]Epoch 27: |          | 0/? [00:00<?, ?it/s][Step 1513] GPU Memory - Allocated: 0.29GB, Reserved: 0.72GB, Peak: 15.55GB
+Epoch 27: |          | 20/? [02:38<00:00,  0.13it/s]Epoch 27: |          | 20/? [02:38<00:00,  0.13it/s, v_num=13, train/lat_mse:aggregate=0.018]Epoch 27: |          | 40/? [04:06<00:00,  0.16it/s, v_num=13, train/lat_mse:aggregate=0.018]Epoch 27: |          | 40/? [04:07<00:00,  0.16it/s, v_num=13, train/lat_mse:aggregate=0.0176][Step 1563] GPU Memory - Allocated: 0.17GB, Reserved: 6.49GB, Peak: 15.55GB
+Time limit reached. Elapsed time is 2:35:33. Signaling Trainer to stop.
+Epoch 27: |          | 40/? [05:05<00:00,  0.13it/s, v_num=13, train/lat_mse:aggregate=0.0173]Epoch 27: |          | 40/? [05:07<00:00,  0.13it/s, v_num=13, train/lat_mse:aggregate=0.0173]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7]
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7]
+LOCAL_RANK: 4 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7]
+LOCAL_RANK: 5 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7]
+LOCAL_RANK: 6 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7]
+LOCAL_RANK: 7 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/strategies/fsdp.py:304: A FSDP `auto_wrap_policy` is set, but the model is already wrapped. The policy will be ignored.
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/lightning_fabric/strategies/fsdp.py:726: FSDP checkpointing is configured, but the model already contains checkpointed layers. Checkpointing will be ignored.
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+Testing: |          | 0/? [00:00<?, ?it/s]Testing: |          | 0/? [00:00<?, ?it/s]
+
+real	7m9.068s
+user	0m0.019s
+sys	0m0.033s

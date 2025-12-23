@@ -1,0 +1,35 @@
+
+Lmod is automatically replacing "gcc-native/14.2" with "gcc/12.2.0".
+
+
+The following have been reloaded with a version change:
+  1) cray-libsci/24.11.0 => cray-libsci/23.09.1.1
+  2) cray-mpich/8.1.31 => cray-mpich/8.1.27
+  3) libfabric/1.22.0 => libfabric/1.20.1
+
+=*70
+Starting super-resolution visualization
+Time: Mon Nov 24 11:16:20 AM EST 2025
+Working directory: /ccs/home/janetw/diffusion/ORBIT-2-sandbox/tutorial
+=*70
+======================================================================
+Super-Resolution Visualization
+======================================================================
+Using checkpoint: last.ckpt
+
+Loading data sample...
+Traceback (most recent call last):
+  File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/tutorial/visualize_superres.py", line 264, in <module>
+    main()
+    ~~~~^^
+  File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/tutorial/visualize_superres.py", line 240, in main
+    sample, in_vars, out_vars, dm = prepare_data()
+                                    ~~~~~~~~~~~~^^
+  File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/tutorial/visualize_superres.py", line 80, in prepare_data
+    train_dataset = dm.train_dataset
+                    ^^^^^^^^^^^^^^^^
+AttributeError: 'IterDataModule' object has no attribute 'train_dataset'. Did you mean: 'train_dataloader'?
+
+real	0m25.525s
+user	0m12.284s
+sys	0m7.299s

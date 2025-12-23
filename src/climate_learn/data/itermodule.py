@@ -2,14 +2,14 @@
 import copy
 import glob
 import os
-from typing import Dict, Optional, OrderedDict
+from typing import Dict, Optional
 
 # Third party
 import numpy as np
 import torch
-import torch.distributed as dist
 from torch.utils.data import DataLoader, IterableDataset
 from torchvision.transforms import transforms
+import pytorch_lightning as pl
 
 # Local application
 from .iterdataset import (
@@ -20,46 +20,11 @@ from .iterdataset import (
     IndividualDataIter,
     ShuffleIterableDataset,
 )
-from .processing.era5_constants import PRECIP_VARIABLES
-from .precipmodule import LogTransform
-
-from climate_learn.dist.distdataset import *
 
 
-def calculate_tile_overlap(overlap):
-    """Calculate tile overlap for horizontal and vertical dimensions.
-
-    Args:
-        overlap: Base overlap size
-
-    Returns:
-        tuple: (left, right, top, bottom) overlap sizes
-
-    Note:
-        Horizontal overlap is 2x vertical due to 2:1 aspect ratio of climate data (lon:lat)
-    """
-    if overlap % 2 == 0:
-        # Even overlap: symmetric padding
-        top = bottom = overlap // 2
-        left = right = overlap // 2 * 2  # 2x for longitude dimension
-    else:
-        # Odd overlap: asymmetric padding
-        left = overlap // 2 * 2  # 2x for longitude dimension
-        right = (overlap // 2 + 1) * 2  # 2x for longitude dimension
-        top = overlap // 2
-        bottom = overlap // 2 + 1
-    return left, right, top, bottom
-
-
-class IterDataModule(torch.nn.Module):
+class IterDataModule(pl.LightningDataModule):
     """ClimateLearn's iter data module interface. Encapsulates dataset/task-specific
-    data modules.
-
-    This module supports the TILES algorithm for processing large climate images by:
-    1. Dividing images into smaller tiles for memory-efficient processing
-    2. Adding overlap regions between tiles to ensure smooth stitching
-    3. Maintaining the 2:1 aspect ratio inherent in lat/lon climate data
-    """
+    data modules."""
 
     def __init__(
         self,
@@ -68,8 +33,6 @@ class IterDataModule(torch.nn.Module):
         out_root_dir,
         in_vars,
         out_vars,
-        data_par_size: int = 1,
-        data_par_group=None,
         src=None,
         history=1,
         window=6,
@@ -82,25 +45,9 @@ class IterDataModule(torch.nn.Module):
         batch_size=64,
         num_workers=0,
         pin_memory=False,
-        div=1,  # TILES: number of divisions per dimension (div x div tiles)
-        overlap=4,  # TILES: overlap size between adjacent tiles
     ):
         super().__init__()
-        self.task = task
-        self.inp_root_dir = inp_root_dir
-        self.out_root_dir = out_root_dir
-        self.in_vars = in_vars
-        self.out_vars = out_vars
-        self.subsample = subsample
-        self.buffer_size = buffer_size
-        self.batch_size = batch_size
-        self.num_workers = num_workers
-        self.pin_memory = pin_memory
-        self.data_par_group = data_par_group
-        self.data_par_size = data_par_size
-        self.div = div
-        self.overlap = overlap
-
+        self.save_hyperparameters(logger=False)
         if task in ("direct-forecasting", "iterative-forecasting"):
             self.dataset_caller = DirectForecast
             self.dataset_arg = {
@@ -147,96 +94,61 @@ class IterDataModule(torch.nn.Module):
 
         self.transforms = self.get_normalize(inp_root_dir, in_vars)
         self.output_transforms = self.get_normalize(out_root_dir, out_vars)
+
         self.data_train: Optional[IterableDataset] = None
         self.data_val: Optional[IterableDataset] = None
         self.data_test: Optional[IterableDataset] = None
 
     def get_lat_lon(self):
-        lat = np.load(os.path.join(self.out_root_dir, "lat.npy"))
-        lon = np.load(os.path.join(self.out_root_dir, "lon.npy"))
+        lat = np.load(os.path.join(self.hparams.out_root_dir, "lat.npy"))
+        lon = np.load(os.path.join(self.hparams.out_root_dir, "lon.npy"))
         return lat, lon
 
     def get_data_variables(self):
-        out_vars = copy.deepcopy(self.out_vars)
+        out_vars = copy.deepcopy(self.hparams.out_vars)
         if "2m_temperature_extreme_mask" in out_vars:
             out_vars.remove("2m_temperature_extreme_mask")
-        return self.in_vars, out_vars
+        return self.hparams.in_vars, out_vars
 
     def get_data_dims(self):
-        in_lat = len(np.load(os.path.join(self.inp_root_dir, "lat.npy")))
-        in_lon = len(np.load(os.path.join(self.inp_root_dir, "lon.npy")))
-        out_lat = len(np.load(os.path.join(self.out_root_dir, "lat.npy")))
-        out_lon = len(np.load(os.path.join(self.out_root_dir, "lon.npy")))
+        in_lat = len(np.load(os.path.join(self.hparams.inp_root_dir, "lat.npy")))
+        in_lon = len(np.load(os.path.join(self.hparams.inp_root_dir, "lon.npy")))
+        out_lat = len(np.load(os.path.join(self.hparams.out_root_dir, "lat.npy")))
+        out_lon = len(np.load(os.path.join(self.hparams.out_root_dir, "lon.npy")))
 
         forecasting_tasks = [
             "direct-forecasting",
             "iterative-forecasting",
             "continuous-forecasting",
         ]
-        if self.task in forecasting_tasks:
+        if self.hparams.task in forecasting_tasks:
             in_size = torch.Size(
                 [
-                    self.batch_size,
-                    self.history,
-                    len(self.in_vars),
+                    self.hparams.batch_size,
+                    self.hparams.history,
+                    len(self.hparams.in_vars),
                     out_lat,
                     out_lon,
                 ]
             )
-            ##TODO: change out size
-            out_vars = copy.deepcopy(self.out_vars)
-            if "2m_temperature_extreme_mask" in out_vars:
-                out_vars.remove("2m_temperature_extreme_mask")
-            out_size = torch.Size([self.batch_size, len(out_vars), out_lat, out_lon])
-
-        elif self.task == "downscaling":
-            # Calculate overlap sizes for TILES algorithm
-            left, right, top, bottom = calculate_tile_overlap(self.overlap)
-            # Calculate input tile dimensions with overlap
-            if self.div == 1:
-                # No tiling: use full image dimensions
-                tile_width_in = in_lon
-                tile_height_in = in_lat
-            else:
-                # With tiling: add overlap to tile dimensions
-                tile_width_in = in_lon // self.div + left + right
-                tile_height_in = in_lat // self.div + top + bottom
+        elif self.hparams.task == "downscaling":
             in_size = torch.Size(
-                [self.batch_size, len(self.in_vars), tile_height_in, tile_width_in]
+                [self.hparams.batch_size, len(self.hparams.in_vars), in_lat, in_lon]
             )
-            ##TODO: change out size
-            out_vars = copy.deepcopy(self.out_vars)
-            if "2m_temperature_extreme_mask" in out_vars:
-                out_vars.remove("2m_temperature_extreme_mask")
-            # Calculate output tile dimensions with scaled overlap
-            if self.div == 1:
-                # No tiling: use full image dimensions
-                tile_width_out = out_lon
-                tile_height_out = out_lat
-            else:
-                # Scale overlap by resolution ratio
-                scale_x = out_lon // in_lon
-                scale_y = out_lat // in_lat
-                tile_width_out = out_lon // self.div + (left + right) * scale_x
-                tile_height_out = out_lat // self.div + (top + bottom) * scale_y
-            out_size = torch.Size(
-                [self.batch_size, len(out_vars), tile_height_out, tile_width_out]
-            )
-
+        ##TODO: change out size
+        out_vars = copy.deepcopy(self.hparams.out_vars)
+        if "2m_temperature_extreme_mask" in out_vars:
+            out_vars.remove("2m_temperature_extreme_mask")
+        out_size = torch.Size([self.hparams.batch_size, len(out_vars), out_lat, out_lon])
         return in_size, out_size
 
     def get_normalize(self, root_dir, variables):
         normalize_mean = dict(np.load(os.path.join(root_dir, "normalize_mean.npz")))
         normalize_std = dict(np.load(os.path.join(root_dir, "normalize_std.npz")))
-        normed = OrderedDict()
-        for var in variables:
-            if var in PRECIP_VARIABLES:
-                normed[var] = LogTransform(m2mm=True, LOG1P=True, thres_mm_per_day=0.25)
-            else:
-                normed[var] = transforms.Normalize(
-                    normalize_mean[var][0], normalize_std[var][0]
-                )
-        return normed
+        return {
+            var: transforms.Normalize(normalize_mean[var][0], normalize_std[var][0])
+            for var in variables
+        }
 
     def get_out_transforms(self):
         out_transforms = {}
@@ -247,10 +159,10 @@ class IterDataModule(torch.nn.Module):
         return out_transforms
 
     def get_climatology(self, split="val"):
-        path = os.path.join(self.out_root_dir, split, "climatology.npz")
+        path = os.path.join(self.hparams.out_root_dir, split, "climatology.npz")
         clim_dict = np.load(path)
         new_clim_dict = {}
-        for var in self.out_vars:
+        for var in self.hparams.out_vars:
             if var == "2m_temperature_extreme_mask":
                 continue
             new_clim_dict[var] = torch.from_numpy(
@@ -260,71 +172,6 @@ class IterDataModule(torch.nn.Module):
 
     def setup(self, stage: Optional[str] = None):
         # load datasets only if they're not loaded already
-        use_ddstore = int(os.environ.get("ORBIT_USE_DDSTORE", 0))
-        print("use_ddstore is :", use_ddstore, flush=True)
-
-        if use_ddstore:
-            self.data_train = IndividualDataIter(
-                self.dataset_caller(
-                    NpyReader(
-                        inp_file_list=self.inp_lister_train,
-                        out_file_list=self.out_lister_train,
-                        variables=self.in_vars,
-                        out_variables=self.out_vars,
-                        data_par_size=self.data_par_size,
-                        data_par_group=self.data_par_group,
-                        shuffle=True,
-                        div=self.div,
-                        overlap=self.overlap,
-                    ),
-                    **self.dataset_arg,
-                ),
-                transforms=self.transforms,
-                output_transforms=self.output_transforms,
-                subsample=self.subsample,
-            )
-
-            self.data_val = IndividualDataIter(
-                self.dataset_caller(
-                    NpyReader(
-                        inp_file_list=self.inp_lister_val,
-                        out_file_list=self.out_lister_val,
-                        variables=self.in_vars,
-                        out_variables=self.out_vars,
-                        data_par_size=self.data_par_size,
-                        data_par_group=self.data_par_group,
-                        shuffle=False,
-                        div=self.div,
-                        overlap=self.overlap,
-                    ),
-                    **self.dataset_arg,
-                ),
-                transforms=self.transforms,
-                output_transforms=self.output_transforms,
-                subsample=self.subsample,
-            )
-
-            self.data_test = IndividualDataIter(
-                self.dataset_caller(
-                    NpyReader(
-                        inp_file_list=self.inp_lister_test,
-                        out_file_list=self.out_lister_test,
-                        variables=self.in_vars,
-                        out_variables=self.out_vars,
-                        data_par_size=self.data_par_size,
-                        data_par_group=self.data_par_group,
-                        shuffle=False,
-                        div=self.div,
-                        overlap=self.overlap,
-                    ),
-                    **self.dataset_arg,
-                ),
-                transforms=self.transforms,
-                output_transforms=self.output_transforms,
-                subsample=self.subsample,
-            )
-            return
-
         if stage != "test":
             if not self.data_train and not self.data_val and not self.data_test:
                 self.data_train = ShuffleIterableDataset(
@@ -333,21 +180,17 @@ class IterDataModule(torch.nn.Module):
                             NpyReader(
                                 inp_file_list=self.inp_lister_train,
                                 out_file_list=self.out_lister_train,
-                                variables=self.in_vars,
-                                out_variables=self.out_vars,
-                                data_par_size=self.data_par_size,
-                                data_par_group=self.data_par_group,
+                                variables=self.hparams.in_vars,
+                                out_variables=self.hparams.out_vars,
                                 shuffle=True,
-                                div=self.div,
-                                overlap=self.overlap,
                             ),
                             **self.dataset_arg,
                         ),
                         transforms=self.transforms,
                         output_transforms=self.output_transforms,
-                        subsample=self.subsample,
+                        subsample=self.hparams.subsample,
                     ),
-                    buffer_size=self.buffer_size,
+                    buffer_size=self.hparams.buffer_size,
                 )
 
                 self.data_val = IndividualDataIter(
@@ -355,19 +198,15 @@ class IterDataModule(torch.nn.Module):
                         NpyReader(
                             inp_file_list=self.inp_lister_val,
                             out_file_list=self.out_lister_val,
-                            variables=self.in_vars,
-                            out_variables=self.out_vars,
-                            data_par_size=self.data_par_size,
-                            data_par_group=self.data_par_group,
+                            variables=self.hparams.in_vars,
+                            out_variables=self.hparams.out_vars,
                             shuffle=False,
-                            div=self.div,
-                            overlap=self.overlap,
                         ),
                         **self.dataset_arg,
                     ),
                     transforms=self.transforms,
                     output_transforms=self.output_transforms,
-                    subsample=self.subsample,
+                    subsample=self.hparams.subsample,
                 )
 
                 self.data_test = IndividualDataIter(
@@ -375,19 +214,15 @@ class IterDataModule(torch.nn.Module):
                         NpyReader(
                             inp_file_list=self.inp_lister_test,
                             out_file_list=self.out_lister_test,
-                            variables=self.in_vars,
-                            out_variables=self.out_vars,
-                            data_par_size=self.data_par_size,
-                            data_par_group=self.data_par_group,
+                            variables=self.hparams.in_vars,
+                            out_variables=self.hparams.out_vars,
                             shuffle=False,
-                            div=self.div,
-                            overlap=self.overlap,
                         ),
                         **self.dataset_arg,
                     ),
                     transforms=self.transforms,
                     output_transforms=self.output_transforms,
-                    subsample=self.subsample,
+                    subsample=self.hparams.subsample,
                 )
         else:
             self.data_test = IndividualDataIter(
@@ -395,85 +230,46 @@ class IterDataModule(torch.nn.Module):
                     NpyReader(
                         inp_file_list=self.inp_lister_test,
                         out_file_list=self.out_lister_test,
-                        variables=self.in_vars,
-                        out_variables=self.out_vars,
-                        data_par_size=self.data_par_size,
-                        data_par_group=self.data_par_group,
+                        variables=self.hparams.in_vars,
+                        out_variables=self.hparams.out_vars,
                         shuffle=False,
-                        div=self.div,
-                        overlap=self.overlap,
                     ),
                     **self.dataset_arg,
                 ),
                 transforms=self.transforms,
                 output_transforms=self.output_transforms,
-                subsample=self.subsample,
+                subsample=self.hparams.subsample,
             )
 
     def train_dataloader(self):
-        use_ddstore = int(os.environ.get("ORBIT_USE_DDSTORE", 0))
-        # print("use_ddstore is :", use_ddstore, flush=True)
-
-        if use_ddstore:
-            ## assume: a GPU is mapped by the local rank
-            gpu_id = int(os.getenv("SLURM_LOCALID", "0"))
-            os.environ["FABRIC_IFACE"] = f"hsn{gpu_id//2}"
-            print("FABRIC_IFACE:", os.environ["FABRIC_IFACE"])
-
-            data_group_size = self.data_par_size
-            data_group_rank = dist.get_rank(group=self.data_par_group)
-
-            trainset = DistDataset(
-                self.data_train,
-                "trainset",
-                data_par_group=self.data_par_group,
-            )
-
-            sampler = torch.utils.data.distributed.DistributedSampler(
-                trainset, num_replicas=data_par_size, rank=data_group_rank, shuffle=True
-            )
-
-            train_loader = DDStoreDataLoader(
-                # train_loader = torch.utils.data.DataLoader(
-                trainset.ddstore,
-                trainset,
-                batch_size=self.batch_size,
-                shuffle=False,
-                drop_last=True,
-                sampler=sampler,
-                collate_fn=collate_fn,
-            )
-
-            return train_loader
-
         return DataLoader(
             self.data_train,
-            batch_size=self.batch_size,
+            batch_size=self.hparams.batch_size,
             drop_last=False,
-            num_workers=self.num_workers,
-            pin_memory=self.pin_memory,
+            num_workers=self.hparams.num_workers,
+            pin_memory=self.hparams.pin_memory,
             collate_fn=self.collate_fn,
         )
 
     def val_dataloader(self):
         return DataLoader(
             self.data_val,
-            batch_size=self.batch_size,
+            batch_size=self.hparams.batch_size,
             shuffle=False,
             drop_last=False,
-            num_workers=self.num_workers,
-            pin_memory=self.pin_memory,
+            num_workers=self.hparams.num_workers,
+            pin_memory=self.hparams.pin_memory,
             collate_fn=self.collate_fn,
         )
 
     def test_dataloader(self):
         return DataLoader(
             self.data_test,
-            batch_size=self.batch_size,
+            batch_size=self.hparams.batch_size,
             shuffle=False,
             drop_last=False,
-            num_workers=self.num_workers,
-            pin_memory=self.pin_memory,
+            num_workers=self.hparams.num_workers,
+            pin_memory=self.hparams.pin_memory,
             collate_fn=self.collate_fn,
         )
 

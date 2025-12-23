@@ -1,0 +1,601 @@
+
+Lmod is automatically replacing "gcc-native/14.2" with "gcc/12.2.0".
+
+
+The following have been reloaded with a version change:
+  1) cray-libsci/24.11.0 => cray-libsci/23.09.1.1
+  2) cray-mpich/8.1.31 => cray-mpich/8.1.27
+  3) libfabric/1.22.0 => libfabric/1.20.1
+
+Job configuration:
+  ERA5_DIR      = /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/
+  FORECAST_TYPE = direct
+  MODEL         = res_slimvit
+  PRED_RANGE    = 120
+  MAX_EPOCHS    = 50
+  PATIENCE      = 20
+  OUTPUT_DIR    = /lustre/orion/csc662/proj-shared/janet/forecasting
+  CHECKPOINT    = 
+world_size 8 num_nodes 1
+Loading model: res_slimvit
+Loading model: res_slimvit
+Loading model: res_slimvit
+Loading model: res_slimvit
+Loading model: res_slimvit
+Loading model: res_slimvit
+Loading model: res_slimvit
+Loading model: res_slimvit
+Loading optimizer adamw
+Loading optimizer adamw
+Loading optimizer adamw
+Loading optimizer adamw
+Loading optimizer adamw
+Loading optimizer adamw
+Loading optimizer adamw
+Loading optimizer adamw
+Loading learning rate scheduler: linear-warmup-cosine-annealing
+Loading learning rate scheduler: linear-warmup-cosine-annealing
+Loading learning rate scheduler: linear-warmup-cosine-annealing
+Loading learning rate scheduler: linear-warmup-cosine-annealing
+Loading learning rate scheduler: linear-warmup-cosine-annealing
+Loading learning rate scheduler: linear-warmup-cosine-annealing
+Loading learning rate scheduler: linear-warmup-cosine-annealing
+Loading learning rate scheduler: linear-warmup-cosine-annealing
+Loading training loss: lat_mse
+Loading training loss: lat_mse
+Loading training loss: lat_mse
+Loading training loss: lat_mse
+Loading training loss: lat_mse
+Loading training loss: lat_mse
+Loading training loss: lat_mse
+Loading training loss: lat_mse
+No train transform
+No train transform
+No train transform
+No train transform
+No train transform
+No train transform
+No train transform
+No train transform
+Loading validation loss: lat_rmse
+Loading validation loss: lat_rmse
+Loading validation loss: lat_rmse
+Loading validation loss: lat_rmse
+Loading validation loss: lat_rmse
+Loading validation loss: lat_rmse
+Loading validation loss: lat_rmse
+Loading validation loss: lat_rmse
+Loading validation loss: lat_acc
+Loading validation loss: lat_acc
+Loading validation loss: lat_acc
+Loading validation loss: lat_acc
+Loading validation loss: lat_acc
+Loading validation loss: lat_acc
+Loading validation loss: lat_acc
+Loading validation loss: lat_acc
+Loading validation loss: lat_mse
+Loading validation loss: lat_mse
+Loading validation transform: denormalize
+Loading validation transform: denormalize
+Loading validation loss: lat_mse
+Loading validation loss: lat_mse
+Loading validation loss: lat_mse
+Loading validation transform: denormalize
+Loading validation transform: denormalize
+Loading validation transform: denormalize
+Loading validation transform: denormalize
+Loading validation transform: denormalize
+No validation transform
+No validation transform
+Loading validation loss: lat_mse
+Loading validation transform: denormalize
+Loading validation transform: denormalize
+Loading validation transform: denormalize
+Loading validation transform: denormalize
+Loading validation loss: lat_mse
+No validation transform
+No validation transform
+Loading validation transform: denormalize
+No validation transform
+Loading validation loss: lat_mse
+Loading validation transform: denormalize
+Loading validation transform: denormalize
+No validation transform
+Loading validation transform: denormalize
+No validation transform
+Loading validation transform: denormalize
+No validation transform
+Loading test loss: lat_rmse
+Loading test loss: lat_rmse
+Loading test loss: lat_rmse
+Loading test loss: lat_rmse
+Loading test loss: lat_rmse
+Loading test loss: lat_rmse
+Loading test loss: lat_rmse
+Loading test loss: lat_rmse
+Loading test loss: lat_acc
+Loading test transform: denormalize
+Loading test loss: lat_acc
+Loading test transform: denormalize
+Loading test transform: denormalize
+Loading test loss: lat_acc
+Loading test transform: denormalize
+Loading test loss: lat_acc
+Loading test loss: lat_acc
+Loading test transform: denormalize
+Loading test transform: denormalize
+Loading test transform: denormalize
+Loading test loss: lat_acc
+Loading test transform: denormalize
+Loading test transform: denormalize
+Loading test loss: lat_acc
+Loading test transform: denormalize
+Loading test transform: denormalize
+Loading test transform: denormalize
+Loading test loss: lat_acc
+Loading test transform: denormalize
+Loading test transform: denormalize
+Loading test transform: denormalize
+Loading test transform: denormalize
+[rank: 0] Seed set to 0
+[rank: 3] Seed set to 0
+[rank: 4] Seed set to 0
+[rank: 6] Seed set to 0
+[rank: 1] Seed set to 0
+[rank: 2] Seed set to 0
+[rank: 7] Seed set to 0
+[rank: 5] Seed set to 0
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/lightning_fabric/strategies/fsdp.py:697: `FSDPStrategy(activation_checkpointing=<class 'timm.models.vision_transformer.Block'>)` is deprecated, use `FSDPStrategy(activation_checkpointing_policy={<class 'timm.models.vision_transformer.Block'>})` instead.
+Trainer already configured with model summary callbacks: [<class 'pytorch_lightning.callbacks.rich_model_summary.RichModelSummary'>]. Skipping setting a default `ModelSummary` callback.
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+>> Resuming from: /lustre/orion/csc662/proj-shared/janet/forecasting/new_baseline_test_high_ressolution_res_slimvit_direct_forecasting_120/checkpoints/last.ckpt
+>> Resuming from: /lustre/orion/csc662/proj-shared/janet/forecasting/new_baseline_test_high_ressolution_res_slimvit_direct_forecasting_120/checkpoints/last.ckpt
+>> Resuming from: /lustre/orion/csc662/proj-shared/janet/forecasting/new_baseline_test_high_ressolution_res_slimvit_direct_forecasting_120/checkpoints/last.ckpt
+>> Resuming from: /lustre/orion/csc662/proj-shared/janet/forecasting/new_baseline_test_high_ressolution_res_slimvit_direct_forecasting_120/checkpoints/last.ckpt
+>> Resuming from: /lustre/orion/csc662/proj-shared/janet/forecasting/new_baseline_test_high_ressolution_res_slimvit_direct_forecasting_120/checkpoints/last.ckpt
+>> Resuming from: /lustre/orion/csc662/proj-shared/janet/forecasting/new_baseline_test_high_ressolution_res_slimvit_direct_forecasting_120/checkpoints/last.ckpt
+>> Resuming from: /lustre/orion/csc662/proj-shared/janet/forecasting/new_baseline_test_high_ressolution_res_slimvit_direct_forecasting_120/checkpoints/last.ckpt
+>> Resuming from: /lustre/orion/csc662/proj-shared/janet/forecasting/new_baseline_test_high_ressolution_res_slimvit_direct_forecasting_120/checkpoints/last.ckpt
+You are using a CUDA device ('AMD Instinct MI250X') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
+Initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/8
+Initializing distributed: GLOBAL_RANK: 2, MEMBER: 3/8
+Initializing distributed: GLOBAL_RANK: 3, MEMBER: 4/8
+Initializing distributed: GLOBAL_RANK: 4, MEMBER: 5/8
+Initializing distributed: GLOBAL_RANK: 5, MEMBER: 6/8
+Initializing distributed: GLOBAL_RANK: 6, MEMBER: 7/8
+Initializing distributed: GLOBAL_RANK: 7, MEMBER: 8/8
+Initializing distributed: GLOBAL_RANK: 1, MEMBER: 2/8
+[W1123 18:43:53.987807460 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [frontier03462.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W1123 18:43:53.991738136 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [frontier03462.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W1123 18:43:53.991850953 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [frontier03462.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W1123 18:43:53.995617613 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [frontier03462.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W1123 18:43:53.995876633 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [frontier03462.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W1123 18:43:53.996204336 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [frontier03462.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W1123 18:43:53.996260484 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [frontier03462.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W1123 18:43:53.061459111 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [frontier03462.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+----------------------------------------------------------------------------------------------------
+distributed_backend=nccl
+All distributed processes registered. Starting with 8 processes
+----------------------------------------------------------------------------------------------------
+
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/callbacks/model_checkpoint.py:751: Checkpoint directory /lustre/orion/csc662/proj-shared/janet/forecasting/new_baseline_test_high_ressolution_res_slimvit_direct_forecasting_120/checkpoints exists and is not empty.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7]
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7]
+LOCAL_RANK: 4 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7]
+LOCAL_RANK: 5 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7]
+LOCAL_RANK: 7 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7]
+LOCAL_RANK: 6 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/utilities/model_summary/model_summary.py:231: Precision bf16-mixed is not supported by the model summary.  Estimated model size in MB will not be accurate. Using 32 bits instead.
+┏━━━┳━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━┓
+┃   ┃ Name ┃ Type         ┃ Params ┃ Mode  ┃
+┡━━━╇━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━┩
+│ 0 │ net  │ Res_Slim_ViT │  241 K │ train │
+└───┴──────┴──────────────┴────────┴───────┘
+Trainable params: 241 K                                                         
+Non-trainable params: 0                                                         
+Total params: 241 K                                                             
+Total estimated model params size (MB): 0                                       
+Modules in train mode: 208                                                      
+Modules in eval mode: 0                                                         
+Restoring states from the checkpoint path at /lustre/orion/csc662/proj-shared/janet/forecasting/new_baseline_test_high_ressolution_res_slimvit_direct_forecasting_120/checkpoints/last.ckpt
+[rank4]: Traceback (most recent call last):
+[rank4]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/tutorial/./test_sup_res_parallel.py", line 394, in <module>
+[rank4]:     trainer.fit(model, datamodule=dm, ckpt_path=resume_path)
+[rank4]:     ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 560, in fit
+[rank4]:     call._call_and_handle_interrupt(
+[rank4]:     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+[rank4]:         self, self._fit_impl, model, train_dataloaders, val_dataloaders, datamodule, ckpt_path
+[rank4]:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:     )
+[rank4]:     ^
+[rank4]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/trainer/call.py", line 49, in _call_and_handle_interrupt
+[rank4]:     return trainer_fn(*args, **kwargs)
+[rank4]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 598, in _fit_impl
+[rank4]:     self._run(model, ckpt_path=ckpt_path)
+[rank4]:     ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 998, in _run
+[rank4]:     self._checkpoint_connector._restore_modules_and_callbacks(ckpt_path)
+[rank4]:     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+[rank4]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/trainer/connectors/checkpoint_connector.py", line 408, in _restore_modules_and_callbacks
+[rank4]:     self.resume_start(checkpoint_path)
+[rank4]:     ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank4]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/trainer/connectors/checkpoint_connector.py", line 83, in resume_start
+[rank4]:     loaded_checkpoint = self.trainer.strategy.load_checkpoint(checkpoint_path)
+[rank4]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/strategies/fsdp.py", line 632, in load_checkpoint
+[rank4]:     _load_raw_module_state(
+[rank4]:     ~~~~~~~~~~~~~~~~~~~~~~^
+[rank4]:         checkpoint.pop("state_dict"),
+[rank4]:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:     ...<2 lines>...
+[rank4]:         strict=self.lightning_module.strict_loading,
+[rank4]:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:     )
+[rank4]:     ^
+[rank4]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/lightning_fabric/strategies/model_parallel.py", line 573, in _load_raw_module_state
+[rank4]:     module.load_state_dict(state_dict, strict=strict)
+[rank4]:     ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/torch/nn/modules/module.py", line 2624, in load_state_dict
+[rank4]:     raise RuntimeError(
+[rank4]:     ...<3 lines>...
+[rank4]:     )
+[rank4]: RuntimeError: Error(s) in loading state_dict for FullyShardedDataParallel:
+[rank4]: 	size mismatch for _fsdp_wrapped_module.net.path2.3.weight: copying a param with shape torch.Size([1, 4, 3, 3]) from checkpoint, the shape in current model is torch.Size([2, 4, 3, 3]).
+[rank4]: 	size mismatch for _fsdp_wrapped_module.net.path2.3.bias: copying a param with shape torch.Size([1]) from checkpoint, the shape in current model is torch.Size([2]).
+[rank4]: 	size mismatch for _fsdp_wrapped_module.net.path1.0.weight: copying a param with shape torch.Size([4, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([4, 2, 3, 3]).
+[rank4]: 	size mismatch for _fsdp_wrapped_module.net.path1.3.weight: copying a param with shape torch.Size([1, 4, 3, 3]) from checkpoint, the shape in current model is torch.Size([2, 4, 3, 3]).
+[rank4]: 	size mismatch for _fsdp_wrapped_module.net.path1.3.bias: copying a param with shape torch.Size([1]) from checkpoint, the shape in current model is torch.Size([2]).
+[rank4]: 	size mismatch for _fsdp_wrapped_module.net.to_img.weight: copying a param with shape torch.Size([64, 128]) from checkpoint, the shape in current model is torch.Size([128, 128]).
+[rank4]: 	size mismatch for _fsdp_wrapped_module.net.to_img.bias: copying a param with shape torch.Size([64]) from checkpoint, the shape in current model is torch.Size([128]).
+[rank7]: Traceback (most recent call last):
+[rank7]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/tutorial/./test_sup_res_parallel.py", line 394, in <module>
+[rank7]:     trainer.fit(model, datamodule=dm, ckpt_path=resume_path)
+[rank7]:     ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 560, in fit
+[rank7]:     call._call_and_handle_interrupt(
+[rank7]:     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+[rank7]:         self, self._fit_impl, model, train_dataloaders, val_dataloaders, datamodule, ckpt_path
+[rank7]:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:     )
+[rank7]:     ^
+[rank7]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/trainer/call.py", line 49, in _call_and_handle_interrupt
+[rank7]:     return trainer_fn(*args, **kwargs)
+[rank7]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 598, in _fit_impl
+[rank7]:     self._run(model, ckpt_path=ckpt_path)
+[rank7]:     ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 998, in _run
+[rank7]:     self._checkpoint_connector._restore_modules_and_callbacks(ckpt_path)
+[rank7]:     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+[rank7]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/trainer/connectors/checkpoint_connector.py", line 408, in _restore_modules_and_callbacks
+[rank7]:     self.resume_start(checkpoint_path)
+[rank7]:     ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank7]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/trainer/connectors/checkpoint_connector.py", line 83, in resume_start
+[rank7]:     loaded_checkpoint = self.trainer.strategy.load_checkpoint(checkpoint_path)
+[rank7]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/strategies/fsdp.py", line 632, in load_checkpoint
+[rank7]:     _load_raw_module_state(
+[rank7]:     ~~~~~~~~~~~~~~~~~~~~~~^
+[rank7]:         checkpoint.pop("state_dict"),
+[rank7]:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:     ...<2 lines>...
+[rank7]:         strict=self.lightning_module.strict_loading,
+[rank7]:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:     )
+[rank7]:     ^
+[rank7]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/lightning_fabric/strategies/model_parallel.py", line 573, in _load_raw_module_state
+[rank7]:     module.load_state_dict(state_dict, strict=strict)
+[rank7]:     ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/torch/nn/modules/module.py", line 2624, in load_state_dict
+[rank7]:     raise RuntimeError(
+[rank7]:     ...<3 lines>...
+[rank7]:     )
+[rank7]: RuntimeError: Error(s) in loading state_dict for FullyShardedDataParallel:
+[rank7]: 	size mismatch for _fsdp_wrapped_module.net.path2.3.weight: copying a param with shape torch.Size([1, 4, 3, 3]) from checkpoint, the shape in current model is torch.Size([2, 4, 3, 3]).
+[rank7]: 	size mismatch for _fsdp_wrapped_module.net.path2.3.bias: copying a param with shape torch.Size([1]) from checkpoint, the shape in current model is torch.Size([2]).
+[rank7]: 	size mismatch for _fsdp_wrapped_module.net.path1.0.weight: copying a param with shape torch.Size([4, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([4, 2, 3, 3]).
+[rank7]: 	size mismatch for _fsdp_wrapped_module.net.path1.3.weight: copying a param with shape torch.Size([1, 4, 3, 3]) from checkpoint, the shape in current model is torch.Size([2, 4, 3, 3]).
+[rank7]: 	size mismatch for _fsdp_wrapped_module.net.path1.3.bias: copying a param with shape torch.Size([1]) from checkpoint, the shape in current model is torch.Size([2]).
+[rank7]: 	size mismatch for _fsdp_wrapped_module.net.to_img.weight: copying a param with shape torch.Size([64, 128]) from checkpoint, the shape in current model is torch.Size([128, 128]).
+[rank7]: 	size mismatch for _fsdp_wrapped_module.net.to_img.bias: copying a param with shape torch.Size([64]) from checkpoint, the shape in current model is torch.Size([128]).
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/tutorial/./test_sup_res_parallel.py", line 394, in <module>
+[rank3]:     trainer.fit(model, datamodule=dm, ckpt_path=resume_path)
+[rank3]:     ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 560, in fit
+[rank3]:     call._call_and_handle_interrupt(
+[rank3]:     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+[rank3]:         self, self._fit_impl, model, train_dataloaders, val_dataloaders, datamodule, ckpt_path
+[rank3]:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:     )
+[rank3]:     ^
+[rank3]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/trainer/call.py", line 49, in _call_and_handle_interrupt
+[rank3]:     return trainer_fn(*args, **kwargs)
+[rank3]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 598, in _fit_impl
+[rank3]:     self._run(model, ckpt_path=ckpt_path)
+[rank3]:     ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 998, in _run
+[rank3]:     self._checkpoint_connector._restore_modules_and_callbacks(ckpt_path)
+[rank3]:     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+[rank3]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/trainer/connectors/checkpoint_connector.py", line 408, in _restore_modules_and_callbacks
+[rank3]:     self.resume_start(checkpoint_path)
+[rank3]:     ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank3]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/trainer/connectors/checkpoint_connector.py", line 83, in resume_start
+[rank3]:     loaded_checkpoint = self.trainer.strategy.load_checkpoint(checkpoint_path)
+[rank3]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/strategies/fsdp.py", line 632, in load_checkpoint
+[rank3]:     _load_raw_module_state(
+[rank3]:     ~~~~~~~~~~~~~~~~~~~~~~^
+[rank3]:         checkpoint.pop("state_dict"),
+[rank3]:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:     ...<2 lines>...
+[rank3]:         strict=self.lightning_module.strict_loading,
+[rank3]:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:     )
+[rank3]:     ^
+[rank3]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/lightning_fabric/strategies/model_parallel.py", line 573, in _load_raw_module_state
+[rank3]:     module.load_state_dict(state_dict, strict=strict)
+[rank3]:     ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/torch/nn/modules/module.py", line 2624, in load_state_dict
+[rank3]:     raise RuntimeError(
+[rank3]:     ...<3 lines>...
+[rank3]:     )
+[rank3]: RuntimeError: Error(s) in loading state_dict for FullyShardedDataParallel:
+[rank3]: 	size mismatch for _fsdp_wrapped_module.net.path2.3.weight: copying a param with shape torch.Size([1, 4, 3, 3]) from checkpoint, the shape in current model is torch.Size([2, 4, 3, 3]).
+[rank3]: 	size mismatch for _fsdp_wrapped_module.net.path2.3.bias: copying a param with shape torch.Size([1]) from checkpoint, the shape in current model is torch.Size([2]).
+[rank3]: 	size mismatch for _fsdp_wrapped_module.net.path1.0.weight: copying a param with shape torch.Size([4, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([4, 2, 3, 3]).
+[rank3]: 	size mismatch for _fsdp_wrapped_module.net.path1.3.weight: copying a param with shape torch.Size([1, 4, 3, 3]) from checkpoint, the shape in current model is torch.Size([2, 4, 3, 3]).
+[rank3]: 	size mismatch for _fsdp_wrapped_module.net.path1.3.bias: copying a param with shape torch.Size([1]) from checkpoint, the shape in current model is torch.Size([2]).
+[rank3]: 	size mismatch for _fsdp_wrapped_module.net.to_img.weight: copying a param with shape torch.Size([64, 128]) from checkpoint, the shape in current model is torch.Size([128, 128]).
+[rank3]: 	size mismatch for _fsdp_wrapped_module.net.to_img.bias: copying a param with shape torch.Size([64]) from checkpoint, the shape in current model is torch.Size([128]).
+[rank6]: Traceback (most recent call last):
+[rank6]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/tutorial/./test_sup_res_parallel.py", line 394, in <module>
+[rank6]:     trainer.fit(model, datamodule=dm, ckpt_path=resume_path)
+[rank6]:     ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 560, in fit
+[rank6]:     call._call_and_handle_interrupt(
+[rank6]:     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+[rank6]:         self, self._fit_impl, model, train_dataloaders, val_dataloaders, datamodule, ckpt_path
+[rank6]:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:     )
+[rank6]:     ^
+[rank6]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/trainer/call.py", line 49, in _call_and_handle_interrupt
+[rank6]:     return trainer_fn(*args, **kwargs)
+[rank6]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 598, in _fit_impl
+[rank6]:     self._run(model, ckpt_path=ckpt_path)
+[rank6]:     ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 998, in _run
+[rank6]:     self._checkpoint_connector._restore_modules_and_callbacks(ckpt_path)
+[rank6]:     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+[rank6]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/trainer/connectors/checkpoint_connector.py", line 408, in _restore_modules_and_callbacks
+[rank6]:     self.resume_start(checkpoint_path)
+[rank6]:     ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank6]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/trainer/connectors/checkpoint_connector.py", line 83, in resume_start
+[rank6]:     loaded_checkpoint = self.trainer.strategy.load_checkpoint(checkpoint_path)
+[rank6]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/strategies/fsdp.py", line 632, in load_checkpoint
+[rank6]:     _load_raw_module_state(
+[rank6]:     ~~~~~~~~~~~~~~~~~~~~~~^
+[rank6]:         checkpoint.pop("state_dict"),
+[rank6]:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:     ...<2 lines>...
+[rank6]:         strict=self.lightning_module.strict_loading,
+[rank6]:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:     )
+[rank6]:     ^
+[rank6]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/lightning_fabric/strategies/model_parallel.py", line 573, in _load_raw_module_state
+[rank6]:     module.load_state_dict(state_dict, strict=strict)
+[rank6]:     ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/torch/nn/modules/module.py", line 2624, in load_state_dict
+[rank6]:     raise RuntimeError(
+[rank6]:     ...<3 lines>...
+[rank6]:     )
+[rank6]: RuntimeError: Error(s) in loading state_dict for FullyShardedDataParallel:
+[rank6]: 	size mismatch for _fsdp_wrapped_module.net.path2.3.weight: copying a param with shape torch.Size([1, 4, 3, 3]) from checkpoint, the shape in current model is torch.Size([2, 4, 3, 3]).
+[rank6]: 	size mismatch for _fsdp_wrapped_module.net.path2.3.bias: copying a param with shape torch.Size([1]) from checkpoint, the shape in current model is torch.Size([2]).
+[rank6]: 	size mismatch for _fsdp_wrapped_module.net.path1.0.weight: copying a param with shape torch.Size([4, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([4, 2, 3, 3]).
+[rank6]: 	size mismatch for _fsdp_wrapped_module.net.path1.3.weight: copying a param with shape torch.Size([1, 4, 3, 3]) from checkpoint, the shape in current model is torch.Size([2, 4, 3, 3]).
+[rank6]: 	size mismatch for _fsdp_wrapped_module.net.path1.3.bias: copying a param with shape torch.Size([1]) from checkpoint, the shape in current model is torch.Size([2]).
+[rank6]: 	size mismatch for _fsdp_wrapped_module.net.to_img.weight: copying a param with shape torch.Size([64, 128]) from checkpoint, the shape in current model is torch.Size([128, 128]).
+[rank6]: 	size mismatch for _fsdp_wrapped_module.net.to_img.bias: copying a param with shape torch.Size([64]) from checkpoint, the shape in current model is torch.Size([128]).
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/tutorial/./test_sup_res_parallel.py", line 394, in <module>
+[rank1]:     trainer.fit(model, datamodule=dm, ckpt_path=resume_path)
+[rank1]:     ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 560, in fit
+[rank1]:     call._call_and_handle_interrupt(
+[rank1]:     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+[rank1]:         self, self._fit_impl, model, train_dataloaders, val_dataloaders, datamodule, ckpt_path
+[rank1]:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:     )
+[rank1]:     ^
+[rank1]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/trainer/call.py", line 49, in _call_and_handle_interrupt
+[rank1]:     return trainer_fn(*args, **kwargs)
+[rank1]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 598, in _fit_impl
+[rank1]:     self._run(model, ckpt_path=ckpt_path)
+[rank1]:     ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 998, in _run
+[rank1]:     self._checkpoint_connector._restore_modules_and_callbacks(ckpt_path)
+[rank1]:     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+[rank1]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/trainer/connectors/checkpoint_connector.py", line 408, in _restore_modules_and_callbacks
+[rank1]:     self.resume_start(checkpoint_path)
+[rank1]:     ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank1]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/trainer/connectors/checkpoint_connector.py", line 83, in resume_start
+[rank1]:     loaded_checkpoint = self.trainer.strategy.load_checkpoint(checkpoint_path)
+[rank1]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/strategies/fsdp.py", line 632, in load_checkpoint
+[rank1]:     _load_raw_module_state(
+[rank1]:     ~~~~~~~~~~~~~~~~~~~~~~^
+[rank1]:         checkpoint.pop("state_dict"),
+[rank1]:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:     ...<2 lines>...
+[rank1]:         strict=self.lightning_module.strict_loading,
+[rank1]:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:     )
+[rank1]:     ^
+[rank1]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/lightning_fabric/strategies/model_parallel.py", line 573, in _load_raw_module_state
+[rank1]:     module.load_state_dict(state_dict, strict=strict)
+[rank1]:     ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/torch/nn/modules/module.py", line 2624, in load_state_dict
+[rank1]:     raise RuntimeError(
+[rank1]:     ...<3 lines>...
+[rank1]:     )
+[rank1]: RuntimeError: Error(s) in loading state_dict for FullyShardedDataParallel:
+[rank1]: 	size mismatch for _fsdp_wrapped_module.net.path2.3.weight: copying a param with shape torch.Size([1, 4, 3, 3]) from checkpoint, the shape in current model is torch.Size([2, 4, 3, 3]).
+[rank1]: 	size mismatch for _fsdp_wrapped_module.net.path2.3.bias: copying a param with shape torch.Size([1]) from checkpoint, the shape in current model is torch.Size([2]).
+[rank1]: 	size mismatch for _fsdp_wrapped_module.net.path1.0.weight: copying a param with shape torch.Size([4, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([4, 2, 3, 3]).
+[rank1]: 	size mismatch for _fsdp_wrapped_module.net.path1.3.weight: copying a param with shape torch.Size([1, 4, 3, 3]) from checkpoint, the shape in current model is torch.Size([2, 4, 3, 3]).
+[rank1]: 	size mismatch for _fsdp_wrapped_module.net.path1.3.bias: copying a param with shape torch.Size([1]) from checkpoint, the shape in current model is torch.Size([2]).
+[rank1]: 	size mismatch for _fsdp_wrapped_module.net.to_img.weight: copying a param with shape torch.Size([64, 128]) from checkpoint, the shape in current model is torch.Size([128, 128]).
+[rank1]: 	size mismatch for _fsdp_wrapped_module.net.to_img.bias: copying a param with shape torch.Size([64]) from checkpoint, the shape in current model is torch.Size([128]).
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/tutorial/./test_sup_res_parallel.py", line 394, in <module>
+[rank0]:     trainer.fit(model, datamodule=dm, ckpt_path=resume_path)
+[rank0]:     ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 560, in fit
+[rank0]:     call._call_and_handle_interrupt(
+[rank0]:     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+[rank0]:         self, self._fit_impl, model, train_dataloaders, val_dataloaders, datamodule, ckpt_path
+[rank0]:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:     )
+[rank0]:     ^
+[rank0]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/trainer/call.py", line 49, in _call_and_handle_interrupt
+[rank0]:     return trainer_fn(*args, **kwargs)
+[rank0]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 598, in _fit_impl
+[rank0]:     self._run(model, ckpt_path=ckpt_path)
+[rank0]:     ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 998, in _run
+[rank0]:     self._checkpoint_connector._restore_modules_and_callbacks(ckpt_path)
+[rank0]:     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+[rank0]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/trainer/connectors/checkpoint_connector.py", line 408, in _restore_modules_and_callbacks
+[rank0]:     self.resume_start(checkpoint_path)
+[rank0]:     ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank0]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/trainer/connectors/checkpoint_connector.py", line 83, in resume_start
+[rank0]:     loaded_checkpoint = self.trainer.strategy.load_checkpoint(checkpoint_path)
+[rank0]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/strategies/fsdp.py", line 632, in load_checkpoint
+[rank0]:     _load_raw_module_state(
+[rank0]:     ~~~~~~~~~~~~~~~~~~~~~~^
+[rank0]:         checkpoint.pop("state_dict"),
+[rank0]:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:     ...<2 lines>...
+[rank0]:         strict=self.lightning_module.strict_loading,
+[rank0]:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:     )
+[rank0]:     ^
+[rank0]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/lightning_fabric/strategies/model_parallel.py", line 573, in _load_raw_module_state
+[rank0]:     module.load_state_dict(state_dict, strict=strict)
+[rank0]:     ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/torch/nn/modules/module.py", line 2624, in load_state_dict
+[rank0]:     raise RuntimeError(
+[rank0]:     ...<3 lines>...
+[rank0]:     )
+[rank0]: RuntimeError: Error(s) in loading state_dict for FullyShardedDataParallel:
+[rank0]: 	size mismatch for _fsdp_wrapped_module.net.path2.3.weight: copying a param with shape torch.Size([1, 4, 3, 3]) from checkpoint, the shape in current model is torch.Size([2, 4, 3, 3]).
+[rank0]: 	size mismatch for _fsdp_wrapped_module.net.path2.3.bias: copying a param with shape torch.Size([1]) from checkpoint, the shape in current model is torch.Size([2]).
+[rank0]: 	size mismatch for _fsdp_wrapped_module.net.path1.0.weight: copying a param with shape torch.Size([4, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([4, 2, 3, 3]).
+[rank0]: 	size mismatch for _fsdp_wrapped_module.net.path1.3.weight: copying a param with shape torch.Size([1, 4, 3, 3]) from checkpoint, the shape in current model is torch.Size([2, 4, 3, 3]).
+[rank0]: 	size mismatch for _fsdp_wrapped_module.net.path1.3.bias: copying a param with shape torch.Size([1]) from checkpoint, the shape in current model is torch.Size([2]).
+[rank0]: 	size mismatch for _fsdp_wrapped_module.net.to_img.weight: copying a param with shape torch.Size([64, 128]) from checkpoint, the shape in current model is torch.Size([128, 128]).
+[rank0]: 	size mismatch for _fsdp_wrapped_module.net.to_img.bias: copying a param with shape torch.Size([64]) from checkpoint, the shape in current model is torch.Size([128]).
+[rank5]: Traceback (most recent call last):
+[rank5]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/tutorial/./test_sup_res_parallel.py", line 394, in <module>
+[rank5]:     trainer.fit(model, datamodule=dm, ckpt_path=resume_path)
+[rank5]:     ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 560, in fit
+[rank5]:     call._call_and_handle_interrupt(
+[rank5]:     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+[rank5]:         self, self._fit_impl, model, train_dataloaders, val_dataloaders, datamodule, ckpt_path
+[rank5]:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:     )
+[rank5]:     ^
+[rank5]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/trainer/call.py", line 49, in _call_and_handle_interrupt
+[rank5]:     return trainer_fn(*args, **kwargs)
+[rank5]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 598, in _fit_impl
+[rank5]:     self._run(model, ckpt_path=ckpt_path)
+[rank5]:     ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 998, in _run
+[rank5]:     self._checkpoint_connector._restore_modules_and_callbacks(ckpt_path)
+[rank5]:     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+[rank5]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/trainer/connectors/checkpoint_connector.py", line 408, in _restore_modules_and_callbacks
+[rank5]:     self.resume_start(checkpoint_path)
+[rank5]:     ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank5]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/trainer/connectors/checkpoint_connector.py", line 83, in resume_start
+[rank5]:     loaded_checkpoint = self.trainer.strategy.load_checkpoint(checkpoint_path)
+[rank5]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/strategies/fsdp.py", line 632, in load_checkpoint
+[rank5]:     _load_raw_module_state(
+[rank5]:     ~~~~~~~~~~~~~~~~~~~~~~^
+[rank5]:         checkpoint.pop("state_dict"),
+[rank5]:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:     ...<2 lines>...
+[rank5]:         strict=self.lightning_module.strict_loading,
+[rank5]:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:     )
+[rank5]:     ^
+[rank5]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/lightning_fabric/strategies/model_parallel.py", line 573, in _load_raw_module_state
+[rank5]:     module.load_state_dict(state_dict, strict=strict)
+[rank5]:     ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/torch/nn/modules/module.py", line 2624, in load_state_dict
+[rank5]:     raise RuntimeError(
+[rank5]:     ...<3 lines>...
+[rank5]:     )
+[rank5]: RuntimeError: Error(s) in loading state_dict for FullyShardedDataParallel:
+[rank5]: 	size mismatch for _fsdp_wrapped_module.net.path2.3.weight: copying a param with shape torch.Size([1, 4, 3, 3]) from checkpoint, the shape in current model is torch.Size([2, 4, 3, 3]).
+[rank5]: 	size mismatch for _fsdp_wrapped_module.net.path2.3.bias: copying a param with shape torch.Size([1]) from checkpoint, the shape in current model is torch.Size([2]).
+[rank5]: 	size mismatch for _fsdp_wrapped_module.net.path1.0.weight: copying a param with shape torch.Size([4, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([4, 2, 3, 3]).
+[rank5]: 	size mismatch for _fsdp_wrapped_module.net.path1.3.weight: copying a param with shape torch.Size([1, 4, 3, 3]) from checkpoint, the shape in current model is torch.Size([2, 4, 3, 3]).
+[rank5]: 	size mismatch for _fsdp_wrapped_module.net.path1.3.bias: copying a param with shape torch.Size([1]) from checkpoint, the shape in current model is torch.Size([2]).
+[rank5]: 	size mismatch for _fsdp_wrapped_module.net.to_img.weight: copying a param with shape torch.Size([64, 128]) from checkpoint, the shape in current model is torch.Size([128, 128]).
+[rank5]: 	size mismatch for _fsdp_wrapped_module.net.to_img.bias: copying a param with shape torch.Size([64]) from checkpoint, the shape in current model is torch.Size([128]).
+[rank2]: Traceback (most recent call last):
+[rank2]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/tutorial/./test_sup_res_parallel.py", line 394, in <module>
+[rank2]:     trainer.fit(model, datamodule=dm, ckpt_path=resume_path)
+[rank2]:     ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 560, in fit
+[rank2]:     call._call_and_handle_interrupt(
+[rank2]:     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+[rank2]:         self, self._fit_impl, model, train_dataloaders, val_dataloaders, datamodule, ckpt_path
+[rank2]:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:     )
+[rank2]:     ^
+[rank2]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/trainer/call.py", line 49, in _call_and_handle_interrupt
+[rank2]:     return trainer_fn(*args, **kwargs)
+[rank2]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 598, in _fit_impl
+[rank2]:     self._run(model, ckpt_path=ckpt_path)
+[rank2]:     ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 998, in _run
+[rank2]:     self._checkpoint_connector._restore_modules_and_callbacks(ckpt_path)
+[rank2]:     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+[rank2]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/trainer/connectors/checkpoint_connector.py", line 408, in _restore_modules_and_callbacks
+[rank2]:     self.resume_start(checkpoint_path)
+[rank2]:     ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank2]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/trainer/connectors/checkpoint_connector.py", line 83, in resume_start
+[rank2]:     loaded_checkpoint = self.trainer.strategy.load_checkpoint(checkpoint_path)
+[rank2]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/pytorch_lightning/strategies/fsdp.py", line 632, in load_checkpoint
+[rank2]:     _load_raw_module_state(
+[rank2]:     ~~~~~~~~~~~~~~~~~~~~~~^
+[rank2]:         checkpoint.pop("state_dict"),
+[rank2]:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:     ...<2 lines>...
+[rank2]:         strict=self.lightning_module.strict_loading,
+[rank2]:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:     )
+[rank2]:     ^
+[rank2]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/lightning_fabric/strategies/model_parallel.py", line 573, in _load_raw_module_state
+[rank2]:     module.load_state_dict(state_dict, strict=strict)
+[rank2]:     ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit/lib/python3.13/site-packages/torch/nn/modules/module.py", line 2624, in load_state_dict
+[rank2]:     raise RuntimeError(
+[rank2]:     ...<3 lines>...
+[rank2]:     )
+[rank2]: RuntimeError: Error(s) in loading state_dict for FullyShardedDataParallel:
+[rank2]: 	size mismatch for _fsdp_wrapped_module.net.path2.3.weight: copying a param with shape torch.Size([1, 4, 3, 3]) from checkpoint, the shape in current model is torch.Size([2, 4, 3, 3]).
+[rank2]: 	size mismatch for _fsdp_wrapped_module.net.path2.3.bias: copying a param with shape torch.Size([1]) from checkpoint, the shape in current model is torch.Size([2]).
+[rank2]: 	size mismatch for _fsdp_wrapped_module.net.path1.0.weight: copying a param with shape torch.Size([4, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([4, 2, 3, 3]).
+[rank2]: 	size mismatch for _fsdp_wrapped_module.net.path1.3.weight: copying a param with shape torch.Size([1, 4, 3, 3]) from checkpoint, the shape in current model is torch.Size([2, 4, 3, 3]).
+[rank2]: 	size mismatch for _fsdp_wrapped_module.net.path1.3.bias: copying a param with shape torch.Size([1]) from checkpoint, the shape in current model is torch.Size([2]).
+[rank2]: 	size mismatch for _fsdp_wrapped_module.net.to_img.weight: copying a param with shape torch.Size([64, 128]) from checkpoint, the shape in current model is torch.Size([128, 128]).
+[rank2]: 	size mismatch for _fsdp_wrapped_module.net.to_img.bias: copying a param with shape torch.Size([64]) from checkpoint, the shape in current model is torch.Size([128]).
+srun: error: frontier03462: tasks 0-7: Exited with exit code 1
+srun: Terminating StepId=3921882.0
+
+real	0m38.050s
+user	0m0.017s
+sys	0m0.037s
