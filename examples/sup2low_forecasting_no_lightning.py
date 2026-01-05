@@ -18,6 +18,7 @@ from torch.distributed.algorithms._checkpoint.checkpoint_wrapper import (
 from torch.distributed.fsdp import MixedPrecision, ShardingStrategy
 from torch.distributed.fsdp.sharded_grad_scaler import ShardedGradScaler
 from torch.nn.parallel import DistributedDataParallel as DDP
+from torch.utils.data._utils.collate import default_collate
 from torch.nn import SyncBatchNorm
 from functools import partial
 from datetime import timedelta
@@ -41,7 +42,7 @@ from climate_learn.models.hub.components.cnn_blocks import (
 )
 from climate_learn.utils.fused_attn import FusedAttn
 from climate_learn.models.hub.components.pos_embed import interpolate_pos_embed
-from climate_learn.data.transforms import collate_resize
+from climate_learn.data.transforms import collate_resize, collate_batch_only
 from utils import seed_everything, init_par_groups
 
 
@@ -80,11 +81,39 @@ def clip_replace_constant(y, yhat, out_variables):
 
 
 def training_step(
-    batch, batch_idx, net, device: int, var_weights, train_loss_metric
+    batch, batch_idx, net, device: int, var_weights, train_loss_metric, resize_config=None
 ) -> torch.Tensor:
     x, y, in_variables, out_variables = batch
     x = x.to(device)
     y = y.to(device)
+    
+    # GPU-based interpolation (much faster than CPU collate_resize)
+    if resize_config is not None:
+        lr_h, lr_w = resize_config['lr_size']
+        hr_h, hr_w = resize_config['hr_size']
+        mode = resize_config['mode']
+        
+        # Interpolate input to low-resolution on GPU
+        # x shape: [B, C, H, W] - downsample to model's input size
+        if mode in ['linear', 'bilinear', 'bicubic', 'trilinear']:
+            x = torch.nn.functional.interpolate(
+                x, size=(lr_h, lr_w), mode=mode, align_corners=False
+            )
+        else:
+            x = torch.nn.functional.interpolate(
+                x, size=(lr_h, lr_w), mode=mode
+            )
+        
+        # Interpolate target to high-resolution on GPU  
+        # y shape: [B, C, H, W] - upsample/keep at target size
+        if mode in ['linear', 'bilinear', 'bicubic', 'trilinear']:
+            y = torch.nn.functional.interpolate(
+                y, size=(hr_h, hr_w), mode=mode, align_corners=False
+            )
+        else:
+            y = torch.nn.functional.interpolate(
+                y, size=(hr_h, hr_w), mode=mode
+            )
 
     yhat = net.forward(x, in_variables, out_variables)
     yhat = clip_replace_constant(y, yhat, out_variables)
@@ -108,19 +137,43 @@ def training_step(
 
 
 def validation_step(
-    batch, batch_idx: int, net, device: int, val_loss_metrics, val_target_transforms
+    batch, batch_idx: int, net, device: int, val_loss_metrics, val_target_transforms, resize_config=None
 ) -> torch.Tensor:
 
     return evaluate_func(
-        batch, "val", net, device, val_loss_metrics, val_target_transforms
+        batch, "val", net, device, val_loss_metrics, val_target_transforms, resize_config
     )
 
 
-def evaluate_func(batch, stage: str, net, device: int, loss_metrics, target_transforms):
+def evaluate_func(batch, stage: str, net, device: int, loss_metrics, target_transforms, resize_config=None):
 
     x, y, in_variables, out_variables = batch
     x = x.to(device)
     y = y.to(device)
+    
+    # GPU-based interpolation (same as training_step)
+    if resize_config is not None:
+        lr_h, lr_w = resize_config['lr_size']
+        hr_h, hr_w = resize_config['hr_size']
+        mode = resize_config['mode']
+        
+        if mode in ['linear', 'bilinear', 'bicubic', 'trilinear']:
+            x = torch.nn.functional.interpolate(
+                x, size=(lr_h, lr_w), mode=mode, align_corners=False
+            )
+        else:
+            x = torch.nn.functional.interpolate(
+                x, size=(lr_h, lr_w), mode=mode
+            )
+        
+        if mode in ['linear', 'bilinear', 'bicubic', 'trilinear']:
+            y = torch.nn.functional.interpolate(
+                y, size=(hr_h, hr_w), mode=mode, align_corners=False
+            )
+        else:
+            y = torch.nn.functional.interpolate(
+                y, size=(hr_h, hr_w), mode=mode
+            )
 
     yhat = net.forward(x, in_variables, out_variables)
     yhat = clip_replace_constant(y, yhat, out_variables)
@@ -270,10 +323,14 @@ def create_model_and_losses(config, device, world_rank, in_vars, out_vars, data_
         )
 
     # Create optimizer
-    lr = float(config["model"]["lr"])
+    base_lr = float(config["model"]["base_lr"])
     weight_decay = float(config["model"]["weight_decay"])
     beta_1 = float(config["model"]["beta_1"])
     beta_2 = float(config["model"]["beta_2"])
+    num_gpus = int(config["trainer"]["num_gpus"])
+    
+    scaling_factor = (num_gpus ** 0.8) # was 0.75
+    lr = base_lr * scaling_factor
     
     optimizer = torch.optim.AdamW(
         model.parameters(),
@@ -349,7 +406,6 @@ def create_losses_after_fsdp(config, device, world_rank, model, data_module, in_
         print("Loss functions created successfully", flush=True)
     
     return train_loss, val_losses, val_transforms
-
 
 def create_data_module(config, world_rank, device):
     """
@@ -438,19 +494,23 @@ def create_data_module(config, world_rank, device):
             num_workers=num_workers,
         )
     
-    # Set collate function for super-resolution
     lr_h, lr_w = config["model"]["img_size"]
     superres_factor = config["model"]["superres_factor"]
     hr_h, hr_w = lr_h * superres_factor, lr_w * superres_factor
     downsample_mode = config["model"]["downsample_mode"]
     
-    data_module.collate_fn = partial(
-        collate_resize, 
-        lr_size=(lr_h, lr_w), 
-        hr_size=(hr_h, hr_w), 
-        mode=downsample_mode
-    )
+    # NEW: Use custom collate function for batching (without interpolation)
+    # Interpolation will be done on GPU in training_step for better performance
+    data_module.collate_fn = collate_batch_only
     
+    # Store these parameters for GPU interpolation later
+    if not hasattr(data_module, 'resize_config'):
+        data_module.resize_config = {
+            'lr_size': (lr_h, lr_w),
+            'hr_size': (hr_h, hr_w),
+            'mode': downsample_mode
+        }
+
     if world_rank == 0:
         log_gpu_memory(device, f"after data_module creation")
 
@@ -479,6 +539,7 @@ def train_epoch(
     train_loss,
     in_vars,
     out_vars,
+    data_module=None,
     data_type="float32",
     log_interval=50,
 ):
@@ -498,8 +559,9 @@ def train_epoch(
             torch.cuda.synchronize(device=device)
             tic = time.perf_counter()
 
-        # Forward pass
-        loss = training_step(batch, batch_idx, model, device, var_weights, train_loss)
+        # Forward pass (with GPU interpolation)
+        resize_config = getattr(data_module, 'resize_config', None) if data_module is not None else None
+        loss = training_step(batch, batch_idx, model, device, var_weights, train_loss, resize_config)
         epoch_loss += loss.item()
         num_batches += 1
 
@@ -558,6 +620,7 @@ def validate_epoch(
     val_target_transforms,
     in_vars,
     out_vars,
+    data_module=None,
 ):
     """Validate model for one epoch."""
     model.eval()
@@ -571,8 +634,9 @@ def validate_epoch(
 
     with torch.no_grad():
         for batch_idx, batch in enumerate(val_dataloader):
+            resize_config = getattr(data_module, 'resize_config', None) if data_module is not None else None
             loss_dict = validation_step(
-                batch, batch_idx, model, device, val_loss_metrics, val_target_transforms
+                batch, batch_idx, model, device, val_loss_metrics, val_target_transforms, resize_config
             )
             
             # Accumulate losses
@@ -857,6 +921,7 @@ def main(device):
             train_loss,
             in_vars,
             out_vars,
+            data_module,
             data_type=data_type,
             log_interval=50,
         )
@@ -873,6 +938,7 @@ def main(device):
                 val_transforms,
                 in_vars,
                 out_vars,
+                data_module,
             )
 
         # Save checkpoint

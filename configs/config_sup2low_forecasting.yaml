@@ -2,12 +2,13 @@
 
 trainer:
   max_epochs: 30
-  batch_size: 128
-  num_workers: 8
+  batch_size: 1  # Reduced from 8 due to large 720×1440 images
+  num_workers: 2
   checkpoint: null  # Path to checkpoint to resume from, or null
-  checkpoint_save_path: "/lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/sup2low_forecasting_lat_mse_new"
+  checkpoint_save_path: "/lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/sup2low_forecasting_lat_mse_gpu_interpolation"
   data_type: "bfloat16"  # "float32", "bfloat16", "float16"
   train_loss: "lat_mse"  # this field is not used by the training script, loss is hardcoded
+  num_gpus: 8
 
 parallelism:
   fsdp: 1
@@ -16,54 +17,56 @@ parallelism:
   seq_par: 1
 
 data:
-  era5_dir: "/lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/"
+  era5_dir: "/lustre/orion/lrn036/world-shared/data/superres/era5/0.25_deg/"
   forecast_type: "direct"  # "direct", "iterative", "continuous"
   pred_range: 120  # lead time
   
   # Input variables
   variables:
-    - "temperature"
+    # - "temperature"
     - "2m_temperature"
-    - "10m_u_component_of_wind"
-    - "10m_v_component_of_wind"
-    - "lattitude"
+    # - "10m_u_component_of_wind"
+    # - "10m_v_component_of_wind"
+    # - "lattitude"
   
   # Output variables
   out_variables:
     - "2m_temperature"
-  
+
   # Variable weights for loss calculation
   var_weights:
     2m_temperature: 1.0
+    10m_u_component_of_wind: 1.0
+    10m_v_component_of_wind: 1.0
 
 model:
   preset: "res_slimvit"  # Model architecture
   
   # Image dimensions
-  img_size: [32, 64]  # Low-resolution input [H, W]
-  superres_factor: 4  # Super-resolution factor (4x upsampling)
-  downsample_mode: "area"  # Downsampling mode: "area", "bilinear", "bicubic", "nearest"
+  img_size: [36, 72]  # Low-resolution input [H, W]
+  superres_factor: 20 # Super-resolution factor (4x upsampling)
+  downsample_mode: "bilinear"  # Downsampling mode: "area", "bilinear", "bicubic", "nearest"
   
   # Model architecture
   history: 1  # Number of historical timesteps
   cnn_ratio: 4
   patch_size: 4
-  embed_dim: 512
-  depth: 16
+  embed_dim: 256  # Reduced from 512 to save memory for large images
+  depth: 8  # Reduced from 16 to save memory
   decoder_depth: 4
-  num_heads: 8
+  num_heads: 4  # Reduced from 8 (must divide embed_dim)
   mlp_ratio: 4.0
   drop_path: 0.1
   drop_rate: 0.0
   learn_pos_emb: true
   
   # Optimizer settings
-  lr: 0.002863  # Base learning rate scaled by (num_gpus ** 0.8)
+  base_lr: 5e-4  # Base learning rate scaled by (num_gpus ** 0.8)
   weight_decay: 0.00001
   beta_1: 0.9
   beta_2: 0.99
   
   # Scheduler settings
   warmup_epochs: 5
-  warmup_start_lr: 0.00000001
-  eta_min: 0.00000001
+  warmup_start_lr: 1e-8
+  eta_min: 1e-8
