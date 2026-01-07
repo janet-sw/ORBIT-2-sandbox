@@ -454,6 +454,9 @@ def create_data_module(config, world_rank, device):
     if world_rank == 0:
         print(f"Setting up distributed data loading: world_size={world_size_value}", flush=True)
         print(f"Each GPU will process 1/{world_size_value} of the dataset", flush=True)
+        
+    # Add buffer_size explicitly
+    buffer_size = config["trainer"]["buffer_size"]
     
     if forecast_type in ("direct", "iterative"):
         data_module = cl.data.IterDataModule(
@@ -471,6 +474,7 @@ def create_data_module(config, world_rank, device):
             subsample=6,
             batch_size=batch_size,
             num_workers=num_workers,
+            buffer_size=buffer_size,
         )
     elif forecast_type == "continuous":
         data_module = cl.data.IterDataModule(
@@ -490,7 +494,7 @@ def create_data_module(config, world_rank, device):
             hrs_each_step=1,
             subsample=6,
             batch_size=batch_size,
-            buffer_size=2000,
+            buffer_size=buffer_size,
             num_workers=num_workers,
         )
     

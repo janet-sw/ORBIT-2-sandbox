@@ -3,7 +3,7 @@
 #SBATCH -J sup2low_forecast
 #SBATCH -o logs/sup2low-%j.out
 #SBATCH -e logs/sup2low-%j.out
-#SBATCH -t 00:40:00
+#SBATCH -t 01:00:00
 #SBATCH -q debug
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=8
@@ -16,7 +16,7 @@ mkdir -p logs
 # Load modules
 module load PrgEnv-gnu
 module load gcc/12.2.0
-module load rocm/6.0.0
+module load rocm/6.3.1
 
 # Activate conda environment - use the correct conda.sh path
 source /lustre/orion/csc662/proj-shared/janet/miniconda3/etc/profile.d/conda.sh

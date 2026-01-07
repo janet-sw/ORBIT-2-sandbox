@@ -3,12 +3,13 @@
 trainer:
   max_epochs: 30
   batch_size: 1  # Reduced from 8 due to large 720×1440 images
-  num_workers: 2
+  num_workers: 1
   checkpoint: null  # Path to checkpoint to resume from, or null
   checkpoint_save_path: "/lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/sup2low_forecasting_lat_mse_gpu_interpolation"
   data_type: "bfloat16"  # "float32", "bfloat16", "float16"
   train_loss: "lat_mse"  # this field is not used by the training script, loss is hardcoded
   num_gpus: 8
+  buffer_size: 50
 
 parallelism:
   fsdp: 1
@@ -43,21 +44,21 @@ model:
   preset: "res_slimvit"  # Model architecture
   
   # Image dimensions
-  img_size: [36, 72]  # Low-resolution input [H, W]
-  superres_factor: 20 # Super-resolution factor (4x upsampling)
+  img_size: [180, 360]  # Low-resolution input [H, W]
+  superres_factor: 4 # Super-resolution factor (4x upsampling)
   downsample_mode: "bilinear"  # Downsampling mode: "area", "bilinear", "bicubic", "nearest"
   
   # Model architecture
   history: 1  # Number of historical timesteps
   cnn_ratio: 4
   patch_size: 4
-  embed_dim: 256  # Reduced from 512 to save memory for large images
-  depth: 8  # Reduced from 16 to save memory
+  embed_dim: 256  
+  depth: 6  
   decoder_depth: 4
-  num_heads: 4  # Reduced from 8 (must divide embed_dim)
+  num_heads: 4
   mlp_ratio: 4.0
   drop_path: 0.1
-  drop_rate: 0.0
+  drop_rate: 0.1
   learn_pos_emb: true
   
   # Optimizer settings
