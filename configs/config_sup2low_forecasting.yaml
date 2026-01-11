@@ -2,20 +2,26 @@
 
 trainer:
   max_epochs: 30
-  batch_size: 1  # Reduced from 8 due to large 720×1440 images
+  batch_size: 2
   num_workers: 1
   checkpoint: null  # Path to checkpoint to resume from, or null
-  checkpoint_save_path: "/lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/sup2low_forecasting_lat_mse_gpu_interpolation"
+  checkpoint_save_path: "/lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/sup2low_forecasting_lat_mse_gpu_interpolation_with_tiling"
   data_type: "bfloat16"  # "float32", "bfloat16", "float16"
   train_loss: "lat_mse"  # this field is not used by the training script, loss is hardcoded
   num_gpus: 8
-  buffer_size: 50
+  buffer_size: 100
 
 parallelism:
   fsdp: 1
   simple_ddp: 1
   tensor_par: 1
   seq_par: 1
+
+### Tiling
+tiling:
+  do_tiling: True
+  div: 4
+  overlap: 5  # Must make (hr_h//div//superres_factor + overlap) divisible by patch_size
 
 data:
   era5_dir: "/lustre/orion/lrn036/world-shared/data/superres/era5/0.25_deg/"
@@ -24,11 +30,14 @@ data:
   
   # Input variables
   variables:
-    # - "temperature"
+    - "temperature"
     - "2m_temperature"
-    # - "10m_u_component_of_wind"
-    # - "10m_v_component_of_wind"
-    # - "lattitude"
+    - "10m_u_component_of_wind"
+    - "10m_v_component_of_wind"
+    - "lattitude"
+    - "land_sea_mask"
+    - "orography"
+    - "landcover"
   
   # Output variables
   out_variables:
@@ -44,16 +53,16 @@ model:
   preset: "res_slimvit"  # Model architecture
   
   # Image dimensions
-  img_size: [180, 360]  # Low-resolution input [H, W]
-  superres_factor: 4 # Super-resolution factor (4x upsampling)
+  img_size: [180, 360]  # Low-resolution input [H, W] - for 720×1440 target
+  superres_factor: 4 # Super-resolution factor (20× upsampling: 36×72 → 720×1440)
   downsample_mode: "bilinear"  # Downsampling mode: "area", "bilinear", "bicubic", "nearest"
   
   # Model architecture
   history: 1  # Number of historical timesteps
   cnn_ratio: 4
-  patch_size: 4
-  embed_dim: 256  
-  depth: 6  
+  patch_size: 5  # Must divide evenly into tiled input dimensions
+  embed_dim: 256
+  depth: 6
   decoder_depth: 4
   num_heads: 4
   mlp_ratio: 4.0

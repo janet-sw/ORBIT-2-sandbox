@@ -183,6 +183,15 @@ def mse(
     error = (pred - target).square()
     #print('during  mse with error', error.dtype, pred.dtype, target.dtype)
     if lat_weights is not None:
+        # Handle tiling: interpolate lat_weights if size doesn't match prediction
+        if lat_weights.shape[-2:] != pred.shape[-2:]:
+            import torch.nn.functional as F
+            lat_weights = F.interpolate(
+                lat_weights, 
+                size=pred.shape[-2:], 
+                mode='bilinear', 
+                align_corners=False
+            )
         error = error * lat_weights
 
     if var_names is not None:

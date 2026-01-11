@@ -89,31 +89,42 @@ def training_step(
     
     # GPU-based interpolation (much faster than CPU collate_resize)
     if resize_config is not None:
-        lr_h, lr_w = resize_config['lr_size']
-        hr_h, hr_w = resize_config['hr_size']
+        # lr_h, lr_w = resize_config['lr_size']
+        # hr_h, hr_w = resize_config['hr_size']
         mode = resize_config['mode']
+        scale = resize_config['scale_factor']
+        
+        # Dynamic resizing (safe for tiles)
+        if mode in ['linear', 'bilinear', 'bicubic', 'trilinear']:
+            x = torch.nn.functional.interpolate(
+                x, scale_factor=scale, mode=mode, align_corners=False, recompute_scale_factor=False
+            )
+        else:
+            x = torch.nn.functional.interpolate(
+                x, scale_factor=scale, mode=mode, recompute_scale_factor=False
+            )
         
         # Interpolate input to low-resolution on GPU
         # x shape: [B, C, H, W] - downsample to model's input size
-        if mode in ['linear', 'bilinear', 'bicubic', 'trilinear']:
-            x = torch.nn.functional.interpolate(
-                x, size=(lr_h, lr_w), mode=mode, align_corners=False
-            )
-        else:
-            x = torch.nn.functional.interpolate(
-                x, size=(lr_h, lr_w), mode=mode
-            )
+        # if mode in ['linear', 'bilinear', 'bicubic', 'trilinear']:
+        #     x = torch.nn.functional.interpolate(
+        #         x, size=(lr_h, lr_w), mode=mode, align_corners=False
+        #     )
+        # else:
+        #     x = torch.nn.functional.interpolate(
+        #         x, size=(lr_h, lr_w), mode=mode
+        #     )
         
         # Interpolate target to high-resolution on GPU  
         # y shape: [B, C, H, W] - upsample/keep at target size
-        if mode in ['linear', 'bilinear', 'bicubic', 'trilinear']:
-            y = torch.nn.functional.interpolate(
-                y, size=(hr_h, hr_w), mode=mode, align_corners=False
-            )
-        else:
-            y = torch.nn.functional.interpolate(
-                y, size=(hr_h, hr_w), mode=mode
-            )
+        # if mode in ['linear', 'bilinear', 'bicubic', 'trilinear']:
+        #     y = torch.nn.functional.interpolate(
+        #         y, size=(hr_h, hr_w), mode=mode, align_corners=False
+        #     )
+        # else:
+        #     y = torch.nn.functional.interpolate(
+        #         y, size=(hr_h, hr_w), mode=mode
+        #     )
 
     yhat = net.forward(x, in_variables, out_variables)
     yhat = clip_replace_constant(y, yhat, out_variables)
@@ -153,27 +164,38 @@ def evaluate_func(batch, stage: str, net, device: int, loss_metrics, target_tran
     
     # GPU-based interpolation (same as training_step)
     if resize_config is not None:
-        lr_h, lr_w = resize_config['lr_size']
-        hr_h, hr_w = resize_config['hr_size']
+        # lr_h, lr_w = resize_config['lr_size']
+        # hr_h, hr_w = resize_config['hr_size']
         mode = resize_config['mode']
+        scale = resize_config['scale_factor']
         
+        # Dynamic resizing (safe for tiles)
         if mode in ['linear', 'bilinear', 'bicubic', 'trilinear']:
             x = torch.nn.functional.interpolate(
-                x, size=(lr_h, lr_w), mode=mode, align_corners=False
+                x, scale_factor=scale, mode=mode, align_corners=False, recompute_scale_factor=False
             )
         else:
             x = torch.nn.functional.interpolate(
-                x, size=(lr_h, lr_w), mode=mode
+                x, scale_factor=scale, mode=mode, recompute_scale_factor=False
             )
         
-        if mode in ['linear', 'bilinear', 'bicubic', 'trilinear']:
-            y = torch.nn.functional.interpolate(
-                y, size=(hr_h, hr_w), mode=mode, align_corners=False
-            )
-        else:
-            y = torch.nn.functional.interpolate(
-                y, size=(hr_h, hr_w), mode=mode
-            )
+        # if mode in ['linear', 'bilinear', 'bicubic', 'trilinear']:
+        #     x = torch.nn.functional.interpolate(
+        #         x, size=(lr_h, lr_w), mode=mode, align_corners=False
+        #     )
+        # else:
+        #     x = torch.nn.functional.interpolate(
+        #         x, size=(lr_h, lr_w), mode=mode
+        #     )
+        
+        # if mode in ['linear', 'bilinear', 'bicubic', 'trilinear']:
+        #     y = torch.nn.functional.interpolate(
+        #         y, size=(hr_h, hr_w), mode=mode, align_corners=False
+        #     )
+        # else:
+        #     y = torch.nn.functional.interpolate(
+        #         y, size=(hr_h, hr_w), mode=mode
+        #     )
 
     yhat = net.forward(x, in_variables, out_variables)
     yhat = clip_replace_constant(y, yhat, out_variables)
@@ -304,7 +326,7 @@ def create_model_and_losses(config, device, world_rank, in_vars, out_vars, data_
             mlp_ratio=config["model"].get("mlp_ratio", 4.0),
             drop_path=config["model"].get("drop_path", 0.1),
             drop_rate=config["model"].get("drop_rate", 0.0),
-            num_constant_vars=num_constant_vars,
+            # num_constant_vars=num_constant_vars,
             FusedAttn_option=FusedAttn.DEFAULT,  # Use PyTorch native attention instead of xformers (ROCm compatibility)
         )
     else:
@@ -407,9 +429,17 @@ def create_losses_after_fsdp(config, device, world_rank, model, data_module, in_
     
     return train_loss, val_losses, val_transforms
 
-def create_data_module(config, world_rank, device):
+def create_data_module(config, world_rank, device, do_tiling=False, div=1, overlap=0):
     """
     Create data module and loaders.
+    
+    Args:
+        config (dict): Configuration dictionary
+        world_rank (int): Process rank
+        device: Training device
+        do_tiling (bool): Whether to use TILES algorithm for large images
+        div (int): Tile division factor (images split into div×div tiles)
+        overlap (int): Tile overlap in pixels
     
     Returns:
         tuple: (data_module, train_dataloader, val_dataloader, in_vars, out_vars)
@@ -475,6 +505,8 @@ def create_data_module(config, world_rank, device):
             batch_size=batch_size,
             num_workers=num_workers,
             buffer_size=buffer_size,
+            div=div,          
+            overlap=overlap,
         )
     elif forecast_type == "continuous":
         data_module = cl.data.IterDataModule(
@@ -494,8 +526,10 @@ def create_data_module(config, world_rank, device):
             hrs_each_step=1,
             subsample=6,
             batch_size=batch_size,
-            buffer_size=buffer_size,
             num_workers=num_workers,
+            buffer_size=buffer_size,
+            div=div,          
+            overlap=overlap,
         )
     
     lr_h, lr_w = config["model"]["img_size"]
@@ -512,8 +546,26 @@ def create_data_module(config, world_rank, device):
         data_module.resize_config = {
             'lr_size': (lr_h, lr_w),
             'hr_size': (hr_h, hr_w),
-            'mode': downsample_mode
+            'mode': downsample_mode,
+            'scale_factor': 1.0 / superres_factor
         }
+
+    # Check tiling compatibility with patch size
+    if do_tiling:
+        patch_size = config["model"]["patch_size"]
+        # For super-resolution forecasting: tiles are in low-res space
+        # Calculate tile dimensions based on division factor
+        yout = hr_h // div  # Output tile height in high-res space
+        yinp = yout // superres_factor + overlap  # Input tile height in low-res space
+
+        if yinp % patch_size != 0:
+            if world_rank == 0:
+                print(f"Tile height: {yinp}, patch_size {patch_size}", flush=True)
+                print(
+                    f"Overlap must be adjusted to accommodate patch_size. Need to increase by {yinp % patch_size}",
+                    flush=True,
+                )
+            sys.exit("Please adjust overlap according to the instructions above")
 
     if world_rank == 0:
         log_gpu_memory(device, f"after data_module creation")
@@ -522,7 +574,7 @@ def create_data_module(config, world_rank, device):
     data_module.setup()
 
     # Create data loaders
-    # Note: batch_size and num_workers are already set in the IterDataModule
+    # Tiling is handled at the IterDataModule level via div and overlap parameters
     train_dataloader = data_module.train_dataloader()
     
     val_dataloader = data_module.val_dataloader()
@@ -801,6 +853,20 @@ def main(device):
     simple_ddp_size = config["parallelism"].get("simple_ddp", 1)
     tensor_par_size = config["parallelism"].get("tensor_par", 1)
     seq_par_size = config["parallelism"].get("seq_par", 1)
+    
+    # Tiling config for large images
+    try:
+        do_tiling = config["tiling"]["do_tiling"]
+        if do_tiling:
+            div = config["tiling"]["div"]
+            overlap = config["tiling"]["overlap"]
+        else:
+            div = 1
+            overlap = 0
+    except (KeyError, TypeError):
+        do_tiling = False
+        div = 1
+        overlap = 0
 
     if world_rank == 0:
         print("\n" + "=" * 80)
@@ -818,7 +884,7 @@ def main(device):
 
     # Create data module
     data_module, train_dataloader, val_dataloader, in_vars, out_vars = create_data_module(
-        config, world_rank, device
+        config, world_rank, device, do_tiling, div, overlap
     )
 
     # Create model and optimizer (WITHOUT losses yet)

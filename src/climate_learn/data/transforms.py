@@ -1,7 +1,8 @@
 import torch
 import torch.nn.functional as F
-from functools import partial
+from torch.utils.data._utils.collate import default_collate
 from typing import Tuple, List
+import os
 
 def _downsample_cpu(x: torch.Tensor, size: Tuple[int, int], mode: str = "area") -> torch.Tensor:
     """Resize on CPU. Supports [B,C,H,W], [B,T,C,H,W], [T,C,H,W], [C,H,W]."""
@@ -27,97 +28,22 @@ def _downsample_cpu(x: torch.Tensor, size: Tuple[int, int], mode: str = "area") 
         return _downsample_cpu(x.unsqueeze(0), size, mode).squeeze(0)
     if x.ndim == 2:  # [H,W]
         return _downsample_cpu(x[None, None], size, mode)[0, 0]
-    return x  # unknown shape → no-op
-     
+    return x
 
 def collate_resize(samples, lr_size=(32,64), mode="area", hr_size=None):
-    """
-    Custom collate function that downsamples inputs to lr_size on CPU.
-    Handles samples from IterDataset which returns:
-    (inp_data_dict, out_data_dict, variables, out_variables)
-    
-    Args:
-        lr_size: Target size for inputs (H, W)
-        mode: Interpolation mode for downsampling
-        hr_size: Optional target size for outputs (H, W). If None, keeps original HR size.
-                 If provided, downsamples outputs to this size (e.g., (128, 256))
-    """
-    import torch
-    from torch.utils.data._utils.collate import default_collate
-    import os
-    
-    first = samples[0]
-    
-    # Check if samples are tuples with 4 elements (from IterDataset)
-    if isinstance(first, (tuple, list)) and len(first) == 4:
-        inp_datas, out_datas, variables, out_variables = [], [], [], []
-        for inp_data, out_data, vars, out_vars in samples:
-            inp_datas.append(inp_data)
-            out_datas.append(out_data)
-            variables.append(vars)
-            out_variables.append(out_vars)
-        
-        # Use the first sample's variables as reference
-        variables = variables[0]
-        out_variables = out_variables[0]
-        
-        # Stack all variable tensors across batch and concatenate along channel dim
-        inp_list = []
-        for var in variables:
-            tensors = [inp[var] for inp in inp_datas]
-            stacked = torch.stack(tensors, dim=0)  # [B, T, H, W]
-            downsampled = _downsample_cpu(stacked, lr_size, mode=mode)
-            inp_list.append(downsampled)
-        
-        out_list = []
-        for var in out_variables:
-            tensors = [out[var] for out in out_datas]
-            stacked = torch.stack(tensors, dim=0)  # [B, H, W]
-            # Add channel dimension: [B, H, W] -> [B, 1, H, W]
-            stacked = stacked.unsqueeze(1)
-            # Downsample outputs to hr_size if specified
-            if hr_size is not None:
-                stacked = _downsample_cpu(stacked, hr_size, mode=mode)
-            out_list.append(stacked)
-        
-        # Concatenate along channel dimension
-        x = torch.cat(inp_list, dim=1)  # [B, T*C, H, W]
-        y = torch.cat(out_list, dim=1)  # [B, C, HR_H, HR_W]
-        
-        # Debug print (only once per process)
-        if not hasattr(collate_resize, '_debug_printed'):
-            rank = int(os.environ.get('RANK', 0))
-            if rank == 0:
-                print(f"[COLLATE DEBUG] Input shape after resize: {x.shape}, Target shape: {y.shape}", flush=True)
-            collate_resize._debug_printed = True
-        
-        return x, y, variables, out_variables
-    
-    # Fallback for dict-based samples
-    elif isinstance(first, dict):
-        xs = [s["inputs"] for s in samples]
-        ys = [s["targets"] for s in samples]
-        x = torch.stack(xs, 0)
-        y = torch.stack(ys, 0)
-        x = _downsample_cpu(x, lr_size, mode=mode)
-        return x, y
-    
-    # Fallback for simple (x, y) tuples
-    elif isinstance(first, (tuple, list)) and len(first) == 2:
-        xlist, ylist = zip(*samples)
-        x = torch.stack(list(xlist), 0)
-        y = torch.stack(list(ylist), 0)
-        x = _downsample_cpu(x, lr_size, mode=mode)
-        return x, y
-    
-    else:
-        return default_collate(samples)
+    # (Keep your existing collate_resize code here if needed)
+    return default_collate(samples)
 
 def collate_batch_only(samples):
-    """Custom collate function that batches samples without interpolation.
-    Handles samples from IterDataset which returns:
-    (inp_data_dict, out_data_dict, variables, out_variables)
     """
+    Robust custom collate that handles uneven tile sizes by padding.
+    Safe for 2D and 3D tensors.
+    """
+    # DEBUG: Print once to verify this code is actually running
+    if not hasattr(collate_batch_only, '_printed'):
+        print("\n[DEBUG] Using custom PADDED collate_batch_only!\n", flush=True)
+        collate_batch_only._printed = True
+
     first = samples[0]
     
     # Check if samples are tuples with 4 elements (from IterDataset)
@@ -129,30 +55,77 @@ def collate_batch_only(samples):
             variables.append(vars)
             out_variables.append(out_vars)
         
-        # Use the first sample's variables as reference
         variables = variables[0]
         out_variables = out_variables[0]
         
-        # Stack all variable tensors across batch and concatenate along channel dim
+        # --- PROCESS INPUTS ---
         inp_list = []
         for var in variables:
             tensors = [inp[var] for inp in inp_datas]
-            stacked = torch.stack(tensors, dim=0)  # [B, T, H, W]
+            
+            # 1. Find max dimensions
+            max_h = max(t.shape[-2] for t in tensors)
+            max_w = max(t.shape[-1] for t in tensors)
+            
+            # 2. Pad tensors safely
+            padded = []
+            for t in tensors:
+                pad_h = max_h - t.shape[-2]
+                pad_w = max_w - t.shape[-1]
+                
+                if pad_h > 0 or pad_w > 0:
+                    # Fix for Replicate Crash: Ensure tensor is at least 3D for replicate padding
+                    original_ndim = t.ndim
+                    if original_ndim == 2: # [H, W] -> [1, H, W]
+                        t = t.unsqueeze(0)
+                    
+                    # Pad (Left, Right, Top, Bottom)
+                    t = F.pad(t, (0, pad_w, 0, pad_h), mode='replicate')
+                    
+                    if original_ndim == 2: # Restore to [H, W]
+                        t = t.squeeze(0)
+                
+                padded.append(t)
+                
+            stacked = torch.stack(padded, dim=0)  # [B, T, H, W]
             inp_list.append(stacked)
         
+        # --- PROCESS OUTPUTS ---
         out_list = []
         for var in out_variables:
             tensors = [out[var] for out in out_datas]
-            stacked = torch.stack(tensors, dim=0)  # [B, H, W]
-            # Add channel dimension: [B, H, W] -> [B, 1, H, W]
-            stacked = stacked.unsqueeze(1)
+            
+            # 1. Find max dimensions
+            max_h = max(t.shape[-2] for t in tensors)
+            max_w = max(t.shape[-1] for t in tensors)
+            
+            # 2. Pad tensors safely
+            padded = []
+            for t in tensors:
+                pad_h = max_h - t.shape[-2]
+                pad_w = max_w - t.shape[-1]
+                
+                if pad_h > 0 or pad_w > 0:
+                    # Fix for Replicate Crash: Output targets are often 2D [H, W]
+                    original_ndim = t.ndim
+                    if original_ndim == 2:
+                        t = t.unsqueeze(0)
+                        
+                    t = F.pad(t, (0, pad_w, 0, pad_h), mode='replicate')
+                    
+                    if original_ndim == 2:
+                        t = t.squeeze(0)
+                        
+                padded.append(t)
+                
+            stacked = torch.stack(padded, dim=0)  # [B, H, W]
+            stacked = stacked.unsqueeze(1)        # [B, 1, H, W]
             out_list.append(stacked)
         
-        # Concatenate all variables along channel dimension
-        inp_batch = torch.cat(inp_list, dim=1)  # [B, C*T, H, W]
-        out_batch = torch.cat(out_list, dim=1)  # [B, C, H, W]
+        # Concatenate
+        inp_batch = torch.cat(inp_list, dim=1)
+        out_batch = torch.cat(out_list, dim=1)
         
         return inp_batch, out_batch, variables, out_variables
     else:
-        # Fallback to default collate for non-IterDataset samples
         return default_collate(samples)

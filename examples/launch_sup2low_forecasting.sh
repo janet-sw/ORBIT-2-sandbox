@@ -3,12 +3,12 @@
 #SBATCH -J sup2low_forecast
 #SBATCH -o logs/sup2low-%j.out
 #SBATCH -e logs/sup2low-%j.out
-#SBATCH -t 01:00:00
+#SBATCH -t 00:40:00
 #SBATCH -q debug
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=8
 #SBATCH --gpus-per-node=8
-#SBATCH --cpus-per-task=7
+#SBATCH --cpus-per-task=7      # Recommended: Request CPUs to avoid bottlenecks
 
 # Create logs directory if it doesn't exist
 mkdir -p logs
