@@ -2,7 +2,7 @@
 
 trainer:
   max_epochs: 30
-  batch_size: 2
+  batch_size: 8
   num_workers: 1
   checkpoint: null  # Path to checkpoint to resume from, or null
   checkpoint_save_path: "/lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/sup2low_forecasting_lat_mse_gpu_interpolation_with_tiling"
@@ -19,7 +19,7 @@ parallelism:
 
 ### Tiling
 tiling:
-  do_tiling: True
+  do_tiling: False
   div: 4
   overlap: 5  # Must make (hr_h//div//superres_factor + overlap) divisible by patch_size
 
@@ -60,7 +60,7 @@ model:
   # Model architecture
   history: 1  # Number of historical timesteps
   cnn_ratio: 4
-  patch_size: 5  # Must divide evenly into tiled input dimensions
+  patch_size: 4  # Must divide evenly into tiled input dimensions
   embed_dim: 256
   depth: 6
   decoder_depth: 4
@@ -71,12 +71,12 @@ model:
   learn_pos_emb: true
   
   # Optimizer settings
-  base_lr: 5e-4  # Base learning rate scaled by (num_gpus ** 0.8)
+  base_lr: 5e-3  # Base learning rate scaled by (num_gpus ** 0.8)
   weight_decay: 0.00001
   beta_1: 0.9
   beta_2: 0.99
   
   # Scheduler settings
-  warmup_epochs: 5
-  warmup_start_lr: 1e-8
+  warmup_epochs: 1
+  warmup_start_lr: 1e-4
   eta_min: 1e-8
