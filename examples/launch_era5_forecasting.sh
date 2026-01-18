@@ -1,9 +1,9 @@
 #!/bin/bash
 #SBATCH -A CSC662
-#SBATCH -J sup2low_forecast
-#SBATCH -o logs/sup2low-%j.out
-#SBATCH -e logs/sup2low-%j.out
-#SBATCH -t 00:40:00
+#SBATCH -J era5_forecast
+#SBATCH -o logs/era5_forecast-%j.out
+#SBATCH -e logs/era5_forecast-%j.out
+#SBATCH -t 00:20:00
 #SBATCH -q debug
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=8
@@ -56,7 +56,7 @@ export ORBIT_USE_DDSTORE=0 ## 1 (enabled) or 0 (disable)
 
 
 # Configuration file
-CONFIG_FILE="/ccs/home/janetw/diffusion/ORBIT-2-sandbox/configs/config_sup2low_forecasting.yaml"
+CONFIG_FILE="/ccs/home/janetw/diffusion/ORBIT-2-sandbox/configs/era5_forecasting.yaml"
 
 time srun -n $((SLURM_JOB_NUM_NODES*8)) \
-python sup2low_forecasting_no_lightning.py "$CONFIG_FILE"
+python era5_forecasting.py "$CONFIG_FILE"

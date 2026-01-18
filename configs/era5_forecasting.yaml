@@ -2,14 +2,14 @@
 
 trainer:
   max_epochs: 30
-  batch_size: 8
-  num_workers: 1
+  batch_size: 128
+  num_workers: 2
   checkpoint: null  # Path to checkpoint to resume from, or null
-  checkpoint_save_path: "/lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/sup2low_forecasting_lat_mse_gpu_interpolation_with_tiling"
+  checkpoint_save_path: "/lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_40625_deg"
   data_type: "bfloat16"  # "float32", "bfloat16", "float16"
   train_loss: "lat_mse"  # this field is not used by the training script, loss is hardcoded
   num_gpus: 8
-  buffer_size: 100
+  # buffer_size: 400
 
 parallelism:
   fsdp: 1
@@ -17,16 +17,11 @@ parallelism:
   tensor_par: 1
   seq_par: 1
 
-### Tiling
-tiling:
-  do_tiling: False
-  div: 4
-  overlap: 5  # Must make (hr_h//div//superres_factor + overlap) divisible by patch_size
-
 data:
-  era5_dir: "/lustre/orion/lrn036/world-shared/data/superres/era5/0.25_deg/"
+  era5_dir: "/lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/"
   forecast_type: "direct"  # "direct", "iterative", "continuous"
   pred_range: 120  # lead time
+  enable_monthly_loader: True
   
   # Input variables
   variables:
@@ -53,14 +48,14 @@ model:
   preset: "res_slimvit"  # Model architecture
   
   # Image dimensions
-  img_size: [180, 360]  # Low-resolution input [H, W] - for 720×1440 target
+  img_size: [32, 64]  # Low-resolution input [H, W] - for 720×1440 target
   superres_factor: 4 # Super-resolution factor (20× upsampling: 36×72 → 720×1440)
   downsample_mode: "bilinear"  # Downsampling mode: "area", "bilinear", "bicubic", "nearest"
   
   # Model architecture
   history: 1  # Number of historical timesteps
   cnn_ratio: 4
-  patch_size: 4  # Must divide evenly into tiled input dimensions
+  patch_size: 2  # Must divide evenly into tiled input dimensions
   embed_dim: 256
   depth: 6
   decoder_depth: 4
@@ -68,15 +63,15 @@ model:
   mlp_ratio: 4.0
   drop_path: 0.1
   drop_rate: 0.1
-  learn_pos_emb: true
+  learn_pos_emb: True
   
   # Optimizer settings
-  base_lr: 5e-3  # Base learning rate scaled by (num_gpus ** 0.8)
+  base_lr: 5e-4  # Base learning rate scaled by (num_gpus ** 0.8)
   weight_decay: 0.00001
   beta_1: 0.9
   beta_2: 0.99
   
   # Scheduler settings
   warmup_epochs: 1
-  warmup_start_lr: 1e-4
+  warmup_start_lr: 1e-8
   eta_min: 1e-8

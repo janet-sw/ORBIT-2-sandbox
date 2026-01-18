@@ -16,10 +16,13 @@ class SequentialMonthlyDataset(IterableDataset):
                  transform=None,
                  rank=0,
                  world_size=1,
-                 dtype=torch.float32): # Add dtype support
+                 dtype="float32"):  # Accept string dtype
         """
         Reads .npz files sequentially. 
         Shards files based on rank to ensure unique data per GPU.
+        
+        Args:
+            dtype: String specifying dtype ("float32", "bfloat16", "float16")
         """
         self.in_vars = in_vars
         self.out_vars = out_vars
@@ -27,7 +30,14 @@ class SequentialMonthlyDataset(IterableDataset):
         self.pred_range = pred_range
         self.subsample = subsample
         self.transform = transform
-        self.dtype = dtype
+        
+        # Convert string dtype to torch dtype
+        dtype_map = {
+            "float32": torch.float32,
+            "bfloat16": torch.bfloat16,
+            "float16": torch.float16,
+        }
+        self.dtype = dtype_map.get(dtype, torch.float32)
         self.rank = rank
         
         # 1. Get all files

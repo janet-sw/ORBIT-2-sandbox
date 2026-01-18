@@ -166,28 +166,13 @@
 
 #     def unpatchify(self, x: torch.Tensor, scaling =1, out_channels=1):
 #         """
-#         x: (B, L, V * (scaling*patch_size)**2)
-#         return imgs: (B, V, H*scaling, W*scaling)
-        
-#         This function now dynamically calculates output dimensions based on the
-#         actual number of patches in x, enabling support for tiled inputs.
-        
-#         The decoder head outputs tokens of size: out_channels * (scaling*patch_size)^2
-#         where scaling is the super-resolution magnification factor.
+#         x: (B, L, V * patch_size**2)
+#         return imgs: (B, V, H, W)
 #         """
-#         p = self.patch_size * scaling  # Effective patch size after super-resolution
+#         p = self.patch_size
 #         c = out_channels
-        
-#         # Calculate actual number of patches from input tensor (supports tiling)
-#         # x.shape[1] = number of patches from encoder (in LOW-RES space)
-#         num_patches = x.shape[1]
-        
-#         # With 2:1 aspect ratio (W:H), we have: num_patches = h * w where w = 2*h
-#         # So: num_patches = h * 2h = 2h^2, therefore h = sqrt(num_patches / 2)
-#         h = int((num_patches // 2) ** 0.5)
-#         w = 2 * h
-        
-#         # Note: h and w are in PATCH space (low-res), output will be h*p × w*p (high-res)
+#         h = self.img_size[0] * scaling // p
+#         w = self.img_size[1] *scaling // p
 #         x = x.reshape(shape=(x.shape[0], h, w, p, p, c))
 #         x = torch.einsum("nhwpqc->nchpwq", x)
 #         imgs = x.reshape(shape=(x.shape[0], c, h * p, w * p))
@@ -281,19 +266,9 @@
 
 #         # x.shape = [B,num_patches,embed_dim]
 
-#         # Dynamically interpolate positional embeddings based on ACTUAL input size
-#         # This enables tiling: each tile has different dimensions than full image
-#         # Extract actual spatial dimensions from the patch count
-#         actual_num_patches = x.shape[1]  # Number of patches in current input
-        
-#         # Calculate actual input dimensions assuming 2:1 aspect ratio (lon:lat)
-#         # For num_patches, we have: num_patches = (H // patch_size) * (W // patch_size)
-#         # With W = 2*H (aspect ratio), we get: num_patches = (H // patch_size) * (2*H // patch_size) = 2 * (H // patch_size)^2
-#         actual_h_patches = int((actual_num_patches // 2) ** 0.5)
-#         actual_w_patches = 2 * actual_h_patches
-#         actual_input_size = (actual_h_patches * self.patch_size, actual_w_patches * self.patch_size)
-        
-#         pos_emb = interpolate_pos_embed_on_the_fly(self.pos_embed, self.patch_size, actual_input_size)
+
+#         pos_emb = interpolate_pos_embed_on_the_fly(self.pos_embed,self.patch_size,self.img_size)
+
 
 #         x = x + pos_emb
 
@@ -386,7 +361,7 @@ from climate_learn.utils.fused_attn import FusedAttn
 class Res_Slim_ViT(nn.Module):
     def __init__(
         self,
-        default_vars,
+        default_vars,  #list of default variables to be used for training
         img_size,
         in_channels,
         out_channels,
@@ -405,9 +380,12 @@ class Res_Slim_ViT(nn.Module):
         tensor_par_size = 1,
         tensor_par_group = None,
         FusedAttn_option = FusedAttn.CK,
+        num_constant_vars = 4,  # Default: land_sea_mask, orography, lattitude, landcover
     ):
         super().__init__()
         self.default_vars = default_vars
+        self.num_constant_vars = num_constant_vars
+
 
         self.img_size = img_size
         self.cnn_ratio = cnn_ratio
@@ -422,6 +400,7 @@ class Res_Slim_ViT(nn.Module):
         self.tensor_par_size = tensor_par_size
         self.tensor_par_group = tensor_par_group
 
+
         self.spatial_embed = nn.Linear(1, embed_dim)
         
         self.token_embeds = nn.ModuleList(
@@ -429,9 +408,15 @@ class Res_Slim_ViT(nn.Module):
         )
         self.num_patches = self.token_embeds[0].num_patches
 
+        # variable embedding to denote which variable each token belongs to
+        # helps in aggregating variables
+
         self.var_embed, self.var_map = self.create_var_embedding(embed_dim)
+
+        # variable aggregation: a learnable query and a single-layer cross attention
         self.var_query = nn.Parameter(torch.zeros(1, 1, embed_dim), requires_grad=True)
 
+        #self.var_agg = nn.MultiheadAttention(embed_dim, num_heads, batch_first=True)
         self.var_agg = VariableMapping_Attention(embed_dim, fused_attn=FusedAttn_option, num_heads=num_heads, qkv_bias=False,tensor_par_size = tensor_par_size, tensor_par_group = tensor_par_group)
         
         self.pos_embed = nn.Parameter(
@@ -460,12 +445,14 @@ class Res_Slim_ViT(nn.Module):
         )
         self.norm = nn.LayerNorm(embed_dim)
 
+        #skip connection path
         self.path2 = nn.ModuleList()
-        self.path2.append(nn.Conv2d(in_channels=(out_channels+4), out_channels=cnn_ratio*superres_mag*superres_mag, kernel_size=(3, 3), stride=1, padding=1)) 
+        self.path2.append(nn.Conv2d(in_channels=(out_channels+num_constant_vars), out_channels=cnn_ratio*superres_mag*superres_mag, kernel_size=(3, 3), stride=1, padding=1)) 
         self.path2.append(nn.GELU())
         self.path2.append(nn.PixelShuffle(superres_mag))
         self.path2.append(nn.Conv2d(in_channels=cnn_ratio, out_channels=out_channels, kernel_size=(3, 3), stride=1, padding=1)) 
         self.path2 = nn.Sequential(*self.path2)
+
 
         self.head = nn.ModuleList()
         for _ in range(decoder_depth):
@@ -487,6 +474,9 @@ class Res_Slim_ViT(nn.Module):
         self.pos_embed.data.copy_(torch.from_numpy(pos_embed).float().unsqueeze(0))
         self.apply(self._init_weights)
 
+
+
+
     def _init_weights(self, m):
         if isinstance(m, nn.Linear):
             trunc_normal_(m.weight, std=0.02)
@@ -496,56 +486,55 @@ class Res_Slim_ViT(nn.Module):
             nn.init.constant_(m.bias, 0)
             nn.init.constant_(m.weight, 1.0)
 
+
     def data_config(self, res, img_size, in_channels, out_channels):
         with torch.no_grad(): 
             orig_size = self.img_size
+
             self.spatial_resolution = res
             self.img_size = img_size
             self.in_channels = in_channels
             self.out_channels = out_channels
             self.num_patches = img_size[0] * img_size[1]// (self.patch_size **2)
        
+ 
         if torch.distributed.get_rank()==0:
             print("updated res is ",res,"img_size",img_size,"in_channels",in_channels,"out_channels",out_channels,"num_patches",self.num_patches,flush=True)
+
+
+        if torch.distributed.get_rank()==0:
             print("model.pos_embed.shape",self.pos_embed.shape,flush=True)
 
-    def unpatchify(self, x: torch.Tensor, h_patches: int, w_patches: int, scaling=1, out_channels=1):
-        """
-        Dynamically unpatchify based on explicit dimensions passed from forward().
-        Arguments:
-            h_patches: Number of patches in height dimension (H // patch_size)
-            w_patches: Number of patches in width dimension (W // patch_size)
-        """
-        p = self.patch_size * scaling
-        c = out_channels
-        
-        # Use EXPLICIT dimensions instead of guessing from x.shape
-        h = h_patches
-        w = w_patches
-        
-        # Check if dimensions match
-        if x.shape[1] != h * w:
-            # If mismatch, it means some patches were dropped or dimensions are wrong
-            # But with padding, this usually stays consistent. 
-            # Fallback/Safety: trust the sequence length if explicit fail (but this shouldn't happen with correct logic)
-            pass
 
+    def unpatchify(self, x: torch.Tensor, scaling =1, out_channels=1):
+        """
+        x: (B, L, V * patch_size**2)
+        return imgs: (B, V, H, W)
+        """
+        p = self.patch_size
+        c = out_channels
+        h = self.img_size[0] * scaling // p
+        w = self.img_size[1] *scaling // p
         x = x.reshape(shape=(x.shape[0], h, w, p, p, c))
         x = torch.einsum("nhwpqc->nchpwq", x)
         imgs = x.reshape(shape=(x.shape[0], c, h * p, w * p))
         return imgs
+
 
     @lru_cache(maxsize=None)
     def get_var_ids(self, vars, device):
         ids = np.array([self.var_map[var] for var in vars])
         return torch.from_numpy(ids).to(device)
 
+
     def get_var_emb(self, var_emb, vars):
         ids = self.get_var_ids(vars, var_emb.device)
         return var_emb[:, ids, :]
 
+
     def create_var_embedding(self, dim):
         var_embed = nn.Parameter(torch.zeros(1, len(self.default_vars), dim), requires_grad=True)
+        # TODO: create a mapping from var --> idx
         var_map = {}
         idx = 0
         for var in self.default_vars:
@@ -553,101 +542,140 @@ class Res_Slim_ViT(nn.Module):
             idx += 1
         return var_embed, var_map
 
+
+
     def aggregate_variables(self, x: torch.Tensor):
+        """
+        x: B, V, L, D
+        """
         b, _, l, _ = x.shape
+
         x = torch.einsum("bvld->blvd", x)
         x = x.flatten(0, 1)  # BxL, V, D
+
+        #var_query = self.var_query.repeat_interleave(x.shape[0], dim=0)
+
         var_query = self.var_query.expand(x.shape[0], -1, -1).contiguous()
-        x = self.var_agg(var_query, x)
+
+        #x , _ = self.var_agg(var_query, x, x)
+        x = self.var_agg(var_query, x)  # BxL, V~ , D, where V~ is the aggregated variables
+
         x = x.squeeze()
 
         if self.tensor_par_size >1:
-            src_rank = dist.get_rank() - dist.get_rank(group=self.tensor_par_group)
-            x= F_Identity_B_Broadcast(x, src_rank, group=self.tensor_par_group)
 
-        x = x.unflatten(dim=0, sizes=(b, l))
+            src_rank = dist.get_rank() - dist.get_rank(group=self.tensor_par_group)
+            x= F_Identity_B_Broadcast(x, src_rank, group=self.tensor_par_group)  #must do the backward broadcast because of the randomneess of dropout
+
+        x = x.unflatten(dim=0, sizes=(b, l))  # B, L, V~, D
+
         return x
 
+
     def residual_connection(self,x:torch.Tensor,out_var_index):
+        """
+         x: B, in channels, H, W
+        """
         x = x[:,out_var_index,:,:]
+
+        #x: B,out channels, H, W
         path2_result = self.path2(x)
+        #x: B, output channels, H*mag, W*mag
         return path2_result
 
+
     def forward_encoder(self, x: torch.Tensor, variables):
-        # 1. CAPTURE ACTUAL DIMENSIONS
-        H, W = x.shape[-2], x.shape[-1]
-        
+
         if isinstance(variables, list):
             variables = tuple(variables)
 
+        #tokenize each variable separately
         embeds = []
         var_ids = self.get_var_ids(variables, x.device)
 
         for i in range(len(var_ids)):
             id = var_ids[i]
             embeds.append(self.token_embeds[id](x[:, i : i + 1]))
-        x = torch.stack(embeds, dim=1)
+        x = torch.stack(embeds, dim=1)  # B, V, L, D
 
+        # add variable embedding
         var_embed = self.get_var_emb(self.var_embed, variables)
-        x = x + var_embed.unsqueeze(2)
 
-        x = self.aggregate_variables(x)
+        x = x + var_embed.unsqueeze(2)  # B, V, L, D
 
-        # 2. CALCULATE EXACT PATCH GRID (No guessing aspect ratio!)
-        actual_h_patches = H // self.patch_size
-        actual_w_patches = W // self.patch_size
-        actual_input_size = (actual_h_patches * self.patch_size, actual_w_patches * self.patch_size)
-        
-        pos_emb = interpolate_pos_embed_on_the_fly(self.pos_embed, self.patch_size, actual_input_size)
+        # variable aggregation
+        x = self.aggregate_variables(x)  # B, L, D, 
+
+        # x.shape = [B,num_patches,embed_dim]
+
+
+        pos_emb = interpolate_pos_embed_on_the_fly(self.pos_embed,self.patch_size,self.img_size)
+
+
         x = x + pos_emb
 
-        spatial_emb = self.spatial_embed(torch.tensor(self.spatial_resolution,dtype=x.dtype,device=x.device).unsqueeze(-1))
-        spatial_emb = spatial_emb.unsqueeze(0).unsqueeze(0)
-        x = x + spatial_emb
+        # add spatial resolution embedding
+
+        spatial_emb = self.spatial_embed(torch.tensor(self.spatial_resolution,dtype=x.dtype,device=x.device).unsqueeze(-1))  # D
+
+        spatial_emb = spatial_emb.unsqueeze(0).unsqueeze(0)  #1, 1, D
+
+        x = x + spatial_emb  # B, L, D
+
+
         x = self.pos_drop(x)
 
         if self.tensor_par_size>1:
             src_rank = dist.get_rank() - dist.get_rank(group=self.tensor_par_group)
             dist.broadcast(x, src_rank , group=self.tensor_par_group)
 
+
         for blk in self.blocks:
             x = blk(x)
+        # x.shape = [B,num_patches,embed_dim]
         x = self.norm(x)
 
         if self.tensor_par_size>1:
             x= F_Identity_B_Broadcast(x, src_rank, group=self.tensor_par_group)
 
         return x
+
     
     def find_var_index(self,in_variables,out_variables):
         temp_index= [in_variables.index(variable) for variable in out_variables] 
-        temp_index.append(in_variables.index("land_sea_mask"))
-        temp_index.append(in_variables.index("orography"))
-        temp_index.append(in_variables.index("lattitude"))
-        temp_index.append(in_variables.index("landcover"))
+        # temp_index.append(in_variables.index("land_sea_mask"))
+        # temp_index.append(in_variables.index("orography"))
+        # temp_index.append(in_variables.index("lattitude"))
+        # temp_index.append(in_variables.index("landcover"))
+        
+        # Add optional constant variables if present
+        optional_vars = ["land_sea_mask", "orography", "lattitude", "landcover"]
+        for var in optional_vars:
+            if var in in_variables:
+                temp_index.append(in_variables.index(var))
+
+
         return temp_index
 
     def forward(self, x, in_variables,out_variables):
-        if len(x.shape) == 5:
+        if len(x.shape) == 5:  # x.shape = [B,T,in_channels,H,W]
             x = x.flatten(1, 2)
-            
-        # 1. CAPTURE INPUT DIMENSIONS BEFORE ENCODING
-        H, W = x.shape[-2], x.shape[-1]
+        # x.shape = [B,T*in_channels,H,W]
 
         out_var_index = self.find_var_index(in_variables,out_variables)
+
         path2_result = self.residual_connection(x,out_var_index)     
 
         x = self.forward_encoder(x, in_variables)
-        
-        # decoder
+
+        # x.shape = [B,num_patches,embed_dim]
+
+        #decoder
         x = self.head(x) 
 
-        # 2. PASS DIMENSIONS TO UNPATCHIFY
-        # We know exactly how many patches height-wise and width-wise based on input H, W
-        h_patches = H // self.patch_size
-        w_patches = W // self.patch_size
-        
-        x = self.unpatchify(x, h_patches=h_patches, w_patches=w_patches, scaling=self.superres_mag, out_channels=self.out_channels)
+        # x.shape = [B,num_patches,out_channels*patch_size*patch_size]
+        x = self.unpatchify(x,scaling=self.superres_mag, out_channels=self.out_channels)
+        # x.shape = [B,out_channels,h*patch_size, w*patch_size]
         x = self.conv_out(x) 
  
         if path2_result.size(dim=2) !=x.size(dim=2) or path2_result.size(dim=3) !=x.size(dim=3):

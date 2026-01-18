@@ -7,7 +7,9 @@ import yaml
 import torch
 import torch.nn as nn
 import torch.distributed as dist
+from torch.utils.data import DataLoader
 from torch.distributed.fsdp import FullyShardedDataParallel as FSDP
+from torch.distributed.fsdp import StateDictType, FullStateDictConfig
 from torch.distributed.fsdp.wrap import wrap, transformer_auto_wrap_policy
 from torch.distributed.algorithms._checkpoint.checkpoint_wrapper import (
     checkpoint_wrapper,
@@ -19,8 +21,6 @@ from torch.distributed.fsdp import MixedPrecision, ShardingStrategy
 from torch.distributed.fsdp.sharded_grad_scaler import ShardedGradScaler
 from torch.nn.parallel import DistributedDataParallel as DDP
 from torch.utils.data._utils.collate import default_collate
-from torch.utils.data import DataLoader
-from torch.nn import SyncBatchNorm
 from functools import partial
 from datetime import timedelta
 import functools
@@ -43,7 +43,7 @@ from climate_learn.models.hub.components.cnn_blocks import (
 )
 from climate_learn.utils.fused_attn import FusedAttn
 from climate_learn.models.hub.components.pos_embed import interpolate_pos_embed
-from climate_learn.data.transforms import collate_resize, collate_batch_only
+from climate_learn.data.transforms import collate_resize, collate_batch_only, custom_collate
 from climate_learn.utils.monthly_loader import SequentialMonthlyDataset
 from utils import seed_everything, init_par_groups
 
@@ -89,56 +89,22 @@ def training_step(
     x = x.to(device)
     y = y.to(device)
     
-    # --- FIX START: Ensure Input is 4D [B, C*T, H, W] ---
-    if x.dim() == 5:
-        # Collapse the extra Time/History dimension into Channels
-        # Supports both [B, C, T, H, W] and [B, T, C, H, W]
-        x = x.flatten(1, 2)
-    
-    # Also fix Target y if necessary (though usually y is already 4D [B, Out, H, W])
-    if y.dim() == 5:
-        y = y.flatten(1, 2)
-    # --- FIX END ---
-    
-    # GPU-based interpolation (much faster than CPU collate_resize)
+    # GPU-based interpolation
     if resize_config is not None:
-        # lr_h, lr_w = resize_config['lr_size']
-        # hr_h, hr_w = resize_config['hr_size']
+        lr_h, lr_w = resize_config['lr_size']
+        hr_h, hr_w = resize_config['hr_size']
         mode = resize_config['mode']
-        scale = resize_config['scale_factor']
-        
-        
-        # Dynamic resizing (safe for tiles)
-        if mode in ['linear', 'bilinear', 'bicubic', 'trilinear']:
-            x = torch.nn.functional.interpolate(
-                x, scale_factor=scale, mode=mode, align_corners=False, recompute_scale_factor=False
-            )
-        else:
-            x = torch.nn.functional.interpolate(
-                x, scale_factor=scale, mode=mode, recompute_scale_factor=False
-            )
         
         # Interpolate input to low-resolution on GPU
         # x shape: [B, C, H, W] - downsample to model's input size
-        # if mode in ['linear', 'bilinear', 'bicubic', 'trilinear']:
-        #     x = torch.nn.functional.interpolate(
-        #         x, size=(lr_h, lr_w), mode=mode, align_corners=False
-        #     )
-        # else:
-        #     x = torch.nn.functional.interpolate(
-        #         x, size=(lr_h, lr_w), mode=mode
-        #     )
-        
-        # Interpolate target to high-resolution on GPU  
-        # y shape: [B, C, H, W] - upsample/keep at target size
-        # if mode in ['linear', 'bilinear', 'bicubic', 'trilinear']:
-        #     y = torch.nn.functional.interpolate(
-        #         y, size=(hr_h, hr_w), mode=mode, align_corners=False
-        #     )
-        # else:
-        #     y = torch.nn.functional.interpolate(
-        #         y, size=(hr_h, hr_w), mode=mode
-        #     )
+        if mode in ['linear', 'bilinear', 'bicubic', 'trilinear']:
+            x = torch.nn.functional.interpolate(
+                x, size=(lr_h, lr_w), mode=mode, align_corners=False
+            )
+        else:
+            x = torch.nn.functional.interpolate(
+                x, size=(lr_h, lr_w), mode=mode
+            )
 
     yhat = net.forward(x, in_variables, out_variables)
     yhat = clip_replace_constant(y, yhat, out_variables)
@@ -176,51 +142,20 @@ def evaluate_func(batch, stage: str, net, device: int, loss_metrics, target_tran
     x = x.to(device)
     y = y.to(device)
     
-    # --- FIX START: Ensure Input is 4D [B, C*T, H, W] ---
-    if x.dim() == 5:
-        # Collapse the extra Time/History dimension into Channels
-        # Supports both [B, C, T, H, W] and [B, T, C, H, W]
-        x = x.flatten(1, 2)
-    
-    # Also fix Target y if necessary (though usually y is already 4D [B, Out, H, W])
-    if y.dim() == 5:
-        y = y.flatten(1, 2)
-    # --- FIX END ---
-    
     # GPU-based interpolation (same as training_step)
     if resize_config is not None:
-        # lr_h, lr_w = resize_config['lr_size']
-        # hr_h, hr_w = resize_config['hr_size']
+        lr_h, lr_w = resize_config['lr_size']
+        hr_h, hr_w = resize_config['hr_size']
         mode = resize_config['mode']
-        scale = resize_config['scale_factor']
         
-        # Dynamic resizing (safe for tiles)
         if mode in ['linear', 'bilinear', 'bicubic', 'trilinear']:
             x = torch.nn.functional.interpolate(
-                x, scale_factor=scale, mode=mode, align_corners=False, recompute_scale_factor=False
+                x, size=(lr_h, lr_w), mode=mode, align_corners=False
             )
         else:
             x = torch.nn.functional.interpolate(
-                x, scale_factor=scale, mode=mode, recompute_scale_factor=False
+                x, size=(lr_h, lr_w), mode=mode
             )
-        
-        # if mode in ['linear', 'bilinear', 'bicubic', 'trilinear']:
-        #     x = torch.nn.functional.interpolate(
-        #         x, size=(lr_h, lr_w), mode=mode, align_corners=False
-        #     )
-        # else:
-        #     x = torch.nn.functional.interpolate(
-        #         x, size=(lr_h, lr_w), mode=mode
-        #     )
-        
-        # if mode in ['linear', 'bilinear', 'bicubic', 'trilinear']:
-        #     y = torch.nn.functional.interpolate(
-        #         y, size=(hr_h, hr_w), mode=mode, align_corners=False
-        #     )
-        # else:
-        #     y = torch.nn.functional.interpolate(
-        #         y, size=(hr_h, hr_w), mode=mode
-        #     )
 
     yhat = net.forward(x, in_variables, out_variables)
     yhat = clip_replace_constant(y, yhat, out_variables)
@@ -319,7 +254,6 @@ def create_model_and_losses(config, device, world_rank, in_vars, out_vars, data_
     # Create model directly without using load_forecasting_module
     if preset == "res_slimvit":
         from climate_learn.models.hub import Res_Slim_ViT
-        from climate_learn.utils.fused_attn import FusedAttn
         
         # Count constant variables (geographical features that don't change over time)
         constant_vars = ["land_sea_mask", "orography", "lattitude", "landcover"]
@@ -356,9 +290,6 @@ def create_model_and_losses(config, device, world_rank, in_vars, out_vars, data_
         )
     else:
         raise NotImplementedError(f"Model preset {preset} not implemented")
-    
-    # Convert to SyncBatchNorm for distributed training
-    # model = SyncBatchNorm.convert_sync_batchnorm(model)
     
     # NOTE: Do NOT move model to device before FSDP wrapping
     # FSDP will handle device placement automatically
@@ -402,10 +333,7 @@ def create_model_and_losses(config, device, world_rank, in_vars, out_vars, data_
             "eta_min": eta_min,
         },
     )
-    
-    # NOTE: Delay climatology loading until AFTER FSDP wrapping
-    # Climatology creates tensors that can interfere with FSDP initialization
-    
+        
     return model, optimizer, scheduler
 
 
@@ -454,17 +382,10 @@ def create_losses_after_fsdp(config, device, world_rank, model, data_module, in_
     
     return train_loss, val_losses, val_transforms
 
-def create_data_module(config, world_rank, device, do_tiling=False, div=1, overlap=0):
+
+def create_data_module(config, world_rank, device):
     """
     Create data module and loaders.
-    
-    Args:
-        config (dict): Configuration dictionary
-        world_rank (int): Process rank
-        device: Training device
-        do_tiling (bool): Whether to use TILES algorithm for large images
-        div (int): Tile division factor (images split into div×div tiles)
-        overlap (int): Tile overlap in pixels
     
     Returns:
         tuple: (data_module, train_dataloader, val_dataloader, in_vars, out_vars)
@@ -509,9 +430,6 @@ def create_data_module(config, world_rank, device, do_tiling=False, div=1, overl
     if world_rank == 0:
         print(f"Setting up distributed data loading: world_size={world_size_value}", flush=True)
         print(f"Each GPU will process 1/{world_size_value} of the dataset", flush=True)
-        
-    # Add buffer_size explicitly
-    buffer_size = config["trainer"]["buffer_size"]
     
     if forecast_type in ("direct", "iterative"):
         data_module = cl.data.IterDataModule(
@@ -529,9 +447,6 @@ def create_data_module(config, world_rank, device, do_tiling=False, div=1, overl
             subsample=6,
             batch_size=batch_size,
             num_workers=num_workers,
-            buffer_size=buffer_size,
-            div=div,          
-            overlap=overlap,
         )
     elif forecast_type == "continuous":
         data_module = cl.data.IterDataModule(
@@ -551,10 +466,8 @@ def create_data_module(config, world_rank, device, do_tiling=False, div=1, overl
             hrs_each_step=1,
             subsample=6,
             batch_size=batch_size,
+            buffer_size=2000,
             num_workers=num_workers,
-            buffer_size=buffer_size,
-            div=div,          
-            overlap=overlap,
         )
     
     lr_h, lr_w = config["model"]["img_size"]
@@ -571,26 +484,8 @@ def create_data_module(config, world_rank, device, do_tiling=False, div=1, overl
         data_module.resize_config = {
             'lr_size': (lr_h, lr_w),
             'hr_size': (hr_h, hr_w),
-            'mode': downsample_mode,
-            'scale_factor': 1.0 / superres_factor
+            'mode': downsample_mode
         }
-
-    # Check tiling compatibility with patch size
-    if do_tiling:
-        patch_size = config["model"]["patch_size"]
-        # For super-resolution forecasting: tiles are in low-res space
-        # Calculate tile dimensions based on division factor
-        yout = hr_h // div  # Output tile height in high-res space
-        yinp = yout // superres_factor + overlap  # Input tile height in low-res space
-
-        if yinp % patch_size != 0:
-            if world_rank == 0:
-                print(f"Tile height: {yinp}, patch_size {patch_size}", flush=True)
-                print(
-                    f"Overlap must be adjusted to accommodate patch_size. Need to increase by {yinp % patch_size}",
-                    flush=True,
-                )
-            sys.exit("Please adjust overlap according to the instructions above")
 
     if world_rank == 0:
         log_gpu_memory(device, f"after data_module creation")
@@ -599,7 +494,7 @@ def create_data_module(config, world_rank, device, do_tiling=False, div=1, overl
     data_module.setup()
 
     # Create data loaders
-    # Tiling is handled at the IterDataModule level via div and overlap parameters
+    # Note: batch_size and num_workers are already set in the IterDataModule
     train_dataloader = data_module.train_dataloader()
     
     val_dataloader = data_module.val_dataloader()
@@ -762,10 +657,6 @@ def save_checkpoint(
     if world_rank == 0:
         log_gpu_memory(device, "Before saving checkpoint", world_rank)
         
-    
-    from torch.distributed.fsdp import FullyShardedDataParallel as FSDP
-    from torch.distributed.fsdp import StateDictType, FullStateDictConfig
-
     # Configure policy: Offload to CPU to save VRAM, gather on Rank 0 only
     save_policy = FullStateDictConfig(offload_to_cpu=True, rank0_only=True)
 
@@ -850,12 +741,18 @@ def load_checkpoint(checkpoint_path, model, optimizer, scheduler, world_rank, re
     
     return start_epoch
 
+
 def main(device):
     """Main training function."""
     # Setup environment
     world_size = int(os.environ["SLURM_NTASKS"])
     world_rank = dist.get_rank()
     local_rank = int(os.environ["SLURM_LOCALID"])
+
+    print(
+        f"world_size={world_size}, world_rank={world_rank}, local_rank={local_rank}",
+        flush=True,
+    )
 
     # Parse config
     config_path = sys.argv[1]
@@ -864,33 +761,14 @@ def main(device):
     # Extract key parameters
     max_epochs = config["trainer"]["max_epochs"]
     checkpoint_path = config["trainer"].get("checkpoint", None)
+    data_type = config["trainer"].get("data_type", "float32")
     cp_save_path = config["trainer"].get("checkpoint_save_path", "checkpoints/forecasting")
     
-    # DataType Logic (Strings -> Objects)
-    data_type_str = config["trainer"].get("data_type", "float32")
-    if data_type_str == "bfloat16":
-        data_type = torch.bfloat16
-    elif data_type_str == "float16":
-        data_type = torch.float16
-    else:
-        data_type = torch.float32
-
     # Parallelism config
+    fsdp_size = config["parallelism"].get("fsdp", 1)
+    simple_ddp_size = config["parallelism"].get("simple_ddp", 1)
     tensor_par_size = config["parallelism"].get("tensor_par", 1)
-    
-    # Tiling config
-    try:
-        do_tiling = config["tiling"]["do_tiling"]
-        if do_tiling:
-            div = config["tiling"]["div"]
-            overlap = config["tiling"]["overlap"]
-        else:
-            div = 1
-            overlap = 0
-    except (KeyError, TypeError):
-        do_tiling = False
-        div = 1
-        overlap = 0
+    seq_par_size = config["parallelism"].get("seq_par", 1)
 
     if world_rank == 0:
         print("\n" + "=" * 80)
@@ -898,467 +776,197 @@ def main(device):
         print("=" * 80)
         print(f"Config: {config_path}")
         print(f"Max epochs: {max_epochs}")
-        print(f"Data type: {data_type_str} ({data_type})") 
+        print(f"Data type: {data_type}")
+        print(f"Checkpoint: {checkpoint_path if checkpoint_path else 'None'}")
         print(f"Save path: {cp_save_path}")
         print("=" * 80 + "\n", flush=True)
-        
-    # ------------------------------------------------------------------
-    # STEP 1: Get Metadata & Expanded Variables
-    # ------------------------------------------------------------------
-    temp_module, _, _, in_vars, out_vars = create_data_module(
-        config, world_rank, device, do_tiling=False 
-    )
-    
-    if world_rank == 0:
-        print(f"Expanded Input Variables: {in_vars}", flush=True)
 
-    # Extract the loaded transforms (Mean/Std)
-    input_transforms = temp_module.transforms
-    output_transforms = temp_module.output_transforms
-
+    # Seed everything
     seed_everything(42)
     
-    # ------------------------------------------------------------------
-    # STEP 2: Initialize Datasets (Sequential RAM Loader)
-    # ------------------------------------------------------------------
-    
-    def apply_normalization(x, y):
-        for i, var_name in enumerate(in_vars):
-            if var_name in input_transforms:
-                x[i] = input_transforms[var_name](x[i].unsqueeze(0)).squeeze(0)
-        for i, var_name in enumerate(out_vars):
-            if var_name in output_transforms:
-                y[i] = output_transforms[var_name](y[i].unsqueeze(0)).squeeze(0)
-        return x, y
-
-    train_files_dir = os.path.join(config["data"]["era5_dir"], "train")
-    val_files_dir = os.path.join(config["data"]["era5_dir"], "val")
-    
-    if world_rank == 0:
-        print(f"Loading data with precision: {data_type} to save RAM.", flush=True)
-
-    train_dataset = SequentialMonthlyDataset(
-        train_files_dir, in_vars, out_vars,
-        pred_range=config["data"]["pred_range"],
-        subsample=6,
-        transform=apply_normalization,
-        rank=world_rank,
-        world_size=world_size,
-        dtype=data_type,
-    )
-
-    val_dataset = SequentialMonthlyDataset(
-        val_files_dir, in_vars, out_vars,
-        pred_range=config["data"]["pred_range"],
-        subsample=6,
-        transform=apply_normalization,
-        rank=world_rank,
-        world_size=world_size,
-        dtype=data_type,
-    )
-    
-    # --- NEW: Custom Collate Function to fix metadata batching ---
-    def custom_collate(batch):
-        # batch is a list of tuples: [(x, y, in_vars, out_vars), ...]
+    ### If enable monthly loader, use custom dataloader instead of datamodule
+    if enable_monthly_loader := config["data"].get("enable_monthly_loader", False):
+        train_files_dir = os.path.join(config["data"]["era5_dir"], "train")
+        val_files_dir = os.path.join(config["data"]["era5_dir"], "val")
         
-        # 1. Stack Tensors (Standard behavior)
-        x = torch.stack([item[0] for item in batch])
-        y = torch.stack([item[1] for item in batch])
+        data_module, _, _, in_vars, out_vars = create_data_module(
+            config, world_rank, device
+        )
         
-        # 2. Extract Metadata (Take from first sample only, do NOT stack)
-        # Since variables are constant across the dataset, we just need one copy
-        in_vars_clean = batch[0][2]
-        out_vars_clean = batch[0][3]
+        input_transforms = data_module.transforms
+        output_transforms = data_module.output_transforms
         
-        return x, y, in_vars_clean, out_vars_clean
+        def apply_normalization(x, y):
+            for i, var_name in enumerate(in_vars):
+                if var_name in input_transforms:
+                    x[i] = input_transforms[var_name](x[i].unsqueeze(0)).squeeze(0)
+            for i, var_name in enumerate(out_vars):
+                if var_name in output_transforms:
+                    y[i] = output_transforms[var_name](y[i].unsqueeze(0)).squeeze(0)
+            return x, y
+    
+        train_dataset = SequentialMonthlyDataset(
+            train_files_dir, in_vars, out_vars,
+            pred_range=config["data"]["pred_range"],
+            subsample=6,
+            transform=apply_normalization,
+            rank=world_rank,
+            world_size=world_size,
+            dtype=data_type,
+        )
 
-    # Create FAST Loaders using the custom collate
-    train_dataloader = DataLoader(
-        train_dataset, 
-        batch_size=config["trainer"]["batch_size"], 
-        num_workers=0,
-        collate_fn=custom_collate  # <--- Apply fix here
-    )
-    val_dataloader = DataLoader(
-        val_dataset, 
-        batch_size=config["trainer"]["batch_size"], 
-        num_workers=0,
-        collate_fn=custom_collate  # <--- Apply fix here
-    )
+        val_dataset = SequentialMonthlyDataset(
+            val_files_dir, in_vars, out_vars,
+            pred_range=config["data"]["pred_range"],
+            subsample=6,
+            transform=apply_normalization,
+            rank=world_rank,
+            world_size=world_size,
+            dtype=data_type,
+        )
     
-    # ------------------------------------------------------------------
-    # STEP 3: Setup Model & Training
-    # ------------------------------------------------------------------
-    
+        train_dataloader = DataLoader(
+            train_dataset, 
+            batch_size=config["trainer"]["batch_size"], 
+            num_workers=1,
+            collate_fn=custom_collate
+        )
+        val_dataloader = DataLoader(
+            val_dataset, 
+            batch_size=config["trainer"]["batch_size"], 
+            num_workers=1,
+            collate_fn=custom_collate
+        )
+        
+    else:
+        # Create data module if not using monthly loader
+        data_module, train_dataloader, val_dataloader, in_vars, out_vars = create_data_module(
+            config, world_rank, device
+        )
+
+    # Create model and optimizer (WITHOUT losses yet)
     model, optimizer, scheduler = create_model_and_losses(
-        config, device, world_rank, in_vars, out_vars, temp_module
+        config, device, world_rank, in_vars, out_vars, data_module
     )
-    
-    if world_rank == 0:
-        print("Using FSDP with activation checkpointing...", flush=True)
-    
-    # FIX: Use data_type_str for logic checks
-    if data_type_str == "bfloat16":
+        
+    # Setup mixed precision policy
+    if data_type == "bfloat16":
         bfloat_policy = MixedPrecision(
             param_dtype=torch.bfloat16,
             reduce_dtype=torch.bfloat16,
             buffer_dtype=torch.bfloat16,
-        )
-    elif data_type_str == "float16":
-         bfloat_policy = MixedPrecision(
-            param_dtype=torch.float16,
-            reduce_dtype=torch.float16,
-            buffer_dtype=torch.float16,
         )
     else:
         bfloat_policy = None
         
     auto_wrap_policy = functools.partial(
         transformer_auto_wrap_policy,
-        transformer_layer_cls={Block}
+        transformer_layer_cls={Block}  # Wrap each Transformer block
     )
         
     model = FSDP(
         model,
         device_id=local_rank,
         mixed_precision=bfloat_policy,
-        auto_wrap_policy=auto_wrap_policy,
-        sharding_strategy=ShardingStrategy.FULL_SHARD,
-        use_orig_params=True,
+        auto_wrap_policy=auto_wrap_policy,  # Enable per-layer wrapping of Block layers
+        sharding_strategy=ShardingStrategy.FULL_SHARD,  # CRITICAL: Actually shard parameters!
+        use_orig_params=True,  # Keep True for ROCm stability (False causes RCCL crashes)
     )
     
+    # Now apply activation checkpointing AFTER FSDP wrapping (critical for memory!)
+    # This reduces memory by ~3x by recomputing activations during backward pass
+    # Use REENTRANT mode - more stable with use_orig_params=True on ROCm
     reentrant_wrapper = functools.partial(
         checkpoint_wrapper,
         checkpoint_impl=CheckpointImpl.REENTRANT,
     )
+    
     check_fn = lambda submodule: isinstance(submodule, Block)
+    
     apply_activation_checkpointing(
         model, 
-        checkpoint_wrapper_fn=reentrant_wrapper,
+        checkpoint_wrapper_fn=reentrant_wrapper, #non_reentrant_wrapper
         check_fn=check_fn
     )
+    
+    if world_rank == 0:
+        print("FSDP wrapping completed, now creating losses...", flush=True)
 
+    # Create losses AFTER FSDP wrapping (climatology can interfere with FSDP init)
     train_loss, val_losses, val_transforms = create_losses_after_fsdp(
-        config, device, world_rank, model, temp_module, in_vars, out_vars
+        config, device, world_rank, model, data_module, in_vars, out_vars
     )
 
-    # FIX: Use data_type_str check
-    if data_type_str == "bfloat16" or data_type_str == "float16":
+    if world_rank == 0:
+        print("Losses created successfully", flush=True)
+
+    # Create gradient scaler for mixed precision
+    if data_type == "bfloat16":
         scaler = ShardedGradScaler(init_scale=8192, growth_interval=100)
     else:
         scaler = None
 
-    start_epoch = load_checkpoint(checkpoint_path, model, optimizer, scheduler, world_rank, reset_optimizer=True)
+    # Load checkpoint if available
+    # Note: Set reset_optimizer=True if resuming with different FSDP settings
+    start_epoch = load_checkpoint(checkpoint_path, model, optimizer, scheduler, world_rank, reset_optimizer=False)
+
+    # Variable weights for loss
     var_weights = config["data"].get("var_weights", {})
 
-    # ------------------------------------------------------------------
-    # STEP 4: Training Loop
-    # ------------------------------------------------------------------
+    # Training loop
     for epoch in range(start_epoch, max_epochs):
+        # Train
         avg_loss = train_epoch(
-            model, train_dataloader, optimizer, scheduler, scaler, epoch,
-            world_rank, device, var_weights, train_loss, in_vars, out_vars,
-            temp_module, data_type=data_type_str, log_interval=50
+            model,
+            train_dataloader,
+            optimizer,
+            scheduler,
+            scaler,
+            epoch,
+            world_rank,
+            device,
+            var_weights,
+            train_loss,
+            in_vars,
+            out_vars,
+            data_module,
+            data_type=data_type,
+            log_interval=50,
         )
 
-        if (epoch + 1) % 5 == 0:
-            validate_epoch(
-                model, val_dataloader, epoch, world_rank, device,
-                val_losses, val_transforms, in_vars, out_vars, temp_module,
+        # Validate (optional, can be skipped for speed)
+        if (epoch + 1) % 5 == 0:  # Validate every 5 epochs
+            val_losses_dict = validate_epoch(
+                model,
+                val_dataloader,
+                epoch,
+                world_rank,
+                device,
+                val_losses,
+                val_transforms,
+                in_vars,
+                out_vars,
+                data_module,
             )
 
-        if (epoch + 1) % 1 == 0:
+        # Save checkpoint
+        if (epoch + 1) % 1 == 0:  # Save every epoch
             save_checkpoint(
-                model, optimizer, scheduler, epoch, cp_save_path,
-                world_rank, local_rank, tensor_par_size, device,
+                model,
+                optimizer,
+                scheduler,
+                epoch,
+                cp_save_path,
+                world_rank,
+                local_rank,
+                tensor_par_size,
+                device,
             )
 
     if world_rank == 0:
-        print("\nTraining completed!\n", flush=True)
-
-# def main(device):
-#     """Main training function."""
-#     # Setup environment
-#     world_size = int(os.environ["SLURM_NTASKS"])
-#     world_rank = dist.get_rank()
-#     local_rank = int(os.environ["SLURM_LOCALID"])
-
-#     print(
-#         f"world_size={world_size}, world_rank={world_rank}, local_rank={local_rank}",
-#         flush=True,
-#     )
-
-#     # Parse config
-#     config_path = sys.argv[1]
-#     config = parse_config(config_path, world_rank)
-
-#     # Extract key parameters
-#     max_epochs = config["trainer"]["max_epochs"]
-#     checkpoint_path = config["trainer"].get("checkpoint", None)
-#     data_type_str = config["trainer"].get("data_type", "float32")
-#     cp_save_path = config["trainer"].get("checkpoint_save_path", "checkpoints/forecasting")
-    
-#     if data_type_str == "bfloat16":
-#         data_type = torch.bfloat16   # <--- usage of torch.bfloat16 (Object)
-#     elif data_type_str == "float16":
-#         data_type = torch.float16
-#     else:
-#         data_type = torch.float32
-    
-#     # Parallelism config
-#     fsdp_size = config["parallelism"].get("fsdp", 1)
-#     simple_ddp_size = config["parallelism"].get("simple_ddp", 1)
-#     tensor_par_size = config["parallelism"].get("tensor_par", 1)
-#     seq_par_size = config["parallelism"].get("seq_par", 1)
-    
-#     # Tiling config for large images
-#     try:
-#         do_tiling = config["tiling"]["do_tiling"]
-#         if do_tiling:
-#             div = config["tiling"]["div"]
-#             overlap = config["tiling"]["overlap"]
-#         else:
-#             div = 1
-#             overlap = 0
-#     except (KeyError, TypeError):
-#         do_tiling = False
-#         div = 1
-#         overlap = 0
-
-#     if world_rank == 0:
-#         print("\n" + "=" * 80)
-#         print("Training Configuration Summary")
-#         print("=" * 80)
-#         print(f"Config: {config_path}")
-#         print(f"Max epochs: {max_epochs}")
-#         print(f"Data type: {data_type}")
-#         print(f"Checkpoint: {checkpoint_path if checkpoint_path else 'None'}")
-#         print(f"Save path: {cp_save_path}")
-#         print("=" * 80 + "\n", flush=True)
-        
-#     # Get the module, but ignore the returned loaders
-#     temp_module, _, _, in_vars, out_vars = create_data_module(
-#         config, world_rank, device, do_tiling=False # Tiling handled by new loader or training step
-#     )
-    
-#     # Extract the loaded transforms (Mean/Std) from the module
-#     # These are dictionaries: {'temperature': Normalize(...), ...}
-#     input_transforms = temp_module.transforms
-#     output_transforms = temp_module.output_transforms
-
-#     # Seed everything
-#     seed_everything(42)
-    
-#     def dummy_transform(x, y):
-#         # Add normalization logic here: (val - mean) / std
-#         return x, y 
-
-#     # 2. Initialize Datasets
-#     train_files_dir = os.path.join(config["data"]["era5_dir"], "train")
-#     val_files_dir = os.path.join(config["data"]["era5_dir"], "val") # or 'test'
-
-#     # Use existing variable lists from config
-#     in_vars = config["data"]["variables"]
-#     out_vars = config["data"]["out_variables"]
-    
-#     def apply_normalization(x, y):
-#         # x shape: [C, H, W], y shape: [C_out, H, W]
-        
-#         # Normalize Inputs
-#         for i, var_name in enumerate(in_vars):
-#             if var_name in input_transforms:
-#                 # Apply transform (x - mean) / std
-#                 # The transforms usually expect [C, H, W] or scalar. 
-#                 # Since we have [H, W], unsqueeze to [1, H, W] then squeeze back
-#                 x[i] = input_transforms[var_name](x[i].unsqueeze(0)).squeeze(0)
-                
-#         # Normalize Targets
-#         for i, var_name in enumerate(out_vars):
-#             if var_name in output_transforms:
-#                 y[i] = output_transforms[var_name](y[i].unsqueeze(0)).squeeze(0)
-                
-#         return x, y
-
-#     train_dataset = SequentialMonthlyDataset(
-#         train_files_dir, in_vars, out_vars,
-#         pred_range=config["data"]["pred_range"],
-#         subsample=6, # 6 hours
-#         transform=apply_normalization,
-#         rank=world_rank,
-#         world_size=world_size,
-#         dtype=data_type,
-#     )
-
-#     val_dataset = SequentialMonthlyDataset(
-#         val_files_dir, in_vars, out_vars,
-#         pred_range=config["data"]["pred_range"],
-#         subsample=6,
-#         transform=apply_normalization,
-#         rank=world_rank,
-#         world_size=world_size,
-#         dtype=data_type,
-#     )
-
-#     # 3. Create Loaders
-#     # num_workers=0 is FASTEST here because data is in RAM! 
-#     # No need for multiprocessing overhead.
-#     # train_dataloader = DataLoader(train_dataset, batch_size=config["trainer"]["batch_size"], num_workers=0)
-#     # val_dataloader = DataLoader(val_dataset, batch_size=config["trainer"]["batch_size"], num_workers=0)
-
-#     # # Create data module
-#     # data_module, train_dataloader, val_dataloader, in_vars, out_vars = create_data_module(
-#     #     config, world_rank, device, do_tiling, div, overlap
-#     # )
-    
-#     data_module, _train_dl, _val_dl, in_vars, out_vars = create_data_module(
-#         config, world_rank, device, do_tiling, div, overlap
-#     )
-    
-#     train_dataloader = DataLoader(train_dataset, batch_size=config["trainer"]["batch_size"], num_workers=0)
-#     val_dataloader = DataLoader(val_dataset, batch_size=config["trainer"]["batch_size"], num_workers=0)
-    
-#     # Create model and optimizer (WITHOUT losses yet)
-#     model, optimizer, scheduler = create_model_and_losses(
-#         config, device, world_rank, in_vars, out_vars, temp_module
-#     )
-    
-#     # FSDP CONFIGURATION with activation checkpointing for memory efficiency
-#     # This matches PyTorch Lightning's strategy to handle large 128x256 images
-    
-#     if world_rank == 0:
-#         print("Using FSDP with activation checkpointing for memory efficiency...", flush=True)
-    
-#     # Setup mixed precision policy
-#     if data_type_str == "bfloat16":
-#         bfloat_policy = MixedPrecision(
-#             param_dtype=torch.bfloat16,
-#             reduce_dtype=torch.bfloat16,
-#             buffer_dtype=torch.bfloat16,
-#         )
-#     else:
-#         bfloat_policy = None
-        
-#     auto_wrap_policy = functools.partial(
-#         transformer_auto_wrap_policy,
-#         transformer_layer_cls={Block}  # Wrap each Transformer block
-#     )
-        
-#     model = FSDP(
-#         model,
-#         device_id=local_rank,
-#         mixed_precision=bfloat_policy,
-#         auto_wrap_policy=auto_wrap_policy,  # Enable per-layer wrapping of Block layers
-#         sharding_strategy=ShardingStrategy.FULL_SHARD,  # CRITICAL: Actually shard parameters!
-#         use_orig_params=True,  # Keep True for ROCm stability (False causes RCCL crashes)
-#     )
-    
-#     # Now apply activation checkpointing AFTER FSDP wrapping (critical for memory!)
-#     # This reduces memory by ~3x by recomputing activations during backward pass
-#     # Use REENTRANT mode - more stable with use_orig_params=True on ROCm
-#     reentrant_wrapper = functools.partial(
-#         checkpoint_wrapper,
-#         checkpoint_impl=CheckpointImpl.REENTRANT,
-#     )
-#     # non_reentrant_wrapper = functools.partial(
-#     #     checkpoint_wrapper,
-#     #     checkpoint_impl=CheckpointImpl.NO_REENTRANT,
-#     # )
-    
-#     check_fn = lambda submodule: isinstance(submodule, Block)
-    
-#     apply_activation_checkpointing(
-#         model, 
-#         checkpoint_wrapper_fn=reentrant_wrapper, #non_reentrant_wrapper
-#         check_fn=check_fn
-#     )
-    
-#     if world_rank == 0:
-#         print("FSDP wrapping with activation checkpointing completed", flush=True)
-
-#     if world_rank == 0:
-#         print("FSDP wrapping completed, now creating losses...", flush=True)
-
-#     # Create losses AFTER FSDP wrapping (climatology can interfere with FSDP init)
-#     train_loss, val_losses, val_transforms = create_losses_after_fsdp(
-#         config, device, world_rank, model, data_module, in_vars, out_vars
-#     )
-
-#     if world_rank == 0:
-#         print("Losses created successfully", flush=True)
-
-#     # Create gradient scaler for mixed precision
-#     if data_type_str == "bfloat16":
-#         scaler = ShardedGradScaler(init_scale=8192, growth_interval=100)
-#     else:
-#         scaler = None
-
-#     # Load checkpoint if available
-#     # Note: Set reset_optimizer=True if resuming with different FSDP settings
-#     start_epoch = load_checkpoint(checkpoint_path, model, optimizer, scheduler, world_rank, reset_optimizer=True)
-
-#     # Variable weights for loss
-#     var_weights = config["data"].get("var_weights", {})
-
-#     # Training loop
-#     for epoch in range(start_epoch, max_epochs):
-#         # # Clear memory cache before each epoch to prevent fragmentation
-#         # if epoch > 0:
-#         #     torch.cuda.empty_cache()
-#         #     if world_rank == 0:
-#         #         print(f"Cleared CUDA cache before epoch {epoch}", flush=True)
-
-#         # Train
-#         avg_loss = train_epoch(
-#             model,
-#             train_dataloader,
-#             optimizer,
-#             scheduler,
-#             scaler,
-#             epoch,
-#             world_rank,
-#             device,
-#             var_weights,
-#             train_loss,
-#             in_vars,
-#             out_vars,
-#             data_module,
-#             data_type=data_type,
-#             log_interval=50,
-#         )
-
-#         # Validate (optional, can be skipped for speed)
-#         if (epoch + 1) % 5 == 0:  # Validate every 5 epochs
-#             val_losses_dict = validate_epoch(
-#                 model,
-#                 val_dataloader,
-#                 epoch,
-#                 world_rank,
-#                 device,
-#                 val_losses,
-#                 val_transforms,
-#                 in_vars,
-#                 out_vars,
-#                 data_module,
-#             )
-
-#         # Save checkpoint
-#         if (epoch + 1) % 1 == 0:  # Save every epoch
-#             save_checkpoint(
-#                 model,
-#                 optimizer,
-#                 scheduler,
-#                 epoch,
-#                 cp_save_path,
-#                 world_rank,
-#                 local_rank,
-#                 tensor_par_size,
-#                 device,
-#             )
-
-#     if world_rank == 0:
-#         print("\n" + "=" * 80)
-#         print("Training completed!")
-#         print("=" * 80 + "\n", flush=True)
+        print("\n" + "=" * 80)
+        print("Training completed!")
+        print("=" * 80 + "\n", flush=True)
 
 
 if __name__ == "__main__":
