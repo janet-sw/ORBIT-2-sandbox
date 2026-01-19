@@ -132,16 +132,34 @@ def collate_batch_only(samples):
         return default_collate(samples)
     
 
+# def custom_collate(batch):
+#         # batch is a list of tuples: [(x, y, in_vars, out_vars), ...]
+        
+#         # 1. Stack Tensors (Standard behavior)
+#         x = torch.stack([item[0] for item in batch])
+#         y = torch.stack([item[1] for item in batch])
+        
+#         # 2. Extract Metadata (Take from first sample only, do NOT stack)
+#         # Since variables are constant across the dataset, we just need one copy
+#         in_vars_clean = batch[0][2]
+#         out_vars_clean = batch[0][3]
+        
+#         return x, y, in_vars_clean, out_vars_clean
+
 def custom_collate(batch):
-        # batch is a list of tuples: [(x, y, in_vars, out_vars), ...]
-        
-        # 1. Stack Tensors (Standard behavior)
-        x = torch.stack([item[0] for item in batch])
-        y = torch.stack([item[1] for item in batch])
-        
-        # 2. Extract Metadata (Take from first sample only, do NOT stack)
-        # Since variables are constant across the dataset, we just need one copy
-        in_vars_clean = batch[0][2]
-        out_vars_clean = batch[0][3]
-        
-        return x, y, in_vars_clean, out_vars_clean
+    # batch is a list of tuples: [(x, y, in_vars, out_vars), ...]
+    
+    # 1. Stack Tensors (Handle Numpy -> Tensor conversion if needed)
+    # default_collate would do this automatically, but since we are doing custom
+    # stacking, we should ensure elements are tensors first.
+    x_list = [torch.as_tensor(item[0]) for item in batch]
+    y_list = [torch.as_tensor(item[1]) for item in batch]
+    
+    x = torch.stack(x_list)
+    y = torch.stack(y_list)
+    
+    # 2. Extract Metadata (Take from first sample only, do NOT stack)
+    in_vars_clean = batch[0][2]
+    out_vars_clean = batch[0][3]
+    
+    return x, y, in_vars_clean, out_vars_clean

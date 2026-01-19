@@ -5,7 +5,7 @@ trainer:
   batch_size: 128
   num_workers: 2
   checkpoint: null  # Path to checkpoint to resume from, or null
-  checkpoint_save_path: "/lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_40625_deg"
+  checkpoint_save_path: "/lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg"
   data_type: "bfloat16"  # "float32", "bfloat16", "float16"
   train_loss: "lat_mse"  # this field is not used by the training script, loss is hardcoded
   num_gpus: 8
@@ -32,7 +32,7 @@ data:
     - "lattitude"
     - "land_sea_mask"
     - "orography"
-    - "landcover"
+    # landcover not available in 1.40625_deg data
   
   # Output variables
   out_variables:

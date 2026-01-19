@@ -89,11 +89,22 @@ def training_step(
     x = x.to(device)
     y = y.to(device)
     
+    # Flatten 5D [B, C, T, H, W] to 4D [B, C*T, H, W]
+    if x.dim() == 5:
+        x = x.flatten(1, 2)
+    if y.dim() == 5:
+        y = y.flatten(1, 2)
+    # ======================
+    
     # GPU-based interpolation
     if resize_config is not None:
         lr_h, lr_w = resize_config['lr_size']
         hr_h, hr_w = resize_config['hr_size']
         mode = resize_config['mode']
+        
+        # Debug: Check tensor shape before interpolation
+        if x.dim() != 4:
+            raise ValueError(f"Expected 4D input tensor [B, C, H, W], but got {x.dim()}D tensor with shape {x.shape}")
         
         # Interpolate input to low-resolution on GPU
         # x shape: [B, C, H, W] - downsample to model's input size
@@ -141,6 +152,13 @@ def evaluate_func(batch, stage: str, net, device: int, loss_metrics, target_tran
     x, y, in_variables, out_variables = batch
     x = x.to(device)
     y = y.to(device)
+    
+    # Flatten 5D [B, C, T, H, W] to 4D [B, C*T, H, W]
+    if x.dim() == 5:
+        x = x.flatten(1, 2)
+    if y.dim() == 5:
+        y = y.flatten(1, 2)
+    # ======================
     
     # GPU-based interpolation (same as training_step)
     if resize_config is not None:
@@ -285,7 +303,7 @@ def create_model_and_losses(config, device, world_rank, in_vars, out_vars, data_
             mlp_ratio=config["model"].get("mlp_ratio", 4.0),
             drop_path=config["model"].get("drop_path", 0.1),
             drop_rate=config["model"].get("drop_rate", 0.0),
-            # num_constant_vars=num_constant_vars,
+            num_constant_vars=num_constant_vars,
             FusedAttn_option=FusedAttn.DEFAULT,  # Use PyTorch native attention instead of xformers (ROCm compatibility)
         )
     else:
@@ -797,8 +815,11 @@ def main(device):
         output_transforms = data_module.output_transforms
         
         def apply_normalization(x, y):
+            # x has shape [C, H, W], y has shape [C_out, H, W] (UNBATCHED from monthly loader)
+            # Transforms expect [1, H, W] per channel
             for i, var_name in enumerate(in_vars):
                 if var_name in input_transforms:
+                    # x[i] has shape [H, W], add batch dim, transform, remove batch dim
                     x[i] = input_transforms[var_name](x[i].unsqueeze(0)).squeeze(0)
             for i, var_name in enumerate(out_vars):
                 if var_name in output_transforms:
@@ -838,6 +859,18 @@ def main(device):
             collate_fn=custom_collate
         )
         
+        lr_h, lr_w = config["model"]["img_size"]
+        superres_factor = config["model"]["superres_factor"]
+        hr_h, hr_w = lr_h * superres_factor, lr_w * superres_factor
+        downsample_mode = config["model"]["downsample_mode"]
+    
+        if not hasattr(data_module, 'resize_config'):
+            data_module.resize_config = {
+                'lr_size': (lr_h, lr_w),
+                'hr_size': (hr_h, hr_w),
+                'mode': downsample_mode
+            }
+            
     else:
         # Create data module if not using monthly loader
         data_module, train_dataloader, val_dataloader, in_vars, out_vars = create_data_module(
