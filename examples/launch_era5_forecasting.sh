@@ -5,10 +5,10 @@
 #SBATCH -e logs/era5_forecast-%j.out
 #SBATCH -t 00:20:00
 #SBATCH -q debug
-#SBATCH --nodes=1
+#SBATCH --nodes=2
 #SBATCH --ntasks-per-node=8
 #SBATCH --gpus-per-node=8
-#SBATCH --cpus-per-task=7      # Recommended: Request CPUs to avoid bottlenecks
+#SBATCH --cpus-per-task=7
 
 # Create logs directory if it doesn't exist
 mkdir -p logs

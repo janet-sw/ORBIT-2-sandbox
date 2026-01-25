@@ -48,18 +48,40 @@ from climate_learn.utils.monthly_loader import SequentialMonthlyDataset
 from utils import seed_everything, init_par_groups
 
 
+# def log_gpu_memory(device, message="", world_rank=None):
+#     """Log GPU memory usage with optional message and rank."""
+#     memory_allocated = torch.cuda.memory_allocated(device) / 1024 / 1024 / 1024
+#     memory_reserved = torch.cuda.memory_reserved(device) / 1024 / 1024 / 1024
+#     if world_rank is not None:
+#         print(
+#             f"rank {world_rank} {message} Allocated: {memory_allocated:.2f}GB, Reserved: {memory_reserved:.2f}GB",
+#             flush=True,
+#         )
+#     else:
+#         print(f"{message} Allocated: {memory_allocated:.2f}GB, Reserved: {memory_reserved:.2f}GB", flush=True)
+
 def log_gpu_memory(device, message="", world_rank=None):
-    """Log GPU memory usage with optional message and rank."""
+    """Log GPU memory usage including max allocated with optional message and rank."""
     memory_allocated = torch.cuda.memory_allocated(device) / 1024 / 1024 / 1024
+    max_memory_allocated = torch.cuda.max_memory_allocated(device) / 1024 / 1024 / 1024
     memory_reserved = torch.cuda.memory_reserved(device) / 1024 / 1024 / 1024
+    
     if world_rank is not None:
         print(
-            f"rank {world_rank} {message} Allocated: {memory_allocated:.2f}GB, Reserved: {memory_reserved:.2f}GB",
+            f"rank {world_rank} {message} "
+            f"Allocated: {memory_allocated:.2f}GB, "
+            f"Max Allocated: {max_memory_allocated:.2f}GB, "
+            f"Reserved: {memory_reserved:.2f}GB",
             flush=True,
         )
     else:
-        print(f"{message} Allocated: {memory_allocated:.2f}GB, Reserved: {memory_reserved:.2f}GB", flush=True)
-
+        print(
+            f"{message} "
+            f"Allocated: {memory_allocated:.2f}GB, "
+            f"Max Allocated: {max_memory_allocated:.2f}GB, "
+            f"Reserved: {memory_reserved:.2f}GB",
+            flush=True
+        )
 
 def get_checkpoint_filename(save_path, epoch, world_rank, tensor_par_size):
     """Generate checkpoint filename for given epoch and rank."""
@@ -448,7 +470,9 @@ def create_data_module(config, world_rank, device):
     if world_rank == 0:
         print(f"Setting up distributed data loading: world_size={world_size_value}", flush=True)
         print(f"Each GPU will process 1/{world_size_value} of the dataset", flush=True)
-    
+        
+    buffer_size = config["trainer"]["buffer_size"]
+
     if forecast_type in ("direct", "iterative"):
         data_module = cl.data.IterDataModule(
             f"{forecast_type}-forecasting",
@@ -465,6 +489,7 @@ def create_data_module(config, world_rank, device):
             subsample=6,
             batch_size=batch_size,
             num_workers=num_workers,
+            # buffer_size=buffer_size,
         )
     elif forecast_type == "continuous":
         data_module = cl.data.IterDataModule(
@@ -484,7 +509,7 @@ def create_data_module(config, world_rank, device):
             hrs_each_step=1,
             subsample=6,
             batch_size=batch_size,
-            buffer_size=2000,
+            buffer_size=buffer_size,
             num_workers=num_workers,
         )
     
@@ -594,7 +619,13 @@ def train_epoch(
     # Step scheduler
     scheduler.step()
 
-    avg_loss = epoch_loss / num_batches if num_batches > 0 else 0.0
+    # Reduce loss across all ranks for accurate average
+    if num_batches > 0:
+        avg_loss_tensor = torch.tensor(epoch_loss / num_batches, device=device)
+        dist.all_reduce(avg_loss_tensor, op=dist.ReduceOp.AVG)
+        avg_loss = avg_loss_tensor.item()
+    else:
+        avg_loss = 0.0
 
     if world_rank == 0:
         print(f"\n{'='*80}")

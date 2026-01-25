@@ -2,14 +2,14 @@
 
 trainer:
   max_epochs: 30
-  batch_size: 128
+  batch_size: 8
   num_workers: 2
   checkpoint: null  # Path to checkpoint to resume from, or null
-  checkpoint_save_path: "/lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg"
+  checkpoint_save_path: "/lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_0.25_deg"
   data_type: "bfloat16"  # "float32", "bfloat16", "float16"
   train_loss: "lat_mse"  # this field is not used by the training script, loss is hardcoded
   num_gpus: 8
-  # buffer_size: 400
+  buffer_size: 20
 
 parallelism:
   fsdp: 1
@@ -18,7 +18,8 @@ parallelism:
   seq_par: 1
 
 data:
-  era5_dir: "/lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/"
+  era5_dir: "/lustre/orion/lrn036/world-shared/data/superres/era5/1.40625_deg/"
+  # era5_dir: "/lustre/orion/lrn036/world-shared/data/superres/era5/0.25_deg/"
   forecast_type: "direct"  # "direct", "iterative", "continuous"
   pred_range: 120  # lead time
   enable_monthly_loader: True
@@ -29,10 +30,10 @@ data:
     - "2m_temperature"
     - "10m_u_component_of_wind"
     - "10m_v_component_of_wind"
-    - "lattitude"
+    - "latitude"
     - "land_sea_mask"
     - "orography"
-    # landcover not available in 1.40625_deg data
+    - "landcover"
   
   # Output variables
   out_variables:
@@ -48,14 +49,14 @@ model:
   preset: "res_slimvit"  # Model architecture
   
   # Image dimensions
-  img_size: [32, 64]  # Low-resolution input [H, W] - for 720×1440 target
-  superres_factor: 4 # Super-resolution factor (20× upsampling: 36×72 → 720×1440)
+  img_size: [32, 64]  # Low-resolution input [H, W]
+  superres_factor: 4 # Super-resolution factor
   downsample_mode: "bilinear"  # Downsampling mode: "area", "bilinear", "bicubic", "nearest"
   
   # Model architecture
   history: 1  # Number of historical timesteps
   cnn_ratio: 4
-  patch_size: 2  # Must divide evenly into tiled input dimensions
+  patch_size: 2  
   embed_dim: 256
   depth: 6
   decoder_depth: 4
@@ -66,12 +67,12 @@ model:
   learn_pos_emb: True
   
   # Optimizer settings
-  base_lr: 5e-4  # Base learning rate scaled by (num_gpus ** 0.8)
+  base_lr: 5e-3  # Base learning rate scaled by (num_gpus ** 0.8)
   weight_decay: 0.00001
   beta_1: 0.9
   beta_2: 0.99
   
   # Scheduler settings
-  warmup_epochs: 1
-  warmup_start_lr: 1e-8
+  warmup_epochs: 5
+  warmup_start_lr: 1e-6
   eta_min: 1e-8

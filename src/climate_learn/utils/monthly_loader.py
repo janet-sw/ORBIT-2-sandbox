@@ -3,34 +3,50 @@ import numpy as np
 import glob
 import os
 import random
-import torch.distributed as dist
 from torch.utils.data import IterableDataset
 
+
 class SequentialMonthlyDataset(IterableDataset):
-    def __init__(self, 
-                 root_dir, 
-                 in_vars, 
-                 out_vars, 
-                 pred_range=120, 
+    def __init__(self,
+                 root_dir,
+                 in_vars,
+                 out_vars,
+                 pred_range=120,
                  subsample=6,
                  transform=None,
                  rank=0,
                  world_size=1,
-                 dtype="float32"):  # Accept string dtype
+                 dtype="float32"):
         """
-        Reads .npz files sequentially. 
+        Reads .npz files sequentially.
         Shards files based on rank to ensure unique data per GPU.
-        
+
+        IMPORTANT: For distributed training with FSDP/DDP, this dataset ensures
+        all ranks produce the same number of samples to prevent deadlocks by
+        limiting each rank to the same number of files.
+
+        Expects npz files with shape (T, 1, H, W) or (T, H, W) for each variable.
+
         Args:
+            root_dir: Directory containing monthly .npz files (e.g., era5/0.25_deg/train)
+            in_vars: List of input variable names
+            out_vars: List of output variable names
+            pred_range: Prediction lead time in timesteps
+            subsample: Temporal subsampling factor
+            transform: Optional transform function (normalization)
+            rank: Current process rank
+            world_size: Total number of processes
             dtype: String specifying dtype ("float32", "bfloat16", "float16")
         """
         self.in_vars = in_vars
         self.out_vars = out_vars
-        self.history = 1 # Hardcoded as per your config
+        self.history = 1
         self.pred_range = pred_range
         self.subsample = subsample
         self.transform = transform
-        
+        self.rank = rank
+        self.world_size = world_size
+
         # Convert string dtype to torch dtype
         dtype_map = {
             "float32": torch.float32,
@@ -38,102 +54,134 @@ class SequentialMonthlyDataset(IterableDataset):
             "float16": torch.float16,
         }
         self.dtype = dtype_map.get(dtype, torch.float32)
-        self.rank = rank
-        
-        # 1. Get all files
+
+        # Get all monthly files
         all_files = sorted(glob.glob(os.path.join(root_dir, "*.npz")))
-        
         if len(all_files) == 0:
             raise ValueError(f"No .npz files found in {root_dir}")
-            
-        # 2. Shard files (Distribute among GPUs)
-        # Rank 0 gets [0, 8, 16...], Rank 1 gets [1, 9, 17...]
-        self.files = all_files[rank::world_size]
-        
-        print(f"[Rank {rank}] Assigned {len(self.files)}/{len(all_files)} monthly files.", flush=True)
+
+        n_files = len(all_files)
+
+        # Calculate files per rank using floor division to ensure all ranks get the same count
+        # This avoids the need for any distributed synchronization
+        files_per_rank = n_files // world_size
+
+        # Each rank takes its slice of files, limited to files_per_rank
+        start_idx = rank * files_per_rank
+        end_idx = start_idx + files_per_rank
+        self.files = all_files[start_idx:end_idx]
+
+        print(f"[Rank {rank}] Assigned {len(self.files)}/{n_files} monthly files (indices {start_idx}:{end_idx}).", flush=True)
+
+        # Verify first file has required variables (only on rank 0)
+        if rank == 0 and len(all_files) > 0:
+            self._verify_monthly_file(all_files[0])
+
+    def _verify_monthly_file(self, filepath):
+        """Verify a monthly file has required variables."""
+        print(f"[Monthly Loader] Verifying variables in {os.path.basename(filepath)}...", flush=True)
+        with np.load(filepath) as npz:
+            available = list(npz.keys())
+            print(f"[Monthly Loader] Available variables: {available}", flush=True)
+
+            all_required = set(self.in_vars + self.out_vars)
+            for var in all_required:
+                if var not in available:
+                    print(f"[Monthly Loader] ERROR: Required var '{var}' NOT FOUND!", flush=True)
+                else:
+                    shape = npz[var].shape
+                    print(f"[Monthly Loader] '{var}': shape={shape}", flush=True)
 
     def _load_month_to_ram(self, filepath):
+        """Load variables from monthly file."""
         try:
-            # print(f"[Rank {self.rank}] Loading {os.path.basename(filepath)}...", flush=True)
-            npz = np.load(filepath) 
+            npz = np.load(filepath)
             data = {}
-            all_vars = list(set(self.in_vars + self.out_vars))
-            
+
+            # Load all required variables
+            all_vars = set(self.in_vars + self.out_vars)
+
             for var in all_vars:
                 if var in npz:
-                    # LOAD AND CAST IMMEDIATELY to save RAM
-                    # Copy makes it a torch tensor, then cast to reduce size
-                    tensor = torch.from_numpy(npz[var])
+                    arr = npz[var]
+                    # Handle shape (T, 1, H, W) -> squeeze to (T, H, W)
+                    if arr.ndim == 4 and arr.shape[1] == 1:
+                        arr = arr.squeeze(1)
+                    tensor = torch.from_numpy(arr)
                     if self.dtype != torch.float32:
                         tensor = tensor.to(self.dtype)
                     data[var] = tensor
                 else:
-                    print(f"Warning: {var} not found in {filepath}")
+                    print(f"[Rank {self.rank}] ERROR: '{var}' not in {os.path.basename(filepath)}")
+                    return None
+
             return data
         except Exception as e:
-            print(f"Failed to load {filepath}: {e}")
+            print(f"[Rank {self.rank}] Failed to load {filepath}: {e}", flush=True)
             return None
 
     def __iter__(self):
-        # Shuffle order of months for this rank
-        random.shuffle(self.files)
+        # Shuffle files for this epoch
+        files_to_process = self.files.copy()
+        random.shuffle(files_to_process)
+        samples_yielded = 0
 
-        for filepath in self.files:
+        for filepath in files_to_process:
             data_dict = self._load_month_to_ram(filepath)
-            if data_dict is None: continue
-            
-            # Determine time dimension from first variable
-            first_var = next(iter(data_dict.values()))
-            T_total = first_var.shape[0]
-            
+            if data_dict is None:
+                continue
+
+            # Get time dimension from first variable
+            first_var = self.in_vars[0]
+            T_total = data_dict[first_var].shape[0]
+
+            # Generate valid time indices
+            # Need: t - history >= 0 and t + pred_range - 1 < T_total
+            # So: t >= history and t <= T_total - pred_range
             indices = list(range(self.history, T_total - self.pred_range, self.subsample))
             random.shuffle(indices)
-            
+
             for t in indices:
                 try:
-                    # Construct Input
-                    # For history=1: each var is [1, H, W], we want final shape [C, H, W]
-                    # For history>1: each var is [history, H, W], flatten to [history*C, H, W]
+                    # Build input tensor: [num_vars * history, H, W]
                     x_list = []
-                    actual_in_vars = []  # Track which variables were actually loaded
                     for var in self.in_vars:
-                        if var not in data_dict:
-                            continue  # Skip if variable not in data file
-                        # Slice [t-history : t]
-                        channel = data_dict[var][t - self.history : t]  # [history, H, W]
+                        # Slice [t-history : t] -> shape [history, H, W]
+                        channel = data_dict[var][t - self.history : t]
                         x_list.append(channel)
-                        actual_in_vars.append(var)
-                    
-                    if len(x_list) == 0:
-                        continue  # No valid input variables
-                        
-                    # Stack creates [num_vars, history, H, W], then reshape to [num_vars*history, H, W]
-                    x = torch.cat(x_list, dim=0)  # Concatenate along time/history dimension
-                    
-                    # Construct Target
+
+                    x = torch.cat(x_list, dim=0)  # [num_vars * history, H, W]
+
+                    # Build output tensor: [num_out_vars, H, W]
                     y_list = []
-                    actual_out_vars = []  # Track which variables were actually loaded
                     for var in self.out_vars:
-                        if var not in data_dict:
-                            continue  # Skip if variable not in data file
-                        target = data_dict[var][t + self.pred_range - 1]
+                        # Target at t + pred_range - 1
+                        target = data_dict[var][t + self.pred_range - 1]  # [H, W]
                         y_list.append(target)
-                        actual_out_vars.append(var)
-                    
-                    if len(y_list) == 0:
-                        continue  # No valid output variables
-                        
-                    y = torch.stack(y_list, dim=0)
-                    
-                    # Transform (Normalization)
+
+                    y = torch.stack(y_list, dim=0)  # [num_out_vars, H, W]
+
+                    # Apply normalization transform
                     if self.transform:
-                        # Ensure transform handles the dtype correctly
                         x, y = self.transform(x, y)
-                        
-                    yield x, y, actual_in_vars, actual_out_vars
-                    
+
+                    # Debug: check for NaNs
+                    if torch.isnan(x).any():
+                        print(f"[Rank {self.rank}] NaN in x at t={t}, file={os.path.basename(filepath)}")
+                        continue
+                    if torch.isnan(y).any():
+                        print(f"[Rank {self.rank}] NaN in y at t={t}, file={os.path.basename(filepath)}")
+                        continue
+
+                    yield x, y, self.in_vars, self.out_vars
+                    samples_yielded += 1
+
                 except Exception as e:
+                    print(f"[Rank {self.rank}] Error at t={t} in {os.path.basename(filepath)}: {e}")
                     continue
-            
-            # Free memory explicitly
+
+            # Free memory
             del data_dict
+
+        if self.rank == 0:
+            print(f"[Monthly Loader] Epoch complete. Yielded {samples_yielded} samples.", flush=True)

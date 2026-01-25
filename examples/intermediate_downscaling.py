@@ -40,16 +40,39 @@ from climate_learn.dist.profile import *
 from utils import seed_everything, init_par_groups
 
 
+# def log_gpu_memory(device, message="", world_rank=None):
+#     """Log GPU memory usage with optional message and rank."""
+#     memory_gb = torch.cuda.memory_reserved(device) / 1024 / 1024 / 1024
+#     if world_rank is not None:
+#         print(
+#             f"rank {world_rank} {message} torch.cuda.memory_reserved: {memory_gb:.2f}GB",
+#             flush=True,
+#         )
+#     else:
+#         print(f"{message} torch.cuda.memory_reserved: {memory_gb:.2f}GB", flush=True)
+
 def log_gpu_memory(device, message="", world_rank=None):
-    """Log GPU memory usage with optional message and rank."""
-    memory_gb = torch.cuda.memory_reserved(device) / 1024 / 1024 / 1024
+    """Log GPU memory usage including max allocated with optional message and rank."""
+    memory_allocated = torch.cuda.memory_allocated(device) / 1024 / 1024 / 1024
+    max_memory_allocated = torch.cuda.max_memory_allocated(device) / 1024 / 1024 / 1024
+    memory_reserved = torch.cuda.memory_reserved(device) / 1024 / 1024 / 1024
+    
     if world_rank is not None:
         print(
-            f"rank {world_rank} {message} torch.cuda.memory_reserved: {memory_gb:.2f}GB",
+            f"rank {world_rank} {message} "
+            f"Allocated: {memory_allocated:.2f}GB, "
+            f"Max Allocated: {max_memory_allocated:.2f}GB, "
+            f"Reserved: {memory_reserved:.2f}GB",
             flush=True,
         )
     else:
-        print(f"{message} torch.cuda.memory_reserved: {memory_gb:.2f}GB", flush=True)
+        print(
+            f"{message} "
+            f"Allocated: {memory_allocated:.2f}GB, "
+            f"Max Allocated: {max_memory_allocated:.2f}GB, "
+            f"Reserved: {memory_reserved:.2f}GB",
+            flush=True
+        )
 
 
 def get_tensor_parallel_checkpoint_path(base_path, rank, tensor_par_size):
