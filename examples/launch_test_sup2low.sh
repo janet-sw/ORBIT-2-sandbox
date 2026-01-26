@@ -41,6 +41,6 @@ echo "Using configuration: ${CONFIG_PATH}"
 echo "Using checkpoint: ${CHECKPOINT_PATH}"
 
 # Run test - single GPU
-time python test_sup2low_model.py "${CONFIG_PATH}" "${CHECKPOINT_PATH}"
+time python compare.py "${CONFIG_PATH}" "${CHECKPOINT_PATH}"
 
 echo "Job completed at: $(date)"

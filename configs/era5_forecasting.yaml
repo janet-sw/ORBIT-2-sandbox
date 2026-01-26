@@ -2,14 +2,14 @@
 
 trainer:
   max_epochs: 30
-  batch_size: 8
+  batch_size: 2
   num_workers: 2
   checkpoint: null  # Path to checkpoint to resume from, or null
-  checkpoint_save_path: "/lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_0.25_deg"
+  checkpoint_save_path: "/lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_0.25_deg_baseline"
   data_type: "bfloat16"  # "float32", "bfloat16", "float16"
   train_loss: "lat_mse"  # this field is not used by the training script, loss is hardcoded
   num_gpus: 8
-  buffer_size: 20
+  buffer_size: 50
 
 parallelism:
   fsdp: 1
@@ -18,8 +18,8 @@ parallelism:
   seq_par: 1
 
 data:
-  era5_dir: "/lustre/orion/lrn036/world-shared/data/superres/era5/1.40625_deg/"
-  # era5_dir: "/lustre/orion/lrn036/world-shared/data/superres/era5/0.25_deg/"
+  # era5_dir: "/lustre/orion/lrn036/world-shared/data/superres/era5/1.40625_deg/"
+  era5_dir: "/lustre/orion/lrn036/world-shared/data/superres/era5/0.25_deg/"
   forecast_type: "direct"  # "direct", "iterative", "continuous"
   pred_range: 120  # lead time
   enable_monthly_loader: True
@@ -27,7 +27,11 @@ data:
   # Input variables
   variables:
     - "temperature"
+    # - "geopotential"
+    # - "u_component_of_wind"
     - "2m_temperature"
+    # - "2m_temperature_max"
+    # - "2m_temperature_min"
     - "10m_u_component_of_wind"
     - "10m_v_component_of_wind"
     - "latitude"
@@ -49,7 +53,7 @@ model:
   preset: "res_slimvit"  # Model architecture
   
   # Image dimensions
-  img_size: [32, 64]  # Low-resolution input [H, W]
+  img_size: [180, 360]  # Low-resolution input [H, W]
   superres_factor: 4 # Super-resolution factor
   downsample_mode: "bilinear"  # Downsampling mode: "area", "bilinear", "bicubic", "nearest"
   

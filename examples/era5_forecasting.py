@@ -125,19 +125,20 @@ def training_step(
         mode = resize_config['mode']
         
         # Debug: Check tensor shape before interpolation
-        if x.dim() != 4:
-            raise ValueError(f"Expected 4D input tensor [B, C, H, W], but got {x.dim()}D tensor with shape {x.shape}")
-        
-        # Interpolate input to low-resolution on GPU
-        # x shape: [B, C, H, W] - downsample to model's input size
-        if mode in ['linear', 'bilinear', 'bicubic', 'trilinear']:
-            x = torch.nn.functional.interpolate(
-                x, size=(lr_h, lr_w), mode=mode, align_corners=False
-            )
-        else:
-            x = torch.nn.functional.interpolate(
-                x, size=(lr_h, lr_w), mode=mode
-            )
+        if x.shape[2] != lr_h or x.shape[3] != lr_w:
+            if x.dim() != 4:
+                raise ValueError(f"Expected 4D input tensor [B, C, H, W], but got {x.dim()}D tensor with shape {x.shape}")
+            
+            # Interpolate input to low-resolution on GPU
+            # x shape: [B, C, H, W] - downsample to model's input size
+            if mode in ['linear', 'bilinear', 'bicubic', 'trilinear']:
+                x = torch.nn.functional.interpolate(
+                    x, size=(lr_h, lr_w), mode=mode, align_corners=False
+                )
+            else:
+                x = torch.nn.functional.interpolate(
+                    x, size=(lr_h, lr_w), mode=mode
+                )
 
     yhat = net.forward(x, in_variables, out_variables)
     yhat = clip_replace_constant(y, yhat, out_variables)
@@ -936,6 +937,15 @@ def main(device):
         sharding_strategy=ShardingStrategy.FULL_SHARD,  # CRITICAL: Actually shard parameters!
         use_orig_params=True,  # Keep True for ROCm stability (False causes RCCL crashes)
     )
+    
+    if world_rank == 0:
+        total_params = sum(p.numel() for p in model.parameters())
+        print(f"Model parameters: {total_params / 1e6:.2f}M", flush=True)
+        print("\n" + "="*80)
+        print("MODEL ARCHITECTURE (Before FSDP):")
+        print("="*80)
+        print(model)
+        print("="*80 + "\n", flush=True)
     
     # Now apply activation checkpointing AFTER FSDP wrapping (critical for memory!)
     # This reduces memory by ~3x by recomputing activations during backward pass

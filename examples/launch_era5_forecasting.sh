@@ -3,9 +3,9 @@
 #SBATCH -J era5_forecast
 #SBATCH -o logs/era5_forecast-%j.out
 #SBATCH -e logs/era5_forecast-%j.out
-#SBATCH -t 00:20:00
+#SBATCH -t 00:30:00
 #SBATCH -q debug
-#SBATCH --nodes=2
+#SBATCH --nodes=1
 #SBATCH --ntasks-per-node=8
 #SBATCH --gpus-per-node=8
 #SBATCH --cpus-per-task=7
