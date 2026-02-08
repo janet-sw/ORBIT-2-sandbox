@@ -91,7 +91,7 @@ def get_checkpoint_filename(save_path, epoch, world_rank, tensor_par_size):
     return base_filename
 
 
-def downsample_tensor(x, target_size, mode):
+def downsample_tensor(x, target_size, mode, antialias=None):
     """
     Downsample input tensor to target_size using specified mode.
     
@@ -100,10 +100,15 @@ def downsample_tensor(x, target_size, mode):
         target_size: Tuple of (H, W) for target size
         mode: Downsampling mode - 'bilinear', 'bicubic', 'area', 'nearest', 
               'max_pool', or 'avg_pool'
+        antialias: Whether to use antialiasing for interpolation modes.
+                   If None, auto-derives: True for bilinear/bicubic, False otherwise.
     
     Returns:
         Downsampled tensor of shape [B, C, target_H, target_W]
     """
+    # Auto-derive antialias if not explicitly set
+    if antialias is None:
+        antialias = mode in ('bilinear', 'bicubic')
     if mode in ['max_pool', 'maxpool']:
         # Calculate kernel size based on input and target sizes
         _, _, h, w = x.shape
@@ -132,12 +137,12 @@ def downsample_tensor(x, target_size, mode):
             x = torch.nn.functional.adaptive_avg_pool2d(x, output_size=target_size)
     elif mode in ['linear', 'bilinear', 'bicubic', 'trilinear']:
         x = torch.nn.functional.interpolate(
-            x, size=target_size, mode=mode, align_corners=False, antialias=False
+            x, size=target_size, mode=mode, align_corners=False, antialias=antialias
         )
     else:
         # 'area', 'nearest', 'nearest-exact'
         x = torch.nn.functional.interpolate(
-            x, size=target_size, mode=mode, align_corners=False, antialias=False
+            x, size=target_size, mode=mode
         )
     return x
 
@@ -174,6 +179,7 @@ def training_step(
         lr_h, lr_w = resize_config['lr_size']
         hr_h, hr_w = resize_config['hr_size']
         mode = resize_config['mode']
+        antialias = resize_config.get('antialias', None)
         
         # Check tensor shape before downsampling
         if x.shape[2] != lr_h or x.shape[3] != lr_w:
@@ -182,7 +188,7 @@ def training_step(
             
             # Downsample input to low-resolution on GPU
             # x shape: [B, C, H, W] - downsample to model's input size
-            x = downsample_tensor(x, (lr_h, lr_w), mode)
+            x = downsample_tensor(x, (lr_h, lr_w), mode, antialias=antialias)
 
     yhat = net.forward(x, in_variables, out_variables)
     yhat = clip_replace_constant(y, yhat, out_variables)
@@ -232,10 +238,11 @@ def evaluate_func(batch, stage: str, net, device: int, loss_metrics, target_tran
         lr_h, lr_w = resize_config['lr_size']
         hr_h, hr_w = resize_config['hr_size']
         mode = resize_config['mode']
+        antialias = resize_config.get('antialias', None)
         
         # Downsample input to low-resolution on GPU
         if x.shape[2] != lr_h or x.shape[3] != lr_w:
-            x = downsample_tensor(x, (lr_h, lr_w), mode)
+            x = downsample_tensor(x, (lr_h, lr_w), mode, antialias=antialias)
 
     yhat = net.forward(x, in_variables, out_variables)
     yhat = clip_replace_constant(y, yhat, out_variables)
@@ -563,11 +570,13 @@ def create_data_module(config, world_rank, device):
     data_module.collate_fn = collate_batch_only
     
     # Store these parameters for GPU interpolation later
+    antialias_setting = config["model"].get("antialias", None)
     if not hasattr(data_module, 'resize_config'):
         data_module.resize_config = {
             'lr_size': (lr_h, lr_w),
             'hr_size': (hr_h, hr_w),
-            'mode': downsample_mode
+            'mode': downsample_mode,
+            'antialias': antialias_setting
         }
 
     if world_rank == 0:
@@ -935,11 +944,13 @@ def main(device):
         hr_h, hr_w = lr_h * superres_factor, lr_w * superres_factor
         downsample_mode = config["model"]["downsample_mode"]
     
+        antialias_setting = config["model"].get("antialias", None)
         if not hasattr(data_module, 'resize_config'):
             data_module.resize_config = {
                 'lr_size': (lr_h, lr_w),
                 'hr_size': (hr_h, hr_w),
-                'mode': downsample_mode
+                'mode': downsample_mode,
+                'antialias': antialias_setting
             }
             
     else:

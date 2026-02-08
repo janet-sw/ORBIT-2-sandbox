@@ -5,7 +5,7 @@ trainer:
   batch_size: 32
   num_workers: 2
   checkpoint: null  # Path to checkpoint to resume from, or null
-  checkpoint_save_path: "/lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_maxpool"
+  checkpoint_save_path: "/lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_bilinear_antialias=False"
   data_type: "bfloat16"  # "float32", "bfloat16", "float16"
   train_loss: "lat_mse"  # this field is not used by the training script, loss is hardcoded
   num_gpus: 8
@@ -22,7 +22,7 @@ data:
   # era5_dir: "/lustre/orion/lrn036/world-shared/data/superres/era5/0.25_deg/"
   forecast_type: "direct"  # "direct", "iterative", "continuous"
   pred_range: 120  # lead time
-  enable_monthly_loader: True
+  enable_monthly_loader: False
   
   # Input variables
   variables:
@@ -59,6 +59,7 @@ model:
   #   Interpolation: "area", "bilinear", "bicubic", "nearest"
   #   Pooling (faster): "max_pool", "avg_pool"
   downsample_mode: "max_pool"
+  antialias: False  # Whether to use antialiasing when downsampling (only applicable for interpolation modes)
   
   # Model architecture
   history: 1  # Number of historical timesteps

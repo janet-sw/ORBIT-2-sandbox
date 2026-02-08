@@ -85,9 +85,20 @@ def test_step(batch, batch_idx, net, device, test_loss_metrics, test_target_tran
     if resize_config is not None:
         lr_h, lr_w = resize_config["lr_size"]
         mode = resize_config["mode"]
-        from era5_forecasting import downsample_tensor
+        antialias = resize_config.get("antialias", None)
+        if antialias is None:
+            antialias = mode in ("bilinear", "bicubic")
         if x.shape[2] != lr_h or x.shape[3] != lr_w:
-            x = downsample_tensor(x, (lr_h, lr_w), mode)
+            if mode in ('max_pool', 'maxpool'):
+                x = torch.nn.functional.adaptive_max_pool2d(x, output_size=(lr_h, lr_w))
+            elif mode in ('avg_pool', 'avgpool'):
+                x = torch.nn.functional.adaptive_avg_pool2d(x, output_size=(lr_h, lr_w))
+            elif mode in ('linear', 'bilinear', 'bicubic', 'trilinear'):
+                x = torch.nn.functional.interpolate(
+                    x, size=(lr_h, lr_w), mode=mode, align_corners=False, antialias=antialias
+                )
+            else:
+                x = torch.nn.functional.interpolate(x, size=(lr_h, lr_w), mode=mode)
 
     yhat = net.forward(x, in_variables, out_variables)
     yhat = clip_replace_constant(y, yhat, out_variables)
@@ -307,14 +318,19 @@ def create_test_data_module(config, world_rank):
     data_module.collate_fn = collate_batch_only
     
     # Store resize config (matching training script's format)
+    # antialias: read from config; if absent, auto-derive (True for bilinear/bicubic)
+    antialias_setting = config["model"].get("antialias", None)
     if not hasattr(data_module, 'resize_config'):
         data_module.resize_config = {
             "lr_size": (lr_h, lr_w),
             "hr_size": (hr_h, hr_w),
-            "mode": downsample_mode
+            "mode": downsample_mode,
+            "antialias": antialias_setting,
         }
 
     if world_rank == 0:
+        effective_aa = antialias_setting if antialias_setting is not None else (downsample_mode in ("bilinear", "bicubic"))
+        print(f"Resize config: mode={downsample_mode}, antialias={antialias_setting} (effective={effective_aa})", flush=True)
         print("Setting up data module...", flush=True)
 
     data_module.setup()

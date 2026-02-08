@@ -66,12 +66,17 @@ class SequentialMonthlyDataset(IterableDataset):
         # This avoids the need for any distributed synchronization
         files_per_rank = n_files // world_size
 
-        # Each rank takes its slice of files, limited to files_per_rank
-        start_idx = rank * files_per_rank
-        end_idx = start_idx + files_per_rank
-        self.files = all_files[start_idx:end_idx]
-
-        print(f"[Rank {rank}] Assigned {len(self.files)}/{n_files} monthly files (indices {start_idx}:{end_idx}).", flush=True)
+        if files_per_rank > 0:
+            # Enough files to shard across ranks
+            start_idx = rank * files_per_rank
+            end_idx = start_idx + files_per_rank
+            self.files = all_files[start_idx:end_idx]
+            print(f"[Rank {rank}] Assigned {len(self.files)}/{n_files} monthly files (indices {start_idx}:{end_idx}).", flush=True)
+        else:
+            # Fewer files than ranks (e.g., 2 val files with 8 GPUs)
+            # All ranks read all files to avoid yielding 0 samples
+            self.files = all_files
+            print(f"[Rank {rank}] Not enough files to shard ({n_files} files, {world_size} ranks). All ranks read all {n_files} files.", flush=True)
 
         # Verify first file has required variables (only on rank 0)
         if rank == 0 and len(all_files) > 0:
