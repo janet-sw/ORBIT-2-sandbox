@@ -91,6 +91,57 @@ def get_checkpoint_filename(save_path, epoch, world_rank, tensor_par_size):
     return base_filename
 
 
+def downsample_tensor(x, target_size, mode):
+    """
+    Downsample input tensor to target_size using specified mode.
+    
+    Args:
+        x: Input tensor of shape [B, C, H, W]
+        target_size: Tuple of (H, W) for target size
+        mode: Downsampling mode - 'bilinear', 'bicubic', 'area', 'nearest', 
+              'max_pool', or 'avg_pool'
+    
+    Returns:
+        Downsampled tensor of shape [B, C, target_H, target_W]
+    """
+    if mode in ['max_pool', 'maxpool']:
+        # Calculate kernel size based on input and target sizes
+        _, _, h, w = x.shape
+        target_h, target_w = target_size
+        kernel_h = h // target_h
+        kernel_w = w // target_w
+        
+        # Use regular max_pool2d with explicit kernel for speed when dimensions divide evenly
+        if h % target_h == 0 and w % target_w == 0:
+            x = torch.nn.functional.max_pool2d(x, kernel_size=(kernel_h, kernel_w))
+        else:
+            # Fall back to adaptive for non-integer ratios
+            x = torch.nn.functional.adaptive_max_pool2d(x, output_size=target_size)
+    elif mode in ['avg_pool', 'avgpool']:
+        # Calculate kernel size based on input and target sizes
+        _, _, h, w = x.shape
+        target_h, target_w = target_size
+        kernel_h = h // target_h
+        kernel_w = w // target_w
+        
+        # Use regular avg_pool2d with explicit kernel for speed when dimensions divide evenly
+        if h % target_h == 0 and w % target_w == 0:
+            x = torch.nn.functional.avg_pool2d(x, kernel_size=(kernel_h, kernel_w))
+        else:
+            # Fall back to adaptive for non-integer ratios
+            x = torch.nn.functional.adaptive_avg_pool2d(x, output_size=target_size)
+    elif mode in ['linear', 'bilinear', 'bicubic', 'trilinear']:
+        x = torch.nn.functional.interpolate(
+            x, size=target_size, mode=mode, align_corners=False, antialias=False
+        )
+    else:
+        # 'area', 'nearest', 'nearest-exact'
+        x = torch.nn.functional.interpolate(
+            x, size=target_size, mode=mode, align_corners=False, antialias=False
+        )
+    return x
+
+
 def clip_replace_constant(y, yhat, out_variables):
     # Clip precipitation to non-negative values if it exists
     if "total_precipitation_24hr" in out_variables:
@@ -118,27 +169,20 @@ def training_step(
         y = y.flatten(1, 2)
     # ======================
     
-    # GPU-based interpolation
+    # GPU-based downsampling (supports interpolation and pooling modes)
     if resize_config is not None:
         lr_h, lr_w = resize_config['lr_size']
         hr_h, hr_w = resize_config['hr_size']
         mode = resize_config['mode']
         
-        # Debug: Check tensor shape before interpolation
+        # Check tensor shape before downsampling
         if x.shape[2] != lr_h or x.shape[3] != lr_w:
             if x.dim() != 4:
                 raise ValueError(f"Expected 4D input tensor [B, C, H, W], but got {x.dim()}D tensor with shape {x.shape}")
             
-            # Interpolate input to low-resolution on GPU
+            # Downsample input to low-resolution on GPU
             # x shape: [B, C, H, W] - downsample to model's input size
-            if mode in ['linear', 'bilinear', 'bicubic', 'trilinear']:
-                x = torch.nn.functional.interpolate(
-                    x, size=(lr_h, lr_w), mode=mode, align_corners=False
-                )
-            else:
-                x = torch.nn.functional.interpolate(
-                    x, size=(lr_h, lr_w), mode=mode
-                )
+            x = downsample_tensor(x, (lr_h, lr_w), mode)
 
     yhat = net.forward(x, in_variables, out_variables)
     yhat = clip_replace_constant(y, yhat, out_variables)
@@ -183,20 +227,15 @@ def evaluate_func(batch, stage: str, net, device: int, loss_metrics, target_tran
         y = y.flatten(1, 2)
     # ======================
     
-    # GPU-based interpolation (same as training_step)
+    # GPU-based downsampling (same as training_step)
     if resize_config is not None:
         lr_h, lr_w = resize_config['lr_size']
         hr_h, hr_w = resize_config['hr_size']
         mode = resize_config['mode']
         
-        if mode in ['linear', 'bilinear', 'bicubic', 'trilinear']:
-            x = torch.nn.functional.interpolate(
-                x, size=(lr_h, lr_w), mode=mode, align_corners=False
-            )
-        else:
-            x = torch.nn.functional.interpolate(
-                x, size=(lr_h, lr_w), mode=mode
-            )
+        # Downsample input to low-resolution on GPU
+        if x.shape[2] != lr_h or x.shape[3] != lr_w:
+            x = downsample_tensor(x, (lr_h, lr_w), mode)
 
     yhat = net.forward(x, in_variables, out_variables)
     yhat = clip_replace_constant(y, yhat, out_variables)
