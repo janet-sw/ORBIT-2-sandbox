@@ -3,7 +3,7 @@
 #SBATCH -J era5_forecast
 #SBATCH -o logs/era5_forecast-%j.out
 #SBATCH -e logs/era5_forecast-%j.out
-#SBATCH -t 00:40:00
+#SBATCH -t 00:50:00
 #SBATCH -q debug
 #SBATCH --nodes=2
 #SBATCH --ntasks-per-node=8

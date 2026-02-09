@@ -35,7 +35,7 @@ export ORBIT_USE_DDSTORE=0
 
 # Configuration and checkpoint paths
 CONFIG_PATH="/ccs/home/janetw/diffusion/ORBIT-2-sandbox/configs/era5_forecasting.yaml"
-CHECKPOINT_PATH="/lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_max_pool/checkpoint_epoch_0029.pt"
+CHECKPOINT_PATH="/lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_bilinear_antialias=True_input_refine_cnn=True/checkpoint_epoch_0029.pt"
 
 echo "=========================================="
 echo "Testing ERA5 Forecasting Model"
@@ -49,7 +49,7 @@ echo "=========================================="
 echo ""
 
 # Run the test script - single GPU
-time python era5_forecasting_test.py \
+time python test_era5_forecasting.py \
     $CONFIG_PATH \
     $CHECKPOINT_PATH
 

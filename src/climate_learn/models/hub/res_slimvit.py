@@ -41,10 +41,12 @@ class Res_Slim_ViT(nn.Module):
         tensor_par_group = None,
         FusedAttn_option = FusedAttn.CK,
         num_constant_vars = 4,  # Default: land_sea_mask, orography, lattitude, landcover
+        input_refine_cnn = False,  # Optional 3x3 CNN to refine input after downsampling
     ):
         super().__init__()
         self.default_vars = default_vars
         self.num_constant_vars = num_constant_vars
+        self.input_refine_cnn = input_refine_cnn
 
 
         self.img_size = img_size
@@ -122,6 +124,17 @@ class Res_Slim_ViT(nn.Module):
         self.head = nn.Sequential(*self.head)
        
         self.conv_out = nn.Conv2d(in_channels=out_channels, out_channels=out_channels, kernel_size=(3, 3), stride=1, padding=1) 
+
+        # Optional input refinement CNN: 3x3 conv + GELU to refine downsampled input
+        # Always register as a module so FSDP wraps it consistently across ranks
+        if self.input_refine_cnn:
+            self.input_refine = nn.Sequential(
+                nn.Conv2d(in_channels * history, in_channels * history, kernel_size=3, padding=1),
+                nn.GELU(),
+            )
+        else:
+            self.input_refine = nn.Identity()
+
         self.initialize_weights()
 
     def initialize_weights(self):
@@ -321,6 +334,13 @@ class Res_Slim_ViT(nn.Module):
         if len(x.shape) == 5:  # x.shape = [B,T,in_channels,H,W]
             x = x.flatten(1, 2)
         # x.shape = [B,T*in_channels,H,W]
+
+        # Optional input refinement: 3x3 CNN to refine downsampled input
+        # When disabled, input_refine is nn.Identity (no-op)
+        if self.input_refine_cnn:
+            x = x + self.input_refine(x)  # residual refinement
+        else:
+            x = self.input_refine(x)  # identity, ensures FSDP participation
 
         out_var_index = self.find_var_index(in_variables,out_variables)
 

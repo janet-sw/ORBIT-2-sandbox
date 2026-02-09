@@ -9,7 +9,7 @@ import torch.nn as nn
 import torch.distributed as dist
 from torch.utils.data import DataLoader
 from torch.distributed.fsdp import FullyShardedDataParallel as FSDP
-from torch.distributed.fsdp import StateDictType, FullStateDictConfig
+from torch.distributed.fsdp import StateDictType, FullStateDictConfig, FullOptimStateDictConfig
 from torch.distributed.fsdp.wrap import wrap, transformer_auto_wrap_policy
 from torch.distributed.algorithms._checkpoint.checkpoint_wrapper import (
     checkpoint_wrapper,
@@ -374,6 +374,7 @@ def create_model_and_losses(config, device, world_rank, in_vars, out_vars, data_
             drop_rate=config["model"].get("drop_rate", 0.0),
             num_constant_vars=num_constant_vars,
             FusedAttn_option=FusedAttn.DEFAULT,  # Use PyTorch native attention instead of xformers (ROCm compatibility)
+            input_refine_cnn=config["model"].get("input_refine_cnn", False),
         )
     else:
         raise NotImplementedError(f"Model preset {preset} not implemented")
@@ -757,18 +758,15 @@ def save_checkpoint(
         
     # Configure policy: Offload to CPU to save VRAM, gather on Rank 0 only
     save_policy = FullStateDictConfig(offload_to_cpu=True, rank0_only=True)
+    optim_save_policy = FullOptimStateDictConfig(offload_to_cpu=True, rank0_only=True)
 
     # ALL ranks must enter this context manager and call state_dict()
     # FSDP handles the communication so that only Rank 0 receives the full dict
-    with FSDP.state_dict_type(model, StateDictType.FULL_STATE_DICT, save_policy):
+    with FSDP.state_dict_type(model, StateDictType.FULL_STATE_DICT, save_policy, optim_save_policy):
         model_states = model.state_dict()
-
-    # Optimizer and Scheduler also need careful handling with FSDP, 
-    # but for standard DDP/FSDP mix, basic state_dict is usually fine provided
-    # you aren't sharding optimizer states (which you are likely doing implicitly with FSDP).
-    # For now, we will grab them on all ranks, but FSDP optimizer saving is complex.
-    # To keep it simple and working like your script intended:
-    optimizer_states = optimizer.state_dict() 
+        # Use FSDP.optim_state_dict to properly gather the full optimizer state
+        # (each rank only holds a shard; this consolidates them)
+        optimizer_states = FSDP.optim_state_dict(model, optimizer)
     scheduler_states = scheduler.state_dict()
     
 
@@ -823,9 +821,14 @@ def load_checkpoint(checkpoint_path, model, optimizer, scheduler, world_rank, re
             print("This is normal when resuming with different FSDP/activation checkpointing settings", flush=True)
     else:
         try:
-            optimizer.load_state_dict(checkpoint["optimizer_state_dict"])
+            # Use FSDP.optim_state_dict_to_load to properly scatter the full optimizer
+            # state dict back to per-rank shards before loading
+            optim_state = FSDP.optim_state_dict_to_load(
+                model, optimizer, checkpoint["optimizer_state_dict"]
+            )
+            optimizer.load_state_dict(optim_state)
             scheduler.load_state_dict(checkpoint["scheduler_state_dict"])
-        except (RuntimeError, ValueError) as e:
+        except Exception as e:
             if world_rank == 0:
                 print(f"WARNING: Failed to load optimizer/scheduler state: {e}", flush=True)
                 print("Continuing with fresh optimizer state...", flush=True)
