@@ -7,3 +7,4 @@ from .unet import Unet
 from .utils import MODEL_REGISTRY
 from .vit import VisionTransformer
 from .res_slimvit import Res_Slim_ViT
+from .res_slimvit_adaptive import Res_Slim_ViT_Adaptive

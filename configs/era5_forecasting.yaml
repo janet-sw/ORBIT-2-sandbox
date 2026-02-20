@@ -2,10 +2,10 @@
 
 trainer:
   max_epochs: 30
-  batch_size: 32
+  batch_size: 8
   num_workers: 2
   checkpoint: null  # Path to checkpoint to resume from, or null
-  checkpoint_save_path: "/lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_bilinear_antialias=False_group_norm" #"/lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_bilinear_antialias=False_input_refine_cnn=False"
+  checkpoint_save_path: "/lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_0.25_deg_sprint_disabled_antialias=True_input_refine_cnn=True" #"/lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_bilinear_antialias=False_input_refine_cnn=False"
   data_type: "bfloat16"  # "float32", "bfloat16", "float16"
   train_loss: "lat_mse"  # this field is not used by the training script, loss is hardcoded
   num_gpus: 8
@@ -18,10 +18,10 @@ parallelism:
   seq_par: 1
 
 data:
-  era5_dir: "/lustre/orion/lrn036/world-shared/data/superres/era5/1.40625_deg/"
-  # era5_dir: "/lustre/orion/lrn036/world-shared/data/superres/era5/0.25_deg/"
+  # era5_dir: "/lustre/orion/lrn036/world-shared/data/superres/era5/1.40625_deg/"
+  era5_dir: "/lustre/orion/lrn036/world-shared/data/superres/era5/0.25_deg/"
   forecast_type: "direct"  # "direct", "iterative", "continuous"
-  pred_range: 120  # lead time
+  pred_range: 120  # lead time [6, 24, 72, 120, 240]
   enable_monthly_loader: True
   
   # Input variables
@@ -50,16 +50,16 @@ data:
     10m_v_component_of_wind: 1.0
 
 model:
-  preset: "res_slimvit"  # Model architecture
+  preset: "res_slimvit"  # Model architecture, res_slimvit_adaptive
   
   # Image dimensions
-  img_size: [32, 64]  # Low-resolution input [H, W]
+  img_size: [180, 360]  # Low-resolution input [H, W]
   superres_factor: 4 # Super-resolution factor
   # Downsampling mode options:
   #   Interpolation: "area", "bilinear", "bicubic", "nearest"
   #   Pooling (faster): "max_pool", "avg_pool"
   downsample_mode: "bilinear"
-  antialias: False  # Whether to use antialiasing when downsampling (only applicable for interpolation modes)
+  antialias: True  # Whether to use antialiasing when downsampling (only applicable for interpolation modes)
   
   # Model architecture
   history: 1  # Number of historical timesteps
@@ -73,8 +73,17 @@ model:
   drop_path: 0.1
   drop_rate: 0.1
   learn_pos_emb: True
-  input_refine_cnn: False  # Optional: Whether to use input refining 3x3 CNN
-  
+  input_refine_cnn: True  # Optional: Whether to use input refining 3x3 CNN
+
+  # # ─── Adaptive sparsity parameters ───
+  # keep_ratio: 0.25          # Keep 25% of tokens in sparse blocks (128 of 512)
+  # num_dense_early: 2        # First 2 blocks: dense (all tokens)
+  # num_sparse_middle: 2      # Middle 2 blocks: sparse (only hard tokens)
+  # # num_dense_late: auto    # Remaining 2 blocks: dense (computed as depth - early - middle)
+  # cnn_hidden_dim: 64        # Hidden dim of ConvNeXt CNN path
+  # cnn_num_blocks: 3         # Number of ConvNeXt blocks
+  # difficulty_temp: 1.0      # Temperature for difficulty sigmoid (lower = sharper)
+
   # Optimizer settings
   base_lr: 5e-3  # Base learning rate scaled by (num_gpus ** 0.8)
   weight_decay: 0.00001
