@@ -159,10 +159,10 @@ class Res_Slim_ViT_Adaptive(nn.Module):
         self.norm = nn.LayerNorm(embed_dim)
 
         # Difficulty predictor: predicts which tokens are hard
-        self.difficulty_head = nn.Sequential(
-            nn.LayerNorm(embed_dim),
-            nn.Linear(embed_dim, 1)
-        )
+        # self.difficulty_head = nn.Sequential(
+        #     nn.LayerNorm(embed_dim),
+        #     nn.Linear(embed_dim, 1)
+        # )
 
         # NOTE: No CNN parallel path — easy tokens use identity skip.
         # This avoids: (1) representation mismatch at merge, (2) full-grid CNN overhead,
@@ -321,20 +321,16 @@ class Res_Slim_ViT_Adaptive(nn.Module):
         """
         B, L, D = x.shape
         
-        # Predict difficulty scores
-        logits = self.difficulty_head(x).squeeze(-1)  # (B, L)
-        difficulty = torch.sigmoid(logits / self.difficulty_temp)  # (B, L) in [0, 1]
+        # Random selection: no difficulty head overhead.
+        # Empirically comparable to learned selection (see low-res ablation).
+        indices = torch.stack([
+            torch.randperm(L, device=x.device)[:num_keep] for _ in range(B)
+        ])  # (B, K)
         
-        # Store for monitoring + aux loss recomputation in training_step
-        DIAG['difficulty_map'] = difficulty.detach()
-        # Store DETACHED features — training_step will re-run difficulty_head
-        # on these to get a fresh autograd graph outside the checkpoint wrapper
-        DIAG['difficulty_input_features'] = x.detach()
+        # Sort indices for better memory access patterns
+        indices, _ = indices.sort(dim=1)
         
-        # Select top-k hardest tokens (hard selection)
-        _, indices = torch.topk(difficulty, num_keep, dim=1)  # (B, K)
-        
-        # Gather hard tokens
+        # Gather selected tokens
         indices_expand = indices.unsqueeze(-1).expand(-1, -1, D)  # (B, K, D)
         hard_tokens = torch.gather(x, 1, indices_expand)  # (B, K, D)
         

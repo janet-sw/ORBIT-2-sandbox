@@ -1200,36 +1200,14 @@ def main(device):
     
     monitor = AdaptiveMonitor(log_dir=cp_save_path, world_rank=world_rank)   # ← ADD
 
-    # Create a STANDALONE auxiliary difficulty head outside FSDP.
-    # This mirrors the difficulty_head inside the model but is NOT sharded,
-    # so we can safely call it in training_step and backprop through it.
-    embed_dim = config["model"]["embed_dim"]
+    # With random token selection, no auxiliary difficulty head is needed.
+    # The training_step handles None gracefully (skips aux loss).
+    aux_difficulty_head = None
+    aux_optimizer = None
     aux_difficulty_temp = config["model"].get("difficulty_temp", 1.0)
-    aux_difficulty_head = nn.Sequential(
-        nn.LayerNorm(embed_dim),
-        nn.Linear(embed_dim, 1),
-    ).to(device)
-    
-    # Initialize from the FSDP model's difficulty_head weights
-    with FSDP.summon_full_params(model, recurse=True, writeback=False):
-        inner = model
-        for attr in ('_fsdp_wrapped_module', 'module'):
-            if hasattr(inner, attr):
-                inner = getattr(inner, attr)
-        while hasattr(inner, '_fsdp_wrapped_module'):
-            inner = inner._fsdp_wrapped_module
-        # Copy weights from the FSDP model's difficulty_head
-        aux_difficulty_head.load_state_dict(inner.difficulty_head.state_dict())
-    
-    aux_optimizer = torch.optim.AdamW(
-        aux_difficulty_head.parameters(),
-        lr=float(config["model"]["base_lr"]) * (int(config["trainer"]["num_gpus"]) ** 0.8),
-        weight_decay=float(config["model"]["weight_decay"]),
-        betas=(float(config["model"]["beta_1"]), float(config["model"]["beta_2"])),
-    )
     
     if world_rank == 0:
-        print(f"[DEBUG] Created standalone aux_difficulty_head on device {device}", flush=True)
+        print(f"[DEBUG] Random token selection mode — no aux_difficulty_head", flush=True)
 
     # Training loop
     for epoch in range(start_epoch, max_epochs):

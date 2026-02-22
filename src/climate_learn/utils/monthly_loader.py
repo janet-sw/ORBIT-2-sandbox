@@ -3,6 +3,7 @@ import numpy as np
 import glob
 import os
 import random
+import threading
 from torch.utils.data import IterableDataset
 
 
@@ -18,8 +19,11 @@ class SequentialMonthlyDataset(IterableDataset):
                  world_size=1,
                  dtype="float32"):
         """
-        Reads .npz files sequentially.
+        Reads .npz files sequentially with background prefetching.
         Shards files based on rank to ensure unique data per GPU.
+
+        While the GPU processes samples from file N, a short-lived background
+        thread loads file N+1. This overlaps I/O with compute.
 
         IMPORTANT: For distributed training with FSDP/DDP, this dataset ensures
         all ranks produce the same number of samples to prevent deadlocks by
@@ -125,16 +129,47 @@ class SequentialMonthlyDataset(IterableDataset):
             print(f"[Rank {self.rank}] Failed to load {filepath}: {e}", flush=True)
             return None
 
+    def _prefetch_file(self, filepath, result_holder):
+        """Load a file in a background thread. Stores result in result_holder[0]."""
+        result_holder[0] = self._load_month_to_ram(filepath)
+
     def __iter__(self):
         # Shuffle files for this epoch
         files_to_process = self.files.copy()
         random.shuffle(files_to_process)
         samples_yielded = 0
 
-        for filepath in files_to_process:
-            data_dict = self._load_month_to_ram(filepath)
+        # --- Prefetch logic ---
+        # While GPU processes samples from file N, load file N+1 in background.
+        # This hides most of the I/O latency behind compute.
+        prefetch_thread = None
+        prefetch_result = [None]  # mutable container for thread to write into
+
+        for file_idx, filepath in enumerate(files_to_process):
+
+            # Wait for prefetch if we started one on the previous iteration
+            if prefetch_thread is not None:
+                prefetch_thread.join()
+                data_dict = prefetch_result[0]
+                prefetch_result[0] = None
+            else:
+                # First file: load synchronously (no prefetch available yet)
+                data_dict = self._load_month_to_ram(filepath)
+
             if data_dict is None:
                 continue
+
+            # Start prefetching the NEXT file in background
+            if file_idx + 1 < len(files_to_process):
+                prefetch_result = [None]
+                prefetch_thread = threading.Thread(
+                    target=self._prefetch_file,
+                    args=(files_to_process[file_idx + 1], prefetch_result),
+                    daemon=True,
+                )
+                prefetch_thread.start()
+            else:
+                prefetch_thread = None
 
             # Get time dimension from first variable
             first_var = self.in_vars[0]
@@ -187,6 +222,10 @@ class SequentialMonthlyDataset(IterableDataset):
 
             # Free memory
             del data_dict
+
+        # Wait for any remaining prefetch thread
+        if prefetch_thread is not None:
+            prefetch_thread.join()
 
         if self.rank == 0:
             print(f"[Monthly Loader] Epoch complete. Yielded {samples_yielded} samples.", flush=True)

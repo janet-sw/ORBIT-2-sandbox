@@ -59,4 +59,4 @@ export ORBIT_USE_DDSTORE=0 ## 1 (enabled) or 0 (disable)
 CONFIG_FILE="/ccs/home/janetw/diffusion/ORBIT-2-sandbox/configs/era5_forecasting.yaml"
 
 time srun -n $((SLURM_JOB_NUM_NODES*8)) \
-python era5_forecasting.py "$CONFIG_FILE"
+python era5_forecasting_sparsity.py "$CONFIG_FILE"
