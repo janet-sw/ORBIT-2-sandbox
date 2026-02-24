@@ -50,6 +50,8 @@ from climate_learn.utils.monthly_loader import SequentialMonthlyDataset
 from utils import seed_everything, init_par_groups
 
 from adaptive_monitor import AdaptiveMonitor
+from era5_timestep_dataset import ERA5TimestepDataset
+
 
 
 # def log_gpu_memory(device, message="", world_rank=None):
@@ -734,7 +736,7 @@ def train_epoch(
     out_vars,
     data_module=None,
     data_type="float32",
-    log_interval=50,
+    log_interval=10,
     monitor=None,
     aux_difficulty_head=None,
     aux_optimizer=None,
@@ -1033,7 +1035,97 @@ def main(device):
     seed_everything(42)
     
     ### If enable monthly loader, use custom dataloader instead of datamodule
-    if enable_monthly_loader := config["data"].get("enable_monthly_loader", False):
+    if config["data"].get("enable_timestep_loader", False):
+        timestep_data_dir = config["data"]["timestep_data_dir"]
+        var_names_path = os.path.join(timestep_data_dir, "var_names.json")
+        
+        # Still need data_module for transforms, climatology, lat/lon
+        data_module, _, _, in_vars, out_vars = create_data_module(
+            config, world_rank, device
+        )
+        
+        input_transforms = data_module.transforms
+        output_transforms = data_module.output_transforms
+        
+        def apply_normalization(x, y):
+            for i, var_name in enumerate(in_vars):
+                if var_name in input_transforms:
+                    x[i] = input_transforms[var_name](x[i].unsqueeze(0)).squeeze(0)
+            for i, var_name in enumerate(out_vars):
+                if var_name in output_transforms:
+                    y[i] = output_transforms[var_name](y[i].unsqueeze(0)).squeeze(0)
+            return x, y
+
+        train_dataset = ERA5TimestepDataset(
+            data_dir=os.path.join(timestep_data_dir, "train"),
+            var_names_path=var_names_path,
+            in_vars=in_vars,
+            out_vars=out_vars,
+            pred_range=config["data"]["pred_range"],
+            subsample=6,
+            transform=apply_normalization,
+            rank=world_rank,
+            world_size=world_size,
+            dtype=data_type,
+        )
+
+        val_dataset = ERA5TimestepDataset(
+            data_dir=os.path.join(timestep_data_dir, "val"),
+            var_names_path=var_names_path,
+            in_vars=in_vars,
+            out_vars=out_vars,
+            pred_range=config["data"]["pred_range"],
+            subsample=6,
+            transform=apply_normalization,
+            rank=world_rank,
+            world_size=world_size,
+            dtype=data_type,
+        )
+        
+        def timestep_collate(batch):
+            """Collate (x, y) pairs and append variable name lists."""
+            x_list, y_list = zip(*batch)
+            x = torch.stack(x_list)
+            y = torch.stack(y_list)
+            return x, y, in_vars, out_vars
+
+
+        train_dataloader = DataLoader(
+            train_dataset,
+            batch_size=config["trainer"]["batch_size"],
+            shuffle=True,
+            # num_workers=config["trainer"].get("num_workers", 4),
+            num_workers=0,
+            # pin_memory=False,
+            drop_last=True,          # avoid uneven batch sizes across ranks
+            # persistent_workers=True,  # keep workers alive between epochs
+            collate_fn=timestep_collate,
+        )
+        val_dataloader = DataLoader(
+            val_dataset,
+            batch_size=config["trainer"]["batch_size"],
+            shuffle=False,
+            # num_workers=config["trainer"].get("num_workers", 4),
+            num_workers=0,
+            # pin_memory=False,
+            drop_last=True,
+            # persistent_workers=True,
+            collate_fn=timestep_collate,
+        )
+
+        lr_h, lr_w = config["model"]["img_size"]
+        superres_factor = config["model"]["superres_factor"]
+        hr_h, hr_w = lr_h * superres_factor, lr_w * superres_factor
+        downsample_mode = config["model"]["downsample_mode"]
+        antialias_setting = config["model"].get("antialias", None)
+        if not hasattr(data_module, 'resize_config'):
+            data_module.resize_config = {
+                'lr_size': (lr_h, lr_w),
+                'hr_size': (hr_h, hr_w),
+                'mode': downsample_mode,
+                'antialias': antialias_setting
+            }
+    elif enable_monthly_loader := config["data"].get("enable_monthly_loader", False):
         train_files_dir = os.path.join(config["data"]["era5_dir"], "train")
         val_files_dir = os.path.join(config["data"]["era5_dir"], "val")
         
@@ -1227,7 +1319,7 @@ def main(device):
             out_vars,
             data_module,
             data_type=data_type,
-            log_interval=50,
+            log_interval=10,
             monitor=monitor,
             aux_difficulty_head=aux_difficulty_head,
             aux_optimizer=aux_optimizer,
