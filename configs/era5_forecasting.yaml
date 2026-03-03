@@ -2,10 +2,10 @@
 
 trainer:
   max_epochs: 30
-  batch_size: 32
+  batch_size: 16
   num_workers: 2
-  checkpoint: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_sprint_disabled_antialias=True_input_refine_cnn=True_interpolation=False/checkpoint_epoch_0006.pt  # Path to checkpoint to resume from, or null
-  checkpoint_save_path: "/lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_sprint_disabled_antialias=True_input_refine_cnn=True_interpolation=False" #"/lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_bilinear_antialias=False_input_refine_cnn=False"
+  checkpoint: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.0_deg_sprint_disabled_antialias=True_input_refine_cnn=True_interpolation=False/checkpoint_epoch_0027.pt  # Path to checkpoint to resume from, or null
+  checkpoint_save_path: "/lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.0_deg_vit_antialias=True_input_refine_cnn=True_interpolation=False" #"/lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_bilinear_antialias=False_input_refine_cnn=False"
   data_type: "bfloat16"  # "float32", "bfloat16", "float16"
   train_loss: "lat_mse"  # this field is not used by the training script, loss is hardcoded
   num_gpus: 16
@@ -21,9 +21,9 @@ data:
   # era5_dir: "/lustre/orion/lrn036/world-shared/data/superres/era5/1.40625_deg/"
   # era5_dir: "/lustre/orion/lrn036/world-shared/data/superres/era5/1.0_deg/"
   # era5_dir: "/lustre/orion/lrn036/world-shared/data/superres/era5/0.25_deg/"
-  # era5_dir: "/lustre/orion/world-shared/lrn036/jyc/frontier/ClimaX-v2/data/ERA5-1hr-superres/1.0_deg/"
-  # timestep_data_dir: "/lustre/orion/world-shared/csc662/janetw/era5_1.0_deg_timesteps"
-  era5_dir: "/lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/"
+  era5_dir: "/lustre/orion/world-shared/lrn036/jyc/frontier/ClimaX-v2/data/ERA5-1hr-superres/1.0_deg/"
+  timestep_data_dir: "/lustre/orion/world-shared/csc662/janetw/era5_1.0_deg_timesteps"
+  # era5_dir: "/lustre/orion/lrn036/world-shared/ERA5_npz/1.0_deg/"
   forecast_type: "direct"  # "direct", "iterative", "continuous"
   pred_range: 120  # lead time [6, 24, 72, 120, 240]
   enable_monthly_loader: True
@@ -57,10 +57,10 @@ data:
   #   10m_v_component_of_wind: 1.0
 
 model:
-  preset: "res_slimvit"  # Model architecture, res_slimvit_adaptive
+  preset: "vit"  # Model architecture, res_slimvit_adaptive
   
   # Image dimensions
-  img_size: [128, 256]  # Low-resolution input [H, W]
+  img_size: [180, 360]  # Low-resolution input [H, W]
   superres_factor: 1 # Super-resolution factor
   # Downsampling mode options:
   #   Interpolation: "area", "bilinear", "bicubic", "nearest"
