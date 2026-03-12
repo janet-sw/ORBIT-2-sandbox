@@ -1,0 +1,1786 @@
+
+Lmod is automatically replacing "cce/18.0.1" with "gcc-native/14.2".
+
+
+Lmod is automatically replacing "PrgEnv-cray/8.6.0" with "PrgEnv-gnu/8.6.0".
+
+
+Inactive Modules:
+  1) darshan-runtime
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) cray-libsci/24.11.0     2) cray-mpich/8.1.31
+
+
+Lmod is automatically replacing "gcc-native/14.2" with "gcc/12.2.0".
+
+
+The following have been reloaded with a version change:
+  1) cray-libsci/24.11.0 => cray-libsci/23.09.1.1
+  2) cray-mpich/8.1.31 => cray-mpich/8.1.27
+  3) libfabric/1.22.0 => libfabric/1.20.1
+
+Job started at: Thu Feb 19 03:05:53 PM EST 2026
+Job ID: 4134433
+Running on nodes: frontier[00282,00284]
+Number of tasks: 16
+Number of nodes: 2
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+[W219 15:07:26.511972772 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier00282.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+[W219 15:07:32.575854883 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier00282.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=4, local_rank=4
+use_ddstore is : 0
+[Rank 4] Assigned 2/40 monthly files (indices 8:10).
+[Rank 4] Not enough files to shard (3 files, 16 ranks). All ranks read all 3 files.
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+[W219 15:07:32.852515151 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier00282.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=8, local_rank=0
+use_ddstore is : 0
+[Rank 8] Assigned 2/40 monthly files (indices 16:18).
+[Rank 8] Not enough files to shard (3 files, 16 ranks). All ranks read all 3 files.
+[W219 15:07:34.722355019 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier00282.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=5, local_rank=5
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+use_ddstore is : 0
+[Rank 5] Assigned 2/40 monthly files (indices 10:12).
+[Rank 5] Not enough files to shard (3 files, 16 ranks). All ranks read all 3 files.
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+[W219 15:07:35.505231410 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier00282.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=7, local_rank=7
+[W219 15:07:35.580329522 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier00282.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=3, local_rank=3
+[W219 15:07:35.626401326 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier00282.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=2, local_rank=2
+[W219 15:07:35.660804845 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier00282.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=6, local_rank=6
+use_ddstore is : 0
+[Rank 3] Assigned 2/40 monthly files (indices 6:8).
+[Rank 3] Not enough files to shard (3 files, 16 ranks). All ranks read all 3 files.
+use_ddstore is : 0
+[Rank 7] Assigned 2/40 monthly files (indices 14:16).
+[Rank 7] Not enough files to shard (3 files, 16 ranks). All ranks read all 3 files.
+use_ddstore is : 0
+[Rank 6] Assigned 2/40 monthly files (indices 12:14).
+[Rank 6] Not enough files to shard (3 files, 16 ranks). All ranks read all 3 files.
+use_ddstore is : 0
+[Rank 2] Assigned 2/40 monthly files (indices 4:6).
+[Rank 2] Not enough files to shard (3 files, 16 ranks). All ranks read all 3 files.
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+[W219 15:07:36.936115984 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier00282.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=1, local_rank=1
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+use_ddstore is : 0
+[Rank 1] Assigned 2/40 monthly files (indices 2:4).
+[Rank 1] Not enough files to shard (3 files, 16 ranks). All ranks read all 3 files.
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+[W219 15:07:43.083175338 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier00282.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=12, local_rank=4
+use_ddstore is : 0
+[Rank 12] Assigned 2/40 monthly files (indices 24:26).
+[Rank 12] Not enough files to shard (3 files, 16 ranks). All ranks read all 3 files.
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+[W219 15:07:47.935410900 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier00282.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=9, local_rank=1
+[W219 15:07:47.163035510 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier00282.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=13, local_rank=5
+use_ddstore is : 0
+[Rank 9] Assigned 2/40 monthly files (indices 18:20).
+[Rank 9] Not enough files to shard (3 files, 16 ranks). All ranks read all 3 files.
+use_ddstore is : 0
+[Rank 13] Assigned 2/40 monthly files (indices 26:28).
+[Rank 13] Not enough files to shard (3 files, 16 ranks). All ranks read all 3 files.
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+[W219 15:07:49.792320888 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier00282.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=14, local_rank=6
+use_ddstore is : 0
+[Rank 14] Assigned 2/40 monthly files (indices 28:30).
+[Rank 14] Not enough files to shard (3 files, 16 ranks). All ranks read all 3 files.
+[W219 15:07:50.508696701 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier00282.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=10, local_rank=2
+[W219 15:07:50.756682085 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier00282.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=15, local_rank=7
+use_ddstore is : 0
+[Rank 10] Assigned 2/40 monthly files (indices 20:22).
+[Rank 10] Not enough files to shard (3 files, 16 ranks). All ranks read all 3 files.
+[W219 15:07:50.879948577 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier00282.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+DDStore loading error!!
+Initialized process group. world_size=16
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=0, local_rank=0
+world_size=16, world_rank=11, local_rank=3
+Loading config from: /ccs/home/janetw/diffusion/ORBIT-2-sandbox/configs/era5_forecasting.yaml
+
+================================================================================
+Training Configuration Summary
+================================================================================
+Config: /ccs/home/janetw/diffusion/ORBIT-2-sandbox/configs/era5_forecasting.yaml
+Max epochs: 30
+Data type: bfloat16
+Checkpoint: None
+Save path: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_sprint_enabled_antialias=True_input_refine_cnn=True
+================================================================================
+
+use_ddstore is : 0
+Creating data module for direct forecasting
+use_ddstore is : 0
+Input variables: ['temperature_50', 'temperature_250', 'temperature_500', 'temperature_600', 'temperature_700', 'temperature_850', 'temperature_925', '2m_temperature', '10m_u_component_of_wind', '10m_v_component_of_wind', 'latitude', 'land_sea_mask', 'orography', 'landcover']
+[Rank 15] Assigned 2/40 monthly files (indices 30:32).
+Output variables: ['2m_temperature']
+[Rank 15] Not enough files to shard (3 files, 16 ranks). All ranks read all 3 files.
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+Setting up distributed data loading: world_size=16
+[Rank 11] Assigned 2/40 monthly files (indices 22:24).
+Each GPU will process 1/16 of the dataset
+[Rank 11] Not enough files to shard (3 files, 16 ranks). All ranks read all 3 files.
+after data_module creation Allocated: 0.00GB, Max Allocated: 0.00GB, Reserved: 0.00GB
+use_ddstore is : 0
+[Rank 0] Assigned 2/40 monthly files (indices 0:2).
+[Monthly Loader] Verifying variables in 1979_0.npz...
+[Monthly Loader] Available variables: ['land_sea_mask', 'landcover', 'latitude', 'orography', '10m_u_component_of_wind', '10m_v_component_of_wind', '2m_temperature_max', '2m_temperature_min', '2m_temperature', 'sea_surface_temperature', 'surface_pressure', 'total_precipitation_24hr', 'volumetric_soil_water_layer_1', 'geopotential_50', 'geopotential_100', 'geopotential_150', 'geopotential_200', 'geopotential_250', 'geopotential_300', 'geopotential_400', 'geopotential_500', 'geopotential_600', 'geopotential_700', 'geopotential_850', 'geopotential_925', 'geopotential_1000', 'specific_humidity_50', 'specific_humidity_100', 'specific_humidity_150', 'specific_humidity_200', 'specific_humidity_250', 'specific_humidity_300', 'specific_humidity_400', 'specific_humidity_500', 'specific_humidity_600', 'specific_humidity_700', 'specific_humidity_850', 'specific_humidity_925', 'specific_humidity_1000', 'temperature_50', 'temperature_100', 'temperature_150', 'temperature_200', 'temperature_250', 'temperature_300', 'temperature_400', 'temperature_500', 'temperature_600', 'temperature_700', 'temperature_850', 'temperature_925', 'temperature_1000', 'u_component_of_wind_50', 'u_component_of_wind_100', 'u_component_of_wind_150', 'u_component_of_wind_200', 'u_component_of_wind_250', 'u_component_of_wind_300', 'u_component_of_wind_400', 'u_component_of_wind_500', 'u_component_of_wind_600', 'u_component_of_wind_700', 'u_component_of_wind_850', 'u_component_of_wind_925', 'u_component_of_wind_1000', 'v_component_of_wind_50', 'v_component_of_wind_100', 'v_component_of_wind_150', 'v_component_of_wind_200', 'v_component_of_wind_250', 'v_component_of_wind_300', 'v_component_of_wind_400', 'v_component_of_wind_500', 'v_component_of_wind_600', 'v_component_of_wind_700', 'v_component_of_wind_850', 'v_component_of_wind_925', 'v_component_of_wind_1000', 'days_of_year', 'time_of_day', 'hrs_each_step', 'num_steps_per_shard', 'extra_steps', 'lattitude']
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+[Monthly Loader] 'landcover': shape=(8760, 1, 128, 256)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+[Monthly Loader] 'orography': shape=(8760, 1, 128, 256)
+[Monthly Loader] 'temperature_925': shape=(8760, 1, 128, 256)
+[Monthly Loader] 'temperature_50': shape=(8760, 1, 128, 256)
+[Monthly Loader] '10m_u_component_of_wind': shape=(8760, 1, 128, 256)
+[Monthly Loader] 'latitude': shape=(8760, 1, 128, 256)
+[Monthly Loader] 'temperature_600': shape=(8760, 1, 128, 256)
+[Monthly Loader] '2m_temperature': shape=(8760, 1, 128, 256)
+[Monthly Loader] 'temperature_250': shape=(8760, 1, 128, 256)
+[Monthly Loader] 'temperature_850': shape=(8760, 1, 128, 256)
+[Monthly Loader] 'temperature_500': shape=(8760, 1, 128, 256)
+[Monthly Loader] 'temperature_700': shape=(8760, 1, 128, 256)
+[Monthly Loader] 'land_sea_mask': shape=(8760, 1, 128, 256)
+[Monthly Loader] '10m_v_component_of_wind': shape=(8760, 1, 128, 256)
+[Rank 0] Not enough files to shard (3 files, 16 ranks). All ranks read all 3 files.
+[Monthly Loader] Verifying variables in 2018_0.npz...
+[Monthly Loader] Available variables: ['land_sea_mask', 'landcover', 'latitude', 'orography', '10m_u_component_of_wind', '10m_v_component_of_wind', '2m_temperature_max', '2m_temperature_min', '2m_temperature', 'sea_surface_temperature', 'surface_pressure', 'total_precipitation_24hr', 'volumetric_soil_water_layer_1', 'geopotential_50', 'geopotential_100', 'geopotential_150', 'geopotential_200', 'geopotential_250', 'geopotential_300', 'geopotential_400', 'geopotential_500', 'geopotential_600', 'geopotential_700', 'geopotential_850', 'geopotential_925', 'geopotential_1000', 'specific_humidity_50', 'specific_humidity_100', 'specific_humidity_150', 'specific_humidity_200', 'specific_humidity_250', 'specific_humidity_300', 'specific_humidity_400', 'specific_humidity_500', 'specific_humidity_600', 'specific_humidity_700', 'specific_humidity_850', 'specific_humidity_925', 'specific_humidity_1000', 'temperature_50', 'temperature_100', 'temperature_150', 'temperature_200', 'temperature_250', 'temperature_300', 'temperature_400', 'temperature_500', 'temperature_600', 'temperature_700', 'temperature_850', 'temperature_925', 'temperature_1000', 'u_component_of_wind_50', 'u_component_of_wind_100', 'u_component_of_wind_150', 'u_component_of_wind_200', 'u_component_of_wind_250', 'u_component_of_wind_300', 'u_component_of_wind_400', 'u_component_of_wind_500', 'u_component_of_wind_600', 'u_component_of_wind_700', 'u_component_of_wind_850', 'u_component_of_wind_925', 'u_component_of_wind_1000', 'v_component_of_wind_50', 'v_component_of_wind_100', 'v_component_of_wind_150', 'v_component_of_wind_200', 'v_component_of_wind_250', 'v_component_of_wind_300', 'v_component_of_wind_400', 'v_component_of_wind_500', 'v_component_of_wind_600', 'v_component_of_wind_700', 'v_component_of_wind_850', 'v_component_of_wind_925', 'v_component_of_wind_1000', 'days_of_year', 'time_of_day', 'hrs_each_step', 'num_steps_per_shard', 'extra_steps', 'lattitude']
+[Monthly Loader] 'landcover': shape=(8760, 1, 128, 256)
+[Monthly Loader] 'orography': shape=(8760, 1, 128, 256)
+[Monthly Loader] 'temperature_925': shape=(8760, 1, 128, 256)
+[Monthly Loader] 'temperature_50': shape=(8760, 1, 128, 256)
+[Monthly Loader] '10m_u_component_of_wind': shape=(8760, 1, 128, 256)
+[Monthly Loader] 'latitude': shape=(8760, 1, 128, 256)
+[Monthly Loader] 'temperature_600': shape=(8760, 1, 128, 256)
+[Monthly Loader] '2m_temperature': shape=(8760, 1, 128, 256)
+[Monthly Loader] 'temperature_250': shape=(8760, 1, 128, 256)
+[Monthly Loader] 'temperature_850': shape=(8760, 1, 128, 256)
+[Monthly Loader] 'temperature_500': shape=(8760, 1, 128, 256)
+[Monthly Loader] 'temperature_700': shape=(8760, 1, 128, 256)
+[Monthly Loader] 'land_sea_mask': shape=(8760, 1, 128, 256)
+[Monthly Loader] '10m_v_component_of_wind': shape=(8760, 1, 128, 256)
+
+[DEBUG] Data module created, creating model...
+Creating model: res_slimvit_adaptive
+Model config: img_size=(32, 64), in_channels=14, out_channels=1, history=1, superres_factor=4
+Model parameters: 5.44M
+[DEBUG] Model created, setting up FSDP...
+[DEBUG] Starting FSDP wrapping...
+[DEBUG] FSDP wrapping completed. Model parameters: 0.34M
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+[DEBUG] FSDP wrapping completed, now creating losses (this may take several minutes)...
+[DEBUG] Loading training climatology for lat_mse (this may take a while)...
+[DEBUG] Training climatology loaded
+[DEBUG] Loading validation climatology...
+[DEBUG] Validation climatology loaded
+Using lat_mse for training loss
+Loss functions created successfully
+[DEBUG] Losses created successfully
+[DEBUG] Created standalone aux_difficulty_head on device 0
+
+================================================================================
+Starting epoch 0
+================================================================================
+
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+[E0 B0] loss=0.83620 time=28.578s | diff μ=0.478 σ=0.052 hard=31.1% aux=0.7106 | tokens 128/512 | mem=0.0GB
+
+======================================================================
+ Parameter Breakdown
+======================================================================
+  Decoder Head                                0.000M  (           0)
+  Token Embeddings                            0.000M  (           0)
+  Variable Aggregation                        0.000M  (           0)
+  Other (pos_embed, var_embed, etc.)          0.340M  (     339,965)
+  ────────────────────────────────────────────────────────────
+  TOTAL                                       0.340M  (     339,965)
+======================================================================
+
+Epoch 0 | Batch 0 | Loss: 0.836199 | Time: 28.631s | LR: 1.00e-06
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 0.97GB, Reserved: 0.07GB
+[E0 B50] loss=0.82072 time=0.154s | diff μ=0.477 σ=0.052 hard=30.1% aux=0.5958 | tokens 128/512 | mem=0.0GB
+Epoch 0 | Batch 50 | Loss: 0.820719 | Time: 0.155s | LR: 1.00e-06
+rank 0 Batch 50 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+[Monthly Loader] Epoch complete. Yielded 2880 samples.
+
+================================================================================
+Epoch 0 completed | Average Loss: 0.833976
+================================================================================
+
+
+======================================================================
+ Epoch 0 Summary (Adaptive Sparsity)
+======================================================================
+  loss                                = 0.830565  (n=90)
+  step_time_sec                       = 0.537447  (n=90)
+  difficulty_mean                     = 0.476896  (n=90)
+  difficulty_std                      = 0.051663  (n=90)
+  difficulty_min                      = 0.300491  (n=90)
+  difficulty_max                      = 0.686159  (n=90)
+  difficulty_entropy                  = 0.687500  (n=90)
+  frac_hard_tokens                    = 0.302121  (n=90)
+  aux_difficulty_loss                 = 0.636299  (n=90)
+  tokens_total                        = 512.000000  (n=90)
+  tokens_kept                         = 128.000000  (n=90)
+  tokens_dropped                      = 384.000000  (n=90)
+  keep_ratio                          = 0.250000  (n=90)
+  gpu_mem_allocated_gb                = 0.014000  (n=90)
+  gpu_mem_max_allocated_gb            = 1.046967  (n=90)
+======================================================================
+
+Warning: could not save training log: [Errno 2] No such file or directory: '/lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_sprint_enabled_antialias=True_input_refine_cnn=True/adaptive_training_log.json'
+[DEBUG] Synced aux_head → model difficulty_head (epoch 0)
+Created checkpoint directory: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_sprint_enabled_antialias=True_input_refine_cnn=True
+rank 0 Before saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+Saved checkpoint to: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_sprint_enabled_antialias=True_input_refine_cnn=True/checkpoint_epoch_0000.pt
+rank 0 After saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+
+================================================================================
+Starting epoch 1
+================================================================================
+
+[E1 B0] loss=0.82016 time=4.248s | diff μ=0.500 σ=0.229 hard=45.4% aux=0.5720 | tokens 128/512 | mem=0.0GB
+Epoch 1 | Batch 0 | Loss: 0.820162 | Time: 4.249s | LR: 6.60e-03
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+[E1 B50] loss=0.11076 time=0.155s | diff μ=0.441 σ=0.243 hard=39.9% aux=0.6590 | tokens 128/512 | mem=0.0GB
+Epoch 1 | Batch 50 | Loss: 0.110759 | Time: 0.156s | LR: 6.60e-03
+rank 0 Batch 50 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+[Monthly Loader] Epoch complete. Yielded 2880 samples.
+
+================================================================================
+Epoch 1 completed | Average Loss: 0.186029
+================================================================================
+
+
+======================================================================
+ Epoch 1 Summary (Adaptive Sparsity)
+======================================================================
+  loss                                = 0.185665  (n=90)
+  step_time_sec                       = 0.229978  (n=90)
+  difficulty_mean                     = 0.467438  (n=90)
+  difficulty_std                      = 0.208967  (n=90)
+  difficulty_min                      = 0.115592  (n=90)
+  difficulty_max                      = 0.794673  (n=90)
+  difficulty_entropy                  = 0.571182  (n=90)
+  frac_hard_tokens                    = 0.445434  (n=90)
+  aux_difficulty_loss                 = 0.713890  (n=90)
+  tokens_total                        = 512.000000  (n=90)
+  tokens_kept                         = 128.000000  (n=90)
+  tokens_dropped                      = 384.000000  (n=90)
+  keep_ratio                          = 0.250000  (n=90)
+  gpu_mem_allocated_gb                = 0.014000  (n=90)
+  gpu_mem_max_allocated_gb            = 1.047000  (n=90)
+======================================================================
+
+[DEBUG] Synced aux_head → model difficulty_head (epoch 1)
+rank 0 Before saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+Saved checkpoint to: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_sprint_enabled_antialias=True_input_refine_cnn=True/checkpoint_epoch_0001.pt
+rank 0 After saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+
+================================================================================
+Starting epoch 2
+================================================================================
+
+[E2 B0] loss=0.09928 time=4.630s | diff μ=0.504 σ=0.168 hard=30.8% aux=0.6357 | tokens 128/512 | mem=0.0GB
+Epoch 2 | Batch 0 | Loss: 0.099283 | Time: 4.632s | LR: 1.32e-02
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+[E2 B50] loss=0.09588 time=0.151s | diff μ=0.504 σ=0.169 hard=30.0% aux=0.6383 | tokens 128/512 | mem=0.0GB
+Epoch 2 | Batch 50 | Loss: 0.095882 | Time: 0.152s | LR: 1.32e-02
+rank 0 Batch 50 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+[Monthly Loader] Epoch complete. Yielded 2880 samples.
+
+================================================================================
+Epoch 2 completed | Average Loss: 0.095624
+================================================================================
+
+
+======================================================================
+ Epoch 2 Summary (Adaptive Sparsity)
+======================================================================
+  loss                                = 0.095909  (n=90)
+  step_time_sec                       = 0.205280  (n=90)
+  difficulty_mean                     = 0.508407  (n=90)
+  difficulty_std                      = 0.171676  (n=90)
+  difficulty_min                      = 0.163240  (n=90)
+  difficulty_max                      = 0.980413  (n=90)
+  difficulty_entropy                  = 0.627383  (n=90)
+  frac_hard_tokens                    = 0.316673  (n=90)
+  aux_difficulty_loss                 = 0.636659  (n=90)
+  tokens_total                        = 512.000000  (n=90)
+  tokens_kept                         = 128.000000  (n=90)
+  tokens_dropped                      = 384.000000  (n=90)
+  keep_ratio                          = 0.250000  (n=90)
+  gpu_mem_allocated_gb                = 0.014000  (n=90)
+  gpu_mem_max_allocated_gb            = 1.047000  (n=90)
+======================================================================
+
+[DEBUG] Synced aux_head → model difficulty_head (epoch 2)
+rank 0 Before saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+Saved checkpoint to: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_sprint_enabled_antialias=True_input_refine_cnn=True/checkpoint_epoch_0002.pt
+rank 0 After saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+
+================================================================================
+Starting epoch 3
+================================================================================
+
+[E3 B0] loss=0.09359 time=1.455s | diff μ=0.508 σ=0.167 hard=31.7% aux=0.6310 | tokens 128/512 | mem=0.0GB
+Epoch 3 | Batch 0 | Loss: 0.093595 | Time: 1.457s | LR: 1.98e-02
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+[E3 B50] loss=0.09234 time=0.154s | diff μ=0.492 σ=0.165 hard=26.9% aux=0.6393 | tokens 128/512 | mem=0.0GB
+Epoch 3 | Batch 50 | Loss: 0.092339 | Time: 0.155s | LR: 1.98e-02
+rank 0 Batch 50 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+[Monthly Loader] Epoch complete. Yielded 2880 samples.
+
+================================================================================
+Epoch 3 completed | Average Loss: 0.091098
+================================================================================
+
+
+======================================================================
+ Epoch 3 Summary (Adaptive Sparsity)
+======================================================================
+  loss                                = 0.091434  (n=90)
+  step_time_sec                       = 0.192306  (n=90)
+  difficulty_mean                     = 0.491938  (n=90)
+  difficulty_std                      = 0.163789  (n=90)
+  difficulty_min                      = 0.246137  (n=90)
+  difficulty_max                      = 0.952667  (n=90)
+  difficulty_entropy                  = 0.634620  (n=90)
+  frac_hard_tokens                    = 0.269098  (n=90)
+  aux_difficulty_loss                 = 0.638574  (n=90)
+  tokens_total                        = 512.000000  (n=90)
+  tokens_kept                         = 128.000000  (n=90)
+  tokens_dropped                      = 384.000000  (n=90)
+  keep_ratio                          = 0.250000  (n=90)
+  gpu_mem_allocated_gb                = 0.014000  (n=90)
+  gpu_mem_max_allocated_gb            = 1.047000  (n=90)
+======================================================================
+
+[DEBUG] Synced aux_head → model difficulty_head (epoch 3)
+rank 0 Before saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+Saved checkpoint to: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_sprint_enabled_antialias=True_input_refine_cnn=True/checkpoint_epoch_0003.pt
+rank 0 After saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+
+================================================================================
+Starting epoch 4
+================================================================================
+
+[E4 B0] loss=0.08905 time=4.851s | diff μ=0.508 σ=0.142 hard=25.4% aux=0.6442 | tokens 128/512 | mem=0.0GB
+Epoch 4 | Batch 0 | Loss: 0.089048 | Time: 4.853s | LR: 2.64e-02
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+[E4 B50] loss=0.09183 time=0.152s | diff μ=0.516 σ=0.059 hard=57.9% aux=0.6411 | tokens 128/512 | mem=0.0GB
+Epoch 4 | Batch 50 | Loss: 0.091828 | Time: 0.153s | LR: 2.64e-02
+rank 0 Batch 50 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+[Monthly Loader] Epoch complete. Yielded 2880 samples.
+
+================================================================================
+Epoch 4 completed | Average Loss: 0.097368
+================================================================================
+
+
+======================================================================
+ Epoch 4 Summary (Adaptive Sparsity)
+======================================================================
+  loss                                = 0.097676  (n=90)
+  step_time_sec                       = 0.209031  (n=90)
+  difficulty_mean                     = 0.518300  (n=90)
+  difficulty_std                      = 0.089704  (n=90)
+  difficulty_min                      = 0.269608  (n=90)
+  difficulty_max                      = 0.920300  (n=90)
+  difficulty_entropy                  = 0.672689  (n=90)
+  frac_hard_tokens                    = 0.495613  (n=90)
+  aux_difficulty_loss                 = 0.652231  (n=90)
+  tokens_total                        = 512.000000  (n=90)
+  tokens_kept                         = 128.000000  (n=90)
+  tokens_dropped                      = 384.000000  (n=90)
+  keep_ratio                          = 0.250000  (n=90)
+  gpu_mem_allocated_gb                = 0.014000  (n=90)
+  gpu_mem_max_allocated_gb            = 1.047000  (n=90)
+======================================================================
+
+[DEBUG] Synced aux_head → model difficulty_head (epoch 4)
+
+Running validation for epoch 4...
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:92: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:92: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:92: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:92: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:92: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:92: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:92: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:92: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:92: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:92: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:92: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:92: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:92: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:92: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:92: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:92: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+[Monthly Loader] Epoch complete. Yielded 2880 samples.
+
+Validation results for epoch 4:
+  val/lat_rmse:2m_temperature: 3.345569
+  val/lat_rmse:aggregate: 3.345569
+  val/lat_acc:2m_temperature: 0.815691
+  val/lat_acc:aggregate: 0.815691
+  val/lat_mse:2m_temperature: 0.023870
+  val/lat_mse:aggregate: 0.023870
+
+rank 0 Before saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+Saved checkpoint to: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_sprint_enabled_antialias=True_input_refine_cnn=True/checkpoint_epoch_0004.pt
+rank 0 After saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+
+================================================================================
+Starting epoch 5
+================================================================================
+
+[E5 B0] loss=0.09152 time=0.970s | diff μ=0.508 σ=0.142 hard=36.8% aux=0.6525 | tokens 128/512 | mem=0.0GB
+Epoch 5 | Batch 0 | Loss: 0.091521 | Time: 0.971s | LR: 2.64e-02
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+[E5 B50] loss=0.08356 time=0.150s | diff μ=0.539 σ=0.149 hard=42.9% aux=0.6053 | tokens 128/512 | mem=0.0GB
+Epoch 5 | Batch 50 | Loss: 0.083557 | Time: 0.151s | LR: 2.64e-02
+rank 0 Batch 50 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+[Monthly Loader] Epoch complete. Yielded 2880 samples.
+
+================================================================================
+Epoch 5 completed | Average Loss: 0.085888
+================================================================================
+
+
+======================================================================
+ Epoch 5 Summary (Adaptive Sparsity)
+======================================================================
+  loss                                = 0.086199  (n=90)
+  step_time_sec                       = 0.180552  (n=90)
+  difficulty_mean                     = 0.544920  (n=90)
+  difficulty_std                      = 0.160751  (n=90)
+  difficulty_min                      = 0.267653  (n=90)
+  difficulty_max                      = 0.916150  (n=90)
+  difficulty_entropy                  = 0.633320  (n=90)
+  frac_hard_tokens                    = 0.431960  (n=90)
+  aux_difficulty_loss                 = 0.617707  (n=90)
+  tokens_total                        = 512.000000  (n=90)
+  tokens_kept                         = 128.000000  (n=90)
+  tokens_dropped                      = 384.000000  (n=90)
+  keep_ratio                          = 0.250000  (n=90)
+  gpu_mem_allocated_gb                = 0.014000  (n=90)
+  gpu_mem_max_allocated_gb            = 1.047000  (n=90)
+======================================================================
+
+[DEBUG] Synced aux_head → model difficulty_head (epoch 5)
+rank 0 Before saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+Saved checkpoint to: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_sprint_enabled_antialias=True_input_refine_cnn=True/checkpoint_epoch_0005.pt
+rank 0 After saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+
+================================================================================
+Starting epoch 6
+================================================================================
+
+[E6 B0] loss=0.08533 time=0.920s | diff μ=0.500 σ=0.196 hard=36.8% aux=0.6065 | tokens 128/512 | mem=0.0GB
+Epoch 6 | Batch 0 | Loss: 0.085325 | Time: 0.921s | LR: 2.63e-02
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+[E6 B50] loss=0.08455 time=0.150s | diff μ=0.617 σ=0.183 hard=65.1% aux=0.6040 | tokens 128/512 | mem=0.0GB
+Epoch 6 | Batch 50 | Loss: 0.084547 | Time: 0.150s | LR: 2.63e-02
+rank 0 Batch 50 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+[Monthly Loader] Epoch complete. Yielded 2880 samples.
+
+================================================================================
+Epoch 6 completed | Average Loss: 0.084149
+================================================================================
+
+
+======================================================================
+ Epoch 6 Summary (Adaptive Sparsity)
+======================================================================
+  loss                                = 0.084515  (n=90)
+  step_time_sec                       = 0.253996  (n=90)
+  difficulty_mean                     = 0.555264  (n=90)
+  difficulty_std                      = 0.174240  (n=90)
+  difficulty_min                      = 0.294248  (n=90)
+  difficulty_max                      = 0.852893  (n=90)
+  difficulty_entropy                  = 0.606023  (n=90)
+  frac_hard_tokens                    = 0.506619  (n=90)
+  aux_difficulty_loss                 = 0.610504  (n=90)
+  tokens_total                        = 512.000000  (n=90)
+  tokens_kept                         = 128.000000  (n=90)
+  tokens_dropped                      = 384.000000  (n=90)
+  keep_ratio                          = 0.250000  (n=90)
+  gpu_mem_allocated_gb                = 0.014000  (n=90)
+  gpu_mem_max_allocated_gb            = 1.047000  (n=90)
+======================================================================
+
+[DEBUG] Synced aux_head → model difficulty_head (epoch 6)
+rank 0 Before saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+Saved checkpoint to: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_sprint_enabled_antialias=True_input_refine_cnn=True/checkpoint_epoch_0006.pt
+rank 0 After saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+
+================================================================================
+Starting epoch 7
+================================================================================
+
+[E7 B0] loss=0.08424 time=0.827s | diff μ=0.490 σ=0.202 hard=43.4% aux=0.5997 | tokens 128/512 | mem=0.0GB
+Epoch 7 | Batch 0 | Loss: 0.084238 | Time: 0.828s | LR: 2.60e-02
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+[E7 B50] loss=0.08428 time=0.157s | diff μ=0.490 σ=0.200 hard=42.9% aux=0.6096 | tokens 128/512 | mem=0.0GB
+Epoch 7 | Batch 50 | Loss: 0.084285 | Time: 0.157s | LR: 2.60e-02
+rank 0 Batch 50 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+[Monthly Loader] Epoch complete. Yielded 2880 samples.
+
+================================================================================
+Epoch 7 completed | Average Loss: 0.083413
+================================================================================
+
+
+======================================================================
+ Epoch 7 Summary (Adaptive Sparsity)
+======================================================================
+  loss                                = 0.083715  (n=90)
+  step_time_sec                       = 0.172153  (n=90)
+  difficulty_mean                     = 0.490682  (n=90)
+  difficulty_std                      = 0.194143  (n=90)
+  difficulty_min                      = 0.176909  (n=90)
+  difficulty_max                      = 0.816089  (n=90)
+  difficulty_entropy                  = 0.614299  (n=90)
+  frac_hard_tokens                    = 0.428781  (n=90)
+  aux_difficulty_loss                 = 0.607249  (n=90)
+  tokens_total                        = 512.000000  (n=90)
+  tokens_kept                         = 128.000000  (n=90)
+  tokens_dropped                      = 384.000000  (n=90)
+  keep_ratio                          = 0.250000  (n=90)
+  gpu_mem_allocated_gb                = 0.014000  (n=90)
+  gpu_mem_max_allocated_gb            = 1.047000  (n=90)
+======================================================================
+
+[DEBUG] Synced aux_head → model difficulty_head (epoch 7)
+rank 0 Before saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+Saved checkpoint to: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_sprint_enabled_antialias=True_input_refine_cnn=True/checkpoint_epoch_0007.pt
+rank 0 After saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+
+================================================================================
+Starting epoch 8
+================================================================================
+
+[E8 B0] loss=0.08190 time=10.537s | diff μ=0.508 σ=0.217 hard=42.7% aux=0.6093 | tokens 128/512 | mem=0.0GB
+Epoch 8 | Batch 0 | Loss: 0.081903 | Time: 10.538s | LR: 2.55e-02
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+[E8 B50] loss=0.08275 time=0.152s | diff μ=0.482 σ=0.167 hard=42.3% aux=0.6018 | tokens 128/512 | mem=0.0GB
+Epoch 8 | Batch 50 | Loss: 0.082754 | Time: 0.153s | LR: 2.55e-02
+rank 0 Batch 50 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+[Monthly Loader] Epoch complete. Yielded 2880 samples.
+
+================================================================================
+Epoch 8 completed | Average Loss: 0.082708
+================================================================================
+
+
+======================================================================
+ Epoch 8 Summary (Adaptive Sparsity)
+======================================================================
+  loss                                = 0.083004  (n=90)
+  step_time_sec                       = 0.273317  (n=90)
+  difficulty_mean                     = 0.487063  (n=90)
+  difficulty_std                      = 0.173803  (n=90)
+  difficulty_min                      = 0.173651  (n=90)
+  difficulty_max                      = 0.810256  (n=90)
+  difficulty_entropy                  = 0.629983  (n=90)
+  frac_hard_tokens                    = 0.429889  (n=90)
+  aux_difficulty_loss                 = 0.603266  (n=90)
+  tokens_total                        = 512.000000  (n=90)
+  tokens_kept                         = 128.000000  (n=90)
+  tokens_dropped                      = 384.000000  (n=90)
+  keep_ratio                          = 0.250000  (n=90)
+  gpu_mem_allocated_gb                = 0.014000  (n=90)
+  gpu_mem_max_allocated_gb            = 1.047000  (n=90)
+======================================================================
+
+[DEBUG] Synced aux_head → model difficulty_head (epoch 8)
+rank 0 Before saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+Saved checkpoint to: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_sprint_enabled_antialias=True_input_refine_cnn=True/checkpoint_epoch_0008.pt
+rank 0 After saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+
+================================================================================
+Starting epoch 9
+================================================================================
+
+[E9 B0] loss=0.08424 time=0.881s | diff μ=0.516 σ=0.196 hard=45.1% aux=0.6011 | tokens 128/512 | mem=0.0GB
+Epoch 9 | Batch 0 | Loss: 0.084236 | Time: 0.882s | LR: 2.48e-02
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+[E9 B50] loss=0.15909 time=0.152s | diff μ=0.519 σ=0.194 hard=46.0% aux=0.6179 | tokens 128/512 | mem=0.0GB
+Epoch 9 | Batch 50 | Loss: 0.159092 | Time: 0.153s | LR: 2.48e-02
+rank 0 Batch 50 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+[Monthly Loader] Epoch complete. Yielded 2880 samples.
+
+================================================================================
+Epoch 9 completed | Average Loss: 0.159059
+================================================================================
+
+
+======================================================================
+ Epoch 9 Summary (Adaptive Sparsity)
+======================================================================
+  loss                                = 0.159652  (n=90)
+  step_time_sec                       = 0.238597  (n=90)
+  difficulty_mean                     = 0.515818  (n=90)
+  difficulty_std                      = 0.194421  (n=90)
+  difficulty_min                      = 0.190729  (n=90)
+  difficulty_max                      = 0.830983  (n=90)
+  difficulty_entropy                  = 0.614080  (n=90)
+  frac_hard_tokens                    = 0.444652  (n=90)
+  aux_difficulty_loss                 = 0.619329  (n=90)
+  tokens_total                        = 512.000000  (n=90)
+  tokens_kept                         = 128.000000  (n=90)
+  tokens_dropped                      = 384.000000  (n=90)
+  keep_ratio                          = 0.250000  (n=90)
+  gpu_mem_allocated_gb                = 0.014000  (n=90)
+  gpu_mem_max_allocated_gb            = 1.047000  (n=90)
+======================================================================
+
+[DEBUG] Synced aux_head → model difficulty_head (epoch 9)
+
+Running validation for epoch 9...
+[Monthly Loader] Epoch complete. Yielded 2880 samples.
+
+Validation results for epoch 9:
+  val/lat_rmse:2m_temperature: 4.489438
+  val/lat_rmse:aggregate: 4.489438
+  val/lat_acc:2m_temperature: 0.674691
+  val/lat_acc:aggregate: 0.674691
+  val/lat_mse:2m_temperature: 0.044000
+  val/lat_mse:aggregate: 0.044000
+
+rank 0 Before saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+Saved checkpoint to: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_sprint_enabled_antialias=True_input_refine_cnn=True/checkpoint_epoch_0009.pt
+rank 0 After saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+
+================================================================================
+Starting epoch 10
+================================================================================
+
+[E10 B0] loss=0.10533 time=2.498s | diff μ=0.480 σ=0.203 hard=41.4% aux=0.6115 | tokens 128/512 | mem=0.0GB
+Epoch 10 | Batch 0 | Loss: 0.105326 | Time: 2.500s | LR: 2.39e-02
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+[E10 B50] loss=0.09356 time=0.150s | diff μ=0.512 σ=0.216 hard=45.3% aux=0.6015 | tokens 128/512 | mem=0.0GB
+Epoch 10 | Batch 50 | Loss: 0.093564 | Time: 0.151s | LR: 2.39e-02
+rank 0 Batch 50 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+[Monthly Loader] Epoch complete. Yielded 2880 samples.
+
+================================================================================
+Epoch 10 completed | Average Loss: 0.096400
+================================================================================
+
+
+======================================================================
+ Epoch 10 Summary (Adaptive Sparsity)
+======================================================================
+  loss                                = 0.096732  (n=90)
+  step_time_sec                       = 0.280456  (n=90)
+  difficulty_mean                     = 0.500312  (n=90)
+  difficulty_std                      = 0.212754  (n=90)
+  difficulty_min                      = 0.160648  (n=90)
+  difficulty_max                      = 0.830550  (n=90)
+  difficulty_entropy                  = 0.598384  (n=90)
+  frac_hard_tokens                    = 0.440223  (n=90)
+  aux_difficulty_loss                 = 0.602231  (n=90)
+  tokens_total                        = 512.000000  (n=90)
+  tokens_kept                         = 128.000000  (n=90)
+  tokens_dropped                      = 384.000000  (n=90)
+  keep_ratio                          = 0.250000  (n=90)
+  gpu_mem_allocated_gb                = 0.014000  (n=90)
+  gpu_mem_max_allocated_gb            = 1.047000  (n=90)
+======================================================================
+
+[DEBUG] Synced aux_head → model difficulty_head (epoch 10)
+rank 0 Before saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+Saved checkpoint to: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_sprint_enabled_antialias=True_input_refine_cnn=True/checkpoint_epoch_0010.pt
+rank 0 After saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+
+================================================================================
+Starting epoch 11
+================================================================================
+
+[E11 B0] loss=0.09124 time=7.936s | diff μ=0.498 σ=0.208 hard=44.7% aux=0.6033 | tokens 128/512 | mem=0.0GB
+Epoch 11 | Batch 0 | Loss: 0.091240 | Time: 7.937s | LR: 2.28e-02
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+[E11 B50] loss=0.08990 time=0.150s | diff μ=0.492 σ=0.206 hard=43.6% aux=0.6052 | tokens 128/512 | mem=0.0GB
+Epoch 11 | Batch 50 | Loss: 0.089900 | Time: 0.151s | LR: 2.28e-02
+rank 0 Batch 50 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+[Monthly Loader] Epoch complete. Yielded 2880 samples.
+
+================================================================================
+Epoch 11 completed | Average Loss: 0.090931
+================================================================================
+
+
+======================================================================
+ Epoch 11 Summary (Adaptive Sparsity)
+======================================================================
+  loss                                = 0.091233  (n=90)
+  step_time_sec                       = 0.266030  (n=90)
+  difficulty_mean                     = 0.492611  (n=90)
+  difficulty_std                      = 0.207704  (n=90)
+  difficulty_min                      = 0.167537  (n=90)
+  difficulty_max                      = 0.899827  (n=90)
+  difficulty_entropy                  = 0.603290  (n=90)
+  frac_hard_tokens                    = 0.436564  (n=90)
+  aux_difficulty_loss                 = 0.605097  (n=90)
+  tokens_total                        = 512.000000  (n=90)
+  tokens_kept                         = 128.000000  (n=90)
+  tokens_dropped                      = 384.000000  (n=90)
+  keep_ratio                          = 0.250000  (n=90)
+  gpu_mem_allocated_gb                = 0.014000  (n=90)
+  gpu_mem_max_allocated_gb            = 1.047000  (n=90)
+======================================================================
+
+[DEBUG] Synced aux_head → model difficulty_head (epoch 11)
+rank 0 Before saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+Saved checkpoint to: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_sprint_enabled_antialias=True_input_refine_cnn=True/checkpoint_epoch_0011.pt
+rank 0 After saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+
+================================================================================
+Starting epoch 12
+================================================================================
+
+[E12 B0] loss=0.09084 time=2.566s | diff μ=0.516 σ=0.203 hard=45.5% aux=0.6034 | tokens 128/512 | mem=0.0GB
+Epoch 12 | Batch 0 | Loss: 0.090842 | Time: 2.567s | LR: 2.16e-02
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+[E12 B50] loss=0.09110 time=0.151s | diff μ=0.516 σ=0.208 hard=45.2% aux=0.6046 | tokens 128/512 | mem=0.0GB
+Epoch 12 | Batch 50 | Loss: 0.091099 | Time: 0.152s | LR: 2.16e-02
+rank 0 Batch 50 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+[Monthly Loader] Epoch complete. Yielded 2880 samples.
+
+================================================================================
+Epoch 12 completed | Average Loss: 0.089100
+================================================================================
+
+
+======================================================================
+ Epoch 12 Summary (Adaptive Sparsity)
+======================================================================
+  loss                                = 0.089396  (n=90)
+  step_time_sec                       = 0.197096  (n=90)
+  difficulty_mean                     = 0.513217  (n=90)
+  difficulty_std                      = 0.206248  (n=90)
+  difficulty_min                      = 0.172344  (n=90)
+  difficulty_max                      = 0.877732  (n=90)
+  difficulty_entropy                  = 0.604503  (n=90)
+  frac_hard_tokens                    = 0.445834  (n=90)
+  aux_difficulty_loss                 = 0.605784  (n=90)
+  tokens_total                        = 512.000000  (n=90)
+  tokens_kept                         = 128.000000  (n=90)
+  tokens_dropped                      = 384.000000  (n=90)
+  keep_ratio                          = 0.250000  (n=90)
+  gpu_mem_allocated_gb                = 0.014000  (n=90)
+  gpu_mem_max_allocated_gb            = 1.047000  (n=90)
+======================================================================
+
+[DEBUG] Synced aux_head → model difficulty_head (epoch 12)
+rank 0 Before saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+Saved checkpoint to: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_sprint_enabled_antialias=True_input_refine_cnn=True/checkpoint_epoch_0012.pt
+rank 0 After saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+
+================================================================================
+Starting epoch 13
+================================================================================
+
+[E13 B0] loss=0.08702 time=8.052s | diff μ=0.516 σ=0.200 hard=44.4% aux=0.6068 | tokens 128/512 | mem=0.0GB
+Epoch 13 | Batch 0 | Loss: 0.087024 | Time: 8.054s | LR: 2.03e-02
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+[E13 B50] loss=0.08858 time=0.150s | diff μ=0.490 σ=0.184 hard=42.9% aux=0.6042 | tokens 128/512 | mem=0.0GB
+Epoch 13 | Batch 50 | Loss: 0.088581 | Time: 0.151s | LR: 2.03e-02
+rank 0 Batch 50 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+[Monthly Loader] Epoch complete. Yielded 2880 samples.
+
+================================================================================
+Epoch 13 completed | Average Loss: 0.087805
+================================================================================
+
+
+======================================================================
+ Epoch 13 Summary (Adaptive Sparsity)
+======================================================================
+  loss                                = 0.088086  (n=90)
+  step_time_sec                       = 0.267181  (n=90)
+  difficulty_mean                     = 0.500179  (n=90)
+  difficulty_std                      = 0.189244  (n=90)
+  difficulty_min                      = 0.185644  (n=90)
+  difficulty_max                      = 0.835019  (n=90)
+  difficulty_entropy                  = 0.618803  (n=90)
+  frac_hard_tokens                    = 0.436583  (n=90)
+  aux_difficulty_loss                 = 0.606317  (n=90)
+  tokens_total                        = 512.000000  (n=90)
+  tokens_kept                         = 128.000000  (n=90)
+  tokens_dropped                      = 384.000000  (n=90)
+  keep_ratio                          = 0.250000  (n=90)
+  gpu_mem_allocated_gb                = 0.014000  (n=90)
+  gpu_mem_max_allocated_gb            = 1.047000  (n=90)
+======================================================================
+
+[DEBUG] Synced aux_head → model difficulty_head (epoch 13)
+rank 0 Before saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+Saved checkpoint to: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_sprint_enabled_antialias=True_input_refine_cnn=True/checkpoint_epoch_0013.pt
+rank 0 After saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+
+================================================================================
+Starting epoch 14
+================================================================================
+
+[E14 B0] loss=0.08708 time=0.762s | diff μ=0.519 σ=0.218 hard=45.4% aux=0.6039 | tokens 128/512 | mem=0.0GB
+Epoch 14 | Batch 0 | Loss: 0.087083 | Time: 0.763s | LR: 1.88e-02
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+[E14 B50] loss=0.08775 time=0.152s | diff μ=0.473 σ=0.130 hard=44.0% aux=0.6065 | tokens 128/512 | mem=0.0GB
+Epoch 14 | Batch 50 | Loss: 0.087746 | Time: 0.153s | LR: 1.88e-02
+rank 0 Batch 50 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+[Monthly Loader] Epoch complete. Yielded 2880 samples.
+
+================================================================================
+Epoch 14 completed | Average Loss: 0.087446
+================================================================================
+
+
+======================================================================
+ Epoch 14 Summary (Adaptive Sparsity)
+======================================================================
+  loss                                = 0.087786  (n=90)
+  step_time_sec                       = 0.245821  (n=90)
+  difficulty_mean                     = 0.440364  (n=90)
+  difficulty_std                      = 0.119282  (n=90)
+  difficulty_min                      = 0.206340  (n=90)
+  difficulty_max                      = 0.719337  (n=90)
+  difficulty_entropy                  = 0.637604  (n=90)
+  frac_hard_tokens                    = 0.313011  (n=90)
+  aux_difficulty_loss                 = 0.612477  (n=90)
+  tokens_total                        = 512.000000  (n=90)
+  tokens_kept                         = 128.000000  (n=90)
+  tokens_dropped                      = 384.000000  (n=90)
+  keep_ratio                          = 0.250000  (n=90)
+  gpu_mem_allocated_gb                = 0.014000  (n=90)
+  gpu_mem_max_allocated_gb            = 1.047000  (n=90)
+======================================================================
+
+[DEBUG] Synced aux_head → model difficulty_head (epoch 14)
+
+Running validation for epoch 14...
+[Monthly Loader] Epoch complete. Yielded 2880 samples.
+
+Validation results for epoch 14:
+  val/lat_rmse:2m_temperature: 3.340936
+  val/lat_rmse:aggregate: 3.340936
+  val/lat_acc:2m_temperature: 0.811884
+  val/lat_acc:aggregate: 0.811884
+  val/lat_mse:2m_temperature: 0.024353
+  val/lat_mse:aggregate: 0.024353
+
+rank 0 Before saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+Saved checkpoint to: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_sprint_enabled_antialias=True_input_refine_cnn=True/checkpoint_epoch_0014.pt
+rank 0 After saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+
+================================================================================
+Starting epoch 15
+================================================================================
+
+[E15 B0] loss=0.08717 time=5.474s | diff μ=0.494 σ=0.185 hard=45.3% aux=0.6085 | tokens 128/512 | mem=0.0GB
+Epoch 15 | Batch 0 | Loss: 0.087174 | Time: 5.475s | LR: 1.73e-02
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+[E15 B50] loss=0.08609 time=0.150s | diff μ=0.500 σ=0.168 hard=44.8% aux=0.6016 | tokens 128/512 | mem=0.0GB
+Epoch 15 | Batch 50 | Loss: 0.086089 | Time: 0.151s | LR: 1.73e-02
+rank 0 Batch 50 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+[Monthly Loader] Epoch complete. Yielded 2880 samples.
+
+================================================================================
+Epoch 15 completed | Average Loss: 0.086117
+================================================================================
+
+
+======================================================================
+ Epoch 15 Summary (Adaptive Sparsity)
+======================================================================
+  loss                                = 0.086489  (n=90)
+  step_time_sec                       = 0.343454  (n=90)
+  difficulty_mean                     = 0.497332  (n=90)
+  difficulty_std                      = 0.169940  (n=90)
+  difficulty_min                      = 0.077749  (n=90)
+  difficulty_max                      = 0.960770  (n=90)
+  difficulty_entropy                  = 0.633623  (n=90)
+  frac_hard_tokens                    = 0.438982  (n=90)
+  aux_difficulty_loss                 = 0.606478  (n=90)
+  tokens_total                        = 512.000000  (n=90)
+  tokens_kept                         = 128.000000  (n=90)
+  tokens_dropped                      = 384.000000  (n=90)
+  keep_ratio                          = 0.250000  (n=90)
+  gpu_mem_allocated_gb                = 0.014000  (n=90)
+  gpu_mem_max_allocated_gb            = 1.047000  (n=90)
+======================================================================
+
+[DEBUG] Synced aux_head → model difficulty_head (epoch 15)
+rank 0 Before saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+Saved checkpoint to: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_sprint_enabled_antialias=True_input_refine_cnn=True/checkpoint_epoch_0015.pt
+rank 0 After saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+
+================================================================================
+Starting epoch 16
+================================================================================
+
+[E16 B0] loss=0.08466 time=9.742s | diff μ=0.494 σ=0.202 hard=42.4% aux=0.6083 | tokens 128/512 | mem=0.0GB
+Epoch 16 | Batch 0 | Loss: 0.084659 | Time: 9.744s | LR: 1.57e-02
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+[E16 B50] loss=0.08601 time=0.154s | diff μ=0.494 σ=0.204 hard=42.0% aux=0.5984 | tokens 128/512 | mem=0.0GB
+Epoch 16 | Batch 50 | Loss: 0.086010 | Time: 0.154s | LR: 1.57e-02
+rank 0 Batch 50 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+[Monthly Loader] Epoch complete. Yielded 2880 samples.
+
+================================================================================
+Epoch 16 completed | Average Loss: 0.085267
+================================================================================
+
+
+======================================================================
+ Epoch 16 Summary (Adaptive Sparsity)
+======================================================================
+  loss                                = 0.085589  (n=90)
+  step_time_sec                       = 0.297271  (n=90)
+  difficulty_mean                     = 0.495661  (n=90)
+  difficulty_std                      = 0.203391  (n=90)
+  difficulty_min                      = 0.145278  (n=90)
+  difficulty_max                      = 0.925651  (n=90)
+  difficulty_entropy                  = 0.606843  (n=90)
+  frac_hard_tokens                    = 0.421818  (n=90)
+  aux_difficulty_loss                 = 0.603539  (n=90)
+  tokens_total                        = 512.000000  (n=90)
+  tokens_kept                         = 128.000000  (n=90)
+  tokens_dropped                      = 384.000000  (n=90)
+  keep_ratio                          = 0.250000  (n=90)
+  gpu_mem_allocated_gb                = 0.014000  (n=90)
+  gpu_mem_max_allocated_gb            = 1.047000  (n=90)
+======================================================================
+
+[DEBUG] Synced aux_head → model difficulty_head (epoch 16)
+rank 0 Before saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+Saved checkpoint to: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_sprint_enabled_antialias=True_input_refine_cnn=True/checkpoint_epoch_0016.pt
+rank 0 After saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+
+================================================================================
+Starting epoch 17
+================================================================================
+
+[E17 B0] loss=0.08613 time=0.820s | diff μ=0.516 σ=0.197 hard=43.3% aux=0.5976 | tokens 128/512 | mem=0.0GB
+Epoch 17 | Batch 0 | Loss: 0.086129 | Time: 0.821s | LR: 1.40e-02
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+[E17 B50] loss=0.08508 time=0.152s | diff μ=0.519 σ=0.195 hard=43.9% aux=0.6007 | tokens 128/512 | mem=0.0GB
+Epoch 17 | Batch 50 | Loss: 0.085079 | Time: 0.153s | LR: 1.40e-02
+rank 0 Batch 50 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+[Monthly Loader] Epoch complete. Yielded 2880 samples.
+
+================================================================================
+Epoch 17 completed | Average Loss: 0.084430
+================================================================================
+
+
+======================================================================
+ Epoch 17 Summary (Adaptive Sparsity)
+======================================================================
+  loss                                = 0.084780  (n=90)
+  step_time_sec                       = 0.329593  (n=90)
+  difficulty_mean                     = 0.520323  (n=90)
+  difficulty_std                      = 0.195604  (n=90)
+  difficulty_min                      = 0.179404  (n=90)
+  difficulty_max                      = 0.956591  (n=90)
+  difficulty_entropy                  = 0.612433  (n=90)
+  frac_hard_tokens                    = 0.439761  (n=90)
+  aux_difficulty_loss                 = 0.601472  (n=90)
+  tokens_total                        = 512.000000  (n=90)
+  tokens_kept                         = 128.000000  (n=90)
+  tokens_dropped                      = 384.000000  (n=90)
+  keep_ratio                          = 0.250000  (n=90)
+  gpu_mem_allocated_gb                = 0.014000  (n=90)
+  gpu_mem_max_allocated_gb            = 1.047000  (n=90)
+======================================================================
+
+[DEBUG] Synced aux_head → model difficulty_head (epoch 17)
+rank 0 Before saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+Saved checkpoint to: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_sprint_enabled_antialias=True_input_refine_cnn=True/checkpoint_epoch_0017.pt
+rank 0 After saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+
+================================================================================
+Starting epoch 18
+================================================================================
+
+[E18 B0] loss=0.08360 time=6.024s | diff μ=0.494 σ=0.207 hard=43.5% aux=0.6032 | tokens 128/512 | mem=0.0GB
+Epoch 18 | Batch 0 | Loss: 0.083602 | Time: 6.025s | LR: 1.24e-02
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+[E18 B50] loss=0.08731 time=0.152s | diff μ=0.500 σ=0.208 hard=45.5% aux=0.5991 | tokens 128/512 | mem=0.0GB
+Epoch 18 | Batch 50 | Loss: 0.087312 | Time: 0.153s | LR: 1.24e-02
+rank 0 Batch 50 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+[Monthly Loader] Epoch complete. Yielded 2880 samples.
+
+================================================================================
+Epoch 18 completed | Average Loss: 0.083915
+================================================================================
+
+
+======================================================================
+ Epoch 18 Summary (Adaptive Sparsity)
+======================================================================
+  loss                                = 0.084305  (n=90)
+  step_time_sec                       = 0.244247  (n=90)
+  difficulty_mean                     = 0.490526  (n=90)
+  difficulty_std                      = 0.206721  (n=90)
+  difficulty_min                      = 0.125240  (n=90)
+  difficulty_max                      = 0.961462  (n=90)
+  difficulty_entropy                  = 0.603810  (n=90)
+  frac_hard_tokens                    = 0.428223  (n=90)
+  aux_difficulty_loss                 = 0.601417  (n=90)
+  tokens_total                        = 512.000000  (n=90)
+  tokens_kept                         = 128.000000  (n=90)
+  tokens_dropped                      = 384.000000  (n=90)
+  keep_ratio                          = 0.250000  (n=90)
+  gpu_mem_allocated_gb                = 0.014000  (n=90)
+  gpu_mem_max_allocated_gb            = 1.047000  (n=90)
+======================================================================
+
+[DEBUG] Synced aux_head → model difficulty_head (epoch 18)
+rank 0 Before saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+Saved checkpoint to: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_sprint_enabled_antialias=True_input_refine_cnn=True/checkpoint_epoch_0018.pt
+rank 0 After saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+
+================================================================================
+Starting epoch 19
+================================================================================
+
+[E19 B0] loss=0.08342 time=2.774s | diff μ=0.512 σ=0.205 hard=43.6% aux=0.6023 | tokens 128/512 | mem=0.0GB
+Epoch 19 | Batch 0 | Loss: 0.083418 | Time: 2.775s | LR: 1.07e-02
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+[E19 B50] loss=0.08308 time=0.151s | diff μ=0.508 σ=0.206 hard=43.3% aux=0.6067 | tokens 128/512 | mem=0.0GB
+Epoch 19 | Batch 50 | Loss: 0.083080 | Time: 0.152s | LR: 1.07e-02
+rank 0 Batch 50 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+[Monthly Loader] Epoch complete. Yielded 2880 samples.
+
+================================================================================
+Epoch 19 completed | Average Loss: 0.083704
+================================================================================
+
+
+======================================================================
+ Epoch 19 Summary (Adaptive Sparsity)
+======================================================================
+  loss                                = 0.084061  (n=90)
+  step_time_sec                       = 0.223817  (n=90)
+  difficulty_mean                     = 0.507973  (n=90)
+  difficulty_std                      = 0.207283  (n=90)
+  difficulty_min                      = 0.149834  (n=90)
+  difficulty_max                      = 0.956506  (n=90)
+  difficulty_entropy                  = 0.603117  (n=90)
+  frac_hard_tokens                    = 0.435368  (n=90)
+  aux_difficulty_loss                 = 0.602081  (n=90)
+  tokens_total                        = 512.000000  (n=90)
+  tokens_kept                         = 128.000000  (n=90)
+  tokens_dropped                      = 384.000000  (n=90)
+  keep_ratio                          = 0.250000  (n=90)
+  gpu_mem_allocated_gb                = 0.014000  (n=90)
+  gpu_mem_max_allocated_gb            = 1.047000  (n=90)
+======================================================================
+
+[DEBUG] Synced aux_head → model difficulty_head (epoch 19)
+
+Running validation for epoch 19...
+[Monthly Loader] Epoch complete. Yielded 2880 samples.
+
+Validation results for epoch 19:
+  val/lat_rmse:2m_temperature: 3.259183
+  val/lat_rmse:aggregate: 3.259183
+  val/lat_acc:2m_temperature: 0.828659
+  val/lat_acc:aggregate: 0.828659
+  val/lat_mse:2m_temperature: 0.022394
+  val/lat_mse:aggregate: 0.022394
+
+rank 0 Before saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+Saved checkpoint to: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_sprint_enabled_antialias=True_input_refine_cnn=True/checkpoint_epoch_0019.pt
+rank 0 After saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+
+================================================================================
+Starting epoch 20
+================================================================================
+
+[E20 B0] loss=0.08289 time=0.796s | diff μ=0.504 σ=0.209 hard=45.1% aux=0.6093 | tokens 128/512 | mem=0.0GB
+Epoch 20 | Batch 0 | Loss: 0.082894 | Time: 0.797s | LR: 9.12e-03
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+[E20 B50] loss=0.08431 time=0.153s | diff μ=0.504 σ=0.212 hard=44.2% aux=0.6009 | tokens 128/512 | mem=0.0GB
+Epoch 20 | Batch 50 | Loss: 0.084313 | Time: 0.154s | LR: 9.12e-03
+rank 0 Batch 50 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+[Monthly Loader] Epoch complete. Yielded 2880 samples.
+
+================================================================================
+Epoch 20 completed | Average Loss: 0.083339
+================================================================================
+
+
+======================================================================
+ Epoch 20 Summary (Adaptive Sparsity)
+======================================================================
+  loss                                = 0.083707  (n=90)
+  step_time_sec                       = 0.177086  (n=90)
+  difficulty_mean                     = 0.501010  (n=90)
+  difficulty_std                      = 0.211334  (n=90)
+  difficulty_min                      = 0.158137  (n=90)
+  difficulty_max                      = 0.944663  (n=90)
+  difficulty_entropy                  = 0.599607  (n=90)
+  frac_hard_tokens                    = 0.442122  (n=90)
+  aux_difficulty_loss                 = 0.602432  (n=90)
+  tokens_total                        = 512.000000  (n=90)
+  tokens_kept                         = 128.000000  (n=90)
+  tokens_dropped                      = 384.000000  (n=90)
+  keep_ratio                          = 0.250000  (n=90)
+  gpu_mem_allocated_gb                = 0.014000  (n=90)
+  gpu_mem_max_allocated_gb            = 1.047000  (n=90)
+======================================================================
+
+[DEBUG] Synced aux_head → model difficulty_head (epoch 20)
+rank 0 Before saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+Saved checkpoint to: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_sprint_enabled_antialias=True_input_refine_cnn=True/checkpoint_epoch_0020.pt
+rank 0 After saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+
+================================================================================
+Starting epoch 21
+================================================================================
+
+[E21 B0] loss=0.08339 time=0.250s | diff μ=0.498 σ=0.202 hard=42.4% aux=0.6017 | tokens 128/512 | mem=0.0GB
+Epoch 21 | Batch 0 | Loss: 0.083386 | Time: 0.252s | LR: 7.58e-03
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+[E21 B50] loss=0.08271 time=0.150s | diff μ=0.496 σ=0.201 hard=42.0% aux=0.6016 | tokens 128/512 | mem=0.0GB
+Epoch 21 | Batch 50 | Loss: 0.082705 | Time: 0.151s | LR: 7.58e-03
+rank 0 Batch 50 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+[Monthly Loader] Epoch complete. Yielded 2880 samples.
+
+================================================================================
+Epoch 21 completed | Average Loss: 0.083096
+================================================================================
+
+
+======================================================================
+ Epoch 21 Summary (Adaptive Sparsity)
+======================================================================
+  loss                                = 0.083432  (n=90)
+  step_time_sec                       = 0.158672  (n=90)
+  difficulty_mean                     = 0.499051  (n=90)
+  difficulty_std                      = 0.202197  (n=90)
+  difficulty_min                      = 0.168532  (n=90)
+  difficulty_max                      = 0.944357  (n=90)
+  difficulty_entropy                  = 0.608100  (n=90)
+  frac_hard_tokens                    = 0.424727  (n=90)
+  aux_difficulty_loss                 = 0.601539  (n=90)
+  tokens_total                        = 512.000000  (n=90)
+  tokens_kept                         = 128.000000  (n=90)
+  tokens_dropped                      = 384.000000  (n=90)
+  keep_ratio                          = 0.250000  (n=90)
+  gpu_mem_allocated_gb                = 0.014000  (n=90)
+  gpu_mem_max_allocated_gb            = 1.047000  (n=90)
+======================================================================
+
+[DEBUG] Synced aux_head → model difficulty_head (epoch 21)
+rank 0 Before saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+Saved checkpoint to: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_sprint_enabled_antialias=True_input_refine_cnn=True/checkpoint_epoch_0021.pt
+rank 0 After saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+
+================================================================================
+Starting epoch 22
+================================================================================
+
+[E22 B0] loss=0.08360 time=0.512s | diff μ=0.500 σ=0.200 hard=42.7% aux=0.5986 | tokens 128/512 | mem=0.0GB
+Epoch 22 | Batch 0 | Loss: 0.083599 | Time: 0.514s | LR: 6.12e-03
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+[E22 B50] loss=0.08322 time=0.150s | diff μ=0.500 σ=0.200 hard=42.4% aux=0.6023 | tokens 128/512 | mem=0.0GB
+Epoch 22 | Batch 50 | Loss: 0.083219 | Time: 0.151s | LR: 6.12e-03
+rank 0 Batch 50 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+[Monthly Loader] Epoch complete. Yielded 2880 samples.
+
+================================================================================
+Epoch 22 completed | Average Loss: 0.082839
+================================================================================
+
+
+======================================================================
+ Epoch 22 Summary (Adaptive Sparsity)
+======================================================================
+  loss                                = 0.083203  (n=90)
+  step_time_sec                       = 0.158254  (n=90)
+  difficulty_mean                     = 0.501466  (n=90)
+  difficulty_std                      = 0.199898  (n=90)
+  difficulty_min                      = 0.190836  (n=90)
+  difficulty_max                      = 0.939062  (n=90)
+  difficulty_entropy                  = 0.609790  (n=90)
+  frac_hard_tokens                    = 0.426676  (n=90)
+  aux_difficulty_loss                 = 0.601899  (n=90)
+  tokens_total                        = 512.000000  (n=90)
+  tokens_kept                         = 128.000000  (n=90)
+  tokens_dropped                      = 384.000000  (n=90)
+  keep_ratio                          = 0.250000  (n=90)
+  gpu_mem_allocated_gb                = 0.014000  (n=90)
+  gpu_mem_max_allocated_gb            = 1.047000  (n=90)
+======================================================================
+
+[DEBUG] Synced aux_head → model difficulty_head (epoch 22)
+rank 0 Before saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+Saved checkpoint to: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_sprint_enabled_antialias=True_input_refine_cnn=True/checkpoint_epoch_0022.pt
+rank 0 After saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+
+================================================================================
+Starting epoch 23
+================================================================================
+
+[E23 B0] loss=0.08374 time=11.739s | diff μ=0.512 σ=0.214 hard=44.0% aux=0.5979 | tokens 128/512 | mem=0.0GB
+Epoch 23 | Batch 0 | Loss: 0.083738 | Time: 11.740s | LR: 4.78e-03
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+[E23 B50] loss=0.08431 time=0.153s | diff μ=0.508 σ=0.212 hard=42.8% aux=0.6006 | tokens 128/512 | mem=0.0GB
+Epoch 23 | Batch 50 | Loss: 0.084309 | Time: 0.153s | LR: 4.78e-03
+rank 0 Batch 50 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+[Monthly Loader] Epoch complete. Yielded 2880 samples.
+
+================================================================================
+Epoch 23 completed | Average Loss: 0.082662
+================================================================================
+
+
+======================================================================
+ Epoch 23 Summary (Adaptive Sparsity)
+======================================================================
+  loss                                = 0.083011  (n=90)
+  step_time_sec                       = 0.287997  (n=90)
+  difficulty_mean                     = 0.513087  (n=90)
+  difficulty_std                      = 0.211512  (n=90)
+  difficulty_min                      = 0.189148  (n=90)
+  difficulty_max                      = 0.956812  (n=90)
+  difficulty_entropy                  = 0.598740  (n=90)
+  frac_hard_tokens                    = 0.434924  (n=90)
+  aux_difficulty_loss                 = 0.601914  (n=90)
+  tokens_total                        = 512.000000  (n=90)
+  tokens_kept                         = 128.000000  (n=90)
+  tokens_dropped                      = 384.000000  (n=90)
+  keep_ratio                          = 0.250000  (n=90)
+  gpu_mem_allocated_gb                = 0.014000  (n=90)
+  gpu_mem_max_allocated_gb            = 1.047000  (n=90)
+======================================================================
+
+[DEBUG] Synced aux_head → model difficulty_head (epoch 23)
+rank 0 Before saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+Saved checkpoint to: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_sprint_enabled_antialias=True_input_refine_cnn=True/checkpoint_epoch_0023.pt
+rank 0 After saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+
+================================================================================
+Starting epoch 24
+================================================================================
+
+[E24 B0] loss=0.08226 time=0.601s | diff μ=0.494 σ=0.203 hard=42.1% aux=0.5991 | tokens 128/512 | mem=0.0GB
+Epoch 24 | Batch 0 | Loss: 0.082258 | Time: 0.602s | LR: 3.58e-03
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+[E24 B50] loss=0.08190 time=0.151s | diff μ=0.490 σ=0.199 hard=41.4% aux=0.6060 | tokens 128/512 | mem=0.0GB
+Epoch 24 | Batch 50 | Loss: 0.081896 | Time: 0.151s | LR: 3.58e-03
+rank 0 Batch 50 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+[Monthly Loader] Epoch complete. Yielded 2880 samples.
+
+================================================================================
+Epoch 24 completed | Average Loss: 0.082581
+================================================================================
+
+
+======================================================================
+ Epoch 24 Summary (Adaptive Sparsity)
+======================================================================
+  loss                                = 0.082947  (n=90)
+  step_time_sec                       = 0.158138  (n=90)
+  difficulty_mean                     = 0.490243  (n=90)
+  difficulty_std                      = 0.202130  (n=90)
+  difficulty_min                      = 0.187380  (n=90)
+  difficulty_max                      = 0.946349  (n=90)
+  difficulty_entropy                  = 0.608273  (n=90)
+  frac_hard_tokens                    = 0.417167  (n=90)
+  aux_difficulty_loss                 = 0.602041  (n=90)
+  tokens_total                        = 512.000000  (n=90)
+  tokens_kept                         = 128.000000  (n=90)
+  tokens_dropped                      = 384.000000  (n=90)
+  keep_ratio                          = 0.250000  (n=90)
+  gpu_mem_allocated_gb                = 0.014000  (n=90)
+  gpu_mem_max_allocated_gb            = 1.047000  (n=90)
+======================================================================
+
+[DEBUG] Synced aux_head → model difficulty_head (epoch 24)
+
+Running validation for epoch 24...
+[Monthly Loader] Epoch complete. Yielded 2880 samples.
+
+Validation results for epoch 24:
+  val/lat_rmse:2m_temperature: 3.153641
+  val/lat_rmse:aggregate: 3.153641
+  val/lat_acc:2m_temperature: 0.832344
+  val/lat_acc:aggregate: 0.832344
+  val/lat_mse:2m_temperature: 0.021480
+  val/lat_mse:aggregate: 0.021480
+
+rank 0 Before saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+Saved checkpoint to: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_sprint_enabled_antialias=True_input_refine_cnn=True/checkpoint_epoch_0024.pt
+rank 0 After saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+
+================================================================================
+Starting epoch 25
+================================================================================
+
+[E25 B0] loss=0.08300 time=1.050s | diff μ=0.504 σ=0.205 hard=42.8% aux=0.6001 | tokens 128/512 | mem=0.0GB
+Epoch 25 | Batch 0 | Loss: 0.083002 | Time: 1.052s | LR: 2.52e-03
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+[E25 B50] loss=0.08241 time=0.151s | diff μ=0.500 σ=0.205 hard=42.3% aux=0.6022 | tokens 128/512 | mem=0.0GB
+Epoch 25 | Batch 50 | Loss: 0.082409 | Time: 0.152s | LR: 2.52e-03
+rank 0 Batch 50 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+[Monthly Loader] Epoch complete. Yielded 2880 samples.
+
+================================================================================
+Epoch 25 completed | Average Loss: 0.082475
+================================================================================
+
+
+======================================================================
+ Epoch 25 Summary (Adaptive Sparsity)
+======================================================================
+  loss                                = 0.082834  (n=90)
+  step_time_sec                       = 0.240739  (n=90)
+  difficulty_mean                     = 0.504398  (n=90)
+  difficulty_std                      = 0.205188  (n=90)
+  difficulty_min                      = 0.199994  (n=90)
+  difficulty_max                      = 0.944008  (n=90)
+  difficulty_entropy                  = 0.605413  (n=90)
+  frac_hard_tokens                    = 0.428066  (n=90)
+  aux_difficulty_loss                 = 0.602201  (n=90)
+  tokens_total                        = 512.000000  (n=90)
+  tokens_kept                         = 128.000000  (n=90)
+  tokens_dropped                      = 384.000000  (n=90)
+  keep_ratio                          = 0.250000  (n=90)
+  gpu_mem_allocated_gb                = 0.014000  (n=90)
+  gpu_mem_max_allocated_gb            = 1.047000  (n=90)
+======================================================================
+
+[DEBUG] Synced aux_head → model difficulty_head (epoch 25)
+rank 0 Before saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+Saved checkpoint to: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_sprint_enabled_antialias=True_input_refine_cnn=True/checkpoint_epoch_0025.pt
+rank 0 After saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+
+================================================================================
+Starting epoch 26
+================================================================================
+
+[E26 B0] loss=0.08296 time=1.009s | diff μ=0.516 σ=0.199 hard=43.2% aux=0.6048 | tokens 128/512 | mem=0.0GB
+Epoch 26 | Batch 0 | Loss: 0.082965 | Time: 1.010s | LR: 1.63e-03
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+[E26 B50] loss=0.08321 time=0.151s | diff μ=0.516 σ=0.201 hard=43.7% aux=0.6003 | tokens 128/512 | mem=0.0GB
+Epoch 26 | Batch 50 | Loss: 0.083213 | Time: 0.152s | LR: 1.63e-03
+rank 0 Batch 50 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+[Monthly Loader] Epoch complete. Yielded 2880 samples.
+
+================================================================================
+Epoch 26 completed | Average Loss: 0.082414
+================================================================================
+
+
+======================================================================
+ Epoch 26 Summary (Adaptive Sparsity)
+======================================================================
+  loss                                = 0.082759  (n=90)
+  step_time_sec                       = 0.209322  (n=90)
+  difficulty_mean                     = 0.516510  (n=90)
+  difficulty_std                      = 0.199492  (n=90)
+  difficulty_min                      = 0.202886  (n=90)
+  difficulty_max                      = 0.943052  (n=90)
+  difficulty_entropy                  = 0.609357  (n=90)
+  frac_hard_tokens                    = 0.436910  (n=90)
+  aux_difficulty_loss                 = 0.602223  (n=90)
+  tokens_total                        = 512.000000  (n=90)
+  tokens_kept                         = 128.000000  (n=90)
+  tokens_dropped                      = 384.000000  (n=90)
+  keep_ratio                          = 0.250000  (n=90)
+  gpu_mem_allocated_gb                = 0.014000  (n=90)
+  gpu_mem_max_allocated_gb            = 1.047000  (n=90)
+======================================================================
+
+[DEBUG] Synced aux_head → model difficulty_head (epoch 26)
+rank 0 Before saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+Saved checkpoint to: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_sprint_enabled_antialias=True_input_refine_cnn=True/checkpoint_epoch_0026.pt
+rank 0 After saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+
+================================================================================
+Starting epoch 27
+================================================================================
+
+[E27 B0] loss=0.08295 time=0.813s | diff μ=0.492 σ=0.209 hard=42.1% aux=0.6029 | tokens 128/512 | mem=0.0GB
+Epoch 27 | Batch 0 | Loss: 0.082954 | Time: 0.815s | LR: 9.27e-04
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+[E27 B50] loss=0.08255 time=0.150s | diff μ=0.494 σ=0.210 hard=42.4% aux=0.6010 | tokens 128/512 | mem=0.0GB
+Epoch 27 | Batch 50 | Loss: 0.082552 | Time: 0.151s | LR: 9.27e-04
+rank 0 Batch 50 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+[Monthly Loader] Epoch complete. Yielded 2880 samples.
+
+================================================================================
+Epoch 27 completed | Average Loss: 0.082328
+================================================================================
+
+
+======================================================================
+ Epoch 27 Summary (Adaptive Sparsity)
+======================================================================
+  loss                                = 0.082670  (n=90)
+  step_time_sec                       = 0.171592  (n=90)
+  difficulty_mean                     = 0.491824  (n=90)
+  difficulty_std                      = 0.208162  (n=90)
+  difficulty_min                      = 0.188157  (n=90)
+  difficulty_max                      = 0.944402  (n=90)
+  difficulty_entropy                  = 0.602640  (n=90)
+  frac_hard_tokens                    = 0.421037  (n=90)
+  aux_difficulty_loss                 = 0.601908  (n=90)
+  tokens_total                        = 512.000000  (n=90)
+  tokens_kept                         = 128.000000  (n=90)
+  tokens_dropped                      = 384.000000  (n=90)
+  keep_ratio                          = 0.250000  (n=90)
+  gpu_mem_allocated_gb                = 0.014000  (n=90)
+  gpu_mem_max_allocated_gb            = 1.047000  (n=90)
+======================================================================
+
+[DEBUG] Synced aux_head → model difficulty_head (epoch 27)
+rank 0 Before saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+Saved checkpoint to: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_sprint_enabled_antialias=True_input_refine_cnn=True/checkpoint_epoch_0027.pt
+rank 0 After saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+
+================================================================================
+Starting epoch 28
+================================================================================
+
+[E28 B0] loss=0.08308 time=10.468s | diff μ=0.486 σ=0.213 hard=41.8% aux=0.6025 | tokens 128/512 | mem=0.0GB
+Epoch 28 | Batch 0 | Loss: 0.083079 | Time: 10.470s | LR: 4.15e-04
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+[E28 B50] loss=0.08462 time=0.152s | diff μ=0.490 σ=0.215 hard=42.3% aux=0.5975 | tokens 128/512 | mem=0.0GB
+Epoch 28 | Batch 50 | Loss: 0.084620 | Time: 0.153s | LR: 4.15e-04
+rank 0 Batch 50 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+[Monthly Loader] Epoch complete. Yielded 2880 samples.
+
+================================================================================
+Epoch 28 completed | Average Loss: 0.082296
+================================================================================
+
+
+======================================================================
+ Epoch 28 Summary (Adaptive Sparsity)
+======================================================================
+  loss                                = 0.082646  (n=90)
+  step_time_sec                       = 0.293641  (n=90)
+  difficulty_mean                     = 0.487994  (n=90)
+  difficulty_std                      = 0.212366  (n=90)
+  difficulty_min                      = 0.180873  (n=90)
+  difficulty_max                      = 0.941883  (n=90)
+  difficulty_entropy                  = 0.598610  (n=90)
+  frac_hard_tokens                    = 0.419456  (n=90)
+  aux_difficulty_loss                 = 0.602044  (n=90)
+  tokens_total                        = 512.000000  (n=90)
+  tokens_kept                         = 128.000000  (n=90)
+  tokens_dropped                      = 384.000000  (n=90)
+  keep_ratio                          = 0.250000  (n=90)
+  gpu_mem_allocated_gb                = 0.014000  (n=90)
+  gpu_mem_max_allocated_gb            = 1.047000  (n=90)
+======================================================================
+
+[DEBUG] Synced aux_head → model difficulty_head (epoch 28)
+rank 0 Before saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+Saved checkpoint to: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_sprint_enabled_antialias=True_input_refine_cnn=True/checkpoint_epoch_0028.pt
+rank 0 After saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+
+================================================================================
+Starting epoch 29
+================================================================================
+
+[E29 B0] loss=0.08449 time=2.855s | diff μ=0.500 σ=0.208 hard=42.6% aux=0.5933 | tokens 128/512 | mem=0.0GB
+Epoch 29 | Batch 0 | Loss: 0.084490 | Time: 2.856s | LR: 1.04e-04
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+[E29 B50] loss=0.08298 time=0.154s | diff μ=0.504 σ=0.204 hard=42.3% aux=0.6022 | tokens 128/512 | mem=0.0GB
+Epoch 29 | Batch 50 | Loss: 0.082981 | Time: 0.154s | LR: 1.04e-04
+rank 0 Batch 50 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+[Monthly Loader] Epoch complete. Yielded 2880 samples.
+
+================================================================================
+Epoch 29 completed | Average Loss: 0.082279
+================================================================================
+
+
+======================================================================
+ Epoch 29 Summary (Adaptive Sparsity)
+======================================================================
+  loss                                = 0.082631  (n=90)
+  step_time_sec                       = 0.201860  (n=90)
+  difficulty_mean                     = 0.500036  (n=90)
+  difficulty_std                      = 0.204297  (n=90)
+  difficulty_min                      = 0.197823  (n=90)
+  difficulty_max                      = 0.948437  (n=90)
+  difficulty_entropy                  = 0.605933  (n=90)
+  frac_hard_tokens                    = 0.420333  (n=90)
+  aux_difficulty_loss                 = 0.602095  (n=90)
+  tokens_total                        = 512.000000  (n=90)
+  tokens_kept                         = 128.000000  (n=90)
+  tokens_dropped                      = 384.000000  (n=90)
+  keep_ratio                          = 0.250000  (n=90)
+  gpu_mem_allocated_gb                = 0.014000  (n=90)
+  gpu_mem_max_allocated_gb            = 1.047000  (n=90)
+======================================================================
+
+[DEBUG] Synced aux_head → model difficulty_head (epoch 29)
+
+Running validation for epoch 29...
+[Monthly Loader] Epoch complete. Yielded 2880 samples.
+
+Validation results for epoch 29:
+  val/lat_rmse:2m_temperature: 3.137460
+  val/lat_rmse:aggregate: 3.137460
+  val/lat_acc:2m_temperature: 0.835258
+  val/lat_acc:aggregate: 0.835258
+  val/lat_mse:2m_temperature: 0.021244
+  val/lat_mse:aggregate: 0.021244
+
+rank 0 Before saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+Saved checkpoint to: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_sprint_enabled_antialias=True_input_refine_cnn=True/checkpoint_epoch_0029.pt
+rank 0 After saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.84GB
+Training log saved to /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_sprint_enabled_antialias=True_input_refine_cnn=True/adaptive_training_log.json
+
+================================================================================
+Training completed!
+================================================================================
+
+
+real	44m56.452s
+user	0m0.024s
+sys	0m0.094s

@@ -1,0 +1,280 @@
+
+Lmod is automatically replacing "cce/18.0.1" with "gcc-native/14.2".
+
+
+Lmod is automatically replacing "PrgEnv-cray/8.6.0" with "PrgEnv-gnu/8.6.0".
+
+
+Inactive Modules:
+  1) darshan-runtime
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) cray-libsci/24.11.0     2) cray-mpich/8.1.31
+
+
+Lmod is automatically replacing "gcc-native/14.2" with "gcc/12.2.0".
+
+
+The following have been reloaded with a version change:
+  1) cray-libsci/24.11.0 => cray-libsci/23.09.1.1
+  2) cray-mpich/8.1.31 => cray-mpich/8.1.27
+  3) libfabric/1.22.0 => libfabric/1.20.1
+
+Job started at: Tue Mar  3 06:31:19 PM EST 2026
+Job ID: 4166270
+Running on nodes: frontier[01527,07351]
+Number of tasks: 16
+Number of nodes: 2
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+[W303 18:32:55.044247879 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier01527.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W303 18:32:55.044288457 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier01527.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W303 18:32:55.044297985 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier01527.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W303 18:32:55.044323445 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier01527.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W303 18:32:55.045142757 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier01527.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W303 18:32:55.046224737 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier01527.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W303 18:32:55.049109199 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier01527.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W303 18:32:55.118113256 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier01527.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+DDStore loading error!!
+Initialized process group. world_size=16
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=4, local_rank=4
+world_size=16, world_rank=3, local_rank=3
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=7, local_rank=7
+DDStore loading error!!
+Initialized process group. world_size=16
+DDStore loading error!!
+Initialized process group. world_size=16
+DDStore loading error!!
+Initialized process group. world_size=16
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=5, local_rank=5
+world_size=16, world_rank=1, local_rank=1
+world_size=16, world_rank=6, local_rank=6
+world_size=16, world_rank=2, local_rank=2
+use_ddstore is : 0
+use_ddstore is : 0
+use_ddstore is : 0
+use_ddstore is : 0
+use_ddstore is : 0
+use_ddstore is : 0
+use_ddstore is : 0
+[Rank 6] Assigned 97/1561 monthly files (indices 582:679).
+[Rank 4] Assigned 97/1561 monthly files (indices 388:485).
+[Rank 6] Assigned 5/81 monthly files (indices 30:35).
+[Rank 4] Assigned 5/81 monthly files (indices 20:25).
+[Rank 7] Assigned 97/1561 monthly files (indices 679:776).
+[Rank 3] Assigned 97/1561 monthly files (indices 291:388).
+[Rank 2] Assigned 97/1561 monthly files (indices 194:291).
+[Rank 1] Assigned 97/1561 monthly files (indices 97:194).
+[Rank 5] Assigned 97/1561 monthly files (indices 485:582).
+[Rank 7] Assigned 5/81 monthly files (indices 35:40).
+[Rank 3] Assigned 5/81 monthly files (indices 15:20).
+[Rank 2] Assigned 5/81 monthly files (indices 10:15).
+[Rank 1] Assigned 5/81 monthly files (indices 5:10).
+[Rank 5] Assigned 5/81 monthly files (indices 25:30).
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting_sparsity.py", line 1407, in <module>
+[rank3]:     main(device)
+[rank3]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting_sparsity.py", line 1208, in main
+[rank3]:     model, optimizer, scheduler = create_model_and_losses(
+[rank3]:                                   ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting_sparsity.py", line 500, in create_model_and_losses
+[rank3]:     raise NotImplementedError(f"Model preset {preset} not implemented")
+[rank3]: NotImplementedError: Model preset vit not implemented
+[rank6]: Traceback (most recent call last):
+[rank6]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting_sparsity.py", line 1407, in <module>
+[rank6]:     main(device)
+[rank6]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting_sparsity.py", line 1208, in main
+[rank6]:     model, optimizer, scheduler = create_model_and_losses(
+[rank6]:                                   ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting_sparsity.py", line 500, in create_model_and_losses
+[rank6]:     raise NotImplementedError(f"Model preset {preset} not implemented")
+[rank6]: NotImplementedError: Model preset vit not implemented
+[rank4]: Traceback (most recent call last):
+[rank4]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting_sparsity.py", line 1407, in <module>
+[rank4]:     main(device)
+[rank4]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting_sparsity.py", line 1208, in main
+[rank4]:     model, optimizer, scheduler = create_model_and_losses(
+[rank4]:                                   ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting_sparsity.py", line 500, in create_model_and_losses
+[rank4]:     raise NotImplementedError(f"Model preset {preset} not implemented")
+[rank4]: NotImplementedError: Model preset vit not implemented
+[rank2]: Traceback (most recent call last):
+[rank2]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting_sparsity.py", line 1407, in <module>
+[rank2]:     main(device)
+[rank2]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting_sparsity.py", line 1208, in main
+[rank2]:     model, optimizer, scheduler = create_model_and_losses(
+[rank2]:                                   ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting_sparsity.py", line 500, in create_model_and_losses
+[rank2]:     raise NotImplementedError(f"Model preset {preset} not implemented")
+[rank2]: NotImplementedError: Model preset vit not implemented
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting_sparsity.py", line 1407, in <module>
+[rank1]:     main(device)
+[rank1]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting_sparsity.py", line 1208, in main
+[rank1]:     model, optimizer, scheduler = create_model_and_losses(
+[rank1]:                                   ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting_sparsity.py", line 500, in create_model_and_losses
+[rank1]:     raise NotImplementedError(f"Model preset {preset} not implemented")
+[rank1]: NotImplementedError: Model preset vit not implemented
+[rank5]: Traceback (most recent call last):
+[rank5]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting_sparsity.py", line 1407, in <module>
+[rank5]:     main(device)
+[rank5]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting_sparsity.py", line 1208, in main
+[rank5]:     model, optimizer, scheduler = create_model_and_losses(
+[rank5]:                                   ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting_sparsity.py", line 500, in create_model_and_losses
+[rank5]:     raise NotImplementedError(f"Model preset {preset} not implemented")
+[rank5]: NotImplementedError: Model preset vit not implemented
+[rank7]: Traceback (most recent call last):
+[rank7]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting_sparsity.py", line 1407, in <module>
+[rank7]:     main(device)
+[rank7]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting_sparsity.py", line 1208, in main
+[rank7]:     model, optimizer, scheduler = create_model_and_losses(
+[rank7]:                                   ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting_sparsity.py", line 500, in create_model_and_losses
+[rank7]:     raise NotImplementedError(f"Model preset {preset} not implemented")
+[rank7]: NotImplementedError: Model preset vit not implemented
+srun: error: frontier01527: tasks 1-7: Exited with exit code 1
+srun: Terminating StepId=4166270.0
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+[W303 18:32:59.244621014 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier01527.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=13, local_rank=5
+use_ddstore is : 0
+[Rank 13] Assigned 97/1561 monthly files (indices 1261:1358).
+[Rank 13] Assigned 5/81 monthly files (indices 65:70).
+[rank13]: Traceback (most recent call last):
+[rank13]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting_sparsity.py", line 1407, in <module>
+[rank13]:     main(device)
+[rank13]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting_sparsity.py", line 1208, in main
+[rank13]:     model, optimizer, scheduler = create_model_and_losses(
+[rank13]:                                   ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank13]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting_sparsity.py", line 500, in create_model_and_losses
+[rank13]:     raise NotImplementedError(f"Model preset {preset} not implemented")
+[rank13]: NotImplementedError: Model preset vit not implemented
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+slurmstepd: error: *** STEP 4166270.0 ON frontier01527 CANCELLED AT 2026-03-03T18:32:59 ***
+srun: error: frontier01527: task 0: Terminated
+srun: error: frontier07351: tasks 8-15: Terminated
+srun: Force Terminated StepId=4166270.0
+
+real	1m40.477s
+user	0m0.016s
+sys	0m0.038s

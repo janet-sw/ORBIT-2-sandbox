@@ -1,0 +1,10 @@
+
+Lmod is automatically replacing "gcc-native/14.2" with "gcc/12.2.0".
+
+
+The following have been reloaded with a version change:
+  1) cray-libsci/24.11.0 => cray-libsci/23.09.1.1
+  2) cray-mpich/8.1.31 => cray-mpich/8.1.27
+  3) libfabric/1.22.0 => libfabric/1.20.1
+
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/etc/conda/activate.d/activate-binutils_linux-64.sh: line 68: ADDR2LINE: unbound variable

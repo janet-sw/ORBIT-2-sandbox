@@ -1,0 +1,103 @@
+
+Lmod is automatically replacing "cce/18.0.1" with "gcc-native/14.2".
+
+
+Lmod is automatically replacing "PrgEnv-cray/8.6.0" with "PrgEnv-gnu/8.6.0".
+
+
+Inactive Modules:
+  1) darshan-runtime
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) cray-libsci/24.11.0     2) cray-mpich/8.1.31
+
+
+Lmod is automatically replacing "gcc-native/14.2" with "gcc/12.2.0".
+
+
+The following have been reloaded with a version change:
+  1) cray-libsci/24.11.0 => cray-libsci/23.09.1.1
+  2) cray-mpich/8.1.31 => cray-mpich/8.1.27
+  3) libfabric/1.22.0 => libfabric/1.20.1
+
+==========================================
+Testing ERA5 Forecasting Model
+==========================================
+Job ID: 4101776
+Nodes: 1
+Tasks per node: 1
+Config: /ccs/home/janetw/diffusion/ORBIT-2-sandbox/configs/era5_forecasting.yaml
+Checkpoint: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_bilinear_antialias=True/checkpoint_epoch_0029.pt
+==========================================
+
+DDStore loading error!!
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+[W208 15:55:47.918090567 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [localhost.localdomain]:29500 (errno: 97 - Address family not supported by protocol).
+Running on single GPU (initialized process group for dataset compatibility)
+Loading config from /ccs/home/janetw/diffusion/ORBIT-2-sandbox/configs/era5_forecasting.yaml
+
+================================================================================
+Testing Configuration
+================================================================================
+Config: /ccs/home/janetw/diffusion/ORBIT-2-sandbox/configs/era5_forecasting.yaml
+Checkpoint: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_bilinear_antialias=True/checkpoint_epoch_0029.pt
+Data type: bfloat16
+World size: 1
+================================================================================
+
+Input variables (14): ['temperature_50', 'temperature_250', 'temperature_500', 'temperature_600', 'temperature_700']...
+Output variables (1): ['2m_temperature']...
+Creating data module with batch_size=64, num_workers=2
+Resize config: mode=bilinear, antialias=True (effective=True)
+Setting up data module...
+use_ddstore is : 0
+Creating res_slimvit model: 14 -> 1 channels
+Total parameters: 5,436,847
+Trainable parameters: 5,436,847
+Model moved to GPU
+Loading checkpoint from /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_bilinear_antialias=True/checkpoint_epoch_0029.pt...
+/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting_test.py:382: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(checkpoint_path, map_location="cpu")
+Loaded checkpoint from epoch 29
+Loading test climatology...
+Test losses and transforms created.
+Starting testing...
+
+
+================================================================================
+Running test evaluation...
+================================================================================
+
+0 NpyReader: /lustre/orion/lrn036/world-shared/data/superres/era5/1.40625_deg/test/2020_0.npz
+Processed 0 batches
+Processed 50 batches
+Processed 100 batches
+
+================================================================================
+Test Results:
+================================================================================
+  test/lat_acc:2m_temperature: 0.792108
+  test/lat_acc:aggregate: 0.792108
+  test/lat_mse:2m_temperature: 0.020558
+  test/lat_mse:aggregate: 0.020558
+  test/lat_rmse:2m_temperature: 2.942991
+  test/lat_rmse:aggregate: 2.942991
+================================================================================
+
+Results saved to: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_bilinear_antialias=True/test_results.txt
+Testing complete!
+
+real	1m24.898s
+user	1m9.845s
+sys	0m32.164s
+
+==========================================
+Testing complete!
+==========================================

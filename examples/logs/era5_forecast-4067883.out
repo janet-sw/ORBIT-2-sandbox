@@ -1,0 +1,543 @@
+
+Lmod is automatically replacing "cce/18.0.1" with "gcc-native/14.2".
+
+
+Lmod is automatically replacing "PrgEnv-cray/8.6.0" with "PrgEnv-gnu/8.6.0".
+
+
+Inactive Modules:
+  1) darshan-runtime
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) cray-libsci/24.11.0     2) cray-mpich/8.1.31
+
+
+Lmod is automatically replacing "gcc-native/14.2" with "gcc/12.2.0".
+
+
+The following have been reloaded with a version change:
+  1) cray-libsci/24.11.0 => cray-libsci/23.09.1.1
+  2) cray-mpich/8.1.31 => cray-mpich/8.1.27
+  3) libfabric/1.22.0 => libfabric/1.20.1
+
+Job started at: Sat Jan 24 03:24:15 PM EST 2026
+Job ID: 4067883
+Running on nodes: frontier[07922,07924]
+Number of tasks: 16
+Number of nodes: 2
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+[W124 15:24:54.683248873 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier07922.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W124 15:24:54.001516919 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier07922.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W124 15:24:54.014610431 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier07922.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+[W124 15:24:54.214538488 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier07922.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W124 15:24:54.221740826 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier07922.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W124 15:24:54.230418761 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier07922.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W124 15:24:54.230862983 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier07922.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W124 15:24:54.231567179 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier07922.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W124 15:24:54.232367666 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier07922.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+[W124 15:24:54.307603371 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier07922.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W124 15:24:54.630896593 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier07922.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=10, local_rank=2
+[W124 15:24:54.635546470 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier07922.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=12, local_rank=4
+[W124 15:24:54.639274865 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier07922.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=14, local_rank=6
+[W124 15:24:54.642642645 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier07922.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W124 15:24:54.642727436 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier07922.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+DDStore loading error!!
+Initialized process group. world_size=16
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=13, local_rank=5
+world_size=16, world_rank=8, local_rank=0
+[W124 15:24:54.644359427 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier07922.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=9, local_rank=1
+use_ddstore is : 0
+use_ddstore is : 0
+use_ddstore is : 0
+use_ddstore is : 0
+use_ddstore is : 0
+use_ddstore is : 0
+[Rank 14] Assigned 20/321 monthly files.
+[Rank 10] Assigned 20/321 monthly files.
+[Rank 14] Assigned 0/9 monthly files.
+[Rank 9] Assigned 20/321 monthly files.
+[Rank 10] Assigned 0/9 monthly files.
+[Rank 9] Assigned 0/9 monthly files.
+[Rank 12] Assigned 20/321 monthly files.
+[Rank 13] Assigned 20/321 monthly files.
+[Rank 13] Assigned 0/9 monthly files.
+[Rank 12] Assigned 0/9 monthly files.
+[Rank 8] Assigned 20/321 monthly files.
+[Rank 8] Assigned 1/9 monthly files.
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=6, local_rank=6
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=15, local_rank=7
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=11, local_rank=3
+use_ddstore is : 0
+[Rank 6] Assigned 20/321 monthly files.
+[Rank 6] Assigned 1/9 monthly files.
+use_ddstore is : 0
+[Rank 15] Assigned 20/321 monthly files.
+[Rank 15] Assigned 0/9 monthly files.
+use_ddstore is : 0
+[Rank 11] Assigned 20/321 monthly files.
+[Rank 11] Assigned 0/9 monthly files.
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=3, local_rank=3
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=7, local_rank=7
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=5, local_rank=5
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=1, local_rank=1
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=2, local_rank=2
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=4, local_rank=4
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=0, local_rank=0
+Loading config from: /ccs/home/janetw/diffusion/ORBIT-2-sandbox/configs/era5_forecasting.yaml
+
+================================================================================
+Training Configuration Summary
+================================================================================
+Config: /ccs/home/janetw/diffusion/ORBIT-2-sandbox/configs/era5_forecasting.yaml
+Max epochs: 30
+Data type: bfloat16
+Checkpoint: None
+Save path: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_0.25_deg
+================================================================================
+
+Creating data module for direct forecasting
+Input variables: ['2m_temperature', '10m_u_component_of_wind', '10m_v_component_of_wind', 'lattitude', 'land_sea_mask']
+Output variables: ['2m_temperature']
+Setting up distributed data loading: world_size=16
+Each GPU will process 1/16 of the dataset
+use_ddstore is : 0
+[Rank 3] Assigned 20/321 monthly files.
+[Rank 3] Assigned 1/9 monthly files.
+use_ddstore is : 0
+[Rank 7] Assigned 20/321 monthly files.
+[Rank 7] Assigned 1/9 monthly files.
+use_ddstore is : 0
+use_ddstore is : 0
+[Rank 5] Assigned 20/321 monthly files.
+[Rank 5] Assigned 1/9 monthly files.
+use_ddstore is : 0
+[Rank 1] Assigned 20/321 monthly files.
+use_ddstore is : 0
+[Rank 1] Assigned 1/9 monthly files.
+[Rank 4] Assigned 20/321 monthly files.
+[Rank 2] Assigned 20/321 monthly files.
+[Rank 4] Assigned 1/9 monthly files.
+[Rank 2] Assigned 1/9 monthly files.
+after data_module creation Allocated: 0.00GB, Max Allocated: 0.00GB, Reserved: 0.00GB
+use_ddstore is : 0
+[Rank 0] Assigned 21/321 monthly files.
+[Rank 0] Assigned 1/9 monthly files.
+Creating model: res_slimvit
+Model config: img_size=(32, 64), in_channels=5, out_channels=1, history=1, superres_factor=4
+Model parameters: 5.42M
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+FSDP wrapping completed, now creating losses...
+Loading training climatology for lat_mse (this may take a while)...
+Loading validation climatology...
+Using lat_mse for training loss
+Loss functions created successfully
+Losses created successfully
+
+================================================================================
+Starting epoch 0
+================================================================================
+
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+Epoch 0 | Batch 0 | Loss: 1.109468 | Time: 23.195s | LR: 1.00e-08
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 0.21GB, Reserved: 0.05GB
+Epoch 0 | Batch 50 | Loss: 1.119349 | Time: 0.059s | LR: 1.00e-08
+rank 0 Batch 50 Allocated: 0.01GB, Max Allocated: 0.22GB, Reserved: 0.48GB
+Epoch 0 | Batch 100 | Loss: 1.121856 | Time: 0.057s | LR: 1.00e-08
+rank 0 Batch 100 Allocated: 0.01GB, Max Allocated: 0.22GB, Reserved: 0.48GB
+Epoch 0 | Batch 150 | Loss: 1.120068 | Time: 0.058s | LR: 1.00e-08
+rank 0 Batch 150 Allocated: 0.01GB, Max Allocated: 0.22GB, Reserved: 0.48GB
+Epoch 0 | Batch 200 | Loss: 1.122468 | Time: 0.058s | LR: 1.00e-08
+rank 0 Batch 200 Allocated: 0.01GB, Max Allocated: 0.22GB, Reserved: 0.48GB
+Epoch 0 | Batch 250 | Loss: 1.134093 | Time: 0.059s | LR: 1.00e-08
+rank 0 Batch 250 Allocated: 0.01GB, Max Allocated: 0.22GB, Reserved: 0.48GB
+Epoch 0 | Batch 300 | Loss: 1.106803 | Time: 0.058s | LR: 1.00e-08
+rank 0 Batch 300 Allocated: 0.01GB, Max Allocated: 0.22GB, Reserved: 0.48GB
+Epoch 0 | Batch 350 | Loss: 1.133556 | Time: 0.060s | LR: 1.00e-08
+rank 0 Batch 350 Allocated: 0.01GB, Max Allocated: 0.22GB, Reserved: 0.48GB
+Epoch 0 | Batch 400 | Loss: 1.154020 | Time: 0.058s | LR: 1.00e-08
+rank 0 Batch 400 Allocated: 0.01GB, Max Allocated: 0.22GB, Reserved: 0.48GB
+Warning: lattitude not found in /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/climatology.npz
+Warning: land_sea_mask not found in /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/climatology.npz
+
+================================================================================
+Epoch 0 completed | Average Loss: 1.167509
+================================================================================
+
+rank 0 Before saving checkpoint Allocated: 0.01GB, Max Allocated: 0.22GB, Reserved: 0.03GB
+Saved checkpoint to: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_0.25_deg/checkpoint_epoch_0000.pt
+rank 0 After saving checkpoint Allocated: 0.01GB, Max Allocated: 0.22GB, Reserved: 0.05GB
+
+================================================================================
+Starting epoch 1
+================================================================================
+
+Epoch 1 | Batch 0 | Loss: 1.131309 | Time: 0.290s | LR: 2.64e-02
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 0.22GB, Reserved: 0.48GB
+Epoch 1 | Batch 50 | Loss: 1.071752 | Time: 0.059s | LR: 2.64e-02
+rank 0 Batch 50 Allocated: 0.01GB, Max Allocated: 0.22GB, Reserved: 0.48GB
+Epoch 1 | Batch 100 | Loss: 0.051208 | Time: 0.063s | LR: 2.64e-02
+rank 0 Batch 100 Allocated: 0.01GB, Max Allocated: 0.22GB, Reserved: 0.48GB
+Epoch 1 | Batch 150 | Loss: 0.039053 | Time: 0.059s | LR: 2.64e-02
+rank 0 Batch 150 Allocated: 0.01GB, Max Allocated: 0.22GB, Reserved: 0.48GB
+Epoch 1 | Batch 200 | Loss: 0.035028 | Time: 0.059s | LR: 2.64e-02
+rank 0 Batch 200 Allocated: 0.01GB, Max Allocated: 0.22GB, Reserved: 0.48GB
+Epoch 1 | Batch 250 | Loss: 0.034176 | Time: 0.059s | LR: 2.64e-02
+rank 0 Batch 250 Allocated: 0.01GB, Max Allocated: 0.22GB, Reserved: 0.48GB
+Epoch 1 | Batch 300 | Loss: 0.033737 | Time: 0.060s | LR: 2.64e-02
+rank 0 Batch 300 Allocated: 0.01GB, Max Allocated: 0.22GB, Reserved: 0.48GB
+Epoch 1 | Batch 350 | Loss: 0.035230 | Time: 0.059s | LR: 2.64e-02
+rank 0 Batch 350 Allocated: 0.01GB, Max Allocated: 0.22GB, Reserved: 0.48GB
+Epoch 1 | Batch 400 | Loss: 0.033231 | Time: 0.059s | LR: 2.64e-02
+rank 0 Batch 400 Allocated: 0.01GB, Max Allocated: 0.22GB, Reserved: 0.48GB
+Warning: lattitude not found in /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/climatology.npz
+Warning: land_sea_mask not found in /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/climatology.npz
+
+================================================================================
+Epoch 1 completed | Average Loss: 225.747375
+================================================================================
+
+rank 0 Before saving checkpoint Allocated: 0.01GB, Max Allocated: 0.22GB, Reserved: 0.50GB
+Saved checkpoint to: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_0.25_deg/checkpoint_epoch_0001.pt
+rank 0 After saving checkpoint Allocated: 0.01GB, Max Allocated: 0.22GB, Reserved: 0.50GB
+
+================================================================================
+Starting epoch 2
+================================================================================
+
+Epoch 2 | Batch 0 | Loss: 0.037439 | Time: 0.088s | LR: 2.63e-02
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 0.22GB, Reserved: 0.50GB
+Epoch 2 | Batch 50 | Loss: 0.041298 | Time: 0.060s | LR: 2.63e-02
+rank 0 Batch 50 Allocated: 0.01GB, Max Allocated: 0.22GB, Reserved: 0.50GB
+Epoch 2 | Batch 100 | Loss: 0.033909 | Time: 0.065s | LR: 2.63e-02
+rank 0 Batch 100 Allocated: 0.01GB, Max Allocated: 0.22GB, Reserved: 0.50GB
+Epoch 2 | Batch 150 | Loss: 0.031345 | Time: 0.058s | LR: 2.63e-02
+rank 0 Batch 150 Allocated: 0.01GB, Max Allocated: 0.22GB, Reserved: 0.50GB
+Epoch 2 | Batch 200 | Loss: 0.032141 | Time: 0.058s | LR: 2.63e-02
+rank 0 Batch 200 Allocated: 0.01GB, Max Allocated: 0.22GB, Reserved: 0.50GB
+Epoch 2 | Batch 250 | Loss: 0.032928 | Time: 0.058s | LR: 2.63e-02
+rank 0 Batch 250 Allocated: 0.01GB, Max Allocated: 0.22GB, Reserved: 0.50GB
+Epoch 2 | Batch 300 | Loss: 0.030204 | Time: 0.058s | LR: 2.63e-02
+rank 0 Batch 300 Allocated: 0.01GB, Max Allocated: 0.22GB, Reserved: 0.50GB
+Epoch 2 | Batch 350 | Loss: 0.032975 | Time: 0.058s | LR: 2.63e-02
+rank 0 Batch 350 Allocated: 0.01GB, Max Allocated: 0.22GB, Reserved: 0.50GB
+Epoch 2 | Batch 400 | Loss: 0.032932 | Time: 0.058s | LR: 2.63e-02
+rank 0 Batch 400 Allocated: 0.01GB, Max Allocated: 0.22GB, Reserved: 0.50GB
+Warning: lattitude not found in /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/climatology.npz
+Warning: land_sea_mask not found in /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/climatology.npz
+
+================================================================================
+Epoch 2 completed | Average Loss: 0.027968
+================================================================================
+
+rank 0 Before saving checkpoint Allocated: 0.01GB, Max Allocated: 0.22GB, Reserved: 0.50GB
+Saved checkpoint to: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_0.25_deg/checkpoint_epoch_0002.pt
+rank 0 After saving checkpoint Allocated: 0.01GB, Max Allocated: 0.22GB, Reserved: 0.50GB
+
+================================================================================
+Starting epoch 3
+================================================================================
+
+Epoch 3 | Batch 0 | Loss: 0.029298 | Time: 0.135s | LR: 2.61e-02
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 0.22GB, Reserved: 0.50GB
+Epoch 3 | Batch 50 | Loss: 0.030498 | Time: 0.058s | LR: 2.61e-02
+rank 0 Batch 50 Allocated: 0.01GB, Max Allocated: 0.22GB, Reserved: 0.50GB
+Epoch 3 | Batch 100 | Loss: 0.032481 | Time: 0.059s | LR: 2.61e-02
+rank 0 Batch 100 Allocated: 0.01GB, Max Allocated: 0.22GB, Reserved: 0.50GB
+Epoch 3 | Batch 150 | Loss: 0.030753 | Time: 0.055s | LR: 2.61e-02
+rank 0 Batch 150 Allocated: 0.01GB, Max Allocated: 0.22GB, Reserved: 0.50GB
+Epoch 3 | Batch 200 | Loss: 0.029032 | Time: 0.055s | LR: 2.61e-02
+rank 0 Batch 200 Allocated: 0.01GB, Max Allocated: 0.22GB, Reserved: 0.50GB
+Epoch 3 | Batch 250 | Loss: 0.029036 | Time: 0.056s | LR: 2.61e-02
+rank 0 Batch 250 Allocated: 0.01GB, Max Allocated: 0.22GB, Reserved: 0.50GB
+Epoch 3 | Batch 300 | Loss: 0.029296 | Time: 0.056s | LR: 2.61e-02
+rank 0 Batch 300 Allocated: 0.01GB, Max Allocated: 0.22GB, Reserved: 0.50GB
+Epoch 3 | Batch 350 | Loss: 0.027032 | Time: 0.056s | LR: 2.61e-02
+rank 0 Batch 350 Allocated: 0.01GB, Max Allocated: 0.22GB, Reserved: 0.50GB
+Epoch 3 | Batch 400 | Loss: 0.026066 | Time: 0.056s | LR: 2.61e-02
+rank 0 Batch 400 Allocated: 0.01GB, Max Allocated: 0.22GB, Reserved: 0.50GB
+Warning: lattitude not found in /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/climatology.npz
+Warning: land_sea_mask not found in /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/climatology.npz
+
+================================================================================
+Epoch 3 completed | Average Loss: 0.026847
+================================================================================
+
+rank 0 Before saving checkpoint Allocated: 0.01GB, Max Allocated: 0.22GB, Reserved: 0.50GB
+Saved checkpoint to: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_0.25_deg/checkpoint_epoch_0003.pt
+rank 0 After saving checkpoint Allocated: 0.01GB, Max Allocated: 0.22GB, Reserved: 0.50GB
+
+================================================================================
+Starting epoch 4
+================================================================================
+
+Epoch 4 | Batch 0 | Loss: 0.031413 | Time: 0.141s | LR: 2.57e-02
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 0.22GB, Reserved: 0.50GB
+Epoch 4 | Batch 50 | Loss: 0.028040 | Time: 0.056s | LR: 2.57e-02
+rank 0 Batch 50 Allocated: 0.01GB, Max Allocated: 0.22GB, Reserved: 0.50GB
+Epoch 4 | Batch 100 | Loss: 0.032728 | Time: 0.059s | LR: 2.57e-02
+rank 0 Batch 100 Allocated: 0.01GB, Max Allocated: 0.22GB, Reserved: 0.50GB
+Epoch 4 | Batch 150 | Loss: 0.035492 | Time: 0.056s | LR: 2.57e-02
+rank 0 Batch 150 Allocated: 0.01GB, Max Allocated: 0.22GB, Reserved: 0.50GB
+Epoch 4 | Batch 200 | Loss: 0.035507 | Time: 0.055s | LR: 2.57e-02
+rank 0 Batch 200 Allocated: 0.01GB, Max Allocated: 0.22GB, Reserved: 0.50GB
+Epoch 4 | Batch 250 | Loss: 0.038140 | Time: 0.056s | LR: 2.57e-02
+rank 0 Batch 250 Allocated: 0.01GB, Max Allocated: 0.22GB, Reserved: 0.50GB
+Epoch 4 | Batch 300 | Loss: 0.034457 | Time: 0.056s | LR: 2.57e-02
+rank 0 Batch 300 Allocated: 0.01GB, Max Allocated: 0.22GB, Reserved: 0.50GB
+Epoch 4 | Batch 350 | Loss: 0.034252 | Time: 0.056s | LR: 2.57e-02
+rank 0 Batch 350 Allocated: 0.01GB, Max Allocated: 0.22GB, Reserved: 0.50GB
+Epoch 4 | Batch 400 | Loss: 0.029353 | Time: 0.056s | LR: 2.57e-02
+rank 0 Batch 400 Allocated: 0.01GB, Max Allocated: 0.22GB, Reserved: 0.50GB
+Warning: lattitude not found in /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/climatology.npz
+Warning: land_sea_mask not found in /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/climatology.npz
+
+================================================================================
+Epoch 4 completed | Average Loss: 0.028128
+================================================================================
+
+
+Running validation for epoch 4...
+Warning: land_sea_mask not found in /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/val/climatology.npz
+Warning: lattitude not found in /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/val/climatology.npz
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:92: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:92: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:92: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:92: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:92: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:92: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:92: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:92: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+slurmstepd: error: *** STEP 4067883.0 ON frontier07922 CANCELLED AT 2026-01-24T16:04:25 DUE TO TIME LIMIT ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** JOB 4067883 ON frontier07922 CANCELLED AT 2026-01-24T16:04:25 DUE TO TIME LIMIT ***

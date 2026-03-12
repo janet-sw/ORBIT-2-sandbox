@@ -1,0 +1,1926 @@
+
+Lmod is automatically replacing "cce/18.0.1" with "gcc-native/14.2".
+
+
+Lmod is automatically replacing "PrgEnv-cray/8.6.0" with "PrgEnv-gnu/8.6.0".
+
+
+Inactive Modules:
+  1) darshan-runtime
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) cray-libsci/24.11.0     2) cray-mpich/8.1.31
+
+
+Lmod is automatically replacing "gcc-native/14.2" with "gcc/12.2.0".
+
+
+The following have been reloaded with a version change:
+  1) cray-libsci/24.11.0 => cray-libsci/23.09.1.1
+  2) cray-mpich/8.1.31 => cray-mpich/8.1.27
+  3) libfabric/1.22.0 => libfabric/1.20.1
+
+Job started at: Sun Jan 18 11:35:30 PM EST 2026
+Job ID: 4051949
+Running on nodes: frontier09389
+Number of tasks: 8
+Number of nodes: 1
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+[W118 23:35:49.540780828 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier09389.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+[W118 23:35:50.471335512 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier09389.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W118 23:35:50.483549604 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier09389.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W118 23:35:50.484632377 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier09389.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W118 23:35:50.485748004 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier09389.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W118 23:35:50.486198906 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier09389.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W118 23:35:50.487328279 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier09389.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W118 23:35:50.555747716 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier09389.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+DDStore loading error!!
+Initialized process group. world_size=8
+world_size=8, world_rank=7, local_rank=7
+DDStore loading error!!
+Initialized process group. world_size=8
+world_size=8, world_rank=4, local_rank=4
+DDStore loading error!!
+Initialized process group. world_size=8
+world_size=8, world_rank=5, local_rank=5
+DDStore loading error!!
+Initialized process group. world_size=8
+world_size=8, world_rank=1, local_rank=1
+DDStore loading error!!
+Initialized process group. world_size=8
+world_size=8, world_rank=6, local_rank=6
+DDStore loading error!!
+Initialized process group. world_size=8
+world_size=8, world_rank=3, local_rank=3
+use_ddstore is : 0
+use_ddstore is : 0
+use_ddstore is : 0
+use_ddstore is : 0
+use_ddstore is : 0
+use_ddstore is : 0
+DDStore loading error!!
+Initialized process group. world_size=8
+world_size=8, world_rank=2, local_rank=2
+DDStore loading error!!
+Initialized process group. world_size=8
+world_size=8, world_rank=0, local_rank=0
+Loading config from: /ccs/home/janetw/diffusion/ORBIT-2-sandbox/configs/era5_forecasting.yaml
+
+================================================================================
+Training Configuration Summary
+================================================================================
+Config: /ccs/home/janetw/diffusion/ORBIT-2-sandbox/configs/era5_forecasting.yaml
+Max epochs: 30
+Data type: bfloat16
+Checkpoint: None
+Save path: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg
+================================================================================
+
+Creating data module for direct forecasting
+Input variables: ['2m_temperature', '10m_u_component_of_wind', '10m_v_component_of_wind', 'lattitude', 'land_sea_mask']
+Output variables: ['2m_temperature']
+Setting up distributed data loading: world_size=8
+Each GPU will process 1/8 of the dataset
+use_ddstore is : 0
+after data_module creation Allocated: 0.00GB, Max Allocated: 0.00GB, Reserved: 0.00GB
+use_ddstore is : 0
+Creating model: res_slimvit
+Model config: img_size=(32, 64), in_channels=5, out_channels=1, history=1, superres_factor=4
+Model parameters: 5.42M
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+FSDP wrapping completed, now creating losses...
+Loading training climatology for lat_mse (this may take a while)...
+Loading validation climatology...
+Using lat_mse for training loss
+Loss functions created successfully
+Losses created successfully
+
+================================================================================
+Starting epoch 0
+================================================================================
+
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+Epoch 0 | Batch 0 | Loss: 1.133887 | Time: 58.485s | LR: 1.00e-08
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 2.05GB, Reserved: 0.09GB
+Epoch 0 | Batch 50 | Loss: 1.135939 | Time: 12.784s | LR: 1.00e-08
+rank 0 Batch 50 Allocated: 0.01GB, Max Allocated: 2.05GB, Reserved: 0.07GB
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2008_2.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2003_7.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1988_3.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1999_1.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1990_5.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1986_3.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2001_7.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1995_4.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2013_0.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1992_5.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2007_0.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1991_3.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2000_4.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1989_3.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2000_5.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1984_3.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1996_1.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1996_6.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1989_1.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2004_6.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2011_2.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1993_7.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1998_7.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2002_1.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1998_4.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1979_2.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2004_4.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1988_5.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1980_5.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1985_6.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2000_5.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1981_2.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2015_6.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2018_6.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1994_6.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2013_4.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1984_0.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2003_2.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1982_0.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2013_3.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2005_2.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1999_7.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2000_0.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1983_0.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1985_0.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1991_7.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2001_2.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1990_1.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1982_4.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1990_0.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2005_4.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1986_7.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2006_1.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1981_2.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2009_6.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2013_6.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2001_1.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1989_6.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2001_3.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1993_6.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2000_7.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1983_4.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1999_2.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2010_3.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1989_1.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2016_1.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1985_2.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1990_4.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1982_2.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1986_2.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2011_3.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2018_2.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2001_0.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2018_3.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1992_6.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1988_1.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1980_2.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2002_0.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2017_1.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1989_6.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1998_4.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1988_0.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1982_2.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2001_6.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2007_2.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1980_7.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1997_6.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1992_0.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2002_1.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2004_5.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2006_6.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1995_2.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1996_2.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1988_4.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1988_2.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1995_0.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2014_0.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1999_0.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1993_2.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1998_3.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2005_7.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1994_3.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2013_6.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2015_7.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2006_7.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2009_0.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2004_3.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2016_4.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1987_5.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1995_2.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1987_2.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1993_3.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1998_2.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1987_6.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1990_0.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1981_3.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2011_5.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2010_5.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1982_1.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2007_0.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1998_5.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1991_4.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1992_3.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2007_3.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1997_5.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2001_0.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2010_0.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2003_2.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2002_3.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2002_7.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2007_7.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2009_2.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2014_4.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1981_1.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2018_6.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1986_6.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1990_3.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2001_4.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1979_4.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1988_5.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1999_6.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1983_7.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2005_1.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1994_4.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2010_4.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1983_4.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2018_2.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2009_7.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1981_3.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2003_0.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2004_4.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1987_4.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2015_3.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2016_3.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1979_2.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1980_4.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1985_3.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2006_5.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1993_5.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2003_3.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1985_0.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2017_0.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1998_5.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1980_1.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1990_3.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1996_1.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2000_1.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1988_0.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2003_3.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1985_7.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1994_7.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1992_7.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1981_4.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1980_6.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1994_0.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2017_3.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1996_2.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1994_5.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1996_5.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1983_3.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1989_7.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1989_3.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2017_4.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2000_6.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2006_0.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2017_6.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2001_2.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1998_0.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1998_1.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1996_4.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2012_6.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1984_6.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2011_6.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1995_7.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1995_0.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2014_4.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1981_6.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1997_6.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2000_3.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1986_7.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2014_5.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1985_5.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2008_0.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2000_2.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2009_1.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1991_3.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2007_3.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1983_6.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2006_2.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1996_7.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2013_0.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2015_4.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2009_6.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2003_7.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1995_5.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1997_0.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2018_0.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2005_1.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1980_7.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2008_5.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1979_7.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1981_7.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2014_5.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1987_5.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2012_4.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2017_6.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2007_4.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1986_4.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1999_5.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2012_6.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2015_7.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2008_4.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2000_1.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1999_2.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1993_3.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1994_1.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2005_3.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2015_4.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1999_3.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1996_5.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1982_7.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2014_7.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1982_1.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1996_4.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1984_7.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1980_5.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2017_0.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2003_5.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1996_3.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1995_5.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1998_6.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1981_4.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1983_2.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2005_6.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1994_7.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1987_0.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2002_0.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1985_2.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2009_0.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2000_7.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2016_3.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1998_6.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2014_0.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2005_4.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2001_1.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2001_7.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2002_2.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2016_7.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2009_2.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2010_6.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2016_6.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1991_1.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2002_6.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2009_7.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1983_0.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1984_2.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2017_2.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1984_1.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1993_4.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2008_1.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2009_1.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2016_5.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1991_5.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1993_0.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2014_2.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2015_2.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1982_0.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1983_5.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1986_1.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1998_1.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1994_2.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2002_4.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1980_6.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1995_3.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2010_2.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1981_0.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1980_2.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1987_7.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2008_7.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2001_5.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2007_1.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1980_3.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2008_3.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1987_3.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2015_5.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1998_3.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1982_5.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1992_0.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1985_1.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2004_2.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2003_6.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1983_5.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1981_5.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2017_7.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2012_0.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1992_4.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1979_5.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1988_2.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2004_5.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1992_3.npz
+
+================================================================================
+Epoch 0 completed | Average Loss: 1.141723
+================================================================================
+
+rank 0 Before saving checkpoint Allocated: 0.01GB, Max Allocated: 2.05GB, Reserved: 2.07GB
+Saved checkpoint to: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg/checkpoint_epoch_0000.pt
+rank 0 After saving checkpoint Allocated: 0.01GB, Max Allocated: 2.05GB, Reserved: 2.07GB
+
+================================================================================
+Starting epoch 1
+================================================================================
+
+Epoch 1 | Batch 0 | Loss: 1.130609 | Time: 51.708s | LR: 2.64e-03
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 2.05GB, Reserved: 2.93GB
+Epoch 1 | Batch 50 | Loss: 0.068614 | Time: 0.201s | LR: 2.64e-03
+rank 0 Batch 50 Allocated: 0.01GB, Max Allocated: 2.05GB, Reserved: 2.93GB
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1989_2.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2014_1.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1990_5.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2007_0.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2012_7.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1983_3.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1985_0.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1979_3.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1979_0.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1987_5.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2011_2.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2004_3.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1995_5.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2007_5.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1982_1.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1998_0.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2017_4.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1999_6.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2015_6.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2003_4.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1983_3.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2017_6.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2006_3.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2015_4.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1994_3.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2005_5.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2001_6.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2001_0.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2004_4.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1993_5.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1996_1.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1991_0.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2007_5.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2000_2.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1997_1.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1981_7.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1980_0.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2013_4.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1996_2.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1988_0.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1980_5.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2012_0.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2004_7.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1989_6.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2005_5.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2006_5.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1991_7.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2014_5.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1997_5.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2007_2.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1983_1.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1979_2.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2012_1.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2000_0.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1981_7.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1982_2.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1983_4.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2010_1.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1996_3.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1983_7.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1993_4.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2001_4.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2017_1.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1992_0.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2001_2.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2000_5.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2010_0.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2005_1.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2004_1.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2014_6.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1988_5.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1997_3.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1999_5.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1996_5.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2000_3.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1985_4.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1993_2.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2013_0.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1999_2.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1986_6.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1983_5.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1981_3.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1989_5.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2003_0.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2006_0.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1999_7.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1997_7.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2008_7.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1994_5.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2009_3.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1996_2.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1982_3.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2013_7.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2006_4.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2007_4.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1980_0.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1987_2.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1993_0.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1994_2.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1994_6.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1994_4.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2013_3.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2006_6.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2003_1.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2010_2.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1998_6.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1989_3.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1996_4.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2018_3.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2003_3.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1984_0.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1987_4.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1999_1.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1979_7.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1998_7.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2014_2.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2002_3.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2016_6.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2005_2.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2015_0.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1983_2.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1990_4.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1991_1.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2004_5.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2009_7.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1992_3.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2004_6.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2000_2.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1994_7.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1997_2.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2018_7.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1997_1.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1993_1.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2002_6.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2003_7.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1992_7.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1992_6.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1989_0.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1980_1.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1991_6.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1991_7.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2013_1.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1987_7.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2017_0.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2003_0.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2018_5.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2016_2.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1984_1.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2015_3.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2003_7.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1981_3.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2007_2.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1986_7.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1988_2.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2018_4.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1981_6.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2016_0.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1980_6.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1985_4.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1994_7.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2000_0.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1984_2.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1996_4.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2005_4.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1993_4.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2012_3.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1989_7.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2006_2.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1987_5.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2014_7.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1979_1.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1990_4.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1986_5.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1996_5.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2001_1.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2000_5.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1988_6.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1992_5.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2012_4.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1996_7.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2017_7.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1984_6.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2016_4.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2012_7.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2008_1.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1981_0.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1995_6.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1990_2.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2004_0.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2007_1.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2011_1.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2002_7.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2016_1.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2010_0.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2012_5.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1992_2.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1984_0.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2006_1.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1995_1.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2004_5.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1994_2.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1979_5.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1992_0.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1986_2.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1997_6.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1990_6.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2003_6.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2014_4.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2008_7.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2014_1.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2006_0.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1981_2.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1996_0.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1988_7.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2016_5.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1997_4.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2006_7.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1995_5.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1985_3.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2007_6.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2018_1.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1979_2.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1994_4.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2009_1.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1992_1.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2002_4.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2003_2.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1998_3.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2018_0.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2006_5.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2016_6.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1987_4.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1986_3.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1999_4.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1990_5.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1999_2.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1987_6.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2002_3.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2004_3.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1982_0.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2007_4.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2014_3.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2015_0.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1985_1.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1985_0.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2005_0.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1997_2.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2005_7.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2001_3.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2006_4.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2004_6.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2000_3.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1987_0.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1989_1.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2006_6.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1981_4.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1998_1.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2015_6.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1996_6.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1981_1.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2002_1.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2010_4.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2008_6.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2000_6.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2008_4.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1985_2.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1997_4.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1996_6.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1983_6.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1987_3.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2012_6.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2014_4.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2008_0.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2004_2.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1980_3.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2007_6.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1986_1.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2012_4.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1996_0.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2002_2.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1983_7.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2016_7.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1988_1.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2016_3.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1989_4.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2012_6.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1998_4.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2009_0.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1995_7.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1996_3.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2014_6.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2001_5.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1982_5.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1993_3.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2000_6.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2018_6.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1998_2.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2005_6.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1995_4.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2000_7.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1991_3.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1981_2.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2008_3.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1980_4.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2005_6.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2013_2.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2007_1.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1991_2.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2015_1.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2016_3.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1985_6.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1996_1.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2009_0.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1982_7.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2014_7.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2001_0.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1990_7.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1993_5.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2005_7.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1992_5.npz
+
+================================================================================
+Epoch 1 completed | Average Loss: 0.343153
+================================================================================
+
+rank 0 Before saving checkpoint Allocated: 0.01GB, Max Allocated: 2.05GB, Reserved: 2.93GB
+Saved checkpoint to: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg/checkpoint_epoch_0001.pt
+rank 0 After saving checkpoint Allocated: 0.01GB, Max Allocated: 2.05GB, Reserved: 2.93GB
+
+================================================================================
+Starting epoch 2
+================================================================================
+
+Epoch 2 | Batch 0 | Loss: 0.072168 | Time: 38.999s | LR: 2.63e-03
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 2.05GB, Reserved: 2.93GB
+Epoch 2 | Batch 50 | Loss: 0.041371 | Time: 0.201s | LR: 2.63e-03
+rank 0 Batch 50 Allocated: 0.01GB, Max Allocated: 2.05GB, Reserved: 2.93GB
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1991_6.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2002_4.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2004_4.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2001_2.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1983_7.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2002_2.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1993_5.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2016_7.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1984_1.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1983_4.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2003_5.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1979_5.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1999_2.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1996_7.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1991_7.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2013_0.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2016_0.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1987_7.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2003_2.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2004_5.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2016_1.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2017_2.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1998_2.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1999_2.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1984_7.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1993_3.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1983_2.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2010_4.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2000_2.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1983_6.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1991_3.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2016_4.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1987_0.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2012_1.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2008_4.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2018_3.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1992_6.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1993_0.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2009_6.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2009_7.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2010_0.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2014_1.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2010_6.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1983_4.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2002_2.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1985_0.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1997_4.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1994_1.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2006_4.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2000_0.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2013_4.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1980_3.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1986_0.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1996_2.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1988_1.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1986_5.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1988_6.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1986_7.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1997_2.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1994_0.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2015_1.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2000_3.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1985_4.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2010_1.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1988_3.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2012_0.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2012_5.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1979_7.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1997_0.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2002_0.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2003_5.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2008_3.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1979_3.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1981_6.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2005_5.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1981_3.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1986_3.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2014_4.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2010_3.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2015_5.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1987_5.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2018_0.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1979_4.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1982_1.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2002_6.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2007_2.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1999_1.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2011_2.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1997_5.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1998_5.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1990_3.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2011_0.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2016_6.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2011_6.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1985_2.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2015_4.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2003_3.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1990_7.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1984_3.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1995_7.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2004_0.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1985_6.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1981_2.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1985_5.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2012_7.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1994_1.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2010_5.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1983_2.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2010_7.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1990_3.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1996_2.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2007_2.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1993_6.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2015_5.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1985_7.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1998_6.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2010_3.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2014_6.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1996_3.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2011_0.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2005_4.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1982_5.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1997_3.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1987_3.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1984_6.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2006_2.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2014_5.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2017_5.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2002_1.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2008_0.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2012_7.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1983_0.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1989_4.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2017_0.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2000_7.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1995_5.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2001_6.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2016_3.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1993_5.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1983_1.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2006_2.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2004_3.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1995_0.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2008_0.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2006_5.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1979_1.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2010_2.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2007_3.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1983_0.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1981_6.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1982_5.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2018_3.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2006_6.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1979_3.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1994_6.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2004_6.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2005_2.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2008_5.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1986_6.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1987_4.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1995_1.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1997_0.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2005_1.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1996_5.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2001_6.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1988_1.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1992_0.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1992_1.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2011_6.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1981_0.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1991_1.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1979_7.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1982_4.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1999_1.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2017_4.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1982_7.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1985_0.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1985_3.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1988_4.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1998_3.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2009_4.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1993_1.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1991_7.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2001_4.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2016_7.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1995_4.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2005_3.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2015_0.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2015_3.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1990_0.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1987_2.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1998_7.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1993_6.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2003_0.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1985_1.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2018_5.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2017_3.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1982_7.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2016_2.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1989_5.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2001_2.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1994_5.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1998_1.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2009_0.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1993_2.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1992_5.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2005_7.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1990_5.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2013_0.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1993_7.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1996_1.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1995_3.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1994_2.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1998_0.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2006_6.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2009_5.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1984_1.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1986_4.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1999_0.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2018_6.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2017_1.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1995_6.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1982_0.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2017_7.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1984_2.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1986_2.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1980_6.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1980_5.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1998_6.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2000_6.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2005_1.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2000_4.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1989_1.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1995_2.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2001_5.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1981_4.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1989_7.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1992_4.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2004_5.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2003_2.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2003_0.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1992_3.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1998_4.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2015_4.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2007_7.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2005_6.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1987_6.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1994_7.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1981_5.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1986_3.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1983_3.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2013_7.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1987_2.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1986_0.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1982_6.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2007_5.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1987_5.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2003_7.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1985_1.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1992_5.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1994_3.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1999_4.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1979_6.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2006_3.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1996_4.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2016_5.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1993_4.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1981_1.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2001_5.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1992_2.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1989_4.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1986_4.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1989_5.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2014_3.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1997_1.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2006_4.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1983_6.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1992_6.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2018_5.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2010_1.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1994_5.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2017_7.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2000_4.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1994_4.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2000_6.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2013_5.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1980_0.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2008_3.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1997_7.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1984_4.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2018_1.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1989_0.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1985_2.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2000_5.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2013_1.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1991_2.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1995_4.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2009_4.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2010_0.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1997_2.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2001_7.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1989_7.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1997_5.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1988_6.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2008_4.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1998_7.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1990_1.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2015_7.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2005_4.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1995_6.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2018_2.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1995_5.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1994_0.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1980_5.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1996_0.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2012_4.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1987_1.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2014_4.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2016_4.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1998_5.npz
+
+================================================================================
+Epoch 2 completed | Average Loss: 0.049243
+================================================================================
+
+rank 0 Before saving checkpoint Allocated: 0.01GB, Max Allocated: 2.05GB, Reserved: 2.93GB
+Saved checkpoint to: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg/checkpoint_epoch_0002.pt
+rank 0 After saving checkpoint Allocated: 0.01GB, Max Allocated: 2.05GB, Reserved: 2.93GB
+
+================================================================================
+Starting epoch 3
+================================================================================
+
+Epoch 3 | Batch 0 | Loss: 0.039470 | Time: 141.498s | LR: 2.61e-03
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 2.05GB, Reserved: 2.93GB
+Epoch 3 | Batch 50 | Loss: 0.035102 | Time: 0.201s | LR: 2.61e-03
+rank 0 Batch 50 Allocated: 0.01GB, Max Allocated: 2.05GB, Reserved: 2.93GB
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1982_6.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2011_5.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1990_3.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2013_7.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2013_3.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1995_7.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2016_0.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1996_1.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2006_7.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1986_4.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1989_0.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1987_6.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2008_2.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2010_1.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1979_4.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2011_4.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1981_6.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2014_4.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2005_5.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1987_7.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1986_3.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2006_5.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1993_2.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2012_7.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2001_5.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2005_1.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2006_1.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2001_3.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1991_5.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2001_2.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2008_6.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2004_7.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1985_1.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2017_4.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2012_4.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2016_6.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1990_7.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1998_7.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2009_3.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1997_5.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1984_3.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2004_7.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2010_3.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2002_1.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2004_6.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1995_7.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2003_3.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2007_3.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1994_6.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1986_6.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2016_4.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2003_0.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2016_6.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1988_4.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1996_3.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1984_4.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2006_0.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2007_2.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1981_3.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1987_3.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1989_6.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2004_0.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1997_0.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1998_5.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1985_4.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2014_2.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2002_0.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2005_2.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1982_1.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1991_1.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2018_1.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2000_5.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1991_2.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2006_6.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1983_7.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1979_6.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1998_1.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2012_1.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1991_5.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2007_6.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1996_7.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2014_0.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2000_7.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2018_6.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1998_6.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2017_5.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1984_3.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1984_6.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2014_5.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1981_5.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1982_2.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1985_6.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1989_1.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2005_7.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2011_3.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1989_6.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1980_1.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2011_2.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1983_5.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2001_0.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1979_7.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1981_1.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2001_6.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1993_3.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1993_1.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1990_4.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2003_2.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2007_3.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1986_5.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2002_0.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2008_7.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2010_6.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2003_5.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2011_7.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1995_6.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2008_0.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2006_3.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1980_3.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2013_4.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1989_7.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1998_4.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2017_7.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2005_5.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2007_7.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1987_5.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2018_7.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2017_4.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1981_2.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2005_3.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1994_1.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1995_0.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1985_6.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2015_5.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1997_1.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2018_4.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1987_0.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2003_1.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2006_2.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2004_5.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1980_2.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1979_6.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1994_4.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2008_5.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1996_4.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2002_6.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2017_6.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2003_0.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2005_0.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2010_5.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2004_2.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1994_1.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2006_4.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1997_1.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1986_0.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1981_7.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2016_4.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1987_5.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2015_4.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1988_7.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1983_3.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1999_3.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1990_6.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1993_0.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1992_1.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1998_7.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2002_7.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2010_6.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1985_2.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2007_1.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2016_3.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1991_0.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2017_5.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2002_3.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1980_4.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1988_7.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1997_3.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1989_5.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2001_7.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1987_7.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2006_3.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2005_4.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1982_2.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1989_1.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1995_1.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2014_7.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1980_3.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1993_6.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1984_5.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1986_7.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1982_4.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2008_6.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2016_5.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1981_6.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1989_3.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1985_0.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2015_0.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2011_4.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2014_0.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2011_5.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1984_1.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2009_0.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2015_2.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1984_0.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2010_0.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2018_0.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1990_3.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2009_7.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1994_7.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1980_1.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1996_6.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1993_4.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2011_3.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1981_1.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1990_7.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1985_1.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2006_1.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1985_5.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2001_1.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1983_1.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2000_2.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1987_0.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1999_7.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2010_7.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2002_5.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1982_4.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2000_6.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2005_2.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2013_0.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1990_0.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1980_5.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2004_1.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2000_0.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2015_3.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1997_6.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1979_0.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1990_6.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2013_2.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1998_4.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2003_6.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2002_1.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2004_2.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2017_6.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2008_2.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2001_0.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2012_5.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1981_5.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2014_1.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2003_6.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1979_3.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1980_0.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1995_2.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1989_0.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2001_4.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1982_7.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2011_0.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1998_3.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2009_4.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2003_4.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1988_0.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1992_4.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2006_2.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2005_3.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1979_1.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1985_2.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1990_2.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1979_5.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1991_3.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1994_0.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2012_5.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1991_7.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1984_7.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1995_2.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2013_1.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2018_7.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2013_6.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1993_6.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2003_4.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1982_1.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2006_0.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1980_6.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1984_4.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1988_1.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1992_1.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2007_6.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2017_2.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1992_2.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2012_1.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2000_3.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2003_3.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1991_1.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1988_2.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1983_1.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1983_2.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2004_3.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2001_7.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2012_2.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1986_1.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2011_6.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1997_0.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1980_0.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2008_3.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1995_4.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1983_3.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2012_3.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1997_6.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2002_4.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1991_3.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1992_0.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1981_0.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1979_2.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2009_1.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2013_4.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1979_5.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2004_3.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1986_2.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1996_4.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2008_5.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1990_0.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1995_3.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2000_4.npz
+
+================================================================================
+Epoch 3 completed | Average Loss: 0.037163
+================================================================================
+
+rank 0 Before saving checkpoint Allocated: 0.01GB, Max Allocated: 2.05GB, Reserved: 2.93GB
+Saved checkpoint to: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg/checkpoint_epoch_0003.pt
+rank 0 After saving checkpoint Allocated: 0.01GB, Max Allocated: 2.05GB, Reserved: 2.93GB
+
+================================================================================
+Starting epoch 4
+================================================================================
+
+Epoch 4 | Batch 0 | Loss: 0.035461 | Time: 69.908s | LR: 2.57e-03
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 2.05GB, Reserved: 2.93GB
+Epoch 4 | Batch 50 | Loss: 0.032604 | Time: 0.200s | LR: 2.57e-03
+rank 0 Batch 50 Allocated: 0.01GB, Max Allocated: 2.05GB, Reserved: 2.93GB
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1982_2.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2015_1.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1990_4.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1988_1.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2014_3.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1992_6.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2008_6.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1986_3.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1994_5.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2015_7.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2002_4.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2003_4.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1979_1.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2012_0.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2018_4.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2015_5.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2004_0.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2016_1.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2016_7.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2013_5.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1992_5.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2006_1.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1992_7.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1986_2.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1986_4.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1994_3.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1979_2.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1982_0.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1989_1.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2001_7.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2003_2.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1980_3.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2007_5.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2008_1.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2009_5.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1997_3.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2006_5.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1998_7.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2009_3.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2013_5.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1986_0.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1997_2.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2008_7.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1996_3.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1995_6.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1982_6.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2014_0.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1988_6.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1987_3.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1980_6.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2011_6.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2002_0.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2013_1.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1999_0.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1994_3.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1985_7.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1996_1.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1981_6.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1993_6.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1985_2.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2017_5.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2011_4.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1979_1.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2014_2.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1985_1.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2000_1.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1981_4.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1991_4.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2010_1.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2016_1.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2012_5.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1985_0.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1990_7.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2007_0.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1981_3.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2012_0.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1998_0.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2001_3.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1993_5.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2007_7.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1996_3.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1998_2.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1986_5.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2014_4.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2016_4.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2015_4.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1993_6.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1987_0.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1983_4.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1997_1.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1983_0.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2018_2.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2010_0.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2002_3.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1983_3.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2013_6.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1997_2.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1986_1.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2018_1.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1981_0.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1988_2.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2015_2.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1999_5.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1982_0.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2002_5.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1988_7.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2000_1.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1995_4.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2015_3.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1983_0.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2000_4.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2013_0.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1996_7.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1990_3.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2012_2.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2002_7.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2012_3.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1993_4.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2009_4.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1998_3.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2011_2.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1987_5.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2011_4.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1993_2.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1986_5.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2007_1.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1984_2.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1997_1.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1986_6.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2010_3.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1986_2.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1996_6.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2005_2.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2010_5.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1992_1.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2018_1.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2014_1.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1999_1.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2014_4.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1988_3.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2004_7.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2010_5.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2017_1.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1997_6.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2005_4.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2004_6.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1995_1.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1996_0.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2010_2.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2005_2.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2004_4.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1984_2.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2005_6.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2015_2.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1987_3.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2006_6.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1980_1.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2008_5.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1982_1.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2000_7.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1998_2.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2009_0.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2002_3.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1994_2.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2015_0.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2004_4.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1989_1.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2004_7.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2003_2.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2012_6.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1987_1.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2004_2.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2009_3.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1997_6.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2017_6.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1999_3.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2012_7.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2015_4.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2012_4.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2008_3.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2002_1.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1995_2.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1991_2.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1981_3.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1996_2.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1985_4.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1986_4.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1992_2.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2007_0.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1983_4.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1980_3.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2017_0.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2013_4.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2009_7.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1994_4.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1980_0.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2017_3.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1996_0.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1999_7.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2018_0.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1980_4.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2016_2.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1989_0.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1979_5.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1993_0.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1991_1.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1984_0.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1984_4.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1989_2.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1988_5.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2009_5.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1999_4.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2018_2.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2011_0.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2005_3.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1990_7.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2000_0.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2013_2.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2002_6.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2004_3.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2009_2.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2001_2.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1991_6.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2007_2.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2005_1.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2017_3.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2018_6.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2011_0.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2010_6.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1995_2.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2013_4.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1994_5.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2005_3.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2003_3.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2011_2.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1991_5.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2012_1.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2000_6.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2000_3.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1986_6.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2005_1.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2018_5.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2011_5.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1995_5.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2006_3.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1983_5.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2009_2.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1983_2.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1981_7.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2002_2.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2006_0.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2016_0.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1985_3.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2017_2.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2001_2.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1979_2.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1983_3.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2012_1.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2014_2.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1983_1.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1986_3.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2000_0.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2013_7.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1991_2.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2001_4.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1987_6.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1998_4.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1980_7.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1987_7.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2017_6.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1983_6.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1994_6.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2015_5.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1997_5.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2006_3.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2011_6.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2008_2.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2009_4.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1995_3.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1989_6.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1998_5.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2014_0.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1999_6.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1999_5.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1992_6.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1994_0.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1988_4.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1988_0.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2015_1.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2011_7.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1990_3.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2016_0.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2004_1.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2008_7.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2008_6.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1989_0.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2001_6.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2015_3.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1998_1.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1989_5.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1993_2.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1989_4.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2010_3.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2002_4.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2002_6.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1990_0.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1982_6.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1979_4.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1982_5.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2016_3.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1991_1.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1993_1.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1987_2.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2008_0.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1980_6.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1990_4.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/1992_0.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2002_0.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2001_1.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/train/2014_7.npz
+
+================================================================================
+Epoch 4 completed | Average Loss: 0.033681
+================================================================================
+
+
+Running validation for epoch 4...
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:92: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:92: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:92: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:92: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:92: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:92: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:92: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:92: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/val/2019_6.npz
+3 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/val/2019_7.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/val/2019_6.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/val/2019_2.npz
+5 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/val/2019_3.npz
+7 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/val/2019_7.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/val/2019_0.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/val/2019_4.npz
+0 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/val/2019_1.npz
+2 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/val/2019_5.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/val/2019_2.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/val/2019_0.npz
+1 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/val/2019_3.npz
+4 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/val/2019_1.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/val/2019_4.npz
+6 NpyReader: /lustre/orion/lrn036/world-shared/ERA5_npz/1.40625_deg/val/2019_5.npz
+
+Validation results for epoch 4:
+  val/lat_rmse:2m_temperature: 3.969995
+  val/lat_rmse:aggregate: 3.969995
+  val/lat_acc:2m_temperature: 0.773480
+  val/lat_acc:aggregate: 0.773480
+  val/lat_mse:2m_temperature: 0.033948
+  val/lat_mse:aggregate: 0.033948
+
+rank 0 Before saving checkpoint Allocated: 0.01GB, Max Allocated: 2.05GB, Reserved: 0.32GB
+Saved checkpoint to: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg/checkpoint_epoch_0004.pt
+rank 0 After saving checkpoint Allocated: 0.01GB, Max Allocated: 2.05GB, Reserved: 0.32GB
+
+================================================================================
+Starting epoch 5
+================================================================================
+
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** STEP 4051949.0 ON frontier09389 CANCELLED AT 2026-01-18T23:52:05 ***
+slurmstepd: error: *** JOB 4051949 ON frontier09389 CANCELLED AT 2026-01-18T23:52:05 ***

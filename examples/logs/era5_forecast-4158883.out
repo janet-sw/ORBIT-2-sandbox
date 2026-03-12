@@ -1,0 +1,711 @@
+
+Lmod is automatically replacing "cce/18.0.1" with "gcc-native/14.2".
+
+
+Lmod is automatically replacing "PrgEnv-cray/8.6.0" with "PrgEnv-gnu/8.6.0".
+
+
+Inactive Modules:
+  1) darshan-runtime
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) cray-libsci/24.11.0     2) cray-mpich/8.1.31
+
+
+Lmod is automatically replacing "gcc-native/14.2" with "gcc/12.2.0".
+
+
+The following have been reloaded with a version change:
+  1) cray-libsci/24.11.0 => cray-libsci/23.09.1.1
+  2) cray-mpich/8.1.31 => cray-mpich/8.1.27
+  3) libfabric/1.22.0 => libfabric/1.20.1
+
+Job started at: Sun Mar  1 02:22:57 PM EST 2026
+Job ID: 4158883
+Running on nodes: frontier[06850,06899]
+Number of tasks: 16
+Number of nodes: 2
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+[W301 14:23:34.862729524 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier06850.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W301 14:23:34.286765803 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier06850.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+[W301 14:23:35.580734814 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier06850.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W301 14:23:35.584657510 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier06850.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W301 14:23:35.605625179 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier06850.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W301 14:23:35.613177025 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier06850.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W301 14:23:35.614431050 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier06850.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W301 14:23:35.615979073 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier06850.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W301 14:23:35.618907617 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier06850.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+[W301 14:23:35.574673628 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier06850.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W301 14:23:35.586119999 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier06850.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W301 14:23:35.591243282 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier06850.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W301 14:23:35.591698363 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier06850.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W301 14:23:35.591763760 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier06850.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W301 14:23:35.592714159 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier06850.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W301 14:23:35.640377814 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier06850.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=2, local_rank=2
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=9, local_rank=1
+use_ddstore is : 0
+use_ddstore is : 0
+[Rank 9] Assigned 97/1561 monthly files (indices 873:970).
+[Rank 9] Assigned 5/81 monthly files (indices 45:50).
+[Rank 2] Assigned 97/1561 monthly files (indices 194:291).
+[Rank 2] Assigned 5/81 monthly files (indices 10:15).
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=10, local_rank=2
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=13, local_rank=5
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=12, local_rank=4
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=8, local_rank=0
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=15, local_rank=7
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=14, local_rank=6
+use_ddstore is : 0
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=11, local_rank=3
+use_ddstore is : 0
+[Rank 10] Assigned 97/1561 monthly files (indices 970:1067).
+[Rank 10] Assigned 5/81 monthly files (indices 50:55).
+[Rank 13] Assigned 97/1561 monthly files (indices 1261:1358).
+[Rank 13] Assigned 5/81 monthly files (indices 65:70).
+use_ddstore is : 0
+[Rank 12] Assigned 97/1561 monthly files (indices 1164:1261).
+[Rank 12] Assigned 5/81 monthly files (indices 60:65).
+use_ddstore is : 0
+use_ddstore is : 0
+use_ddstore is : 0
+[Rank 8] Assigned 97/1561 monthly files (indices 776:873).
+[Rank 8] Assigned 5/81 monthly files (indices 40:45).
+[Rank 15] Assigned 97/1561 monthly files (indices 1455:1552).
+[Rank 15] Assigned 5/81 monthly files (indices 75:80).
+[Rank 14] Assigned 97/1561 monthly files (indices 1358:1455).
+[Rank 14] Assigned 5/81 monthly files (indices 70:75).
+use_ddstore is : 0
+[Rank 11] Assigned 97/1561 monthly files (indices 1067:1164).
+[Rank 11] Assigned 5/81 monthly files (indices 55:60).
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=7, local_rank=7
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=3, local_rank=3
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=6, local_rank=6
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=4, local_rank=4
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=5, local_rank=5
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=1, local_rank=1
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=0, local_rank=0
+Loading config from: /ccs/home/janetw/diffusion/ORBIT-2-sandbox/configs/era5_forecasting.yaml
+
+================================================================================
+Training Configuration Summary
+================================================================================
+Config: /ccs/home/janetw/diffusion/ORBIT-2-sandbox/configs/era5_forecasting.yaml
+Max epochs: 30
+Data type: bfloat16
+Checkpoint: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.0_deg_sprint_disabled_antialias=True_input_refine_cnn=True_interpolation=False/checkpoint_epoch_0018.pt
+Save path: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.0_deg_sprint_disabled_antialias=True_input_refine_cnn=True_interpolation=False
+================================================================================
+
+Creating data module for direct forecasting
+Input variables: ['temperature_50', 'temperature_250', 'temperature_500', 'temperature_600', 'temperature_700', 'temperature_850', 'temperature_925', 'geopotential_50', 'geopotential_250', 'geopotential_500', 'geopotential_600', 'geopotential_700', 'geopotential_850', 'geopotential_925', 'u_component_of_wind_50', 'u_component_of_wind_250', 'u_component_of_wind_500', 'u_component_of_wind_600', 'u_component_of_wind_700', 'u_component_of_wind_850', 'u_component_of_wind_925', 'v_component_of_wind_50', 'v_component_of_wind_250', 'v_component_of_wind_500', 'v_component_of_wind_600', 'v_component_of_wind_700', 'v_component_of_wind_850', 'v_component_of_wind_925', '2m_temperature', '10m_u_component_of_wind', '10m_v_component_of_wind', 'land_sea_mask', 'orography', 'specific_humidity_50', 'specific_humidity_250', 'specific_humidity_500', 'specific_humidity_600', 'specific_humidity_700', 'specific_humidity_850', 'specific_humidity_925']
+Output variables: ['2m_temperature', '10m_u_component_of_wind', 'geopotential_500', 'temperature_850']
+Setting up distributed data loading: world_size=16
+Each GPU will process 1/16 of the dataset
+use_ddstore is : 0
+[Rank 7] Assigned 97/1561 monthly files (indices 679:776).
+[Rank 7] Assigned 5/81 monthly files (indices 35:40).
+use_ddstore is : 0
+[Rank 3] Assigned 97/1561 monthly files (indices 291:388).
+[Rank 3] Assigned 5/81 monthly files (indices 15:20).
+use_ddstore is : 0
+use_ddstore is : 0
+use_ddstore is : 0
+use_ddstore is : 0
+after data_module creation Allocated: 0.00GB, Max Allocated: 0.00GB, Reserved: 0.00GB
+use_ddstore is : 0
+[Rank 6] Assigned 97/1561 monthly files (indices 582:679).
+[Rank 6] Assigned 5/81 monthly files (indices 30:35).
+[Rank 1] Assigned 97/1561 monthly files (indices 97:194).
+[Rank 5] Assigned 97/1561 monthly files (indices 485:582).
+[Rank 4] Assigned 97/1561 monthly files (indices 388:485).
+[Rank 1] Assigned 5/81 monthly files (indices 5:10).
+[Rank 5] Assigned 5/81 monthly files (indices 25:30).
+[Rank 4] Assigned 5/81 monthly files (indices 20:25).
+[Rank 0] Assigned 97/1561 monthly files (indices 0:97).
+[Monthly Loader] Verifying variables in 1979_0.npz...
+[Monthly Loader] Available variables: ['land_sea_mask', 'orography', '2m_temperature', '10m_u_component_of_wind', '10m_v_component_of_wind', 'mean_sea_level_pressure', 'surface_pressure', 'total_precipitation', 'sea_surface_temperature', 'geopotential_50', 'geopotential_100', 'geopotential_150', 'geopotential_200', 'geopotential_250', 'geopotential_300', 'geopotential_400', 'geopotential_500', 'geopotential_600', 'geopotential_700', 'geopotential_850', 'geopotential_925', 'geopotential_1000', 'u_component_of_wind_50', 'u_component_of_wind_100', 'u_component_of_wind_150', 'u_component_of_wind_200', 'u_component_of_wind_250', 'u_component_of_wind_300', 'u_component_of_wind_400', 'u_component_of_wind_500', 'u_component_of_wind_600', 'u_component_of_wind_700', 'u_component_of_wind_850', 'u_component_of_wind_925', 'u_component_of_wind_1000', 'v_component_of_wind_50', 'v_component_of_wind_100', 'v_component_of_wind_150', 'v_component_of_wind_200', 'v_component_of_wind_250', 'v_component_of_wind_300', 'v_component_of_wind_400', 'v_component_of_wind_500', 'v_component_of_wind_600', 'v_component_of_wind_700', 'v_component_of_wind_850', 'v_component_of_wind_925', 'v_component_of_wind_1000', 'temperature_50', 'temperature_100', 'temperature_150', 'temperature_200', 'temperature_250', 'temperature_300', 'temperature_400', 'temperature_500', 'temperature_600', 'temperature_700', 'temperature_850', 'temperature_925', 'temperature_1000', 'specific_humidity_50', 'specific_humidity_100', 'specific_humidity_150', 'specific_humidity_200', 'specific_humidity_250', 'specific_humidity_300', 'specific_humidity_400', 'specific_humidity_500', 'specific_humidity_600', 'specific_humidity_700', 'specific_humidity_850', 'specific_humidity_925', 'specific_humidity_1000', 'days_of_year', 'time_of_day', 'hrs_each_step', 'num_steps_per_shard', 'lattitude']
+[Monthly Loader] 'v_component_of_wind_600': shape=(219, 1, 180, 360)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+[Monthly Loader] 'temperature_700': shape=(219, 1, 180, 360)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting_sparsity.py:961: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(checkpoint_path, map_location="cpu")
+/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting_sparsity.py:961: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting_sparsity.py:961: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(checkpoint_path, map_location="cpu")
+  checkpoint = torch.load(checkpoint_path, map_location="cpu")
+/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting_sparsity.py:961: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting_sparsity.py:961: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(checkpoint_path, map_location="cpu")
+  checkpoint = torch.load(checkpoint_path, map_location="cpu")
+/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting_sparsity.py:961: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting_sparsity.py:961: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(checkpoint_path, map_location="cpu")
+  checkpoint = torch.load(checkpoint_path, map_location="cpu")
+/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting_sparsity.py:961: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting_sparsity.py:961: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(checkpoint_path, map_location="cpu")
+  checkpoint = torch.load(checkpoint_path, map_location="cpu")
+/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting_sparsity.py:961: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting_sparsity.py:961: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(checkpoint_path, map_location="cpu")
+  checkpoint = torch.load(checkpoint_path, map_location="cpu")
+/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting_sparsity.py:961: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting_sparsity.py:961: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(checkpoint_path, map_location="cpu")
+  checkpoint = torch.load(checkpoint_path, map_location="cpu")
+/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting_sparsity.py:961: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(checkpoint_path, map_location="cpu")
+/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting_sparsity.py:961: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(checkpoint_path, map_location="cpu")
+[Monthly Loader] 'geopotential_600': shape=(219, 1, 180, 360)
+[Monthly Loader] 'specific_humidity_700': shape=(219, 1, 180, 360)
+[Monthly Loader] 'geopotential_850': shape=(219, 1, 180, 360)
+[Monthly Loader] 'v_component_of_wind_850': shape=(219, 1, 180, 360)
+[Monthly Loader] 'u_component_of_wind_50': shape=(219, 1, 180, 360)
+[Monthly Loader] 'specific_humidity_600': shape=(219, 1, 180, 360)
+[Monthly Loader] 'u_component_of_wind_250': shape=(219, 1, 180, 360)
+[Monthly Loader] 'geopotential_500': shape=(219, 1, 180, 360)
+[Monthly Loader] 'temperature_850': shape=(219, 1, 180, 360)
+[Monthly Loader] 'specific_humidity_925': shape=(219, 1, 180, 360)
+[Monthly Loader] 'v_component_of_wind_50': shape=(219, 1, 180, 360)
+[Monthly Loader] 'v_component_of_wind_925': shape=(219, 1, 180, 360)
+[Monthly Loader] 'v_component_of_wind_700': shape=(219, 1, 180, 360)
+[Monthly Loader] 'specific_humidity_500': shape=(219, 1, 180, 360)
+[Monthly Loader] 'specific_humidity_250': shape=(219, 1, 180, 360)
+[Monthly Loader] 'u_component_of_wind_850': shape=(219, 1, 180, 360)
+[Monthly Loader] 'temperature_925': shape=(219, 1, 180, 360)
+[Monthly Loader] '2m_temperature': shape=(219, 1, 180, 360)
+[Monthly Loader] 'temperature_50': shape=(219, 1, 180, 360)
+[Monthly Loader] 'v_component_of_wind_500': shape=(219, 1, 180, 360)
+[Monthly Loader] '10m_v_component_of_wind': shape=(219, 1, 180, 360)
+[Monthly Loader] 'u_component_of_wind_600': shape=(219, 1, 180, 360)
+[Monthly Loader] 'geopotential_250': shape=(219, 1, 180, 360)
+[Monthly Loader] 'geopotential_700': shape=(219, 1, 180, 360)
+[Monthly Loader] 'temperature_250': shape=(219, 1, 180, 360)
+[Monthly Loader] 'u_component_of_wind_925': shape=(219, 1, 180, 360)
+[Monthly Loader] 'v_component_of_wind_250': shape=(219, 1, 180, 360)
+[Monthly Loader] '10m_u_component_of_wind': shape=(219, 1, 180, 360)
+[Monthly Loader] 'geopotential_925': shape=(219, 1, 180, 360)
+[Monthly Loader] 'u_component_of_wind_500': shape=(219, 1, 180, 360)
+[Monthly Loader] 'temperature_600': shape=(219, 1, 180, 360)
+[Monthly Loader] 'specific_humidity_850': shape=(219, 1, 180, 360)
+[Monthly Loader] 'temperature_500': shape=(219, 1, 180, 360)
+[Monthly Loader] 'u_component_of_wind_700': shape=(219, 1, 180, 360)
+[Monthly Loader] 'geopotential_50': shape=(219, 1, 180, 360)
+[Monthly Loader] 'land_sea_mask': shape=(219, 1, 180, 360)
+[Monthly Loader] 'specific_humidity_50': shape=(219, 1, 180, 360)
+[Monthly Loader] 'orography': shape=(219, 1, 180, 360)
+[Rank 0] Assigned 5/81 monthly files (indices 0:5).
+[Monthly Loader] Verifying variables in 2018_0.npz...
+[Monthly Loader] Available variables: ['land_sea_mask', 'orography', '2m_temperature', '10m_u_component_of_wind', '10m_v_component_of_wind', 'mean_sea_level_pressure', 'surface_pressure', 'total_precipitation', 'sea_surface_temperature', 'geopotential_50', 'geopotential_100', 'geopotential_150', 'geopotential_200', 'geopotential_250', 'geopotential_300', 'geopotential_400', 'geopotential_500', 'geopotential_600', 'geopotential_700', 'geopotential_850', 'geopotential_925', 'geopotential_1000', 'u_component_of_wind_50', 'u_component_of_wind_100', 'u_component_of_wind_150', 'u_component_of_wind_200', 'u_component_of_wind_250', 'u_component_of_wind_300', 'u_component_of_wind_400', 'u_component_of_wind_500', 'u_component_of_wind_600', 'u_component_of_wind_700', 'u_component_of_wind_850', 'u_component_of_wind_925', 'u_component_of_wind_1000', 'v_component_of_wind_50', 'v_component_of_wind_100', 'v_component_of_wind_150', 'v_component_of_wind_200', 'v_component_of_wind_250', 'v_component_of_wind_300', 'v_component_of_wind_400', 'v_component_of_wind_500', 'v_component_of_wind_600', 'v_component_of_wind_700', 'v_component_of_wind_850', 'v_component_of_wind_925', 'v_component_of_wind_1000', 'temperature_50', 'temperature_100', 'temperature_150', 'temperature_200', 'temperature_250', 'temperature_300', 'temperature_400', 'temperature_500', 'temperature_600', 'temperature_700', 'temperature_850', 'temperature_925', 'temperature_1000', 'specific_humidity_50', 'specific_humidity_100', 'specific_humidity_150', 'specific_humidity_200', 'specific_humidity_250', 'specific_humidity_300', 'specific_humidity_400', 'specific_humidity_500', 'specific_humidity_600', 'specific_humidity_700', 'specific_humidity_850', 'specific_humidity_925', 'specific_humidity_1000', 'days_of_year', 'time_of_day', 'hrs_each_step', 'num_steps_per_shard', 'lattitude']
+[Monthly Loader] 'v_component_of_wind_600': shape=(219, 1, 180, 360)
+[Monthly Loader] 'temperature_700': shape=(219, 1, 180, 360)
+[Monthly Loader] 'geopotential_600': shape=(219, 1, 180, 360)
+[Monthly Loader] 'specific_humidity_700': shape=(219, 1, 180, 360)
+[Monthly Loader] 'geopotential_850': shape=(219, 1, 180, 360)
+[Monthly Loader] 'v_component_of_wind_850': shape=(219, 1, 180, 360)
+[Monthly Loader] 'u_component_of_wind_50': shape=(219, 1, 180, 360)
+[Monthly Loader] 'specific_humidity_600': shape=(219, 1, 180, 360)
+[Monthly Loader] 'u_component_of_wind_250': shape=(219, 1, 180, 360)
+[Monthly Loader] 'geopotential_500': shape=(219, 1, 180, 360)
+[Monthly Loader] 'temperature_850': shape=(219, 1, 180, 360)
+[Monthly Loader] 'specific_humidity_925': shape=(219, 1, 180, 360)
+[Monthly Loader] 'v_component_of_wind_50': shape=(219, 1, 180, 360)
+[Monthly Loader] 'v_component_of_wind_925': shape=(219, 1, 180, 360)
+[Monthly Loader] 'v_component_of_wind_700': shape=(219, 1, 180, 360)
+[Monthly Loader] 'specific_humidity_500': shape=(219, 1, 180, 360)
+[Monthly Loader] 'specific_humidity_250': shape=(219, 1, 180, 360)
+[Monthly Loader] 'u_component_of_wind_850': shape=(219, 1, 180, 360)
+[Monthly Loader] 'temperature_925': shape=(219, 1, 180, 360)
+[Monthly Loader] '2m_temperature': shape=(219, 1, 180, 360)
+[Monthly Loader] 'temperature_50': shape=(219, 1, 180, 360)
+[Monthly Loader] 'v_component_of_wind_500': shape=(219, 1, 180, 360)
+[Monthly Loader] '10m_v_component_of_wind': shape=(219, 1, 180, 360)
+[Monthly Loader] 'u_component_of_wind_600': shape=(219, 1, 180, 360)
+[Monthly Loader] 'geopotential_250': shape=(219, 1, 180, 360)
+[Monthly Loader] 'geopotential_700': shape=(219, 1, 180, 360)
+[Monthly Loader] 'temperature_250': shape=(219, 1, 180, 360)
+[Monthly Loader] 'u_component_of_wind_925': shape=(219, 1, 180, 360)
+[Monthly Loader] 'v_component_of_wind_250': shape=(219, 1, 180, 360)
+[Monthly Loader] '10m_u_component_of_wind': shape=(219, 1, 180, 360)
+[Monthly Loader] 'geopotential_925': shape=(219, 1, 180, 360)
+[Monthly Loader] 'u_component_of_wind_500': shape=(219, 1, 180, 360)
+[Monthly Loader] 'temperature_600': shape=(219, 1, 180, 360)
+[Monthly Loader] 'specific_humidity_850': shape=(219, 1, 180, 360)
+[Monthly Loader] 'temperature_500': shape=(219, 1, 180, 360)
+[Monthly Loader] 'u_component_of_wind_700': shape=(219, 1, 180, 360)
+[Monthly Loader] 'geopotential_50': shape=(219, 1, 180, 360)
+[Monthly Loader] 'land_sea_mask': shape=(219, 1, 180, 360)
+[Monthly Loader] 'specific_humidity_50': shape=(219, 1, 180, 360)
+[Monthly Loader] 'orography': shape=(219, 1, 180, 360)
+
+[DEBUG] Data module created, creating model...
+Creating model: res_slimvit
+Model config: img_size=(180, 360), in_channels=40, out_channels=4, history=1, superres_factor=1
+Model parameters: 14.23M
+[DEBUG] Model created, setting up FSDP...
+[DEBUG] Starting FSDP wrapping...
+[DEBUG] FSDP wrapping completed. Model parameters: 0.89M
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+[DEBUG] FSDP wrapping completed, now creating losses (this may take several minutes)...
+[DEBUG] Loading training climatology for lat_mse (this may take a while)...
+[DEBUG] Training climatology loaded
+[DEBUG] Loading validation climatology...
+[DEBUG] Validation climatology loaded
+Using lat_mse for training loss
+Loss functions created successfully
+[DEBUG] Losses created successfully
+Loading checkpoint from: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.0_deg_sprint_disabled_antialias=True_input_refine_cnn=True_interpolation=False/checkpoint_epoch_0018.pt
+/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting_sparsity.py:961: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(checkpoint_path, map_location="cpu")
+Resumed from epoch 18
+[DEBUG] Random token selection mode — no aux_difficulty_head
+
+================================================================================
+Starting epoch 19
+================================================================================
+
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+[E19 B0] loss=0.16641 time=40.727s | diff=N/A (DIAG empty) | mem=0.0GB
+
+======================================================================
+ Parameter Breakdown
+======================================================================
+  Decoder Head                                0.000M  (           0)
+  Token Embeddings                            0.000M  (           0)
+  Variable Aggregation                        0.000M  (           0)
+  Other (pos_embed, var_embed, etc.)          0.889M  (     889,481)
+  ────────────────────────────────────────────────────────────
+  TOTAL                                       0.889M  (     889,481)
+======================================================================
+
+Epoch 19 | Batch 0 | Loss: 0.166409 | Time: 40.728s | LR: 1.87e-03
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 26.14GB, Reserved: 0.28GB
+Epoch 19 | Batch 10 | Loss: 0.170381 | Time: 21.002s | LR: 1.87e-03
+rank 0 Batch 10 Allocated: 0.01GB, Max Allocated: 26.14GB, Reserved: 41.05GB
+Epoch 19 | Batch 20 | Loss: 0.187344 | Time: 21.183s | LR: 1.87e-03
+rank 0 Batch 20 Allocated: 0.01GB, Max Allocated: 26.14GB, Reserved: 41.05GB
+Epoch 19 | Batch 30 | Loss: 0.186409 | Time: 21.152s | LR: 1.87e-03
+rank 0 Batch 30 Allocated: 0.01GB, Max Allocated: 26.14GB, Reserved: 41.05GB
+Epoch 19 | Batch 40 | Loss: 0.177852 | Time: 20.948s | LR: 1.87e-03
+rank 0 Batch 40 Allocated: 0.01GB, Max Allocated: 26.14GB, Reserved: 41.05GB
+[E19 B50] loss=0.16586 time=20.955s | diff=N/A (DIAG empty) | mem=0.0GB
+Epoch 19 | Batch 50 | Loss: 0.165860 | Time: 20.956s | LR: 1.87e-03
+rank 0 Batch 50 Allocated: 0.01GB, Max Allocated: 26.14GB, Reserved: 41.05GB
+Epoch 19 | Batch 60 | Loss: 0.201648 | Time: 20.998s | LR: 1.87e-03
+rank 0 Batch 60 Allocated: 0.01GB, Max Allocated: 26.14GB, Reserved: 41.05GB
+Epoch 19 | Batch 70 | Loss: 0.172062 | Time: 21.053s | LR: 1.87e-03
+rank 0 Batch 70 Allocated: 0.01GB, Max Allocated: 26.14GB, Reserved: 41.05GB
+Epoch 19 | Batch 80 | Loss: 0.175061 | Time: 20.919s | LR: 1.87e-03
+rank 0 Batch 80 Allocated: 0.01GB, Max Allocated: 26.14GB, Reserved: 41.05GB
+Epoch 19 | Batch 90 | Loss: 0.181928 | Time: 21.172s | LR: 1.87e-03
+rank 0 Batch 90 Allocated: 0.01GB, Max Allocated: 26.14GB, Reserved: 41.05GB
+[E19 B100] loss=0.17883 time=20.927s | diff=N/A (DIAG empty) | mem=0.0GB
+Epoch 19 | Batch 100 | Loss: 0.178826 | Time: 20.928s | LR: 1.87e-03
+rank 0 Batch 100 Allocated: 0.01GB, Max Allocated: 26.14GB, Reserved: 41.05GB
+[Monthly Loader] Epoch complete. Yielded 1649 samples.
+
+================================================================================
+Epoch 19 completed | Average Loss: 0.180455
+================================================================================
+
+
+======================================================================
+ Epoch 19 Summary (Adaptive Sparsity)
+======================================================================
+  loss                                = 0.178606  (n=104)
+  step_time_sec                       = 21.104711  (n=104)
+  gpu_mem_allocated_gb                = 0.015000  (n=104)
+  gpu_mem_max_allocated_gb            = 28.067000  (n=104)
+======================================================================
+
+
+Running validation for epoch 19...
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:92: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:92: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:92: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:92: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:92: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:92: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:92: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:92: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:92: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:92: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:92: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:92: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:92: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:92: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:92: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:92: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+[Monthly Loader] Epoch complete. Yielded 85 samples.
+
+Validation results for epoch 19:
+  val/lat_rmse:2m_temperature: 3.569936
+  val/lat_rmse:10m_u_component_of_wind: 4.242356
+  val/lat_rmse:geopotential_500: 908.316657
+  val/lat_rmse:temperature_850: 4.136878
+  val/lat_rmse:aggregate: 230.066457
+  val/lat_acc:2m_temperature: 0.684878
+  val/lat_acc:10m_u_component_of_wind: 0.148291
+  val/lat_acc:geopotential_500: 0.424806
+  val/lat_acc:temperature_850: 0.496493
+  val/lat_acc:aggregate: 0.438617
+  val/lat_mse:2m_temperature: 0.026369
+  val/lat_mse:10m_u_component_of_wind: 0.588798
+  val/lat_mse:geopotential_500: 0.072250
+  val/lat_mse:temperature_850: 0.067528
+  val/lat_mse:aggregate: 0.188736
+
+rank 0 Before saving checkpoint Allocated: 0.02GB, Max Allocated: 26.14GB, Reserved: 8.06GB
+Saved checkpoint to: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.0_deg_sprint_disabled_antialias=True_input_refine_cnn=True_interpolation=False/checkpoint_epoch_0019.pt
+rank 0 After saving checkpoint Allocated: 0.01GB, Max Allocated: 26.14GB, Reserved: 8.06GB
+
+================================================================================
+Starting epoch 20
+================================================================================
+
+[E20 B0] loss=0.18573 time=23.104s | diff=N/A (DIAG empty) | mem=0.0GB
+Epoch 20 | Batch 0 | Loss: 0.185728 | Time: 23.105s | LR: 1.59e-03
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 26.14GB, Reserved: 42.69GB
+Epoch 20 | Batch 10 | Loss: 0.167119 | Time: 21.851s | LR: 1.59e-03
+rank 0 Batch 10 Allocated: 0.01GB, Max Allocated: 26.14GB, Reserved: 42.69GB
+Epoch 20 | Batch 20 | Loss: 0.196470 | Time: 21.081s | LR: 1.59e-03
+rank 0 Batch 20 Allocated: 0.01GB, Max Allocated: 26.14GB, Reserved: 42.69GB
+Epoch 20 | Batch 30 | Loss: 0.181638 | Time: 21.039s | LR: 1.59e-03
+rank 0 Batch 30 Allocated: 0.01GB, Max Allocated: 26.14GB, Reserved: 42.69GB
+Epoch 20 | Batch 40 | Loss: 0.174585 | Time: 21.420s | LR: 1.59e-03
+rank 0 Batch 40 Allocated: 0.01GB, Max Allocated: 26.14GB, Reserved: 42.69GB
+[E20 B50] loss=0.17328 time=21.567s | diff=N/A (DIAG empty) | mem=0.0GB
+Epoch 20 | Batch 50 | Loss: 0.173276 | Time: 21.567s | LR: 1.59e-03
+rank 0 Batch 50 Allocated: 0.01GB, Max Allocated: 26.14GB, Reserved: 42.69GB
+Epoch 20 | Batch 60 | Loss: 0.180034 | Time: 21.136s | LR: 1.59e-03
+rank 0 Batch 60 Allocated: 0.01GB, Max Allocated: 26.14GB, Reserved: 42.69GB
+Epoch 20 | Batch 70 | Loss: 0.183525 | Time: 21.156s | LR: 1.59e-03
+rank 0 Batch 70 Allocated: 0.01GB, Max Allocated: 26.14GB, Reserved: 42.69GB
+Epoch 20 | Batch 80 | Loss: 0.167541 | Time: 21.405s | LR: 1.59e-03
+rank 0 Batch 80 Allocated: 0.01GB, Max Allocated: 26.14GB, Reserved: 42.69GB
+Epoch 20 | Batch 90 | Loss: 0.177800 | Time: 21.272s | LR: 1.59e-03
+rank 0 Batch 90 Allocated: 0.01GB, Max Allocated: 26.14GB, Reserved: 42.69GB
+[E20 B100] loss=0.17499 time=20.877s | diff=N/A (DIAG empty) | mem=0.0GB
+Epoch 20 | Batch 100 | Loss: 0.174993 | Time: 20.877s | LR: 1.59e-03
+rank 0 Batch 100 Allocated: 0.01GB, Max Allocated: 26.14GB, Reserved: 42.69GB
+[Monthly Loader] Epoch complete. Yielded 1649 samples.
+
+================================================================================
+Epoch 20 completed | Average Loss: 0.179933
+================================================================================
+
+
+======================================================================
+ Epoch 20 Summary (Adaptive Sparsity)
+======================================================================
+  loss                                = 0.178291  (n=104)
+  step_time_sec                       = 20.993146  (n=104)
+  gpu_mem_allocated_gb                = 0.016000  (n=104)
+  gpu_mem_max_allocated_gb            = 28.067000  (n=104)
+======================================================================
+
+rank 0 Before saving checkpoint Allocated: 0.01GB, Max Allocated: 26.14GB, Reserved: 42.69GB
+Saved checkpoint to: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.0_deg_sprint_disabled_antialias=True_input_refine_cnn=True_interpolation=False/checkpoint_epoch_0020.pt
+rank 0 After saving checkpoint Allocated: 0.01GB, Max Allocated: 26.14GB, Reserved: 42.69GB
+
+================================================================================
+Starting epoch 21
+================================================================================
+
+[E21 B0] loss=0.17685 time=21.838s | diff=N/A (DIAG empty) | mem=0.0GB
+Epoch 21 | Batch 0 | Loss: 0.176847 | Time: 21.841s | LR: 1.32e-03
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 26.14GB, Reserved: 42.69GB
+Epoch 21 | Batch 10 | Loss: 0.183357 | Time: 21.370s | LR: 1.32e-03
+rank 0 Batch 10 Allocated: 0.01GB, Max Allocated: 26.14GB, Reserved: 42.69GB
+Epoch 21 | Batch 20 | Loss: 0.174842 | Time: 20.916s | LR: 1.32e-03
+rank 0 Batch 20 Allocated: 0.01GB, Max Allocated: 26.14GB, Reserved: 42.69GB
+Epoch 21 | Batch 30 | Loss: 0.179794 | Time: 21.140s | LR: 1.32e-03
+rank 0 Batch 30 Allocated: 0.01GB, Max Allocated: 26.14GB, Reserved: 42.69GB
+Epoch 21 | Batch 40 | Loss: 0.171503 | Time: 21.108s | LR: 1.32e-03
+rank 0 Batch 40 Allocated: 0.01GB, Max Allocated: 26.14GB, Reserved: 42.69GB
+[E21 B50] loss=0.16824 time=21.046s | diff=N/A (DIAG empty) | mem=0.0GB
+Epoch 21 | Batch 50 | Loss: 0.168244 | Time: 21.047s | LR: 1.32e-03
+rank 0 Batch 50 Allocated: 0.01GB, Max Allocated: 26.14GB, Reserved: 42.69GB
+Epoch 21 | Batch 60 | Loss: 0.172976 | Time: 21.591s | LR: 1.32e-03
+rank 0 Batch 60 Allocated: 0.01GB, Max Allocated: 26.14GB, Reserved: 42.69GB
+Epoch 21 | Batch 70 | Loss: 0.187764 | Time: 21.131s | LR: 1.32e-03
+rank 0 Batch 70 Allocated: 0.01GB, Max Allocated: 26.14GB, Reserved: 42.69GB
+Epoch 21 | Batch 80 | Loss: 0.171913 | Time: 20.949s | LR: 1.32e-03
+rank 0 Batch 80 Allocated: 0.01GB, Max Allocated: 26.14GB, Reserved: 42.69GB
+Epoch 21 | Batch 90 | Loss: 0.177897 | Time: 21.058s | LR: 1.32e-03
+rank 0 Batch 90 Allocated: 0.01GB, Max Allocated: 26.14GB, Reserved: 42.69GB
+[E21 B100] loss=0.15733 time=20.892s | diff=N/A (DIAG empty) | mem=0.0GB
+Epoch 21 | Batch 100 | Loss: 0.157333 | Time: 20.892s | LR: 1.32e-03
+rank 0 Batch 100 Allocated: 0.01GB, Max Allocated: 26.14GB, Reserved: 42.69GB
+[Monthly Loader] Epoch complete. Yielded 1649 samples.
+
+================================================================================
+Epoch 21 completed | Average Loss: 0.179367
+================================================================================
+
+
+======================================================================
+ Epoch 21 Summary (Adaptive Sparsity)
+======================================================================
+  loss                                = 0.177379  (n=104)
+  step_time_sec                       = 20.989154  (n=104)
+  gpu_mem_allocated_gb                = 0.016000  (n=104)
+  gpu_mem_max_allocated_gb            = 28.067000  (n=104)
+======================================================================
+
+rank 0 Before saving checkpoint Allocated: 0.01GB, Max Allocated: 26.14GB, Reserved: 42.69GB
+Saved checkpoint to: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.0_deg_sprint_disabled_antialias=True_input_refine_cnn=True_interpolation=False/checkpoint_epoch_0021.pt
+rank 0 After saving checkpoint Allocated: 0.01GB, Max Allocated: 26.14GB, Reserved: 42.69GB
+
+================================================================================
+Starting epoch 22
+================================================================================
+
+[E22 B0] loss=0.16884 time=22.995s | diff=N/A (DIAG empty) | mem=0.0GB
+Epoch 22 | Batch 0 | Loss: 0.168841 | Time: 22.996s | LR: 1.07e-03
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 26.14GB, Reserved: 42.69GB
+Epoch 22 | Batch 10 | Loss: 0.184001 | Time: 21.783s | LR: 1.07e-03
+rank 0 Batch 10 Allocated: 0.01GB, Max Allocated: 26.14GB, Reserved: 42.69GB
+Epoch 22 | Batch 20 | Loss: 0.170430 | Time: 21.273s | LR: 1.07e-03
+rank 0 Batch 20 Allocated: 0.01GB, Max Allocated: 26.14GB, Reserved: 42.69GB
+slurmstepd: error: *** STEP 4158883.0 ON frontier06850 CANCELLED AT 2026-03-01T16:23:07 DUE TO TIME LIMIT ***
+slurmstepd: error: *** JOB 4158883 ON frontier06850 CANCELLED AT 2026-03-01T16:23:07 DUE TO TIME LIMIT ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.

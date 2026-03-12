@@ -1,0 +1,626 @@
+
+Lmod is automatically replacing "cce/18.0.1" with "gcc-native/14.2".
+
+
+Lmod is automatically replacing "PrgEnv-cray/8.6.0" with "PrgEnv-gnu/8.6.0".
+
+
+Inactive Modules:
+  1) darshan-runtime
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) cray-libsci/24.11.0     2) cray-mpich/8.1.31
+
+
+Lmod is automatically replacing "gcc-native/14.2" with "gcc/12.2.0".
+
+
+The following have been reloaded with a version change:
+  1) cray-libsci/24.11.0 => cray-libsci/23.09.1.1
+  2) cray-mpich/8.1.31 => cray-mpich/8.1.27
+  3) libfabric/1.22.0 => libfabric/1.20.1
+
+Job started at: Sat Jan 31 09:57:40 PM EST 2026
+Job ID: 4084387
+Running on nodes: frontier[03073-03074]
+Number of tasks: 16
+Number of nodes: 2
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+[W131 21:58:19.265353036 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier03073.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W131 21:58:19.267712290 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier03073.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W131 21:58:19.267764169 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier03073.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W131 21:58:19.267765611 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier03073.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W131 21:58:19.269178655 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier03073.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W131 21:58:19.270264760 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier03073.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W131 21:58:19.271323494 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier03073.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W131 21:58:19.090333448 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier03073.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W131 21:58:19.090343106 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier03073.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W131 21:58:19.090328518 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier03073.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W131 21:58:19.090772541 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier03073.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W131 21:58:19.090974084 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier03073.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W131 21:58:19.091285295 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier03073.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W131 21:58:19.092811242 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier03073.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W131 21:58:19.094267507 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier03073.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W131 21:58:20.352557731 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier03073.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=3, local_rank=3
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=4, local_rank=4
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=2, local_rank=2
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=5, local_rank=5
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=6, local_rank=6
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=1, local_rank=1
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=7, local_rank=7
+DDStore loading error!!
+Initialized process group. world_size=16
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=9, local_rank=1
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=11, local_rank=3
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=13, local_rank=5
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=14, local_rank=6
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=15, local_rank=7
+world_size=16, world_rank=8, local_rank=0
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=12, local_rank=4
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=10, local_rank=2
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=0, local_rank=0
+Loading config from: /ccs/home/janetw/diffusion/ORBIT-2-sandbox/configs/era5_forecasting.yaml
+
+================================================================================
+Training Configuration Summary
+================================================================================
+Config: /ccs/home/janetw/diffusion/ORBIT-2-sandbox/configs/era5_forecasting.yaml
+Max epochs: 30
+Data type: bfloat16
+Checkpoint: None
+Save path: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_0.25_deg_bilinear
+================================================================================
+
+Creating data module for direct forecasting
+Input variables: ['2m_temperature', '10m_u_component_of_wind', '10m_v_component_of_wind', 'latitude', 'land_sea_mask', 'orography', 'landcover']
+Output variables: ['2m_temperature']
+Setting up distributed data loading: world_size=16
+Each GPU will process 1/16 of the dataset
+use_ddstore is : 0
+use_ddstore is : 0
+use_ddstore is : 0
+use_ddstore is : 0
+use_ddstore is : 0
+use_ddstore is : 0
+use_ddstore is : 0
+after data_module creation Allocated: 0.00GB, Max Allocated: 0.00GB, Reserved: 0.00GB
+use_ddstore is : 0
+[Rank 2] Assigned 48/781 monthly files (indices 96:144).
+[Rank 2] Assigned 2/41 monthly files (indices 4:6).
+[Rank 4] Assigned 48/781 monthly files (indices 192:240).
+[Rank 6] Assigned 48/781 monthly files (indices 288:336).
+[Rank 4] Assigned 2/41 monthly files (indices 8:10).
+[Rank 1] Assigned 48/781 monthly files (indices 48:96).
+[Rank 6] Assigned 2/41 monthly files (indices 12:14).
+[Rank 3] Assigned 48/781 monthly files (indices 144:192).
+[Rank 1] Assigned 2/41 monthly files (indices 2:4).
+[Rank 5] Assigned 48/781 monthly files (indices 240:288).
+[Rank 3] Assigned 2/41 monthly files (indices 6:8).
+[Rank 7] Assigned 48/781 monthly files (indices 336:384).
+[Rank 0] Assigned 48/781 monthly files (indices 0:48).
+[Monthly Loader] Verifying variables in 1979_0.npz...
+[Rank 5] Assigned 2/41 monthly files (indices 10:12).
+[Rank 7] Assigned 2/41 monthly files (indices 14:16).
+use_ddstore is : 0
+use_ddstore is : 0
+use_ddstore is : 0
+use_ddstore is : 0
+use_ddstore is : 0
+use_ddstore is : 0
+use_ddstore is : 0
+use_ddstore is : 0
+[Rank 10] Assigned 48/781 monthly files (indices 480:528).
+[Rank 10] Assigned 2/41 monthly files (indices 20:22).
+[Rank 11] Assigned 48/781 monthly files (indices 528:576).
+[Rank 14] Assigned 48/781 monthly files (indices 672:720).
+[Rank 15] Assigned 48/781 monthly files (indices 720:768).
+[Rank 13] Assigned 48/781 monthly files (indices 624:672).
+[Rank 11] Assigned 2/41 monthly files (indices 22:24).
+[Rank 14] Assigned 2/41 monthly files (indices 28:30).
+[Rank 15] Assigned 2/41 monthly files (indices 30:32).
+[Rank 13] Assigned 2/41 monthly files (indices 26:28).
+[Rank 8] Assigned 48/781 monthly files (indices 384:432).
+[Rank 12] Assigned 48/781 monthly files (indices 576:624).
+[Rank 9] Assigned 48/781 monthly files (indices 432:480).
+[Rank 8] Assigned 2/41 monthly files (indices 16:18).
+[Rank 12] Assigned 2/41 monthly files (indices 24:26).
+[Rank 9] Assigned 2/41 monthly files (indices 18:20).
+[Monthly Loader] Available variables: ['land_sea_mask', 'landcover', 'latitude', 'orography', '10m_u_component_of_wind', '10m_v_component_of_wind', '2m_temperature_max', '2m_temperature_min', '2m_temperature', 'sea_surface_temperature', 'surface_pressure', 'total_precipitation_24hr', 'volumetric_soil_water_layer_1', 'geopotential_50', 'geopotential_100', 'geopotential_150', 'geopotential_200', 'geopotential_250', 'geopotential_300', 'geopotential_400', 'geopotential_500', 'geopotential_600', 'geopotential_700', 'geopotential_850', 'geopotential_925', 'geopotential_1000', 'specific_humidity_50', 'specific_humidity_100', 'specific_humidity_150', 'specific_humidity_200', 'specific_humidity_250', 'specific_humidity_300', 'specific_humidity_400', 'specific_humidity_500', 'specific_humidity_600', 'specific_humidity_700', 'specific_humidity_850', 'specific_humidity_925', 'specific_humidity_1000', 'temperature_50', 'temperature_100', 'temperature_150', 'temperature_200', 'temperature_250', 'temperature_300', 'temperature_400', 'temperature_500', 'temperature_600', 'temperature_700', 'temperature_850', 'temperature_925', 'temperature_1000', 'u_component_of_wind_50', 'u_component_of_wind_100', 'u_component_of_wind_150', 'u_component_of_wind_200', 'u_component_of_wind_250', 'u_component_of_wind_300', 'u_component_of_wind_400', 'u_component_of_wind_500', 'u_component_of_wind_600', 'u_component_of_wind_700', 'u_component_of_wind_850', 'u_component_of_wind_925', 'u_component_of_wind_1000', 'v_component_of_wind_50', 'v_component_of_wind_100', 'v_component_of_wind_150', 'v_component_of_wind_200', 'v_component_of_wind_250', 'v_component_of_wind_300', 'v_component_of_wind_400', 'v_component_of_wind_500', 'v_component_of_wind_600', 'v_component_of_wind_700', 'v_component_of_wind_850', 'v_component_of_wind_925', 'v_component_of_wind_1000', 'days_of_year', 'time_of_day', 'hrs_each_step', 'num_steps_per_shard', 'extra_steps', 'lattitude']
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+[Monthly Loader] 'land_sea_mask': shape=(438, 1, 720, 1440)
+[Monthly Loader] 'latitude': shape=(438, 1, 720, 1440)
+[Monthly Loader] 'landcover': shape=(438, 1, 720, 1440)
+[Monthly Loader] '10m_u_component_of_wind': shape=(438, 1, 720, 1440)
+[Monthly Loader] 'orography': shape=(438, 1, 720, 1440)
+[Monthly Loader] '10m_v_component_of_wind': shape=(438, 1, 720, 1440)
+[Monthly Loader] '2m_temperature': shape=(438, 1, 720, 1440)
+[Rank 0] Assigned 2/41 monthly files (indices 0:2).
+[Monthly Loader] Verifying variables in 2018_0.npz...
+[Monthly Loader] Available variables: ['land_sea_mask', 'landcover', 'latitude', 'orography', '10m_u_component_of_wind', '10m_v_component_of_wind', '2m_temperature_max', '2m_temperature_min', '2m_temperature', 'sea_surface_temperature', 'surface_pressure', 'total_precipitation_24hr', 'volumetric_soil_water_layer_1', 'geopotential_50', 'geopotential_100', 'geopotential_150', 'geopotential_200', 'geopotential_250', 'geopotential_300', 'geopotential_400', 'geopotential_500', 'geopotential_600', 'geopotential_700', 'geopotential_850', 'geopotential_925', 'geopotential_1000', 'specific_humidity_50', 'specific_humidity_100', 'specific_humidity_150', 'specific_humidity_200', 'specific_humidity_250', 'specific_humidity_300', 'specific_humidity_400', 'specific_humidity_500', 'specific_humidity_600', 'specific_humidity_700', 'specific_humidity_850', 'specific_humidity_925', 'specific_humidity_1000', 'temperature_50', 'temperature_100', 'temperature_150', 'temperature_200', 'temperature_250', 'temperature_300', 'temperature_400', 'temperature_500', 'temperature_600', 'temperature_700', 'temperature_850', 'temperature_925', 'temperature_1000', 'u_component_of_wind_50', 'u_component_of_wind_100', 'u_component_of_wind_150', 'u_component_of_wind_200', 'u_component_of_wind_250', 'u_component_of_wind_300', 'u_component_of_wind_400', 'u_component_of_wind_500', 'u_component_of_wind_600', 'u_component_of_wind_700', 'u_component_of_wind_850', 'u_component_of_wind_925', 'u_component_of_wind_1000', 'v_component_of_wind_50', 'v_component_of_wind_100', 'v_component_of_wind_150', 'v_component_of_wind_200', 'v_component_of_wind_250', 'v_component_of_wind_300', 'v_component_of_wind_400', 'v_component_of_wind_500', 'v_component_of_wind_600', 'v_component_of_wind_700', 'v_component_of_wind_850', 'v_component_of_wind_925', 'v_component_of_wind_1000', 'days_of_year', 'time_of_day', 'hrs_each_step', 'num_steps_per_shard', 'extra_steps', 'lattitude']
+[Monthly Loader] 'land_sea_mask': shape=(438, 1, 720, 1440)
+[Monthly Loader] 'latitude': shape=(438, 1, 720, 1440)
+[Monthly Loader] 'landcover': shape=(438, 1, 720, 1440)
+[Monthly Loader] '10m_u_component_of_wind': shape=(438, 1, 720, 1440)
+[Monthly Loader] 'orography': shape=(438, 1, 720, 1440)
+[Monthly Loader] '10m_v_component_of_wind': shape=(438, 1, 720, 1440)
+[Monthly Loader] '2m_temperature': shape=(438, 1, 720, 1440)
+Creating model: res_slimvit
+Model config: img_size=(180, 360), in_channels=7, out_channels=1, history=1, superres_factor=4
+Model parameters: 9.44M
+Model parameters: 0.59M
+
+================================================================================
+MODEL ARCHITECTURE (Before FSDP):
+================================================================================
+FullyShardedDataParallel(
+  (_fsdp_wrapped_module): Res_Slim_ViT(
+    (spatial_embed): Linear(in_features=1, out_features=256, bias=True)
+    (token_embeds): ModuleList(
+      (0-6): 7 x PatchEmbed(
+        (proj): Conv2d(1, 256, kernel_size=(2, 2), stride=(2, 2))
+        (norm): Identity()
+      )
+    )
+    (var_agg): VariableMapping_Attention(
+      (q): Linear(in_features=256, out_features=256, bias=False)
+      (kv): Linear(in_features=256, out_features=512, bias=False)
+      (q_norm): Identity()
+      (k_norm): Identity()
+      (attn_drop): Dropout(p=0.0, inplace=False)
+      (proj): Linear(in_features=256, out_features=256, bias=True)
+      (proj_drop): Dropout(p=0.0, inplace=False)
+    )
+    (pos_drop): Dropout(p=0.1, inplace=False)
+    (blocks): ModuleList(
+      (0): FullyShardedDataParallel(
+        (_fsdp_wrapped_module): Block(
+          (norm1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=256, out_features=768, bias=True)
+            (q_norm): Identity()
+            (k_norm): Identity()
+            (attn_drop): Dropout(p=0.1, inplace=False)
+            (proj): Linear(in_features=256, out_features=256, bias=True)
+            (proj_drop): Dropout(p=0.1, inplace=False)
+          )
+          (ls1): Identity()
+          (drop_path1): Identity()
+          (norm2): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=256, out_features=1024, bias=True)
+            (act): GELU(approximate='none')
+            (drop1): Dropout(p=0.1, inplace=False)
+            (norm): Identity()
+            (fc2): Linear(in_features=1024, out_features=256, bias=True)
+            (drop2): Dropout(p=0.1, inplace=False)
+          )
+          (ls2): Identity()
+          (drop_path2): Identity()
+        )
+      )
+      (1): FullyShardedDataParallel(
+        (_fsdp_wrapped_module): Block(
+          (norm1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=256, out_features=768, bias=True)
+            (q_norm): Identity()
+            (k_norm): Identity()
+            (attn_drop): Dropout(p=0.1, inplace=False)
+            (proj): Linear(in_features=256, out_features=256, bias=True)
+            (proj_drop): Dropout(p=0.1, inplace=False)
+          )
+          (ls1): Identity()
+          (drop_path1): DropPath(drop_prob=0.020)
+          (norm2): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=256, out_features=1024, bias=True)
+            (act): GELU(approximate='none')
+            (drop1): Dropout(p=0.1, inplace=False)
+            (norm): Identity()
+            (fc2): Linear(in_features=1024, out_features=256, bias=True)
+            (drop2): Dropout(p=0.1, inplace=False)
+          )
+          (ls2): Identity()
+          (drop_path2): DropPath(drop_prob=0.020)
+        )
+      )
+      (2): FullyShardedDataParallel(
+        (_fsdp_wrapped_module): Block(
+          (norm1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=256, out_features=768, bias=True)
+            (q_norm): Identity()
+            (k_norm): Identity()
+            (attn_drop): Dropout(p=0.1, inplace=False)
+            (proj): Linear(in_features=256, out_features=256, bias=True)
+            (proj_drop): Dropout(p=0.1, inplace=False)
+          )
+          (ls1): Identity()
+          (drop_path1): DropPath(drop_prob=0.040)
+          (norm2): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=256, out_features=1024, bias=True)
+            (act): GELU(approximate='none')
+            (drop1): Dropout(p=0.1, inplace=False)
+            (norm): Identity()
+            (fc2): Linear(in_features=1024, out_features=256, bias=True)
+            (drop2): Dropout(p=0.1, inplace=False)
+          )
+          (ls2): Identity()
+          (drop_path2): DropPath(drop_prob=0.040)
+        )
+      )
+      (3): FullyShardedDataParallel(
+        (_fsdp_wrapped_module): Block(
+          (norm1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=256, out_features=768, bias=True)
+            (q_norm): Identity()
+            (k_norm): Identity()
+            (attn_drop): Dropout(p=0.1, inplace=False)
+            (proj): Linear(in_features=256, out_features=256, bias=True)
+            (proj_drop): Dropout(p=0.1, inplace=False)
+          )
+          (ls1): Identity()
+          (drop_path1): DropPath(drop_prob=0.060)
+          (norm2): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=256, out_features=1024, bias=True)
+            (act): GELU(approximate='none')
+            (drop1): Dropout(p=0.1, inplace=False)
+            (norm): Identity()
+            (fc2): Linear(in_features=1024, out_features=256, bias=True)
+            (drop2): Dropout(p=0.1, inplace=False)
+          )
+          (ls2): Identity()
+          (drop_path2): DropPath(drop_prob=0.060)
+        )
+      )
+      (4): FullyShardedDataParallel(
+        (_fsdp_wrapped_module): Block(
+          (norm1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=256, out_features=768, bias=True)
+            (q_norm): Identity()
+            (k_norm): Identity()
+            (attn_drop): Dropout(p=0.1, inplace=False)
+            (proj): Linear(in_features=256, out_features=256, bias=True)
+            (proj_drop): Dropout(p=0.1, inplace=False)
+          )
+          (ls1): Identity()
+          (drop_path1): DropPath(drop_prob=0.080)
+          (norm2): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=256, out_features=1024, bias=True)
+            (act): GELU(approximate='none')
+            (drop1): Dropout(p=0.1, inplace=False)
+            (norm): Identity()
+            (fc2): Linear(in_features=1024, out_features=256, bias=True)
+            (drop2): Dropout(p=0.1, inplace=False)
+          )
+          (ls2): Identity()
+          (drop_path2): DropPath(drop_prob=0.080)
+        )
+      )
+      (5): FullyShardedDataParallel(
+        (_fsdp_wrapped_module): Block(
+          (norm1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=256, out_features=768, bias=True)
+            (q_norm): Identity()
+            (k_norm): Identity()
+            (attn_drop): Dropout(p=0.1, inplace=False)
+            (proj): Linear(in_features=256, out_features=256, bias=True)
+            (proj_drop): Dropout(p=0.1, inplace=False)
+          )
+          (ls1): Identity()
+          (drop_path1): DropPath(drop_prob=0.100)
+          (norm2): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=256, out_features=1024, bias=True)
+            (act): GELU(approximate='none')
+            (drop1): Dropout(p=0.1, inplace=False)
+            (norm): Identity()
+            (fc2): Linear(in_features=1024, out_features=256, bias=True)
+            (drop2): Dropout(p=0.1, inplace=False)
+          )
+          (ls2): Identity()
+          (drop_path2): DropPath(drop_prob=0.100)
+        )
+      )
+    )
+    (norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+    (path2): Sequential(
+      (0): Conv2d(4, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (1): GELU(approximate='none')
+      (2): PixelShuffle(upscale_factor=4)
+      (3): Conv2d(4, 1, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    )
+    (head): Sequential(
+      (0): Linear(in_features=256, out_features=256, bias=True)
+      (1): GELU(approximate='none')
+      (2): Linear(in_features=256, out_features=256, bias=True)
+      (3): GELU(approximate='none')
+      (4): Linear(in_features=256, out_features=256, bias=True)
+      (5): GELU(approximate='none')
+      (6): Linear(in_features=256, out_features=256, bias=True)
+      (7): GELU(approximate='none')
+      (8): Linear(in_features=256, out_features=64, bias=True)
+    )
+    (conv_out): Conv2d(1, 1, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  )
+)
+================================================================================
+
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+FSDP wrapping completed, now creating losses...
+Loading training climatology for lat_mse (this may take a while)...
+Loading validation climatology...
+Using lat_mse for training loss
+Loss functions created successfully
+Losses created successfully
+
+================================================================================
+Starting epoch 0
+================================================================================
+
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+Epoch 0 | Batch 0 | Loss: 0.978727 | Time: 22.646s | LR: 1.00e-06
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 1.18GB, Reserved: 0.08GB
+Epoch 0 | Batch 50 | Loss: 0.977834 | Time: 1.404s | LR: 1.00e-06
+rank 0 Batch 50 Allocated: 0.01GB, Max Allocated: 1.19GB, Reserved: 2.28GB
+Epoch 0 | Batch 100 | Loss: 0.929778 | Time: 1.389s | LR: 1.00e-06
+rank 0 Batch 100 Allocated: 0.01GB, Max Allocated: 1.19GB, Reserved: 2.28GB
+Epoch 0 | Batch 150 | Loss: 0.947950 | Time: 1.393s | LR: 1.00e-06
+rank 0 Batch 150 Allocated: 0.01GB, Max Allocated: 1.19GB, Reserved: 2.28GB
+Epoch 0 | Batch 200 | Loss: 0.914599 | Time: 1.387s | LR: 1.00e-06
+rank 0 Batch 200 Allocated: 0.01GB, Max Allocated: 1.19GB, Reserved: 2.28GB
+Epoch 0 | Batch 250 | Loss: 1.021029 | Time: 1.389s | LR: 1.00e-06
+rank 0 Batch 250 Allocated: 0.01GB, Max Allocated: 1.19GB, Reserved: 2.28GB
+Epoch 0 | Batch 300 | Loss: 0.963069 | Time: 1.395s | LR: 1.00e-06
+rank 0 Batch 300 Allocated: 0.01GB, Max Allocated: 1.19GB, Reserved: 2.28GB
+Epoch 0 | Batch 350 | Loss: 0.900258 | Time: 1.393s | LR: 1.00e-06
+rank 0 Batch 350 Allocated: 0.01GB, Max Allocated: 1.19GB, Reserved: 2.28GB
+Epoch 0 | Batch 400 | Loss: 0.883802 | Time: 1.390s | LR: 1.00e-06
+rank 0 Batch 400 Allocated: 0.01GB, Max Allocated: 1.19GB, Reserved: 2.28GB
+Epoch 0 | Batch 450 | Loss: 0.926012 | Time: 7.186s | LR: 1.00e-06
+rank 0 Batch 450 Allocated: 0.01GB, Max Allocated: 1.19GB, Reserved: 2.28GB
+Epoch 0 | Batch 500 | Loss: 0.958703 | Time: 1.403s | LR: 1.00e-06
+rank 0 Batch 500 Allocated: 0.01GB, Max Allocated: 1.19GB, Reserved: 2.28GB
+Epoch 0 | Batch 550 | Loss: 0.833444 | Time: 1.386s | LR: 1.00e-06
+rank 0 Batch 550 Allocated: 0.01GB, Max Allocated: 1.19GB, Reserved: 2.28GB
+Epoch 0 | Batch 600 | Loss: 0.949258 | Time: 1.389s | LR: 1.00e-06
+rank 0 Batch 600 Allocated: 0.01GB, Max Allocated: 1.19GB, Reserved: 2.28GB
+Epoch 0 | Batch 650 | Loss: 0.894655 | Time: 1.406s | LR: 1.00e-06
+rank 0 Batch 650 Allocated: 0.01GB, Max Allocated: 1.19GB, Reserved: 2.28GB
+Epoch 0 | Batch 700 | Loss: 0.911845 | Time: 1.395s | LR: 1.00e-06
+rank 0 Batch 700 Allocated: 0.01GB, Max Allocated: 1.19GB, Reserved: 2.28GB
+Epoch 0 | Batch 750 | Loss: 0.962004 | Time: 1.395s | LR: 1.00e-06
+rank 0 Batch 750 Allocated: 0.01GB, Max Allocated: 1.19GB, Reserved: 2.28GB
+Epoch 0 | Batch 800 | Loss: 0.870302 | Time: 1.390s | LR: 1.00e-06
+rank 0 Batch 800 Allocated: 0.01GB, Max Allocated: 1.19GB, Reserved: 2.28GB
+Epoch 0 | Batch 850 | Loss: 0.923509 | Time: 1.388s | LR: 1.00e-06
+rank 0 Batch 850 Allocated: 0.01GB, Max Allocated: 1.19GB, Reserved: 2.28GB
+Epoch 0 | Batch 900 | Loss: 0.981402 | Time: 1.469s | LR: 1.00e-06
+rank 0 Batch 900 Allocated: 0.01GB, Max Allocated: 1.19GB, Reserved: 2.28GB
+slurmstepd: error: *** STEP 4084387.0 ON frontier03073 CANCELLED AT 2026-01-31T22:37:58 DUE TO TIME LIMIT ***
+slurmstepd: error: *** JOB 4084387 ON frontier03073 CANCELLED AT 2026-01-31T22:37:58 DUE TO TIME LIMIT ***

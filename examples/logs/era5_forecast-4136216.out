@@ -1,0 +1,433 @@
+
+Lmod is automatically replacing "cce/18.0.1" with "gcc-native/14.2".
+
+
+Lmod is automatically replacing "PrgEnv-cray/8.6.0" with "PrgEnv-gnu/8.6.0".
+
+
+Inactive Modules:
+  1) darshan-runtime
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) cray-libsci/24.11.0     2) cray-mpich/8.1.31
+
+
+Lmod is automatically replacing "gcc-native/14.2" with "gcc/12.2.0".
+
+
+The following have been reloaded with a version change:
+  1) cray-libsci/24.11.0 => cray-libsci/23.09.1.1
+  2) cray-mpich/8.1.31 => cray-mpich/8.1.27
+  3) libfabric/1.22.0 => libfabric/1.20.1
+
+Job started at: Fri Feb 20 02:02:30 AM EST 2026
+Job ID: 4136216
+Running on nodes: frontier[08744-08745]
+Number of tasks: 16
+Number of nodes: 2
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+[W220 02:02:54.203616109 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier08744.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+[W220 02:02:55.343934182 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier08744.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W220 02:02:55.347772365 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier08744.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W220 02:02:55.349735941 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier08744.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W220 02:02:55.351502102 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier08744.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W220 02:02:55.356447577 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier08744.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W220 02:02:55.364077525 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier08744.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W220 02:02:55.368202624 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier08744.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W220 02:02:55.372086063 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier08744.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=10, local_rank=2
+[W220 02:02:55.240453090 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier08744.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=9, local_rank=1
+[W220 02:02:55.242667151 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier08744.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=8, local_rank=0
+[W220 02:02:55.246442017 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier08744.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W220 02:02:55.247006471 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier08744.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=13, local_rank=5
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=15, local_rank=7
+[W220 02:02:55.248626200 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier08744.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+DDStore loading error!!
+Initialized process group. world_size=16
+[W220 02:02:55.249415970 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier08744.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+world_size=16, world_rank=11, local_rank=3
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=12, local_rank=4
+[W220 02:02:55.251280694 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier08744.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=14, local_rank=6
+DDStore loading error!!
+Initialized process group. world_size=16
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=4, local_rank=4
+world_size=16, world_rank=1, local_rank=1
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=2, local_rank=2
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=3, local_rank=3
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=7, local_rank=7
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=6, local_rank=6
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=5, local_rank=5
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=0, local_rank=0
+Loading config from: /ccs/home/janetw/diffusion/ORBIT-2-sandbox/configs/era5_forecasting.yaml
+
+================================================================================
+Training Configuration Summary
+================================================================================
+Config: /ccs/home/janetw/diffusion/ORBIT-2-sandbox/configs/era5_forecasting.yaml
+Max epochs: 30
+Data type: bfloat16
+Checkpoint: None
+Save path: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_0.25_deg_sprint_enabled_antialias=True_input_refine_cnn=True
+================================================================================
+
+Creating data module for direct forecasting
+Input variables: ['temperature_50', 'temperature_250', 'temperature_500', 'temperature_600', 'temperature_700', 'temperature_850', 'temperature_925', '2m_temperature', '10m_u_component_of_wind', '10m_v_component_of_wind', 'latitude', 'land_sea_mask', 'orography', 'landcover']
+Output variables: ['2m_temperature']
+Setting up distributed data loading: world_size=16
+Each GPU will process 1/16 of the dataset
+use_ddstore is : 0
+use_ddstore is : 0
+use_ddstore is : 0
+use_ddstore is : 0
+use_ddstore is : 0
+use_ddstore is : 0
+use_ddstore is : 0
+use_ddstore is : 0
+[Rank 10] Assigned 48/781 monthly files (indices 480:528).
+[Rank 10] Assigned 2/41 monthly files (indices 20:22).
+[Rank 8] Assigned 48/781 monthly files (indices 384:432).
+[Rank 9] Assigned 48/781 monthly files (indices 432:480).
+[Rank 12] Assigned 48/781 monthly files (indices 576:624).
+[Rank 8] Assigned 2/41 monthly files (indices 16:18).
+[Rank 9] Assigned 2/41 monthly files (indices 18:20).
+[Rank 13] Assigned 48/781 monthly files (indices 624:672).
+[Rank 11] Assigned 48/781 monthly files (indices 528:576).
+[Rank 12] Assigned 2/41 monthly files (indices 24:26).
+[Rank 13] Assigned 2/41 monthly files (indices 26:28).
+[Rank 11] Assigned 2/41 monthly files (indices 22:24).
+[Rank 15] Assigned 48/781 monthly files (indices 720:768).
+[Rank 14] Assigned 48/781 monthly files (indices 672:720).
+[Rank 15] Assigned 2/41 monthly files (indices 30:32).
+[Rank 14] Assigned 2/41 monthly files (indices 28:30).
+use_ddstore is : 0
+use_ddstore is : 0
+use_ddstore is : 0
+use_ddstore is : 0
+use_ddstore is : 0
+use_ddstore is : 0
+use_ddstore is : 0
+[Rank 5] Assigned 48/781 monthly files (indices 240:288).
+[Rank 5] Assigned 2/41 monthly files (indices 10:12).
+[Rank 7] Assigned 48/781 monthly files (indices 336:384).
+[Rank 3] Assigned 48/781 monthly files (indices 144:192).
+[Rank 6] Assigned 48/781 monthly files (indices 288:336).
+[Rank 3] Assigned 2/41 monthly files (indices 6:8).
+[Rank 6] Assigned 2/41 monthly files (indices 12:14).
+[Rank 7] Assigned 2/41 monthly files (indices 14:16).
+[Rank 1] Assigned 48/781 monthly files (indices 48:96).
+[Rank 4] Assigned 48/781 monthly files (indices 192:240).
+[Rank 1] Assigned 2/41 monthly files (indices 2:4).
+[Rank 2] Assigned 48/781 monthly files (indices 96:144).
+[Rank 4] Assigned 2/41 monthly files (indices 8:10).
+[Rank 2] Assigned 2/41 monthly files (indices 4:6).
+[rank10]: Traceback (most recent call last):
+[rank10]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting.py", line 1122, in <module>
+[rank10]:     main(device)
+[rank10]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting.py", line 966, in main
+[rank10]:     model, optimizer, scheduler = create_model_and_losses(
+[rank10]:                                   ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank10]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting.py", line 380, in create_model_and_losses
+[rank10]:     raise NotImplementedError(f"Model preset {preset} not implemented")
+[rank10]: NotImplementedError: Model preset res_slimvit_adaptive not implemented
+after data_module creation Allocated: 0.00GB, Max Allocated: 0.00GB, Reserved: 0.00GB
+[rank8]: Traceback (most recent call last):
+[rank8]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting.py", line 1122, in <module>
+[rank8]:     main(device)
+[rank8]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting.py", line 966, in main
+[rank8]:     model, optimizer, scheduler = create_model_and_losses(
+[rank8]:                                   ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank8]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting.py", line 380, in create_model_and_losses
+[rank8]:     raise NotImplementedError(f"Model preset {preset} not implemented")
+[rank8]: NotImplementedError: Model preset res_slimvit_adaptive not implemented
+use_ddstore is : 0
+[rank9]: Traceback (most recent call last):
+[rank9]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting.py", line 1122, in <module>
+[rank9]:     main(device)
+[rank9]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting.py", line 966, in main
+[rank9]:     model, optimizer, scheduler = create_model_and_losses(
+[rank9]:                                   ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank9]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting.py", line 380, in create_model_and_losses
+[rank9]:     raise NotImplementedError(f"Model preset {preset} not implemented")
+[rank9]: NotImplementedError: Model preset res_slimvit_adaptive not implemented
+[rank11]: Traceback (most recent call last):
+[rank11]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting.py", line 1122, in <module>
+[rank11]:     main(device)
+[rank11]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting.py", line 966, in main
+[rank11]:     model, optimizer, scheduler = create_model_and_losses(
+[rank11]:                                   ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank11]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting.py", line 380, in create_model_and_losses
+[rank11]:     raise NotImplementedError(f"Model preset {preset} not implemented")
+[rank11]: NotImplementedError: Model preset res_slimvit_adaptive not implemented
+[Rank 0] Assigned 48/781 monthly files (indices 0:48).
+[Monthly Loader] Verifying variables in 1979_0.npz...
+[rank13]: Traceback (most recent call last):
+[rank13]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting.py", line 1122, in <module>
+[rank13]:     main(device)
+[rank13]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting.py", line 966, in main
+[rank13]:     model, optimizer, scheduler = create_model_and_losses(
+[rank13]:                                   ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank13]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting.py", line 380, in create_model_and_losses
+[rank13]:     raise NotImplementedError(f"Model preset {preset} not implemented")
+[rank13]: NotImplementedError: Model preset res_slimvit_adaptive not implemented
+[rank12]: Traceback (most recent call last):
+[rank12]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting.py", line 1122, in <module>
+[rank12]:     main(device)
+[rank12]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting.py", line 966, in main
+[rank12]:     model, optimizer, scheduler = create_model_and_losses(
+[rank12]:                                   ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank12]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting.py", line 380, in create_model_and_losses
+[rank12]:     raise NotImplementedError(f"Model preset {preset} not implemented")
+[rank12]: NotImplementedError: Model preset res_slimvit_adaptive not implemented
+[rank14]: Traceback (most recent call last):
+[rank14]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting.py", line 1122, in <module>
+[rank14]:     main(device)
+[rank14]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting.py", line 966, in main
+[rank14]:     model, optimizer, scheduler = create_model_and_losses(
+[rank14]:                                   ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank14]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting.py", line 380, in create_model_and_losses
+[rank14]:     raise NotImplementedError(f"Model preset {preset} not implemented")
+[rank14]: NotImplementedError: Model preset res_slimvit_adaptive not implemented
+[rank15]: Traceback (most recent call last):
+[rank15]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting.py", line 1122, in <module>
+[rank15]:     main(device)
+[rank15]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting.py", line 966, in main
+[rank15]:     model, optimizer, scheduler = create_model_and_losses(
+[rank15]:                                   ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank15]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting.py", line 380, in create_model_and_losses
+[rank15]:     raise NotImplementedError(f"Model preset {preset} not implemented")
+[rank15]: NotImplementedError: Model preset res_slimvit_adaptive not implemented
+[rank4]: Traceback (most recent call last):
+[rank4]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting.py", line 1122, in <module>
+[rank4]:     main(device)
+[rank4]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting.py", line 966, in main
+[rank4]:     model, optimizer, scheduler = create_model_and_losses(
+[rank4]:                                   ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting.py", line 380, in create_model_and_losses
+[rank4]:     raise NotImplementedError(f"Model preset {preset} not implemented")
+[rank4]: NotImplementedError: Model preset res_slimvit_adaptive not implemented
+[rank5]: Traceback (most recent call last):
+[rank5]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting.py", line 1122, in <module>
+[rank5]:     main(device)
+[rank5]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting.py", line 966, in main
+[rank5]:     model, optimizer, scheduler = create_model_and_losses(
+[rank5]:                                   ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting.py", line 380, in create_model_and_losses
+[rank5]:     raise NotImplementedError(f"Model preset {preset} not implemented")
+[rank5]: NotImplementedError: Model preset res_slimvit_adaptive not implemented
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting.py", line 1122, in <module>
+[rank3]:     main(device)
+[rank3]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting.py", line 966, in main
+[rank3]:     model, optimizer, scheduler = create_model_and_losses(
+[rank3]:                                   ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting.py", line 380, in create_model_and_losses
+[rank3]:     raise NotImplementedError(f"Model preset {preset} not implemented")
+[rank3]: NotImplementedError: Model preset res_slimvit_adaptive not implemented
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting.py", line 1122, in <module>
+[rank1]:     main(device)
+[rank1]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting.py", line 966, in main
+[rank1]:     model, optimizer, scheduler = create_model_and_losses(
+[rank1]:                                   ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting.py", line 380, in create_model_and_losses
+[rank1]:     raise NotImplementedError(f"Model preset {preset} not implemented")
+[rank1]: NotImplementedError: Model preset res_slimvit_adaptive not implemented
+[rank2]: Traceback (most recent call last):
+[rank2]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting.py", line 1122, in <module>
+[rank2]:     main(device)
+[rank2]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting.py", line 966, in main
+[rank2]:     model, optimizer, scheduler = create_model_and_losses(
+[rank2]:                                   ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting.py", line 380, in create_model_and_losses
+[rank2]:     raise NotImplementedError(f"Model preset {preset} not implemented")
+[rank2]: NotImplementedError: Model preset res_slimvit_adaptive not implemented
+[rank7]: Traceback (most recent call last):
+[rank7]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting.py", line 1122, in <module>
+[rank7]:     main(device)
+[rank7]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting.py", line 966, in main
+[rank7]:     model, optimizer, scheduler = create_model_and_losses(
+[rank7]:                                   ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting.py", line 380, in create_model_and_losses
+[rank7]:     raise NotImplementedError(f"Model preset {preset} not implemented")
+[rank7]: NotImplementedError: Model preset res_slimvit_adaptive not implemented
+[rank6]: Traceback (most recent call last):
+[rank6]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting.py", line 1122, in <module>
+[rank6]:     main(device)
+[rank6]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting.py", line 966, in main
+[rank6]:     model, optimizer, scheduler = create_model_and_losses(
+[rank6]:                                   ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/autofs/nccs-svm1_home2/janetw/diffusion/ORBIT-2-sandbox/examples/era5_forecasting.py", line 380, in create_model_and_losses
+[rank6]:     raise NotImplementedError(f"Model preset {preset} not implemented")
+[rank6]: NotImplementedError: Model preset res_slimvit_adaptive not implemented
+[Monthly Loader] Available variables: ['land_sea_mask', 'landcover', 'latitude', 'orography', '10m_u_component_of_wind', '10m_v_component_of_wind', '2m_temperature_max', '2m_temperature_min', '2m_temperature', 'sea_surface_temperature', 'surface_pressure', 'total_precipitation_24hr', 'volumetric_soil_water_layer_1', 'geopotential_50', 'geopotential_100', 'geopotential_150', 'geopotential_200', 'geopotential_250', 'geopotential_300', 'geopotential_400', 'geopotential_500', 'geopotential_600', 'geopotential_700', 'geopotential_850', 'geopotential_925', 'geopotential_1000', 'specific_humidity_50', 'specific_humidity_100', 'specific_humidity_150', 'specific_humidity_200', 'specific_humidity_250', 'specific_humidity_300', 'specific_humidity_400', 'specific_humidity_500', 'specific_humidity_600', 'specific_humidity_700', 'specific_humidity_850', 'specific_humidity_925', 'specific_humidity_1000', 'temperature_50', 'temperature_100', 'temperature_150', 'temperature_200', 'temperature_250', 'temperature_300', 'temperature_400', 'temperature_500', 'temperature_600', 'temperature_700', 'temperature_850', 'temperature_925', 'temperature_1000', 'u_component_of_wind_50', 'u_component_of_wind_100', 'u_component_of_wind_150', 'u_component_of_wind_200', 'u_component_of_wind_250', 'u_component_of_wind_300', 'u_component_of_wind_400', 'u_component_of_wind_500', 'u_component_of_wind_600', 'u_component_of_wind_700', 'u_component_of_wind_850', 'u_component_of_wind_925', 'u_component_of_wind_1000', 'v_component_of_wind_50', 'v_component_of_wind_100', 'v_component_of_wind_150', 'v_component_of_wind_200', 'v_component_of_wind_250', 'v_component_of_wind_300', 'v_component_of_wind_400', 'v_component_of_wind_500', 'v_component_of_wind_600', 'v_component_of_wind_700', 'v_component_of_wind_850', 'v_component_of_wind_925', 'v_component_of_wind_1000', 'days_of_year', 'time_of_day', 'hrs_each_step', 'num_steps_per_shard', 'extra_steps', 'lattitude']
+[rank8]:[W220 02:02:56.626247759 ProcessGroupNCCL.cpp:1168] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+srun: error: frontier08745: tasks 8-15: Exited with exit code 1
+srun: Terminating StepId=4136216.0
+[Monthly Loader] 'temperature_925': shape=(438, 1, 720, 1440)
+srun: error: frontier08744: tasks 1-7: Exited with exit code 1
+slurmstepd: error: *** STEP 4136216.0 ON frontier08744 CANCELLED AT 2026-02-20T02:02:58 ***
+srun: error: frontier08744: task 0: Terminated
+srun: Force Terminated StepId=4136216.0
+
+real	0m28.170s
+user	0m0.017s
+sys	0m0.037s

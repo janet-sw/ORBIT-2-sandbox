@@ -1,0 +1,1253 @@
+
+Lmod is automatically replacing "cce/18.0.1" with "gcc-native/14.2".
+
+
+Lmod is automatically replacing "PrgEnv-cray/8.6.0" with "PrgEnv-gnu/8.6.0".
+
+
+Inactive Modules:
+  1) darshan-runtime
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) cray-libsci/24.11.0     2) cray-mpich/8.1.31
+
+
+Lmod is automatically replacing "gcc-native/14.2" with "gcc/12.2.0".
+
+
+The following have been reloaded with a version change:
+  1) cray-libsci/24.11.0 => cray-libsci/23.09.1.1
+  2) cray-mpich/8.1.31 => cray-mpich/8.1.27
+  3) libfabric/1.22.0 => libfabric/1.20.1
+
+Job started at: Sun Feb  8 08:43:34 PM EST 2026
+Job ID: 4102425
+Running on nodes: frontier[00280,00290]
+Number of tasks: 16
+Number of nodes: 2
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+[W208 20:43:52.342215789 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier00280.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W208 20:43:52.051347235 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier00280.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+[W208 20:43:53.914316182 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier00280.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W208 20:43:53.574491249 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier00280.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W208 20:43:53.575250828 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier00280.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W208 20:43:53.923692203 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier00280.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W208 20:43:53.926759036 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier00280.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W208 20:43:53.595661048 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier00280.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W208 20:43:53.596303586 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier00280.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W208 20:43:53.597552742 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier00280.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W208 20:43:53.599669062 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier00280.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W208 20:43:53.603412014 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier00280.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W208 20:43:53.946478030 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier00280.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W208 20:43:53.947404675 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier00280.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W208 20:43:53.947973298 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier00280.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W208 20:43:53.994205951 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier00280.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=2, local_rank=2
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=15, local_rank=7
+use_ddstore is : 0
+[Rank 2] Assigned 2/40 monthly files (indices 4:6).
+[Rank 2] Not enough files to shard (3 files, 16 ranks). All ranks read all 3 files.
+use_ddstore is : 0
+[Rank 15] Assigned 2/40 monthly files (indices 30:32).
+[Rank 15] Not enough files to shard (3 files, 16 ranks). All ranks read all 3 files.
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=5, local_rank=5
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=13, local_rank=5
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=9, local_rank=1
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=1, local_rank=1
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=4, local_rank=4
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=8, local_rank=0
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=12, local_rank=4
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=11, local_rank=3
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=10, local_rank=2
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=14, local_rank=6
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=7, local_rank=7
+use_ddstore is : 0
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=6, local_rank=6
+[Rank 5] Assigned 2/40 monthly files (indices 10:12).
+[Rank 5] Not enough files to shard (3 files, 16 ranks). All ranks read all 3 files.
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=3, local_rank=3
+use_ddstore is : 0
+use_ddstore is : 0
+[Rank 9] Assigned 2/40 monthly files (indices 18:20).
+[Rank 9] Not enough files to shard (3 files, 16 ranks). All ranks read all 3 files.
+[Rank 13] Assigned 2/40 monthly files (indices 26:28).
+[Rank 13] Not enough files to shard (3 files, 16 ranks). All ranks read all 3 files.
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=0, local_rank=0
+Loading config from: /ccs/home/janetw/diffusion/ORBIT-2-sandbox/configs/era5_forecasting.yaml
+use_ddstore is : 0
+[Rank 1] Assigned 2/40 monthly files (indices 2:4).
+[Rank 1] Not enough files to shard (3 files, 16 ranks). All ranks read all 3 files.
+use_ddstore is : 0
+[Rank 4] Assigned 2/40 monthly files (indices 8:10).
+[Rank 4] Not enough files to shard (3 files, 16 ranks). All ranks read all 3 files.
+
+================================================================================
+Training Configuration Summary
+================================================================================
+Config: /ccs/home/janetw/diffusion/ORBIT-2-sandbox/configs/era5_forecasting.yaml
+Max epochs: 30
+Data type: bfloat16
+Checkpoint: None
+Save path: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_bilinear_antialias=True_input_refine_cnn=True
+================================================================================
+
+Creating data module for direct forecasting
+Input variables: ['temperature_50', 'temperature_250', 'temperature_500', 'temperature_600', 'temperature_700', 'temperature_850', 'temperature_925', '2m_temperature', '10m_u_component_of_wind', '10m_v_component_of_wind', 'latitude', 'land_sea_mask', 'orography', 'landcover']
+Output variables: ['2m_temperature']
+Setting up distributed data loading: world_size=16
+Each GPU will process 1/16 of the dataset
+use_ddstore is : 0
+[Rank 8] Assigned 2/40 monthly files (indices 16:18).
+[Rank 8] Not enough files to shard (3 files, 16 ranks). All ranks read all 3 files.
+use_ddstore is : 0
+use_ddstore is : 0
+[Rank 12] Assigned 2/40 monthly files (indices 24:26).
+[Rank 12] Not enough files to shard (3 files, 16 ranks). All ranks read all 3 files.
+[Rank 11] Assigned 2/40 monthly files (indices 22:24).
+[Rank 11] Not enough files to shard (3 files, 16 ranks). All ranks read all 3 files.
+use_ddstore is : 0
+[Rank 10] Assigned 2/40 monthly files (indices 20:22).
+[Rank 10] Not enough files to shard (3 files, 16 ranks). All ranks read all 3 files.
+use_ddstore is : 0
+[Rank 14] Assigned 2/40 monthly files (indices 28:30).
+[Rank 14] Not enough files to shard (3 files, 16 ranks). All ranks read all 3 files.
+use_ddstore is : 0
+[Rank 7] Assigned 2/40 monthly files (indices 14:16).
+[Rank 7] Not enough files to shard (3 files, 16 ranks). All ranks read all 3 files.
+use_ddstore is : 0
+use_ddstore is : 0
+[Rank 3] Assigned 2/40 monthly files (indices 6:8).
+[Rank 3] Not enough files to shard (3 files, 16 ranks). All ranks read all 3 files.
+[Rank 6] Assigned 2/40 monthly files (indices 12:14).
+[Rank 6] Not enough files to shard (3 files, 16 ranks). All ranks read all 3 files.
+after data_module creation Allocated: 0.00GB, Max Allocated: 0.00GB, Reserved: 0.00GB
+use_ddstore is : 0
+[Rank 0] Assigned 2/40 monthly files (indices 0:2).
+[Monthly Loader] Verifying variables in 1979_0.npz...
+[Monthly Loader] Available variables: ['land_sea_mask', 'landcover', 'latitude', 'orography', '10m_u_component_of_wind', '10m_v_component_of_wind', '2m_temperature_max', '2m_temperature_min', '2m_temperature', 'sea_surface_temperature', 'surface_pressure', 'total_precipitation_24hr', 'volumetric_soil_water_layer_1', 'geopotential_50', 'geopotential_100', 'geopotential_150', 'geopotential_200', 'geopotential_250', 'geopotential_300', 'geopotential_400', 'geopotential_500', 'geopotential_600', 'geopotential_700', 'geopotential_850', 'geopotential_925', 'geopotential_1000', 'specific_humidity_50', 'specific_humidity_100', 'specific_humidity_150', 'specific_humidity_200', 'specific_humidity_250', 'specific_humidity_300', 'specific_humidity_400', 'specific_humidity_500', 'specific_humidity_600', 'specific_humidity_700', 'specific_humidity_850', 'specific_humidity_925', 'specific_humidity_1000', 'temperature_50', 'temperature_100', 'temperature_150', 'temperature_200', 'temperature_250', 'temperature_300', 'temperature_400', 'temperature_500', 'temperature_600', 'temperature_700', 'temperature_850', 'temperature_925', 'temperature_1000', 'u_component_of_wind_50', 'u_component_of_wind_100', 'u_component_of_wind_150', 'u_component_of_wind_200', 'u_component_of_wind_250', 'u_component_of_wind_300', 'u_component_of_wind_400', 'u_component_of_wind_500', 'u_component_of_wind_600', 'u_component_of_wind_700', 'u_component_of_wind_850', 'u_component_of_wind_925', 'u_component_of_wind_1000', 'v_component_of_wind_50', 'v_component_of_wind_100', 'v_component_of_wind_150', 'v_component_of_wind_200', 'v_component_of_wind_250', 'v_component_of_wind_300', 'v_component_of_wind_400', 'v_component_of_wind_500', 'v_component_of_wind_600', 'v_component_of_wind_700', 'v_component_of_wind_850', 'v_component_of_wind_925', 'v_component_of_wind_1000', 'days_of_year', 'time_of_day', 'hrs_each_step', 'num_steps_per_shard', 'extra_steps', 'lattitude']
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+[Monthly Loader] 'landcover': shape=(8760, 1, 128, 256)
+[Monthly Loader] 'temperature_600': shape=(8760, 1, 128, 256)
+[Monthly Loader] 'temperature_50': shape=(8760, 1, 128, 256)
+[Monthly Loader] 'temperature_700': shape=(8760, 1, 128, 256)
+[Monthly Loader] '10m_v_component_of_wind': shape=(8760, 1, 128, 256)
+[Monthly Loader] 'temperature_250': shape=(8760, 1, 128, 256)
+[Monthly Loader] 'orography': shape=(8760, 1, 128, 256)
+[Monthly Loader] 'temperature_850': shape=(8760, 1, 128, 256)
+[Monthly Loader] '10m_u_component_of_wind': shape=(8760, 1, 128, 256)
+[Monthly Loader] 'latitude': shape=(8760, 1, 128, 256)
+[Monthly Loader] '2m_temperature': shape=(8760, 1, 128, 256)
+[Monthly Loader] 'temperature_925': shape=(8760, 1, 128, 256)
+[Monthly Loader] 'temperature_500': shape=(8760, 1, 128, 256)
+[Monthly Loader] 'land_sea_mask': shape=(8760, 1, 128, 256)
+[Rank 0] Not enough files to shard (3 files, 16 ranks). All ranks read all 3 files.
+[Monthly Loader] Verifying variables in 2018_0.npz...
+[Monthly Loader] Available variables: ['land_sea_mask', 'landcover', 'latitude', 'orography', '10m_u_component_of_wind', '10m_v_component_of_wind', '2m_temperature_max', '2m_temperature_min', '2m_temperature', 'sea_surface_temperature', 'surface_pressure', 'total_precipitation_24hr', 'volumetric_soil_water_layer_1', 'geopotential_50', 'geopotential_100', 'geopotential_150', 'geopotential_200', 'geopotential_250', 'geopotential_300', 'geopotential_400', 'geopotential_500', 'geopotential_600', 'geopotential_700', 'geopotential_850', 'geopotential_925', 'geopotential_1000', 'specific_humidity_50', 'specific_humidity_100', 'specific_humidity_150', 'specific_humidity_200', 'specific_humidity_250', 'specific_humidity_300', 'specific_humidity_400', 'specific_humidity_500', 'specific_humidity_600', 'specific_humidity_700', 'specific_humidity_850', 'specific_humidity_925', 'specific_humidity_1000', 'temperature_50', 'temperature_100', 'temperature_150', 'temperature_200', 'temperature_250', 'temperature_300', 'temperature_400', 'temperature_500', 'temperature_600', 'temperature_700', 'temperature_850', 'temperature_925', 'temperature_1000', 'u_component_of_wind_50', 'u_component_of_wind_100', 'u_component_of_wind_150', 'u_component_of_wind_200', 'u_component_of_wind_250', 'u_component_of_wind_300', 'u_component_of_wind_400', 'u_component_of_wind_500', 'u_component_of_wind_600', 'u_component_of_wind_700', 'u_component_of_wind_850', 'u_component_of_wind_925', 'u_component_of_wind_1000', 'v_component_of_wind_50', 'v_component_of_wind_100', 'v_component_of_wind_150', 'v_component_of_wind_200', 'v_component_of_wind_250', 'v_component_of_wind_300', 'v_component_of_wind_400', 'v_component_of_wind_500', 'v_component_of_wind_600', 'v_component_of_wind_700', 'v_component_of_wind_850', 'v_component_of_wind_925', 'v_component_of_wind_1000', 'days_of_year', 'time_of_day', 'hrs_each_step', 'num_steps_per_shard', 'extra_steps', 'lattitude']
+[Monthly Loader] 'landcover': shape=(8760, 1, 128, 256)
+[Monthly Loader] 'temperature_600': shape=(8760, 1, 128, 256)
+[Monthly Loader] 'temperature_50': shape=(8760, 1, 128, 256)
+[Monthly Loader] 'temperature_700': shape=(8760, 1, 128, 256)
+[Monthly Loader] '10m_v_component_of_wind': shape=(8760, 1, 128, 256)
+[Monthly Loader] 'temperature_250': shape=(8760, 1, 128, 256)
+[Monthly Loader] 'orography': shape=(8760, 1, 128, 256)
+[Monthly Loader] 'temperature_850': shape=(8760, 1, 128, 256)
+[Monthly Loader] '10m_u_component_of_wind': shape=(8760, 1, 128, 256)
+[Monthly Loader] 'latitude': shape=(8760, 1, 128, 256)
+[Monthly Loader] '2m_temperature': shape=(8760, 1, 128, 256)
+[Monthly Loader] 'temperature_925': shape=(8760, 1, 128, 256)
+[Monthly Loader] 'temperature_500': shape=(8760, 1, 128, 256)
+[Monthly Loader] 'land_sea_mask': shape=(8760, 1, 128, 256)
+Creating model: res_slimvit
+Model config: img_size=(32, 64), in_channels=14, out_channels=1, history=1, superres_factor=4
+Model parameters: 5.44M
+Model parameters: 0.34M
+
+================================================================================
+MODEL ARCHITECTURE (Before FSDP):
+================================================================================
+FullyShardedDataParallel(
+  (_fsdp_wrapped_module): Res_Slim_ViT(
+    (spatial_embed): Linear(in_features=1, out_features=256, bias=True)
+    (token_embeds): ModuleList(
+      (0-13): 14 x PatchEmbed(
+        (proj): Conv2d(1, 256, kernel_size=(2, 2), stride=(2, 2))
+        (norm): Identity()
+      )
+    )
+    (var_agg): VariableMapping_Attention(
+      (q): Linear(in_features=256, out_features=256, bias=False)
+      (kv): Linear(in_features=256, out_features=512, bias=False)
+      (q_norm): Identity()
+      (k_norm): Identity()
+      (attn_drop): Dropout(p=0.0, inplace=False)
+      (proj): Linear(in_features=256, out_features=256, bias=True)
+      (proj_drop): Dropout(p=0.0, inplace=False)
+    )
+    (pos_drop): Dropout(p=0.1, inplace=False)
+    (blocks): ModuleList(
+      (0): FullyShardedDataParallel(
+        (_fsdp_wrapped_module): Block(
+          (norm1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=256, out_features=768, bias=True)
+            (q_norm): Identity()
+            (k_norm): Identity()
+            (attn_drop): Dropout(p=0.1, inplace=False)
+            (proj): Linear(in_features=256, out_features=256, bias=True)
+            (proj_drop): Dropout(p=0.1, inplace=False)
+          )
+          (ls1): Identity()
+          (drop_path1): Identity()
+          (norm2): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=256, out_features=1024, bias=True)
+            (act): GELU(approximate='none')
+            (drop1): Dropout(p=0.1, inplace=False)
+            (norm): Identity()
+            (fc2): Linear(in_features=1024, out_features=256, bias=True)
+            (drop2): Dropout(p=0.1, inplace=False)
+          )
+          (ls2): Identity()
+          (drop_path2): Identity()
+        )
+      )
+      (1): FullyShardedDataParallel(
+        (_fsdp_wrapped_module): Block(
+          (norm1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=256, out_features=768, bias=True)
+            (q_norm): Identity()
+            (k_norm): Identity()
+            (attn_drop): Dropout(p=0.1, inplace=False)
+            (proj): Linear(in_features=256, out_features=256, bias=True)
+            (proj_drop): Dropout(p=0.1, inplace=False)
+          )
+          (ls1): Identity()
+          (drop_path1): DropPath(drop_prob=0.020)
+          (norm2): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=256, out_features=1024, bias=True)
+            (act): GELU(approximate='none')
+            (drop1): Dropout(p=0.1, inplace=False)
+            (norm): Identity()
+            (fc2): Linear(in_features=1024, out_features=256, bias=True)
+            (drop2): Dropout(p=0.1, inplace=False)
+          )
+          (ls2): Identity()
+          (drop_path2): DropPath(drop_prob=0.020)
+        )
+      )
+      (2): FullyShardedDataParallel(
+        (_fsdp_wrapped_module): Block(
+          (norm1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=256, out_features=768, bias=True)
+            (q_norm): Identity()
+            (k_norm): Identity()
+            (attn_drop): Dropout(p=0.1, inplace=False)
+            (proj): Linear(in_features=256, out_features=256, bias=True)
+            (proj_drop): Dropout(p=0.1, inplace=False)
+          )
+          (ls1): Identity()
+          (drop_path1): DropPath(drop_prob=0.040)
+          (norm2): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=256, out_features=1024, bias=True)
+            (act): GELU(approximate='none')
+            (drop1): Dropout(p=0.1, inplace=False)
+            (norm): Identity()
+            (fc2): Linear(in_features=1024, out_features=256, bias=True)
+            (drop2): Dropout(p=0.1, inplace=False)
+          )
+          (ls2): Identity()
+          (drop_path2): DropPath(drop_prob=0.040)
+        )
+      )
+      (3): FullyShardedDataParallel(
+        (_fsdp_wrapped_module): Block(
+          (norm1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=256, out_features=768, bias=True)
+            (q_norm): Identity()
+            (k_norm): Identity()
+            (attn_drop): Dropout(p=0.1, inplace=False)
+            (proj): Linear(in_features=256, out_features=256, bias=True)
+            (proj_drop): Dropout(p=0.1, inplace=False)
+          )
+          (ls1): Identity()
+          (drop_path1): DropPath(drop_prob=0.060)
+          (norm2): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=256, out_features=1024, bias=True)
+            (act): GELU(approximate='none')
+            (drop1): Dropout(p=0.1, inplace=False)
+            (norm): Identity()
+            (fc2): Linear(in_features=1024, out_features=256, bias=True)
+            (drop2): Dropout(p=0.1, inplace=False)
+          )
+          (ls2): Identity()
+          (drop_path2): DropPath(drop_prob=0.060)
+        )
+      )
+      (4): FullyShardedDataParallel(
+        (_fsdp_wrapped_module): Block(
+          (norm1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=256, out_features=768, bias=True)
+            (q_norm): Identity()
+            (k_norm): Identity()
+            (attn_drop): Dropout(p=0.1, inplace=False)
+            (proj): Linear(in_features=256, out_features=256, bias=True)
+            (proj_drop): Dropout(p=0.1, inplace=False)
+          )
+          (ls1): Identity()
+          (drop_path1): DropPath(drop_prob=0.080)
+          (norm2): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=256, out_features=1024, bias=True)
+            (act): GELU(approximate='none')
+            (drop1): Dropout(p=0.1, inplace=False)
+            (norm): Identity()
+            (fc2): Linear(in_features=1024, out_features=256, bias=True)
+            (drop2): Dropout(p=0.1, inplace=False)
+          )
+          (ls2): Identity()
+          (drop_path2): DropPath(drop_prob=0.080)
+        )
+      )
+      (5): FullyShardedDataParallel(
+        (_fsdp_wrapped_module): Block(
+          (norm1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=256, out_features=768, bias=True)
+            (q_norm): Identity()
+            (k_norm): Identity()
+            (attn_drop): Dropout(p=0.1, inplace=False)
+            (proj): Linear(in_features=256, out_features=256, bias=True)
+            (proj_drop): Dropout(p=0.1, inplace=False)
+          )
+          (ls1): Identity()
+          (drop_path1): DropPath(drop_prob=0.100)
+          (norm2): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=256, out_features=1024, bias=True)
+            (act): GELU(approximate='none')
+            (drop1): Dropout(p=0.1, inplace=False)
+            (norm): Identity()
+            (fc2): Linear(in_features=1024, out_features=256, bias=True)
+            (drop2): Dropout(p=0.1, inplace=False)
+          )
+          (ls2): Identity()
+          (drop_path2): DropPath(drop_prob=0.100)
+        )
+      )
+    )
+    (norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+    (path2): Sequential(
+      (0): Conv2d(4, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (1): GELU(approximate='none')
+      (2): PixelShuffle(upscale_factor=4)
+      (3): Conv2d(4, 1, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    )
+    (head): Sequential(
+      (0): Linear(in_features=256, out_features=256, bias=True)
+      (1): GELU(approximate='none')
+      (2): Linear(in_features=256, out_features=256, bias=True)
+      (3): GELU(approximate='none')
+      (4): Linear(in_features=256, out_features=256, bias=True)
+      (5): GELU(approximate='none')
+      (6): Linear(in_features=256, out_features=256, bias=True)
+      (7): GELU(approximate='none')
+      (8): Linear(in_features=256, out_features=64, bias=True)
+    )
+    (conv_out): Conv2d(1, 1, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (input_refine): Sequential(
+      (0): Conv2d(14, 14, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (1): GELU(approximate='none')
+    )
+  )
+)
+================================================================================
+
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+FSDP wrapping completed, now creating losses...
+Loading training climatology for lat_mse (this may take a while)...
+Loading validation climatology...
+Using lat_mse for training loss
+Loss functions created successfully
+Losses created successfully
+
+================================================================================
+Starting epoch 0
+================================================================================
+
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+Epoch 0 | Batch 0 | Loss: 0.754247 | Time: 23.810s | LR: 1.00e-06
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 0.05GB
+Epoch 0 | Batch 50 | Loss: 0.707179 | Time: 0.160s | LR: 1.00e-06
+rank 0 Batch 50 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+[Monthly Loader] Epoch complete. Yielded 2880 samples.
+
+================================================================================
+Epoch 0 completed | Average Loss: 0.725772
+================================================================================
+
+Created checkpoint directory: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_bilinear_antialias=True_input_refine_cnn=True
+rank 0 Before saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+Saved checkpoint to: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_bilinear_antialias=True_input_refine_cnn=True/checkpoint_epoch_0000.pt
+rank 0 After saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+
+================================================================================
+Starting epoch 1
+================================================================================
+
+Epoch 1 | Batch 0 | Loss: 0.734585 | Time: 0.771s | LR: 6.60e-03
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+Epoch 1 | Batch 50 | Loss: 0.050426 | Time: 0.163s | LR: 6.60e-03
+rank 0 Batch 50 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+[Monthly Loader] Epoch complete. Yielded 2880 samples.
+
+================================================================================
+Epoch 1 completed | Average Loss: 0.197320
+================================================================================
+
+rank 0 Before saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+Saved checkpoint to: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_bilinear_antialias=True_input_refine_cnn=True/checkpoint_epoch_0001.pt
+rank 0 After saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+
+================================================================================
+Starting epoch 2
+================================================================================
+
+Epoch 2 | Batch 0 | Loss: 0.037819 | Time: 0.306s | LR: 1.32e-02
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+Epoch 2 | Batch 50 | Loss: 0.030536 | Time: 0.163s | LR: 1.32e-02
+rank 0 Batch 50 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+[Monthly Loader] Epoch complete. Yielded 2880 samples.
+
+================================================================================
+Epoch 2 completed | Average Loss: 0.031596
+================================================================================
+
+rank 0 Before saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+Saved checkpoint to: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_bilinear_antialias=True_input_refine_cnn=True/checkpoint_epoch_0002.pt
+rank 0 After saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+
+================================================================================
+Starting epoch 3
+================================================================================
+
+Epoch 3 | Batch 0 | Loss: 0.027782 | Time: 0.321s | LR: 1.98e-02
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+Epoch 3 | Batch 50 | Loss: 0.032319 | Time: 0.165s | LR: 1.98e-02
+rank 0 Batch 50 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+[Monthly Loader] Epoch complete. Yielded 2880 samples.
+
+================================================================================
+Epoch 3 completed | Average Loss: 0.042115
+================================================================================
+
+rank 0 Before saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+Saved checkpoint to: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_bilinear_antialias=True_input_refine_cnn=True/checkpoint_epoch_0003.pt
+rank 0 After saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+
+================================================================================
+Starting epoch 4
+================================================================================
+
+Epoch 4 | Batch 0 | Loss: 0.028296 | Time: 3.158s | LR: 2.64e-02
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+Epoch 4 | Batch 50 | Loss: 0.029546 | Time: 0.165s | LR: 2.64e-02
+rank 0 Batch 50 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+[Monthly Loader] Epoch complete. Yielded 2880 samples.
+
+================================================================================
+Epoch 4 completed | Average Loss: 0.026457
+================================================================================
+
+
+Running validation for epoch 4...
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:92: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:92: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:92: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:92: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:92: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:92: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:92: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:92: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:92: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:92: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:92: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:92: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:92: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:92: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:92: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:92: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+[Monthly Loader] Epoch complete. Yielded 2880 samples.
+
+Validation results for epoch 4:
+  val/lat_rmse:2m_temperature: 3.351235
+  val/lat_rmse:aggregate: 3.351235
+  val/lat_acc:2m_temperature: 0.810585
+  val/lat_acc:aggregate: 0.810585
+  val/lat_mse:2m_temperature: 0.024482
+  val/lat_mse:aggregate: 0.024482
+
+rank 0 Before saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+Saved checkpoint to: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_bilinear_antialias=True_input_refine_cnn=True/checkpoint_epoch_0004.pt
+rank 0 After saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+
+================================================================================
+Starting epoch 5
+================================================================================
+
+Epoch 5 | Batch 0 | Loss: 0.024180 | Time: 0.449s | LR: 2.64e-02
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+Epoch 5 | Batch 50 | Loss: 0.028720 | Time: 0.163s | LR: 2.64e-02
+rank 0 Batch 50 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+[Monthly Loader] Epoch complete. Yielded 2880 samples.
+
+================================================================================
+Epoch 5 completed | Average Loss: 0.025070
+================================================================================
+
+rank 0 Before saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+Saved checkpoint to: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_bilinear_antialias=True_input_refine_cnn=True/checkpoint_epoch_0005.pt
+rank 0 After saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+
+================================================================================
+Starting epoch 6
+================================================================================
+
+Epoch 6 | Batch 0 | Loss: 0.024287 | Time: 0.305s | LR: 2.63e-02
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+Epoch 6 | Batch 50 | Loss: 0.024908 | Time: 0.162s | LR: 2.63e-02
+rank 0 Batch 50 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+[Monthly Loader] Epoch complete. Yielded 2880 samples.
+
+================================================================================
+Epoch 6 completed | Average Loss: 0.024831
+================================================================================
+
+rank 0 Before saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+Saved checkpoint to: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_bilinear_antialias=True_input_refine_cnn=True/checkpoint_epoch_0006.pt
+rank 0 After saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+
+================================================================================
+Starting epoch 7
+================================================================================
+
+Epoch 7 | Batch 0 | Loss: 0.028463 | Time: 0.200s | LR: 2.60e-02
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+Epoch 7 | Batch 50 | Loss: 0.021985 | Time: 0.162s | LR: 2.60e-02
+rank 0 Batch 50 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+[Monthly Loader] Epoch complete. Yielded 2880 samples.
+
+================================================================================
+Epoch 7 completed | Average Loss: 0.027347
+================================================================================
+
+rank 0 Before saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+Saved checkpoint to: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_bilinear_antialias=True_input_refine_cnn=True/checkpoint_epoch_0007.pt
+rank 0 After saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+
+================================================================================
+Starting epoch 8
+================================================================================
+
+Epoch 8 | Batch 0 | Loss: 0.033702 | Time: 0.170s | LR: 2.55e-02
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+Epoch 8 | Batch 50 | Loss: 0.024363 | Time: 0.161s | LR: 2.55e-02
+rank 0 Batch 50 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+[Monthly Loader] Epoch complete. Yielded 2880 samples.
+
+================================================================================
+Epoch 8 completed | Average Loss: 0.025999
+================================================================================
+
+rank 0 Before saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+Saved checkpoint to: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_bilinear_antialias=True_input_refine_cnn=True/checkpoint_epoch_0008.pt
+rank 0 After saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+
+================================================================================
+Starting epoch 9
+================================================================================
+
+Epoch 9 | Batch 0 | Loss: 0.024076 | Time: 0.168s | LR: 2.48e-02
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+Epoch 9 | Batch 50 | Loss: 0.022811 | Time: 0.161s | LR: 2.48e-02
+rank 0 Batch 50 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+[Monthly Loader] Epoch complete. Yielded 2880 samples.
+
+================================================================================
+Epoch 9 completed | Average Loss: 0.023072
+================================================================================
+
+
+Running validation for epoch 9...
+[Monthly Loader] Epoch complete. Yielded 2880 samples.
+
+Validation results for epoch 9:
+  val/lat_rmse:2m_temperature: 3.170341
+  val/lat_rmse:aggregate: 3.170341
+  val/lat_acc:2m_temperature: 0.832449
+  val/lat_acc:aggregate: 0.832449
+  val/lat_mse:2m_temperature: 0.021779
+  val/lat_mse:aggregate: 0.021779
+
+rank 0 Before saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+Saved checkpoint to: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_bilinear_antialias=True_input_refine_cnn=True/checkpoint_epoch_0009.pt
+rank 0 After saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+
+================================================================================
+Starting epoch 10
+================================================================================
+
+Epoch 10 | Batch 0 | Loss: 0.025103 | Time: 0.445s | LR: 2.39e-02
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+Epoch 10 | Batch 50 | Loss: 0.024184 | Time: 0.161s | LR: 2.39e-02
+rank 0 Batch 50 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+[Monthly Loader] Epoch complete. Yielded 2880 samples.
+
+================================================================================
+Epoch 10 completed | Average Loss: 0.022967
+================================================================================
+
+rank 0 Before saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+Saved checkpoint to: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_bilinear_antialias=True_input_refine_cnn=True/checkpoint_epoch_0010.pt
+rank 0 After saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+
+================================================================================
+Starting epoch 11
+================================================================================
+
+Epoch 11 | Batch 0 | Loss: 0.020709 | Time: 1.828s | LR: 2.28e-02
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+Epoch 11 | Batch 50 | Loss: 0.021590 | Time: 0.161s | LR: 2.28e-02
+rank 0 Batch 50 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+[Monthly Loader] Epoch complete. Yielded 2880 samples.
+
+================================================================================
+Epoch 11 completed | Average Loss: 0.022301
+================================================================================
+
+rank 0 Before saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+Saved checkpoint to: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_bilinear_antialias=True_input_refine_cnn=True/checkpoint_epoch_0011.pt
+rank 0 After saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+
+================================================================================
+Starting epoch 12
+================================================================================
+
+Epoch 12 | Batch 0 | Loss: 0.021757 | Time: 2.450s | LR: 2.16e-02
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+Epoch 12 | Batch 50 | Loss: 0.021767 | Time: 0.161s | LR: 2.16e-02
+rank 0 Batch 50 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+[Monthly Loader] Epoch complete. Yielded 2880 samples.
+
+================================================================================
+Epoch 12 completed | Average Loss: 0.022320
+================================================================================
+
+rank 0 Before saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+Saved checkpoint to: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_bilinear_antialias=True_input_refine_cnn=True/checkpoint_epoch_0012.pt
+rank 0 After saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+
+================================================================================
+Starting epoch 13
+================================================================================
+
+Epoch 13 | Batch 0 | Loss: 0.021266 | Time: 0.426s | LR: 2.03e-02
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+Epoch 13 | Batch 50 | Loss: 0.022792 | Time: 0.164s | LR: 2.03e-02
+rank 0 Batch 50 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+[Monthly Loader] Epoch complete. Yielded 2880 samples.
+
+================================================================================
+Epoch 13 completed | Average Loss: 0.021693
+================================================================================
+
+rank 0 Before saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+Saved checkpoint to: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_bilinear_antialias=True_input_refine_cnn=True/checkpoint_epoch_0013.pt
+rank 0 After saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+
+================================================================================
+Starting epoch 14
+================================================================================
+
+Epoch 14 | Batch 0 | Loss: 0.023730 | Time: 0.326s | LR: 1.88e-02
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+Epoch 14 | Batch 50 | Loss: 0.023665 | Time: 0.164s | LR: 1.88e-02
+rank 0 Batch 50 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+[Monthly Loader] Epoch complete. Yielded 2880 samples.
+
+================================================================================
+Epoch 14 completed | Average Loss: 0.022573
+================================================================================
+
+
+Running validation for epoch 14...
+[Monthly Loader] Epoch complete. Yielded 2880 samples.
+
+Validation results for epoch 14:
+  val/lat_rmse:2m_temperature: 3.360247
+  val/lat_rmse:aggregate: 3.360247
+  val/lat_acc:2m_temperature: 0.813208
+  val/lat_acc:aggregate: 0.813208
+  val/lat_mse:2m_temperature: 0.023849
+  val/lat_mse:aggregate: 0.023849
+
+rank 0 Before saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+Saved checkpoint to: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_bilinear_antialias=True_input_refine_cnn=True/checkpoint_epoch_0014.pt
+rank 0 After saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+
+================================================================================
+Starting epoch 15
+================================================================================
+
+Epoch 15 | Batch 0 | Loss: 0.025185 | Time: 0.399s | LR: 1.73e-02
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+Epoch 15 | Batch 50 | Loss: 0.022909 | Time: 0.165s | LR: 1.73e-02
+rank 0 Batch 50 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+[Monthly Loader] Epoch complete. Yielded 2880 samples.
+
+================================================================================
+Epoch 15 completed | Average Loss: 0.021695
+================================================================================
+
+rank 0 Before saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+Saved checkpoint to: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_bilinear_antialias=True_input_refine_cnn=True/checkpoint_epoch_0015.pt
+rank 0 After saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+
+================================================================================
+Starting epoch 16
+================================================================================
+
+Epoch 16 | Batch 0 | Loss: 0.020299 | Time: 0.824s | LR: 1.57e-02
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+Epoch 16 | Batch 50 | Loss: 0.020458 | Time: 0.164s | LR: 1.57e-02
+rank 0 Batch 50 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+[Monthly Loader] Epoch complete. Yielded 2880 samples.
+
+================================================================================
+Epoch 16 completed | Average Loss: 0.021199
+================================================================================
+
+rank 0 Before saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+Saved checkpoint to: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_bilinear_antialias=True_input_refine_cnn=True/checkpoint_epoch_0016.pt
+rank 0 After saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+
+================================================================================
+Starting epoch 17
+================================================================================
+
+Epoch 17 | Batch 0 | Loss: 0.019384 | Time: 3.035s | LR: 1.40e-02
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+Epoch 17 | Batch 50 | Loss: 0.021393 | Time: 0.169s | LR: 1.40e-02
+rank 0 Batch 50 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+[Monthly Loader] Epoch complete. Yielded 2880 samples.
+
+================================================================================
+Epoch 17 completed | Average Loss: 0.021028
+================================================================================
+
+rank 0 Before saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+Saved checkpoint to: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_bilinear_antialias=True_input_refine_cnn=True/checkpoint_epoch_0017.pt
+rank 0 After saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+
+================================================================================
+Starting epoch 18
+================================================================================
+
+Epoch 18 | Batch 0 | Loss: 0.021610 | Time: 2.446s | LR: 1.24e-02
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+Epoch 18 | Batch 50 | Loss: 0.020629 | Time: 0.163s | LR: 1.24e-02
+rank 0 Batch 50 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+[Monthly Loader] Epoch complete. Yielded 2880 samples.
+
+================================================================================
+Epoch 18 completed | Average Loss: 0.021006
+================================================================================
+
+rank 0 Before saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+Saved checkpoint to: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_bilinear_antialias=True_input_refine_cnn=True/checkpoint_epoch_0018.pt
+rank 0 After saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+
+================================================================================
+Starting epoch 19
+================================================================================
+
+Epoch 19 | Batch 0 | Loss: 0.020577 | Time: 1.323s | LR: 1.07e-02
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+Epoch 19 | Batch 50 | Loss: 0.021313 | Time: 0.161s | LR: 1.07e-02
+rank 0 Batch 50 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+[Monthly Loader] Epoch complete. Yielded 2880 samples.
+
+================================================================================
+Epoch 19 completed | Average Loss: 0.020838
+================================================================================
+
+
+Running validation for epoch 19...
+[Monthly Loader] Epoch complete. Yielded 2880 samples.
+
+Validation results for epoch 19:
+  val/lat_rmse:2m_temperature: 3.062434
+  val/lat_rmse:aggregate: 3.062434
+  val/lat_acc:2m_temperature: 0.844051
+  val/lat_acc:aggregate: 0.844051
+  val/lat_mse:2m_temperature: 0.019875
+  val/lat_mse:aggregate: 0.019875
+
+rank 0 Before saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+Saved checkpoint to: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_bilinear_antialias=True_input_refine_cnn=True/checkpoint_epoch_0019.pt
+rank 0 After saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+
+================================================================================
+Starting epoch 20
+================================================================================
+
+Epoch 20 | Batch 0 | Loss: 0.019351 | Time: 3.467s | LR: 9.12e-03
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+Epoch 20 | Batch 50 | Loss: 0.021590 | Time: 0.162s | LR: 9.12e-03
+rank 0 Batch 50 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+[Monthly Loader] Epoch complete. Yielded 2880 samples.
+
+================================================================================
+Epoch 20 completed | Average Loss: 0.020675
+================================================================================
+
+rank 0 Before saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+Saved checkpoint to: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_bilinear_antialias=True_input_refine_cnn=True/checkpoint_epoch_0020.pt
+rank 0 After saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+
+================================================================================
+Starting epoch 21
+================================================================================
+
+Epoch 21 | Batch 0 | Loss: 0.021092 | Time: 0.203s | LR: 7.58e-03
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+Epoch 21 | Batch 50 | Loss: 0.019601 | Time: 0.161s | LR: 7.58e-03
+rank 0 Batch 50 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+[Monthly Loader] Epoch complete. Yielded 2880 samples.
+
+================================================================================
+Epoch 21 completed | Average Loss: 0.020612
+================================================================================
+
+rank 0 Before saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+Saved checkpoint to: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_bilinear_antialias=True_input_refine_cnn=True/checkpoint_epoch_0021.pt
+rank 0 After saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+
+================================================================================
+Starting epoch 22
+================================================================================
+
+Epoch 22 | Batch 0 | Loss: 0.020875 | Time: 2.644s | LR: 6.12e-03
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+Epoch 22 | Batch 50 | Loss: 0.019222 | Time: 0.162s | LR: 6.12e-03
+rank 0 Batch 50 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+[Monthly Loader] Epoch complete. Yielded 2880 samples.
+
+================================================================================
+Epoch 22 completed | Average Loss: 0.020479
+================================================================================
+
+rank 0 Before saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+Saved checkpoint to: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_bilinear_antialias=True_input_refine_cnn=True/checkpoint_epoch_0022.pt
+rank 0 After saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+
+================================================================================
+Starting epoch 23
+================================================================================
+
+Epoch 23 | Batch 0 | Loss: 0.021804 | Time: 2.613s | LR: 4.78e-03
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+Epoch 23 | Batch 50 | Loss: 0.021962 | Time: 0.161s | LR: 4.78e-03
+rank 0 Batch 50 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+[Monthly Loader] Epoch complete. Yielded 2880 samples.
+
+================================================================================
+Epoch 23 completed | Average Loss: 0.020437
+================================================================================
+
+rank 0 Before saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+Saved checkpoint to: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_bilinear_antialias=True_input_refine_cnn=True/checkpoint_epoch_0023.pt
+rank 0 After saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+
+================================================================================
+Starting epoch 24
+================================================================================
+
+Epoch 24 | Batch 0 | Loss: 0.019690 | Time: 0.216s | LR: 3.58e-03
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+Epoch 24 | Batch 50 | Loss: 0.019852 | Time: 0.164s | LR: 3.58e-03
+rank 0 Batch 50 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+[Monthly Loader] Epoch complete. Yielded 2880 samples.
+
+================================================================================
+Epoch 24 completed | Average Loss: 0.020385
+================================================================================
+
+
+Running validation for epoch 24...
+[Monthly Loader] Epoch complete. Yielded 2880 samples.
+
+Validation results for epoch 24:
+  val/lat_rmse:2m_temperature: 3.012819
+  val/lat_rmse:aggregate: 3.012819
+  val/lat_acc:2m_temperature: 0.846898
+  val/lat_acc:aggregate: 0.846898
+  val/lat_mse:2m_temperature: 0.019654
+  val/lat_mse:aggregate: 0.019654
+
+rank 0 Before saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+Saved checkpoint to: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_bilinear_antialias=True_input_refine_cnn=True/checkpoint_epoch_0024.pt
+rank 0 After saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+
+================================================================================
+Starting epoch 25
+================================================================================
+
+Epoch 25 | Batch 0 | Loss: 0.019148 | Time: 2.509s | LR: 2.52e-03
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+Epoch 25 | Batch 50 | Loss: 0.020082 | Time: 0.161s | LR: 2.52e-03
+rank 0 Batch 50 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+[Monthly Loader] Epoch complete. Yielded 2880 samples.
+
+================================================================================
+Epoch 25 completed | Average Loss: 0.020302
+================================================================================
+
+rank 0 Before saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+Saved checkpoint to: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_bilinear_antialias=True_input_refine_cnn=True/checkpoint_epoch_0025.pt
+rank 0 After saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+
+================================================================================
+Starting epoch 26
+================================================================================
+
+Epoch 26 | Batch 0 | Loss: 0.018994 | Time: 1.219s | LR: 1.63e-03
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+Epoch 26 | Batch 50 | Loss: 0.021770 | Time: 0.162s | LR: 1.63e-03
+rank 0 Batch 50 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+[Monthly Loader] Epoch complete. Yielded 2880 samples.
+
+================================================================================
+Epoch 26 completed | Average Loss: 0.020264
+================================================================================
+
+rank 0 Before saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+Saved checkpoint to: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_bilinear_antialias=True_input_refine_cnn=True/checkpoint_epoch_0026.pt
+rank 0 After saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+
+================================================================================
+Starting epoch 27
+================================================================================
+
+Epoch 27 | Batch 0 | Loss: 0.019784 | Time: 0.271s | LR: 9.27e-04
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+Epoch 27 | Batch 50 | Loss: 0.021933 | Time: 0.162s | LR: 9.27e-04
+rank 0 Batch 50 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+[Monthly Loader] Epoch complete. Yielded 2880 samples.
+
+================================================================================
+Epoch 27 completed | Average Loss: 0.020233
+================================================================================
+
+rank 0 Before saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+Saved checkpoint to: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_bilinear_antialias=True_input_refine_cnn=True/checkpoint_epoch_0027.pt
+rank 0 After saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+
+================================================================================
+Starting epoch 28
+================================================================================
+
+Epoch 28 | Batch 0 | Loss: 0.020812 | Time: 0.498s | LR: 4.15e-04
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+Epoch 28 | Batch 50 | Loss: 0.019890 | Time: 0.163s | LR: 4.15e-04
+rank 0 Batch 50 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+[Monthly Loader] Epoch complete. Yielded 2880 samples.
+
+================================================================================
+Epoch 28 completed | Average Loss: 0.020207
+================================================================================
+
+rank 0 Before saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+Saved checkpoint to: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_bilinear_antialias=True_input_refine_cnn=True/checkpoint_epoch_0028.pt
+rank 0 After saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+
+================================================================================
+Starting epoch 29
+================================================================================
+
+Epoch 29 | Batch 0 | Loss: 0.020522 | Time: 1.926s | LR: 1.04e-04
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+Epoch 29 | Batch 50 | Loss: 0.020273 | Time: 0.162s | LR: 1.04e-04
+rank 0 Batch 50 Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+[Monthly Loader] Epoch complete. Yielded 2880 samples.
+
+================================================================================
+Epoch 29 completed | Average Loss: 0.020192
+================================================================================
+
+
+Running validation for epoch 29...
+[Monthly Loader] Epoch complete. Yielded 2880 samples.
+
+Validation results for epoch 29:
+  val/lat_rmse:2m_temperature: 3.017902
+  val/lat_rmse:aggregate: 3.017902
+  val/lat_acc:2m_temperature: 0.846598
+  val/lat_acc:aggregate: 0.846598
+  val/lat_mse:2m_temperature: 0.019457
+  val/lat_mse:aggregate: 0.019457
+
+rank 0 Before saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+Saved checkpoint to: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_bilinear_antialias=True_input_refine_cnn=True/checkpoint_epoch_0029.pt
+rank 0 After saving checkpoint Allocated: 0.01GB, Max Allocated: 0.98GB, Reserved: 1.82GB
+
+================================================================================
+Training completed!
+================================================================================
+
+
+real	39m40.930s
+user	0m0.025s
+sys	0m0.066s

@@ -1,0 +1,481 @@
+
+Lmod is automatically replacing "cce/18.0.1" with "gcc-native/14.2".
+
+
+Lmod is automatically replacing "PrgEnv-cray/8.6.0" with "PrgEnv-gnu/8.6.0".
+
+
+Inactive Modules:
+  1) darshan-runtime
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) cray-libsci/24.11.0     2) cray-mpich/8.1.31
+
+
+Lmod is automatically replacing "gcc-native/14.2" with "gcc/12.2.0".
+
+
+The following have been reloaded with a version change:
+  1) cray-libsci/24.11.0 => cray-libsci/23.09.1.1
+  2) cray-mpich/8.1.31 => cray-mpich/8.1.27
+  3) libfabric/1.22.0 => libfabric/1.20.1
+
+Job started at: Mon Feb 23 08:07:49 PM EST 2026
+Job ID: 4144418
+Running on nodes: frontier[07403,07418]
+Number of tasks: 16
+Number of nodes: 2
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+[W223 20:08:08.012388949 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier07403.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W223 20:08:08.022460135 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier07403.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+[W223 20:08:09.573720713 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier07403.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+[W223 20:08:09.586478658 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier07403.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=3, local_rank=3
+[W223 20:08:09.591331002 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier07403.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=1, local_rank=1
+[W223 20:08:09.593294071 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier07403.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=7, local_rank=7
+[W223 20:08:09.596219253 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier07403.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=2, local_rank=2
+[W223 20:08:09.599158333 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier07403.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+use_ddstore is : 0
+use_ddstore is : 0
+use_ddstore is : 0
+use_ddstore is : 0
+[Rank 7] Assigned 20/321 monthly files (indices 140:160).
+[Rank 7] Not enough files to shard (9 files, 16 ranks). All ranks read all 9 files.
+[Rank 3] Assigned 20/321 monthly files (indices 60:80).
+[Rank 3] Not enough files to shard (9 files, 16 ranks). All ranks read all 9 files.
+[Rank 2] Assigned 20/321 monthly files (indices 40:60).
+[Rank 1] Assigned 20/321 monthly files (indices 20:40).
+[Rank 2] Not enough files to shard (9 files, 16 ranks). All ranks read all 9 files.
+[Rank 1] Not enough files to shard (9 files, 16 ranks). All ranks read all 9 files.
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=6, local_rank=6
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=4, local_rank=4
+use_ddstore is : 0
+use_ddstore is : 0
+[Rank 6] Assigned 20/321 monthly files (indices 120:140).
+[Rank 6] Not enough files to shard (9 files, 16 ranks). All ranks read all 9 files.
+[Rank 4] Assigned 20/321 monthly files (indices 80:100).
+[Rank 4] Not enough files to shard (9 files, 16 ranks). All ranks read all 9 files.
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=5, local_rank=5
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+use_ddstore is : 0
+[Rank 5] Assigned 20/321 monthly files (indices 100:120).
+[Rank 5] Not enough files to shard (9 files, 16 ranks). All ranks read all 9 files.
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+[W223 20:08:18.579247834 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier07403.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=8, local_rank=0
+use_ddstore is : 0
+[Rank 8] Assigned 20/321 monthly files (indices 160:180).
+[Rank 8] Not enough files to shard (9 files, 16 ranks). All ranks read all 9 files.
+[W223 20:08:18.012741934 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier07403.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=9, local_rank=1
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+use_ddstore is : 0
+[Rank 9] Assigned 20/321 monthly files (indices 180:200).
+[Rank 9] Not enough files to shard (9 files, 16 ranks). All ranks read all 9 files.
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+[W223 20:08:18.245619263 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier07403.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=10, local_rank=2
+use_ddstore is : 0
+[Rank 10] Assigned 20/321 monthly files (indices 200:220).
+[Rank 10] Not enough files to shard (9 files, 16 ranks). All ranks read all 9 files.
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.4.1+cu121 with CUDA 1201 (you have 2.4.1+rocm6.0)
+    Python  3.11.10 (you have 3.11.14)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+[W223 20:08:19.933076897 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier07403.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=13, local_rank=5
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+use_ddstore is : 0
+[Rank 13] Assigned 20/321 monthly files (indices 260:280).
+[Rank 13] Not enough files to shard (9 files, 16 ranks). All ranks read all 9 files.
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/ccs/home/janetw/diffusion/ORBIT-2-sandbox/src/climate_learn/models/hub/components/attention.py:10: FutureWarning: xformers.components is deprecated and is not maintained anymore. It might be removed in a future version of xFormers 
+  from xformers.components.attention.core import scaled_dot_product_attention as xformers_sdpa
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+[W223 20:08:20.819511078 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier07403.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=14, local_rank=6
+[W223 20:08:20.896827736 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier07403.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=12, local_rank=4
+use_ddstore is : 0
+[Rank 14] Assigned 20/321 monthly files (indices 280:300).
+[Rank 14] Not enough files to shard (9 files, 16 ranks). All ranks read all 9 files.
+use_ddstore is : 0
+[Rank 12] Assigned 20/321 monthly files (indices 240:260).
+[Rank 12] Not enough files to shard (9 files, 16 ranks). All ranks read all 9 files.
+[W223 20:08:20.994228379 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier07403.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=11, local_rank=3
+[W223 20:08:20.033976507 socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [frontier07403.frontier.olcf.ornl.gov]:29500 (errno: 97 - Address family not supported by protocol).
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=15, local_rank=7
+DDStore loading error!!
+Initialized process group. world_size=16
+world_size=16, world_rank=0, local_rank=0
+Loading config from: /ccs/home/janetw/diffusion/ORBIT-2-sandbox/configs/era5_forecasting.yaml
+
+================================================================================
+Training Configuration Summary
+================================================================================
+Config: /ccs/home/janetw/diffusion/ORBIT-2-sandbox/configs/era5_forecasting.yaml
+Max epochs: 30
+Data type: bfloat16
+Checkpoint: None
+Save path: /lustre/orion/csc662/proj-shared/janet/forecasting/orbit_main/era5_forecasting_1.40625_deg_sprint_disabled_antialias=True_input_refine_cnn=True_interpolation=False
+================================================================================
+
+Creating data module for direct forecasting
+Input variables: ['temperature_50', 'temperature_250', 'temperature_500', 'temperature_600', 'temperature_700', 'temperature_850', 'temperature_925', 'geopotential_50', 'geopotential_250', 'geopotential_500', 'geopotential_600', 'geopotential_700', 'geopotential_850', 'geopotential_925', 'u_component_of_wind_50', 'u_component_of_wind_250', 'u_component_of_wind_500', 'u_component_of_wind_600', 'u_component_of_wind_700', 'u_component_of_wind_850', 'u_component_of_wind_925', 'v_component_of_wind_50', 'v_component_of_wind_250', 'v_component_of_wind_500', 'v_component_of_wind_600', 'v_component_of_wind_700', 'v_component_of_wind_850', 'v_component_of_wind_925', '2m_temperature', '10m_u_component_of_wind', '10m_v_component_of_wind', 'land_sea_mask', 'orography', 'specific_humidity_50', 'specific_humidity_250', 'specific_humidity_500', 'specific_humidity_600', 'specific_humidity_700', 'specific_humidity_850', 'specific_humidity_925']
+Output variables: ['2m_temperature', '10m_u_component_of_wind', 'geopotential_500', 'temperature_850']
+Setting up distributed data loading: world_size=16
+Each GPU will process 1/16 of the dataset
+after data_module creation Allocated: 0.00GB, Max Allocated: 0.00GB, Reserved: 0.00GB
+use_ddstore is : 0
+[Rank 0] Assigned 20/321 monthly files (indices 0:20).
+[Monthly Loader] Verifying variables in 1979_0.npz...
+[Monthly Loader] Available variables: ['land_sea_mask', 'orography', 'lattitude', '2m_temperature', '10m_u_component_of_wind', '10m_v_component_of_wind', 'total_precipitation', 'geopotential_10', 'geopotential_20', 'geopotential_30', 'geopotential_50', 'geopotential_70', 'geopotential_100', 'geopotential_150', 'geopotential_200', 'geopotential_250', 'geopotential_300', 'geopotential_400', 'geopotential_500', 'geopotential_600', 'geopotential_700', 'geopotential_850', 'geopotential_925', 'geopotential_1000', 'u_component_of_wind_10', 'u_component_of_wind_20', 'u_component_of_wind_30', 'u_component_of_wind_50', 'u_component_of_wind_70', 'u_component_of_wind_100', 'u_component_of_wind_150', 'u_component_of_wind_200', 'u_component_of_wind_250', 'u_component_of_wind_300', 'u_component_of_wind_400', 'u_component_of_wind_500', 'u_component_of_wind_600', 'u_component_of_wind_700', 'u_component_of_wind_850', 'u_component_of_wind_925', 'u_component_of_wind_1000', 'v_component_of_wind_10', 'v_component_of_wind_20', 'v_component_of_wind_30', 'v_component_of_wind_50', 'v_component_of_wind_70', 'v_component_of_wind_100', 'v_component_of_wind_150', 'v_component_of_wind_200', 'v_component_of_wind_250', 'v_component_of_wind_300', 'v_component_of_wind_400', 'v_component_of_wind_500', 'v_component_of_wind_600', 'v_component_of_wind_700', 'v_component_of_wind_850', 'v_component_of_wind_925', 'v_component_of_wind_1000', 'temperature_10', 'temperature_20', 'temperature_30', 'temperature_50', 'temperature_70', 'temperature_100', 'temperature_150', 'temperature_200', 'temperature_250', 'temperature_300', 'temperature_400', 'temperature_500', 'temperature_600', 'temperature_700', 'temperature_850', 'temperature_925', 'temperature_1000', 'specific_humidity_10', 'specific_humidity_20', 'specific_humidity_30', 'specific_humidity_50', 'specific_humidity_70', 'specific_humidity_100', 'specific_humidity_150', 'specific_humidity_200', 'specific_humidity_250', 'specific_humidity_300', 'specific_humidity_400', 'specific_humidity_500', 'specific_humidity_600', 'specific_humidity_700', 'specific_humidity_850', 'specific_humidity_925', 'specific_humidity_1000', 'sea_surface_temperature', 'mean_sea_level_pressure']
+use_ddstore is : 0
+[Rank 11] Assigned 20/321 monthly files (indices 220:240).
+[Rank 11] Not enough files to shard (9 files, 16 ranks). All ranks read all 9 files.
+use_ddstore is : 0
+[Rank 15] Assigned 20/321 monthly files (indices 300:320).
+[Rank 15] Not enough files to shard (9 files, 16 ranks). All ranks read all 9 files.
+[Monthly Loader] 'specific_humidity_700': shape=(1095, 1, 128, 256)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+[Monthly Loader] '10m_u_component_of_wind': shape=(1095, 1, 128, 256)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+[Monthly Loader] 'temperature_50': shape=(1095, 1, 128, 256)
+[Monthly Loader] 'v_component_of_wind_50': shape=(1095, 1, 128, 256)
+[Monthly Loader] 'geopotential_850': shape=(1095, 1, 128, 256)
+[Monthly Loader] 'u_component_of_wind_700': shape=(1095, 1, 128, 256)
+[Monthly Loader] 'specific_humidity_250': shape=(1095, 1, 128, 256)
+[Monthly Loader] 'u_component_of_wind_925': shape=(1095, 1, 128, 256)
+[Monthly Loader] 'v_component_of_wind_600': shape=(1095, 1, 128, 256)
+[Monthly Loader] 'u_component_of_wind_850': shape=(1095, 1, 128, 256)
+[Monthly Loader] 'u_component_of_wind_600': shape=(1095, 1, 128, 256)
+[Monthly Loader] 'temperature_500': shape=(1095, 1, 128, 256)
+[Monthly Loader] 'temperature_250': shape=(1095, 1, 128, 256)
+[Monthly Loader] 'temperature_700': shape=(1095, 1, 128, 256)
+[Monthly Loader] 'temperature_600': shape=(1095, 1, 128, 256)
+[Monthly Loader] 'v_component_of_wind_925': shape=(1095, 1, 128, 256)
+[Monthly Loader] 'specific_humidity_600': shape=(1095, 1, 128, 256)
+[Monthly Loader] 'v_component_of_wind_700': shape=(1095, 1, 128, 256)
+[Monthly Loader] 'specific_humidity_850': shape=(1095, 1, 128, 256)
+[Monthly Loader] 'v_component_of_wind_500': shape=(1095, 1, 128, 256)
+[Monthly Loader] 'orography': shape=(1095, 1, 128, 256)
+[Monthly Loader] 'temperature_850': shape=(1095, 1, 128, 256)
+[Monthly Loader] 'u_component_of_wind_50': shape=(1095, 1, 128, 256)
+[Monthly Loader] 'geopotential_250': shape=(1095, 1, 128, 256)
+[Monthly Loader] 'geopotential_700': shape=(1095, 1, 128, 256)
+[Monthly Loader] 'temperature_925': shape=(1095, 1, 128, 256)
+[Monthly Loader] 'geopotential_500': shape=(1095, 1, 128, 256)
+[Monthly Loader] 'v_component_of_wind_250': shape=(1095, 1, 128, 256)
+[Monthly Loader] 'u_component_of_wind_250': shape=(1095, 1, 128, 256)
+[Monthly Loader] 'geopotential_50': shape=(1095, 1, 128, 256)
+[Monthly Loader] 'v_component_of_wind_850': shape=(1095, 1, 128, 256)
+[Monthly Loader] 'u_component_of_wind_500': shape=(1095, 1, 128, 256)
+[Monthly Loader] 'specific_humidity_500': shape=(1095, 1, 128, 256)
+[Monthly Loader] 'geopotential_925': shape=(1095, 1, 128, 256)
+[Monthly Loader] '2m_temperature': shape=(1095, 1, 128, 256)
+[Monthly Loader] 'specific_humidity_50': shape=(1095, 1, 128, 256)
+[Monthly Loader] 'specific_humidity_925': shape=(1095, 1, 128, 256)
+[Monthly Loader] 'geopotential_600': shape=(1095, 1, 128, 256)
+[Monthly Loader] '10m_v_component_of_wind': shape=(1095, 1, 128, 256)
+[Monthly Loader] 'land_sea_mask': shape=(1095, 1, 128, 256)
+[Rank 0] Not enough files to shard (9 files, 16 ranks). All ranks read all 9 files.
+[Monthly Loader] Verifying variables in 2019_0.npz...
+[Monthly Loader] Available variables: ['land_sea_mask', 'orography', 'lattitude', '2m_temperature', '10m_u_component_of_wind', '10m_v_component_of_wind', 'total_precipitation', 'geopotential_10', 'geopotential_20', 'geopotential_30', 'geopotential_50', 'geopotential_70', 'geopotential_100', 'geopotential_150', 'geopotential_200', 'geopotential_250', 'geopotential_300', 'geopotential_400', 'geopotential_500', 'geopotential_600', 'geopotential_700', 'geopotential_850', 'geopotential_925', 'geopotential_1000', 'u_component_of_wind_10', 'u_component_of_wind_20', 'u_component_of_wind_30', 'u_component_of_wind_50', 'u_component_of_wind_70', 'u_component_of_wind_100', 'u_component_of_wind_150', 'u_component_of_wind_200', 'u_component_of_wind_250', 'u_component_of_wind_300', 'u_component_of_wind_400', 'u_component_of_wind_500', 'u_component_of_wind_600', 'u_component_of_wind_700', 'u_component_of_wind_850', 'u_component_of_wind_925', 'u_component_of_wind_1000', 'v_component_of_wind_10', 'v_component_of_wind_20', 'v_component_of_wind_30', 'v_component_of_wind_50', 'v_component_of_wind_70', 'v_component_of_wind_100', 'v_component_of_wind_150', 'v_component_of_wind_200', 'v_component_of_wind_250', 'v_component_of_wind_300', 'v_component_of_wind_400', 'v_component_of_wind_500', 'v_component_of_wind_600', 'v_component_of_wind_700', 'v_component_of_wind_850', 'v_component_of_wind_925', 'v_component_of_wind_1000', 'temperature_10', 'temperature_20', 'temperature_30', 'temperature_50', 'temperature_70', 'temperature_100', 'temperature_150', 'temperature_200', 'temperature_250', 'temperature_300', 'temperature_400', 'temperature_500', 'temperature_600', 'temperature_700', 'temperature_850', 'temperature_925', 'temperature_1000', 'specific_humidity_10', 'specific_humidity_20', 'specific_humidity_30', 'specific_humidity_50', 'specific_humidity_70', 'specific_humidity_100', 'specific_humidity_150', 'specific_humidity_200', 'specific_humidity_250', 'specific_humidity_300', 'specific_humidity_400', 'specific_humidity_500', 'specific_humidity_600', 'specific_humidity_700', 'specific_humidity_850', 'specific_humidity_925', 'specific_humidity_1000', 'sea_surface_temperature', 'mean_sea_level_pressure']
+[Monthly Loader] 'specific_humidity_700': shape=(1095, 1, 128, 256)
+[Monthly Loader] '10m_u_component_of_wind': shape=(1095, 1, 128, 256)
+[Monthly Loader] 'temperature_50': shape=(1095, 1, 128, 256)
+[Monthly Loader] 'v_component_of_wind_50': shape=(1095, 1, 128, 256)
+[Monthly Loader] 'geopotential_850': shape=(1095, 1, 128, 256)
+[Monthly Loader] 'u_component_of_wind_700': shape=(1095, 1, 128, 256)
+[Monthly Loader] 'specific_humidity_250': shape=(1095, 1, 128, 256)
+[Monthly Loader] 'u_component_of_wind_925': shape=(1095, 1, 128, 256)
+[Monthly Loader] 'v_component_of_wind_600': shape=(1095, 1, 128, 256)
+[Monthly Loader] 'u_component_of_wind_850': shape=(1095, 1, 128, 256)
+[Monthly Loader] 'u_component_of_wind_600': shape=(1095, 1, 128, 256)
+[Monthly Loader] 'temperature_500': shape=(1095, 1, 128, 256)
+[Monthly Loader] 'temperature_250': shape=(1095, 1, 128, 256)
+[Monthly Loader] 'temperature_700': shape=(1095, 1, 128, 256)
+[Monthly Loader] 'temperature_600': shape=(1095, 1, 128, 256)
+[Monthly Loader] 'v_component_of_wind_925': shape=(1095, 1, 128, 256)
+[Monthly Loader] 'specific_humidity_600': shape=(1095, 1, 128, 256)
+[Monthly Loader] 'v_component_of_wind_700': shape=(1095, 1, 128, 256)
+[Monthly Loader] 'specific_humidity_850': shape=(1095, 1, 128, 256)
+[Monthly Loader] 'v_component_of_wind_500': shape=(1095, 1, 128, 256)
+[Monthly Loader] 'orography': shape=(1095, 1, 128, 256)
+[Monthly Loader] 'temperature_850': shape=(1095, 1, 128, 256)
+[Monthly Loader] 'u_component_of_wind_50': shape=(1095, 1, 128, 256)
+[Monthly Loader] 'geopotential_250': shape=(1095, 1, 128, 256)
+[Monthly Loader] 'geopotential_700': shape=(1095, 1, 128, 256)
+[Monthly Loader] 'temperature_925': shape=(1095, 1, 128, 256)
+[Monthly Loader] 'geopotential_500': shape=(1095, 1, 128, 256)
+[Monthly Loader] 'v_component_of_wind_250': shape=(1095, 1, 128, 256)
+[Monthly Loader] 'u_component_of_wind_250': shape=(1095, 1, 128, 256)
+[Monthly Loader] 'geopotential_50': shape=(1095, 1, 128, 256)
+[Monthly Loader] 'v_component_of_wind_850': shape=(1095, 1, 128, 256)
+[Monthly Loader] 'u_component_of_wind_500': shape=(1095, 1, 128, 256)
+[Monthly Loader] 'specific_humidity_500': shape=(1095, 1, 128, 256)
+[Monthly Loader] 'geopotential_925': shape=(1095, 1, 128, 256)
+[Monthly Loader] '2m_temperature': shape=(1095, 1, 128, 256)
+[Monthly Loader] 'specific_humidity_50': shape=(1095, 1, 128, 256)
+[Monthly Loader] 'specific_humidity_925': shape=(1095, 1, 128, 256)
+[Monthly Loader] 'geopotential_600': shape=(1095, 1, 128, 256)
+[Monthly Loader] '10m_v_component_of_wind': shape=(1095, 1, 128, 256)
+[Monthly Loader] 'land_sea_mask': shape=(1095, 1, 128, 256)
+
+[DEBUG] Data module created, creating model...
+Creating model: res_slimvit_adaptive
+Model config: img_size=(128, 256), in_channels=40, out_channels=4, history=1, superres_factor=1
+Model parameters: 12.18M
+[DEBUG] Model created, setting up FSDP...
+[DEBUG] Starting FSDP wrapping...
+[DEBUG] FSDP wrapping completed. Model parameters: 0.76M
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/distributed/fsdp/wrap.py:491: FutureWarning: Please specify CheckpointImpl.NO_REENTRANT as CheckpointImpl.REENTRANT will soon be removed as the default and eventually deprecated.
+  return wrapper_cls(module, **kwargs)
+[DEBUG] FSDP wrapping completed, now creating losses (this may take several minutes)...
+[DEBUG] Loading training climatology for lat_mse (this may take a while)...
+[DEBUG] Training climatology loaded
+[DEBUG] Loading validation climatology...
+[DEBUG] Validation climatology loaded
+Using lat_mse for training loss
+Loss functions created successfully
+[DEBUG] Losses created successfully
+[DEBUG] Random token selection mode — no aux_difficulty_head
+
+================================================================================
+Starting epoch 0
+================================================================================
+
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/lustre/orion/csc662/proj-shared/janet/miniconda3/envs/orbit_main/lib/python3.11/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+[E0 B0] loss=1.22717 time=27.492s | diff=N/A (DIAG empty) | tokens 2048/8192 | mem=0.0GB
+
+======================================================================
+ Parameter Breakdown
+======================================================================
+  Decoder Head                                0.000M  (           0)
+  Token Embeddings                            0.000M  (           0)
+  Variable Aggregation                        0.000M  (           0)
+  Other (pos_embed, var_embed, etc.)          0.761M  (     761,353)
+  ────────────────────────────────────────────────────────────
+  TOTAL                                       0.761M  (     761,353)
+======================================================================
+
+Epoch 0 | Batch 0 | Loss: 1.227169 | Time: 27.495s | LR: 1.00e-06
+rank 0 Batch 0 Allocated: 0.01GB, Max Allocated: 26.42GB, Reserved: 0.24GB
+Epoch 0 | Batch 10 | Loss: 1.134335 | Time: 6.192s | LR: 1.00e-06
+rank 0 Batch 10 Allocated: 0.01GB, Max Allocated: 26.42GB, Reserved: 41.40GB
+Epoch 0 | Batch 20 | Loss: 1.118969 | Time: 6.290s | LR: 1.00e-06
+rank 0 Batch 20 Allocated: 0.01GB, Max Allocated: 26.42GB, Reserved: 41.40GB
+Epoch 0 | Batch 30 | Loss: 1.142829 | Time: 5.664s | LR: 1.00e-06
+rank 0 Batch 30 Allocated: 0.01GB, Max Allocated: 26.42GB, Reserved: 41.40GB
+Epoch 0 | Batch 40 | Loss: 1.168767 | Time: 5.676s | LR: 1.00e-06
+rank 0 Batch 40 Allocated: 0.01GB, Max Allocated: 26.42GB, Reserved: 41.40GB
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** STEP 4144418.0 ON frontier07403 CANCELLED AT 2026-02-23T20:13:59 ***
+slurmstepd: error: *** JOB 4144418 ON frontier07403 CANCELLED AT 2026-02-23T20:13:59 ***
